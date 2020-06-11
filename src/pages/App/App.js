@@ -32,7 +32,6 @@ class App extends Component {
           <NavBar 
             user={this.state.user}
             handleLogout={this.handleLogout}
-            handleSignupOrLogin={this.handleSignupOrLogin}
           />
         </header>
         <body>
