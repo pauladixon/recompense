@@ -27,13 +27,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+
         <header>
           <Link to='' className='title'>:: recompense ::</Link>
           <NavBar 
             user={this.state.user}
             handleLogout={this.handleLogout}
             handleSignupOrLogin={this.handleSignupOrLogin}
-          />
+            />
         </header>
         <body>
           <Switch>
