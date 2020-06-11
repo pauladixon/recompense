@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import userService from '../../utils/userService';
+import NavBar from '../../components/NavBar/NavBar';
 
 class SignupForm extends Component {
 
@@ -38,6 +39,7 @@ class SignupForm extends Component {
   render() {
     return (
       <div>
+          <NavBar />
         <header className="header-footer">Sign Up</header>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
           <div className="form-group">
