@@ -1,3 +1,8 @@
-.NavBar-welcome {
-    color: grey;
-  }
+.nav {
+    text-decoration: none;
+    color: black;
+}
+
+.nav:hover {
+    font-weight: bold;
+}
