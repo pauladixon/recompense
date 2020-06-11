@@ -16,4 +16,4 @@ function signup(user) {
 
 export default {
   signup
-};
+}; 
