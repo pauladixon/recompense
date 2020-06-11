@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './SignupForm.css';
 import { Link } from 'react-router-dom';
 import userService from '../../utils/userService';
 
@@ -38,11 +39,11 @@ class SignupForm extends Component {
   render() {
     return (
       <div>
-        <header>Sign Up</header>
-        <form onSubmit={this.handleSubmit} >
+        <header className="signup-header">Sign Up</header>
+        <form  onSubmit={this.handleSubmit} >
           <div>
             <div>
-              <input 
+              <input className="signup-form"
                 type="text" 
                 placeholder="Name" 
                 value={this.state.name} 
@@ -53,7 +54,7 @@ class SignupForm extends Component {
           </div>
           <div>
             <div>
-              <input 
+              <input className="signup-form"
                 type="email" 
                 placeholder="Email" 
                 value={this.state.email} 
@@ -64,7 +65,7 @@ class SignupForm extends Component {
           </div>
           <div>
             <div>
-              <input 
+              <input className="signup-form"
                 type="password" 
                 placeholder="Password" 
                 value={this.state.password} 
@@ -75,7 +76,7 @@ class SignupForm extends Component {
           </div>
           <div>
             <div>
-              <input 
+              <input className="signup-form"
                 type="password" 
                 className="form-control" 
                 placeholder="Confirm Password" 
@@ -85,10 +86,11 @@ class SignupForm extends Component {
               />
             </div>
           </div>
-          <div className="form-group">
-            <div className="col-sm-12 text-center">
-              <button className="btn btn-default" disabled={this.isFormInvalid()}>Sign Up</button>&nbsp;&nbsp;
-              <Link to='/'>Cancel</Link>
+          <div>
+            <div className="col-sm-12">
+              <button disabled={this.isFormInvalid()}>Sign Up</button>
+              &nbsp;&nbsp;
+              <Link to='/' className="cancel">Cancel</Link>
             </div>
           </div>
         </form>

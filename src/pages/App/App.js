@@ -27,7 +27,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
         <header>
           <Link to='' className='title'>:: recompense ::</Link>
           <NavBar 
