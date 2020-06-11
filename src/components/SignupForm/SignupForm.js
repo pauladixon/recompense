@@ -14,7 +14,6 @@ class SignupForm extends Component {
   handleChange = (e) => {
     this.props.updateMessage('');
     this.setState({
-      // Using ES2015 Computed Property Names
       [e.target.name]: e.target.value
     });
   }
@@ -23,10 +22,8 @@ class SignupForm extends Component {
     e.preventDefault();
     try {
       await userService.signup(this.state);
-      // Successfully signed up - show GamePage
-      this.props.history.push('/');
+      this.props.handleSignupOrLogin();
     } catch (err) {
-      // Invalid user data (probably duplicate email)
       this.props.updateMessage(err.message);
     }
   }
@@ -77,7 +74,6 @@ class SignupForm extends Component {
             <div>
               <input 
                 type="password" 
-                className="form-control" 
                 placeholder="Confirm Password" 
                 value={this.state.passwordConf} 
                 name="passwordConf" 
@@ -85,9 +81,9 @@ class SignupForm extends Component {
               />
             </div>
           </div>
-          <div className="form-group">
-            <div className="col-sm-12 text-center">
-              <button className="btn btn-default" disabled={this.isFormInvalid()}>Sign Up</button>&nbsp;&nbsp;
+          <div>
+            <div>
+              <button disabled={this.isFormInvalid()}>Sign Up</button>&nbsp;&nbsp;
               <Link to='/'>Cancel</Link>
             </div>
           </div>
