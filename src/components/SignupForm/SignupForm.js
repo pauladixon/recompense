@@ -78,7 +78,7 @@ class SignupForm extends Component {
             <div>
               <input className="signup-form"
                 type="password" 
-                className="form-control" 
+                 
                 placeholder="Confirm Password" 
                 value={this.state.passwordConf} 
                 name="passwordConf" 
