@@ -1,98 +1,68 @@
 import React, { Component } from 'react';
-import './SignupForm.css';
-import { Link } from 'react-router-dom';
+import './App.css';
+import { Link, Route, Switch } from 'react-router-dom';
+import SignupPage from '../SignupPage/SignupPage';
+import LoginPage from '../LoginPage/LoginPage';
+import NavBar from '../../components/NavBar/NavBar';
+import Home from "../../pages/Home/Home.js";
 import userService from '../../utils/userService';
 
-class SignupForm extends Component {
-
-  state = {
-    name: '',
-    email: '',
-    password: '',
-    passwordConf: ''
-  };
-
-  handleChange = (e) => {
-    this.props.updateMessage('');
-    this.setState({
-      [e.target.name]: e.target.value
-    });
-  }
-
-  handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await userService.signup(this.state);
-      this.props.handleSignupOrLogin();
-    } catch (err) {
-      this.props.updateMessage(err.message);
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      user: userService.getUser()
     }
   }
 
-  isFormInvalid() {
-    return !(this.state.name && this.state.email && this.state.password === this.state.passwordConf);
+  handleLogout = () => {
+    userService.logout()
+    this.setState({ user: null })
+  }
+
+  handleSignupOrLogin = () => {
+    this.setState({ user: userService.getUser() })
   }
 
   render() {
     return (
-      <div>
-        <header className="signup-header">Sign Up</header>
-        <form  onSubmit={this.handleSubmit} >
-          <div>
-            <div>
-              <input className="signup-form"
-                type="text" 
-                placeholder="Name" 
-                value={this.state.name} 
-                name="name" 
-                onChange={this.handleChange} 
+      <div className="App">
+        <header>
+          <Link to='' className='title'>:: recompense ::</Link>
+          <NavBar 
+            user={this.state.user}
+            handleLogout={this.handleLogout}
+            handleSignupOrLogin={this.handleSignupOrLogin}
+            />
+        </header>
+        <body>
+          <Switch>
+              <Route
+                exact path="/"
+                render = {(props) => (
+                  <Home
+                    {...props}
+                  />
+                )}
               />
-            </div>
-          </div>
-          <div>
-            <div>
-              <input className="signup-form"
-                type="email" 
-                placeholder="Email" 
-                value={this.state.email} 
-                name="email" 
-                onChange={this.handleChange} 
-              />
-            </div>
-          </div>
-          <div>
-            <div>
-              <input className="signup-form"
-                type="password" 
-                placeholder="Password" 
-                value={this.state.password} 
-                name="password" 
-                onChange={this.handleChange} 
-              />
-            </div>
-          </div>
-          <div>
-            <div>
-              <input className="signup-form"
-                type="password" 
-                placeholder="Confirm Password" 
-                value={this.state.passwordConf} 
-                name="passwordConf" 
-                onChange={this.handleChange} 
-              />
-            </div>
-          </div>
-          <div>
-            <div className="col-sm-12">
-                <button disabled={this.isFormInvalid()}>Sign Up</button>
-                &nbsp;&nbsp;
-                <Link to='/' className="cancel">Cancel</Link>
-            </div>
-          </div>
-        </form>
+              <Route exact path='/signup' render={({ history }) =>
+                <SignupPage
+                  history={history}
+                  handleSignupOrLogin={this.handleSignupOrLogin}
+                />
+              } />
+              <Route exact path='/login' render={(({ history }) =>
+                <LoginPage
+                  history={history}
+                  handleSignupOrLogin={this.handleSignupOrLogin}
+                />
+              )} />
+            </Switch>
+          </body>
       </div>
     );
   }
+
 }
 
-export default SignupForm;
+export default App;

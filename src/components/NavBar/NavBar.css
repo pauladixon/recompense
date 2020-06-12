@@ -6,3 +6,10 @@
 .nav:hover {
     font-weight: bold;
 }
+
+.nav-bar {
+    border-bottom: solid 1px black;
+    width: 1000px;
+    display: flex;
+    justify-content: flex-end;
+}

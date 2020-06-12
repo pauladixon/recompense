@@ -35,44 +35,44 @@ class SignupForm extends Component {
           <div>
             <div>
               <input className="signup-form"
-                type="text"
-                placeholder="Name"
-                value={this.state.name}
-                name="name"
-                onChange={this.handleChange}
+                type="text" 
+                placeholder="Name" 
+                value={this.state.name} 
+                name="name" 
+                onChange={this.handleChange} 
               />
             </div>
           </div>
           <div>
             <div>
               <input className="signup-form"
-                type="email"
-                placeholder="Email"
-                value={this.state.email}
-                name="email"
-                onChange={this.handleChange}
+                type="email" 
+                placeholder="Email" 
+                value={this.state.email} 
+                name="email" 
+                onChange={this.handleChange} 
               />
             </div>
           </div>
           <div>
             <div>
               <input className="signup-form"
-                type="password"
-                placeholder="Password"
-                value={this.state.password}
-                name="password"
-                onChange={this.handleChange}
+                type="password" 
+                placeholder="Password" 
+                value={this.state.password} 
+                name="password" 
+                onChange={this.handleChange} 
               />
             </div>
           </div>
           <div>
             <div>
               <input className="signup-form"
-                type="password"
-                placeholder="Confirm Password"
-                value={this.state.passwordConf}
-                name="passwordConf"
-                onChange={this.handleChange}
+                type="password" 
+                placeholder="Confirm Password" 
+                value={this.state.passwordConf} 
+                name="passwordConf" 
+                onChange={this.handleChange} 
               />
             </div>
           </div>
