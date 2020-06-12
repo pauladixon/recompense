@@ -1,0 +1,9 @@
+.add-link {
+    font-weight: lighter;
+    color: black;
+
+}
+
+.add-link:hover {
+    font-weight: bold;
+}

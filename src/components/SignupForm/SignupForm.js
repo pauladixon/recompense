@@ -30,7 +30,7 @@ class SignupForm extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="signup-container">
         <header className="signup-header">Sign Up</header>
         <form  onSubmit={this.handleSubmit} >
           <div>
@@ -77,9 +77,9 @@ class SignupForm extends Component {
               />
             </div>
           </div>
-          <div>
-            <div className="col-sm-12">
-                <button disabled={this.isFormInvalid()}>Sign Up</button>
+          <div className="buttons-div">
+            <div className="buttons">
+                <button className="signup-form" disabled={this.isFormInvalid()}>Sign Up</button>
                 &nbsp;&nbsp;
                 <Link to='/' className="cancel">Cancel</Link>
             </div>
