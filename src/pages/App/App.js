@@ -8,6 +8,8 @@ import Home from "../../pages/Home/Home.js";
 import ServiceFloor from '../../pages/ServiceFloor/ServiceFloor.js';
 import userService from '../../utils/userService';
 import DirectAidLinks from '../DirectAidLinks/DirectAidLinks';
+import AddService from '../../components/AddService/AddService';
+import AddLink from '../../components/AddLink/AddLink';
 
 
 class App extends Component {
@@ -72,6 +74,22 @@ class App extends Component {
               exact path="/directaidlinks"
               render={(props) => (
                 <DirectAidLinks
+                  {...props}
+                />
+              )}
+            />
+            <Route
+              exact path="/addservice"
+              render={(props) => (
+                <AddService
+                  {...props}
+                />
+              )}
+            />
+            <Route
+              exact path="/addlink"
+              render={(props) => (
+                <AddLink
                   {...props}
                 />
               )}
