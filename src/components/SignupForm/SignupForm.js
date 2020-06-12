@@ -66,7 +66,7 @@ class SignupForm extends Component {
             </div>
           </div>
           <div>
-            <div>
+            <div>git 
               <input className="signup-form"
                 type="password"
                 placeholder="Confirm Password"
