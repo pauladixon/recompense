@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './LoginPage.css';
 import userService from '../../utils/userService'
 
 class LoginPage extends Component {
@@ -12,7 +13,7 @@ class LoginPage extends Component {
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value
-    })
+    });
   }
 
   handleSubmit = async(e) => {
@@ -28,12 +29,12 @@ class LoginPage extends Component {
 
   render() {
     return (
-      <div>
-        <header>Log In</header>
+      <div className="signup-container">
+        <header className="signup-header">Log In</header>
         <form onSubmit={this.handleSubmit} >
           <div>
             <div>
-              <input 
+              <input className="signup-form"
                 type="email" 
                 placeholder="Email" 
                 value={this.state.email} 
@@ -44,7 +45,7 @@ class LoginPage extends Component {
           </div>
           <div>
             <div>
-              <input 
+              <input className="signup-form"
                 type="password"
                 placeholder="Password"
                 value={this.state.pw}
@@ -55,8 +56,8 @@ class LoginPage extends Component {
           </div>
           <div>
             <div>
-              <button>Log In</button>&nbsp;&nbsp;&nbsp;
-              <Link to='/'>Cancel</Link>
+              <button className="signup-form button">Log In</button>&nbsp;&nbsp;&nbsp;
+              <Link to='/' className="cancel">Cancel</Link>
             </div>
           </div>
         </form>

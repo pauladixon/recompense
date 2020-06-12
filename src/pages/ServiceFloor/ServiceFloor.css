@@ -1,0 +1,9 @@
+.add-service {
+    font-weight: lighter;
+    color: black;
+    margin-left: 40px;
+}
+
+.add-service:hover {
+    font-weight: bold;
+}

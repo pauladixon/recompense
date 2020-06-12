@@ -1,12 +1,17 @@
+body {
+    background-color: #FFF4DE;
+}
+
 .App {
   text-align: center;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Helvetica, sans-serif;
   color: black;
 }
 
 .title {
   text-decoration: none;
   color: black;
+
 }
 
 .title:hover {
@@ -21,4 +26,34 @@ header {
 
 *:focus {
   outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page {
+  display: flex;
+  flex-direction: row;
+}
+
+.page-header {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 200px;
+  font-weight: bold;
+  margin-top: 100px;
+  margin-left: 20px;
+}
+
+.page-content {
+  margin-left: 180px;
+  width: 950px;
+  height: 1000px;
+}
+
+.posts {
+  display: flex;
+  justify-content: flex-start;
 }
