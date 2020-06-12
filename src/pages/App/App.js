@@ -33,7 +33,7 @@ class App extends Component {
             user={this.state.user}
             handleLogout={this.handleLogout}
             handleSignupOrLogin={this.handleSignupOrLogin}
-          />
+            />
         </header>
         <body>
           <Switch>
