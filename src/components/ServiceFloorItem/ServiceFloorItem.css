@@ -1,0 +1,8 @@
+.serviceflooritem {
+    border: solid black;
+    padding: 30px;
+}
+
+.serviceflooritem-detail-link {
+    text-align: right;
+}
