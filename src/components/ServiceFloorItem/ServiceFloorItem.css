@@ -1,6 +1,10 @@
 .serviceflooritem {
     border: solid black;
+    margin: 20px;
     padding: 30px;
+    background-color: white;
+    min-width: 100px;
+    min-height: 100px;
 }
 
 .serviceflooritem-detail-link {
