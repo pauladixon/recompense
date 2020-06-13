@@ -23,7 +23,7 @@ class AddServicePage extends Component {
   }
 
   handleChange = e => {
-    const formData = { ...this.state.formData, [e.target.name]: e.target.value}
+    const formData = { ...this.state.formData, [e.target.name]: e.target.value, }
     this.setState({
       formData,
       invalidForm: !this.formRef.current.checkValidity()
@@ -95,7 +95,8 @@ class AddServicePage extends Component {
                       required
                   />
               </div>
-              <button className="btn"
+              <button
+                  className="btn"
                   type="submit"
                   disabled={this.state.invalidForm}
               >

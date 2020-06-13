@@ -6,9 +6,11 @@ function ServiceFloorItem({ service }) {
     return (
         <>
             <div className='serviceflooritem'>
-                <p>{service.name}</p>
-                <p>{service.city}</p>
-                <p>{service.exchange}</p>
+                <div>
+                    <p>{service.name}</p>
+                    <p>{service.city}</p>
+                    <p>{service.exchange}</p>
+                </div>
                 <div className='serviceflooritem-detail-link'>
                     <Link 
                         to={{

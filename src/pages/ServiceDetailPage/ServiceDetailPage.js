@@ -13,7 +13,7 @@ function ServiceDetailPage (props) {
                 user={props.user}
                 handleDeleteService={props.handleDeleteService}
             />
-            <Link to='/servicefloor'>Return to Services Floor</Link>
+            <Link to='/servicesfloor'>Return to Services Floor</Link>
         </>
     )
 }

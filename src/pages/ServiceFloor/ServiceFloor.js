@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import ServiceFloorItem from '../../components/ServiceFloorItem/ServiceFloorItem'
 import './ServiceFloor.css'
 
-const ServiceFloor = (props) => {
+function ServiceFloor(props) {
   return (
     <div className="page">
         <div className="page-header">

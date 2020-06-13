@@ -4,7 +4,7 @@ import '../../utils/userService'
 import './ServiceCard.css'
 
 function ServiceCard({ service, handleDeleteService, user }) {
-    user = user === null ? user = NaN : user;
+    user = user === null ? user = NaN : user
     const categories = service.categories.map((category, idx) =>
         <span key={category.value}>{idx !== 0 ? ', ' : ''}{category.label}</span>)
     return (
@@ -15,7 +15,7 @@ function ServiceCard({ service, handleDeleteService, user }) {
                 </div>
                 <div className="panel-body">
                     <dl>
-                        <dt>Exchange: </dt> <dd>${service.exchange}</dd>
+                        <dt>Exchange: </dt> <dd>{service.exchange}</dd>
                     </dl>
                     <dl>
                         <dt>City, State: </dt> <dd>{service.city}</dd>
@@ -43,12 +43,12 @@ function ServiceCard({ service, handleDeleteService, user }) {
                             onClick={() => handleDeleteService(service._id)}
                         >
                             Delete
-            </button>
+                        </button>
                     }
                 </div>
             </div>
         </>
-    );
+    )
 }
 
-export default ServiceCard;
+export default ServiceCard
