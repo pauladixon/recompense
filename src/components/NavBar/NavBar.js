@@ -19,7 +19,7 @@ const NavBar = (props) => {
     </div>
   return (
     <div className="nav-bar">
-      <Link className="nav" to="/servicefloor">Services Floor</Link>
+      <Link className="nav" to="/servicesfloor">Services Floor</Link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <Link className="nav" to="/directaidlinks">Direct Aid</Link>
       {nav}

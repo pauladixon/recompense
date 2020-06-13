@@ -11,7 +11,7 @@ body {
 .title {
   text-decoration: none;
   color: black;
-
+  font-size: 14px;
 }
 
 .title:hover {
