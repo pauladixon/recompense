@@ -7,12 +7,14 @@ import NavBar from '../../components/NavBar/NavBar';
 import Home from "../../pages/Home/Home.js";
 import ServiceFloor from '../ServiceFloor/ServiceFloor';
 import ServiceDetailPage from '../ServiceDetailPage/ServiceDetailPage'
+import LinkDetailPage from '../LinkDetailPage/LinkDetailPage'
 import EditServicePage from '../EditServicePage/EditServicePage'
 import userService from '../../utils/userService';
-import DirectAidLinks from '../DirectAidLinks/DirectAidLinks';
+import LinksPage from '../LinksPage/LinksPage';
 import * as servicesAPI from '../../services/services-api'
+import * as linksAPI from '../../services/links-api';
 import AddServicePage from '../AddServicePage/AddServicePage'
-import AddLink from '../../components/AddLink/AddLink';
+import AddLinkPage from '../../components/AddLinkPage/AddLinkPage';
 
 
 class App extends Component {
@@ -20,6 +22,7 @@ class App extends Component {
     user: userService.getUser(),
     services: [],
     choices: [],
+    links: []
   }
 
   handleLogout = () => {
@@ -55,6 +58,14 @@ class App extends Component {
     this.setState(state => ({
       services: state.services.filter(service => service._id !== id)
     }), () => this.props.history.push('/servicesfloor'))
+  }
+
+  handleAddLink = async newLinkData => {
+    const newLink = await linksAPI.create(newLinkData)
+    this.setState(state => ({
+      links: [...state.links, newLink]
+    }),
+      () => this.props.history.push('/directaidlinks'))
   }
 
   async componentDidMount() {
@@ -105,7 +116,7 @@ class App extends Component {
             <Route
               exact path="/servicedetail"
               render={({ location }) =>
-                <ServiceDetailPage 
+                <ServiceDetailPage
                   location={location}
                   handleDeleteService={this.handleDeleteService}
                   user={this.state.user}
@@ -114,41 +125,52 @@ class App extends Component {
             />
             <Route
               exact path="/addservice"
-              render={() => 
+              render={() =>
                 userService.getUser() ?
-                  <AddServicePage 
-                    handleAddService={this.handleAddService} 
+                  <AddServicePage
+                    handleAddService={this.handleAddService}
                     city={this.state.user.city}
-                />
-                :
-                <Redirect to='/login' />
+                  />
+                  :
+                  <Redirect to='/login' />
               }
             />
             <Route
               exact path="/editservice"
-              render={({ location }) => 
+              render={({ location }) =>
                 userService.getUser() ?
-                  <EditServicePage 
-                    handleUpdateService={this.handleUpdateService} 
+                  <EditServicePage
+                    handleUpdateService={this.handleUpdateService}
                     location={location}
                     user={this.state.user}
-                />
-                :
-                <Redirect to='/login' />
+                  />
+                  :
+                  <Redirect to='/login' />
               }
             />
             <Route
               exact path="/directaidlinks"
-              render={(props) => (
-                <DirectAidLinks
-                  {...props}
+              render={() => (
+                <LinksPage
+                  links={this.state.links}
                 />
               )}
             />
             <Route
+              exact path="/linkdetail"
+              render={({ location }) =>
+                <LinkDetailPage
+                  location={location}
+                  // handleDeleteLink={this.handleDeleteLink}
+                  user={this.state.user}
+                />
+              }
+            />
+            <Route
               exact path="/addlink"
               render={(props) => (
-                <AddLink
+                <AddLinkPage
+                  links={this.state.links}
                   {...props}
                 />
               )}
