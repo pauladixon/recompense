@@ -150,9 +150,9 @@ class App extends Component {
             />
             <Route
               exact path="/directaidlinks"
-              render={(props) => (
+              render={() => (
                 <LinksPage
-                  {...props}
+                  links={this.state.links}
                 />
               )}
             />
@@ -161,7 +161,7 @@ class App extends Component {
               render={({ location }) =>
                 <LinkDetailPage
                   location={location}
-                  // handleDeleteService={this.handleDeleteService}
+                  // handleDeleteLink={this.handleDeleteLink}
                   user={this.state.user}
                 />
               }

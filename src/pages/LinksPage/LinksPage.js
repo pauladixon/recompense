@@ -1,27 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import LinkItem from '../../components/LinkItem/LinkItem'
 import './LinksPage.css';
 
-const DirectAidLinks = (props) => {
+const LinksPage = (props) => {
 
   return (
     <div className="page">
-        <div className="page-header">
-          <p >Direct Aid:</p>  
-          <Link className="add-link" to="/addlink">Post A Link</Link>
-          <Link className="add-link" to="/linkdetail">Link Detail</Link>
+      <div className="page-header">
+        <p >Direct Aid:</p>
+        <Link className="add-link" to="/addlink">Post A Link</Link>
+        {/* <Link className="add-link" to="/linkdetail">Link Detail</Link> */}
+      </div>
+      <div className="page-content">
+
+        <div className="posts">
+          {props.links.map(link =>
+            <LinkItem link={link} key={link._id} />
+          )}
         </div>
-        <div className="page-content">
-           
-         <div className="posts">
-             <p>stuff</p>
-        </div> 
-        </div>
-      
+      </div>
+
     </div>
 
   );
 };
 
-export default DirectAidLinks;
+export default LinksPage;

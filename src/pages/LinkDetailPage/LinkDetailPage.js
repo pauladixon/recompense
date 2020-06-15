@@ -3,13 +3,13 @@ import LinkCard from '../../components/LinkCard/LinkCard'
 import { Link } from 'react-router-dom'
 
 function LinkDetailPage (props) {
-    // const service = props.location.state.service
+    const link = props.location.state.link
     return (
         <>
             <h1>Link Details</h1>
             <LinkCard
-                // key={service._id}
-                // service={service}
+                key={link._id}
+                link={link}
                 user={props.user}
                 // handleDeleteService={props.handleDeleteService}
             />
