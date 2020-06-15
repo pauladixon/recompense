@@ -36,7 +36,7 @@ class AddServicePage extends Component {
 
   render() {
     return (
-      <div>
+      <div className="add-service-page">
           <p>add service</p>
           <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
               <div className="form-group">
@@ -48,8 +48,9 @@ class AddServicePage extends Component {
                       required
                   />
               </div>
-              <div className="form-group">
+              <div className="select-dropdown">
                   <label>Categories</label>
+                 
                       <Select
                           value={this.state.formData.categories}
                           isMulti
@@ -57,7 +58,8 @@ class AddServicePage extends Component {
                           onChange={this.handleChangeCategories}
                           options={serviceCategories}
                           required
-                      />
+                          />
+                       
               </div>
               <div className="form-group">
                   <label>Description</label>

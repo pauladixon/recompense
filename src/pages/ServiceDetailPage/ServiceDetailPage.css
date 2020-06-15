@@ -1,0 +1,36 @@
+hr {
+    color: black;
+    width: 980px;
+    margin-left: 430px;
+}
+
+.detail-page {
+    width: 980px;
+    margin-left: 430px;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+/* .service-card {
+    background-color: white;
+    margin: 300px;
+} */
+
+.detail-header {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px;
+}
+
+.return-link {
+    display: flex;
+    justify-content: flex-start;
+    margin: 15px;
+    color: black;
+    width: 200px;
+}
+
+.return-link:hover {
+    font-weight: bold;
+}

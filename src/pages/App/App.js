@@ -83,7 +83,7 @@ class App extends Component {
             handleLogout={this.handleLogout}
           />
         </header>
-        <div className="body">
+        <div className="">
           <Switch>
             <Route
               exact path="/"

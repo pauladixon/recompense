@@ -6,6 +6,7 @@ const serviceCategories = [
     { value: 'COVID Supplies', label: 'COVID Supplies' },
     { value: 'On Discount for Black Ppl', label: 'On Discount for Black People' },
     { value: 'Free for Black Ppl', label: 'Free for Black Ppl' },
+    { value: 'Misc', label: 'Misc'}
   ]
 
 export default serviceCategories

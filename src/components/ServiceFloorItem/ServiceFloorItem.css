@@ -1,12 +1,31 @@
 .serviceflooritem {
-    border: solid black;
+    border: solid 2px;
+    border-color: #97A2AB;
     margin: 20px;
     padding: 30px;
     background-color: white;
     min-width: 100px;
     min-height: 100px;
+    background-color: #CFE2FF;
+    border-radius: 5px;
+    /* display: flex;
+    justify-content: flex-start; */
 }
 
+.service-name {
+    font-weight: bold;
+    margin-right: 700px;
+}
 .serviceflooritem-detail-link {
     text-align: right;
+}
+
+.detail-link {
+    color: black;
+    /* display: flex;
+    justify-content: flex-end; */
+}
+
+.detail-link:hover {
+    font-weight: bold;
 }

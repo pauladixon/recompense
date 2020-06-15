@@ -5,7 +5,7 @@ import './ServiceFloor.css'
 
 function ServiceFloor(props) {
   return (
-    <div className="page">
+    <div className="service-page">
         <div className="page-header">
           <p >Services:</p>  
           <Link className="add-service" to="/addservice">Post A Service</Link>
