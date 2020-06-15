@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
 
-class AddLink extends Component {
+class AddLinkPage extends Component {
   state = {
     invalidForm: true,
     formData: {
@@ -45,4 +45,4 @@ class AddLink extends Component {
     );
   }
 }
-export default AddLink;
+export default AddLinkPage;

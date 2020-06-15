@@ -7,13 +7,14 @@ import NavBar from '../../components/NavBar/NavBar';
 import Home from "../../pages/Home/Home.js";
 import ServiceFloor from '../ServiceFloor/ServiceFloor';
 import ServiceDetailPage from '../ServiceDetailPage/ServiceDetailPage'
+import LinkDetailPage from '../LinkDetailPage/LinkDetailPage'
 import EditServicePage from '../EditServicePage/EditServicePage'
 import userService from '../../utils/userService';
-import DirectAidLinks from '../DirectAidLinks/DirectAidLinks';
+import LinksPage from '../LinksPage/LinksPage';
 import * as servicesAPI from '../../services/services-api'
 import * as linksAPI from '../../services/links-api';
 import AddServicePage from '../AddServicePage/AddServicePage'
-import AddLink from '../../components/AddLink/AddLink';
+import AddLinkPage from '../../components/AddLinkPage/AddLinkPage';
 
 
 class App extends Component {
@@ -115,7 +116,7 @@ class App extends Component {
             <Route
               exact path="/servicedetail"
               render={({ location }) =>
-                <ServiceDetailPage 
+                <ServiceDetailPage
                   location={location}
                   handleDeleteService={this.handleDeleteService}
                   user={this.state.user}
@@ -124,42 +125,52 @@ class App extends Component {
             />
             <Route
               exact path="/addservice"
-              render={() => 
+              render={() =>
                 userService.getUser() ?
-                  <AddServicePage 
-                    handleAddService={this.handleAddService} 
+                  <AddServicePage
+                    handleAddService={this.handleAddService}
                     city={this.state.user.city}
-                />
-                :
-                <Redirect to='/login' />
+                  />
+                  :
+                  <Redirect to='/login' />
               }
             />
             <Route
               exact path="/editservice"
-              render={({ location }) => 
+              render={({ location }) =>
                 userService.getUser() ?
-                  <EditServicePage 
-                    handleUpdateService={this.handleUpdateService} 
+                  <EditServicePage
+                    handleUpdateService={this.handleUpdateService}
                     location={location}
                     user={this.state.user}
-                />
-                :
-                <Redirect to='/login' />
+                  />
+                  :
+                  <Redirect to='/login' />
               }
             />
             <Route
               exact path="/directaidlinks"
               render={(props) => (
-                <DirectAidLinks
+                <LinksPage
                   {...props}
                 />
               )}
             />
             <Route
+              exact path="/linkdetail"
+              render={({ location }) =>
+                <LinkDetailPage
+                  location={location}
+                  // handleDeleteService={this.handleDeleteService}
+                  user={this.state.user}
+                />
+              }
+            />
+            <Route
               exact path="/addlink"
               render={(props) => (
-                <AddLink
-                links={this.state.links}
+                <AddLinkPage
+                  links={this.state.links}
                   {...props}
                 />
               )}

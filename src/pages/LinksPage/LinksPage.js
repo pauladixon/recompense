@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './DirectAidLinks.css';
+import './LinksPage.css';
 
 const DirectAidLinks = (props) => {
 
@@ -10,6 +10,7 @@ const DirectAidLinks = (props) => {
         <div className="page-header">
           <p >Direct Aid:</p>  
           <Link className="add-link" to="/addlink">Post A Link</Link>
+          <Link className="add-link" to="/linkdetail">Link Detail</Link>
         </div>
         <div className="page-content">
            
