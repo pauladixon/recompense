@@ -31,7 +31,7 @@ class EditServicePage extends Component {
         })
     }
 
-    renderEditItemForm() {
+    renderEditServiceForm() {
         return (
             <>
                 <h1>Edit Service</h1>
@@ -105,7 +105,7 @@ class EditServicePage extends Component {
     }
 
     render() {
-        return this.state.formData ? this.renderEditItemForm() : <Redirect to='/marketplace' />;
+        return this.state.formData ? this.renderEditServiceForm() : <Redirect to='/marketplace' />;
     }
 }
 

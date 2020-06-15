@@ -11,6 +11,7 @@ import EditServicePage from '../EditServicePage/EditServicePage'
 import userService from '../../utils/userService';
 import DirectAidLinks from '../DirectAidLinks/DirectAidLinks';
 import * as servicesAPI from '../../services/services-api'
+import * as linksAPI from '../../services/links-api';
 import AddServicePage from '../AddServicePage/AddServicePage'
 import AddLink from '../../components/AddLink/AddLink';
 
@@ -20,6 +21,7 @@ class App extends Component {
     user: userService.getUser(),
     services: [],
     choices: [],
+    links: []
   }
 
   handleLogout = () => {
@@ -57,6 +59,14 @@ class App extends Component {
     }), () => this.props.history.push('/servicesfloor'))
   }
 
+  handleAddLink = async newLinkData => {
+    const newLink = await linksAPI.create(newLinkData)
+    this.setState(state => ({
+      links: [...state.links, newLink]
+    }),
+      () => this.props.history.push('/directaidlinks'))
+  }
+
   async componentDidMount() {
     const services = await servicesAPI.getAll()
     this.setState({ services })
@@ -72,7 +82,7 @@ class App extends Component {
             handleLogout={this.handleLogout}
           />
         </header>
-        <body>
+        <div className="body">
           <Switch>
             <Route
               exact path="/"
@@ -149,12 +159,13 @@ class App extends Component {
               exact path="/addlink"
               render={(props) => (
                 <AddLink
+                links={this.state.links}
                   {...props}
                 />
               )}
             />
           </Switch>
-        </body>
+        </div>
       </div>
     );
   }

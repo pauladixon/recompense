@@ -4,26 +4,26 @@ const BASE_URL = '/api/services'
 
 export function getAll() {
     return fetch(BASE_URL)
-    .then(res => res.json())
+        .then(res => res.json())
 }
 
 export function create(service) {
     const options = {
         method: 'POST',
         headers: {
-            'Content-type': 'applications/json',
+            'Content-type': 'application/json',
             'Authorization':  'Bearer ' + tokenService.getToken()
         },
         body: JSON.stringify(service)
     }
-    return fetch(BASE_URL, options).then(res => res.json)
+    return fetch(BASE_URL, options).then(res => res.json())
 }
 
 export function update(service) {
     const options = {
         method: 'PUT',
         headers: {
-            'Content-type': 'applications/json',
+            'Content-type': 'application/json',
             'Authorization': 'Bearer ' + tokenService.getToken()
         },
         body: JSON.stringify(service)
