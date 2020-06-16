@@ -1,0 +1,62 @@
+.detail-card-container {
+    margin-left: 300px;
+
+}
+
+.detail-card {
+    border: solid #3c0c15;
+    background-color:#d9c9ba;
+    color: floralwhite;
+    margin-left: 100px;
+    padding: 10px 20px 10px 20px;
+    color: black;
+    max-width: 600px;
+    min-height: 100px;
+    display: grid;
+    border-radius: 10px;
+
+}
+
+.line-item {
+    margin: 0px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-label {
+    color: #3c0c15;
+    font-size: 12px;
+    margin-right: 50px;
+}
+
+.service-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-links {
+    margin: 30px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+}
+
+.edit {
+    background-color: white;
+    color: black;
+    width: 30px;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.delete {
+    background-color: white;
+    border: none;
+    width: 60px;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+}

@@ -1,17 +1,26 @@
-body {
-    background-color: #FFF4DE;
+html {
+  background-color: #FFF4DE;
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .App {
   text-align: center;
-  font-family: Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
   color: black;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
 .title {
   text-decoration: none;
-  color: black;
-  font-size: 14px;
+  color:	#3c0c15;
+  font-size: 42px;
+  font-family: 'Permanent Marker'
 }
 
 .title:hover {

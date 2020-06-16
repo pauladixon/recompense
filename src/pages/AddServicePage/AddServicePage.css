@@ -1,7 +1,6 @@
-.select-dropdown {
-    width: 300px;
-}
 
-/* .add-service-page {
-    background-color: white;
-} */
+.add-service-page {
+    display: flex;
+    justify-content: flex-start;
+    background-color: yellow;
+}
