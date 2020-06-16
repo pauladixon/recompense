@@ -13,7 +13,6 @@ const LinksPage = (props) => {
         {/* <Link className="add-link" to="/linkdetail">Link Detail</Link> */}
       </div>
       <div className="page-content">
-
         <div className="posts">
           {props.links.map(link =>
             <LinkItem link={link} key={link._id} />

@@ -40,3 +40,10 @@ hr {
 .comment-header {
     margin-right: 500px;
 }
+
+.detail-page {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

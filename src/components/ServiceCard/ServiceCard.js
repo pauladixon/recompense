@@ -6,7 +6,7 @@ import './ServiceCard.css'
 function ServiceCard({ service, handleDeleteService, user }) {
     user = user === null ? user = NaN : user
     const categories = service.categories.map((category, idx) =>
-        <span key={category.value}>{idx !== 0 ? ', ' : ''}{category.label}</span>)
+        <span key={category.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{category.label}</span>)
     return (
         <>
             <div className='detail-card'>
@@ -25,7 +25,7 @@ function ServiceCard({ service, handleDeleteService, user }) {
                         </div>
                         <div className='line-item'>
                             <span className='service-label'>Categories: </span>
-                            <span className='service-info'>{categories}</span>
+                            <span className='service-info categories'>{categories}</span>
                         </div>
                         <div className='line-item'>
                             <span className='service-label'>Description: </span>
@@ -40,20 +40,27 @@ function ServiceCard({ service, handleDeleteService, user }) {
                     </div>
                     <div className='card-links'>
                         {user._id === service.user &&
+                            <button
+                                className='delete'
+                                onClick={() => handleDeleteService(service._id)}
+                            >
+                                Remove
+                        </button>
+                        }
+                        <Link
+                            className='home-link'
+                            to='/servicesfloor'
+                        >
+                            Return to Services Floor
+                        </Link>
+                        {user._id === service.user &&
                             <Link
                                 className='edit'
                                 to={{
                                     pathname: '/editservice',
                                     state: { service },
                                 }}>Edit</Link>
-                        } {user._id === service.user &&
-                            <button
-                                className='delete'
-                                onClick={() => handleDeleteService(service._id)}
-                            >
-                                Delete
-                        </button>
-                        }
+                        } 
                     </div>
                 </div>
             </div>

@@ -51,7 +51,7 @@ class AddServicePage extends Component {
           </div>
           <div className="form-group">
             <label>Description: </label>
-            <input 
+            <textarea 
               className="signup-form"
               name="description"
               value={this.state.formData.description}
