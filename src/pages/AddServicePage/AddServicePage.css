@@ -2,5 +2,58 @@
 .add-service-page {
     display: flex;
     justify-content: flex-start;
-    background-color: yellow;
+}
+
+.add-service-form {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+}
+
+.btn {
+    margin-top: 20px;
+    margin-left: 50px;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    background-color: #3c0c15;
+    color: white;
+    border-radius: 4px;
+}
+
+.form-group {
+    color: #3c0c15;
+    font-size: 12px;
+    margin-right: 50px;
+    text-align: left;
+}
+
+.form-item {
+    max-width: 500px;
+    margin: 6px 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-form {
+    width: 200px;
+    height: 32px;
+    background-color: white;
+    border: solid .25px #3c0c15;
+    border-radius: 4px;
+}
+
+.description {
+    height: 100px;
+}
+
+.service-categories {
+    width: 206px;
+    font-size: 12px;
+    background-color: white;
+    border: solid .25px #3c0c15;
+    border-radius: 4px;
 }

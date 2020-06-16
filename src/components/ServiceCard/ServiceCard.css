@@ -1,16 +1,14 @@
 .detail-card-container {
     margin-left: 300px;
-
 }
 
 .detail-card {
     margin: 20px;
     background-color:#d9c9ba;
     color: floralwhite;
-    margin-left: 100px;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px 10px 15px;
     color: black;
-    max-width: 600px;
+    width: 500px;
     min-height: 100px;
     display: grid;
     border-radius: 4px;
@@ -24,12 +22,12 @@
     font-style: italic;
     letter-spacing: 3px;;
     text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.185);
-    margin-bottom: 40px;
+    margin: 30px 0px;
     border-radius: 10px;
 }
 
 .line-item {
-    margin: 5px 80px;
+    margin: 6px 80px;
     display: flex;
     justify-content: space-between;
 }
@@ -37,12 +35,14 @@
 .categories {
     display: flex;
     flex-flow: row wrap;
+    margin-right: 5px;
 }
 
 .service-label {
     color: #3c0c15;
     font-size: 12px;
     margin-right: 50px;
+    min-width: 70px;
     text-align: left;
 }
 
@@ -51,10 +51,11 @@
     justify-content: center;
     align-items: center;
     font-size: 13px;
+    width: 250px;
 }
 
 .card-links {
-    margin: 30px;
+    margin: 40px;
     display: flex;
     justify-content: space-around;
     font-size: 12px;

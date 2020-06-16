@@ -57,6 +57,11 @@ a {
   flex-direction: row;
 }
 
+.page-content {
+  display: flex;
+  margin: 50px 0px 0px 50px;
+}
+
 .page-header {
   display: flex;
   justify-content: flex-start;
@@ -68,22 +73,12 @@ a {
   margin: 40px 0px 0px 20px;
 }
 
-.page-content {
-  margin: 50px 80px;
-}
-
-.posts {
-  display: flex;
-  justify-content: flex-start;
-}
-
 .add-link {
   background-color: #3c0c15;
   color: white;
   border: none;
   padding: 8px 0px;
   width: 130px;
-  margin-left: 30px;
   font-size: 12px;
   border-radius: 4px;
 }
