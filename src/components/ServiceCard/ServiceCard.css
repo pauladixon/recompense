@@ -1,14 +1,20 @@
+.detail-card-container {
+    margin-left: 300px;
+
+}
+
 .detail-card {
     border: solid #3c0c15;
-    margin: 20px;
     background-color:#d9c9ba;
     color: floralwhite;
-    margin: 100px;
+    margin-left: 100px;
     padding: 10px 20px 10px 20px;
     color: black;
     max-width: 600px;
     min-height: 100px;
     display: grid;
+    border-radius: 10px;
+
 }
 
 .line-item {
