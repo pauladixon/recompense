@@ -6,25 +6,18 @@ function ServiceFloorItem({ service }) {
     return (
         <>
             <div className='serviceflooritem'>
-                <div >
-                    <div className="service-name">
-                       <p >{service.name}</p> 
-                    </div>
-                    
-                    <div>
+                <div>
+                    <p>{service.name}</p> 
                     <p>{service.city}</p>
                     <p>{service.exchange}</p>
-
-                    </div>
                 </div>
                 <div className='serviceflooritem-detail-link'>
                     <Link 
-                        className="detail-link"
                         to={{
                             pathname: '/servicedetail',
                             state: { service }
                         }}
-                    > Details
+                    > details
                     </Link>
                 </div>
             </div>

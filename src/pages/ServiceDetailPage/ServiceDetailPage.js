@@ -7,12 +7,11 @@ function ServiceDetailPage (props) {
     const service = props.location.state.service
     return (
         <>
-            <div className="detail-header">
+            <div>
             <h4>Service Details:</h4>
             </div>
-            <div className="detail-page">
+            <div>
             <ServiceCard
-                className="service-card"
                 key={service._id}
                 service={service}
                 user={props.user}
@@ -20,7 +19,7 @@ function ServiceDetailPage (props) {
                 />
                 </div>
             <hr></hr>
-              <Link className="return-link" to='/servicesfloor'>Return to Services Floor</Link>  
+              <Link to='/servicesfloor'>Return to Services Floor</Link>  
         </>
     )
 }
