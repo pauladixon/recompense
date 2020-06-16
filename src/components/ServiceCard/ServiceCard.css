@@ -4,7 +4,7 @@
 }
 
 .detail-card {
-    border: solid #3c0c15;
+    margin: 20px;
     background-color:#d9c9ba;
     color: floralwhite;
     margin-left: 100px;
@@ -13,27 +13,44 @@
     max-width: 600px;
     min-height: 100px;
     display: grid;
-    border-radius: 10px;
+    border-radius: 4px;
+    box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
+}
 
+.card-name {
+    color: #3c0c15;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 3px;;
+    text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.185);
+    margin-bottom: 40px;
+    border-radius: 10px;
 }
 
 .line-item {
-    margin: 0px 100px;
+    margin: 5px 80px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+}
+
+.categories {
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .service-label {
     color: #3c0c15;
     font-size: 12px;
     margin-right: 50px;
+    text-align: left;
 }
 
 .service-info {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 13px;
 }
 
 .card-links {
@@ -44,19 +61,22 @@
 }
 
 .edit {
-    background-color: white;
-    color: black;
+    background-color: #3c0c15;
+    color: white;
     width: 30px;
     border: none;
     padding: 8px;
-    border-radius: 8px;
+    font-size: 12px;
+    border-radius: 4px;
 }
 
 .delete {
-    background-color: white;
     border: none;
     width: 60px;
     padding: 8px;
     border-radius: 8px;
     font-size: 12px;
+    background-color: #3c0c15;
+    color: white;
+    border-radius: 4px;
 }

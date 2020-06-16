@@ -1,7 +1,11 @@
 .add-service {
-    font-weight: lighter;
-    color: black;
-    margin-left: 40px;
+    background-color: #3c0c15;
+    color: white;
+    border: none;
+    padding: 8px 0px;
+    width: 100px;
+    font-size: 12px;
+    border-radius: 4px;
 }
 
 .add-service:hover {
@@ -14,24 +18,15 @@
 }
 
 .page-content {
-    width: 80%;
-    padding: 0px 30px;
     display: flex;
 }
 
 .posts {
     display: flex;
     flex-flow: row wrap;
-    
+    margin-right: 20px;
 }
 
 .service-page {
     display: flex;
-    flex-direction: row;
 }
-
-/* .posts {
-    display: flex;
-    flex-flow: row wrap;
-    flex-direction: column-reverse;
-} */

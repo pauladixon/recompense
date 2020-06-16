@@ -9,12 +9,11 @@ function ServiceCard({ service, handleDeleteService, user }) {
         <span key={category.value}>{idx !== 0 ? ', ' : ''}{category.label}</span>)
     return (
         <>
-            <div className="detail-card-container">
-
-                <div className='detail-card'>
-                    <div>
-                        <h4>{service.name}</h4>
-                    </div>
+            <div className='detail-card'>
+                <div>
+                    <p className='card-name'>{service.name}</p>
+                </div>
+                <div>
                     <div>
                         <div className='line-item'>
                             <span className='service-label'>Exchange: </span>

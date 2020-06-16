@@ -10,8 +10,9 @@
 
 .nav-bar {
     border-bottom: solid 1px #3c0c15;
+    padding-bottom: 5px;
     margin-left: 50px;
-    margin-top: 25px;
+    margin-top: 15px;
     min-width: 70%;
     display: flex;
     justify-content: flex-end;
