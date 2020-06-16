@@ -23,3 +23,14 @@
     flex-flow: row wrap;
     margin-right: 40px;
 }
+
+.service-page {
+    display: flex;
+    flex-direction: row;
+}
+
+/* .posts {
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: column-reverse;
+} */

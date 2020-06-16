@@ -11,4 +11,32 @@
 .link-button {
     text-align: right;
     margin: 100px;
+    border-radius: 8px;
+    margin: 40px;
+}
+
+.service-card {
+    margin-left: 400px;
+}
+
+.home-link {
+    display: flex;
+    justify-content: flex-end;
+    width: 130px;
+}
+
+.comments-form {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 400px;
+}
+
+hr {
+    color: black;
+    width: 1000px;
+    margin-left: 400px;
+}
+
+.comment-header {
+    margin-right: 500px;
 }

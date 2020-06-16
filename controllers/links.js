@@ -9,12 +9,12 @@ module.exports = {
 }
 
 async function index(req, res) {
-    const links = await Service.find({})
+    const links = await Link.find({})
     res.status(200).json(links)
 }
 
 async function show(req, res) {
-    const link = await Service.findById(req.params.id)
+    const link = await Link.findById(req.params.id)
     res.status(200).json(link)
 }
 

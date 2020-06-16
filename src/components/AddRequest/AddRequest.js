@@ -1,50 +1,51 @@
-import React, { Component } from 'react';
-import Select from 'react-select';
-import serviceCategories from '../../data';
+import React, { Component} from 'react';
+import Select from 'react-select'
+import serviceCategories from '../../data'
 
-class AddLinkPage extends Component {
-  state = {
-    invalidForm: true,
-    formData: {
-      name: '',
-      description: '',
-      cashapp: '',
-      venmo: '',
-      paypal: '',
-      contactEmail: ''
-    }
-  }
-  formRef = React.createRef()
+class AddRequest extends Component {
+    state = {
+        invalidForm: true,
+        formData: {
+            name: '',
+            categories: '',
+            description: '',
+            exchange: '',
+            city: this.props.city,
+            contactEmail: ''
+        }
+      }
+      formRef = React.createRef()
+    
+      handleSubmit = e => {
+        e.preventDefault()
+        this.props.handleAddRequest(this.state.formData)
+      }
+      handleChange = e => {
+        const formData = { ...this.state.formData, [e.target.name]: e.target.value, }
+        this.setState({
+          formData,
+          invalidForm: !this.formRef.current.checkValidity()
+        })
+      }
 
-  handleSubmit = e => {
-    e.preventDefault()
-    this.props.handleAddLink(this.state.formData)
-  }
-  handleChange = e => {
-    const formData = { ...this.state.formData, [e.target.name]: e.target.value, }
-    this.setState({
-      formData,
-      invalidForm: !this.formRef.current.checkValidity()
-    })
-  }
   render() {
-
     return (
       <div className="Home">
-        <p>add link</p>
-        <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
-          <div className="form-group">
-            <label>Name</label>
-            <input className="signup-form"
+        <p>Add Request</p>
+        <form>
+        <div>
+            <label>Request: </label>
+               <input
+              className="signup-form"
               name="name"
               value={this.state.formData.name}
               onChange={this.handleChange}
               required
-            />
+            /> 
           </div>
           <div className="form-group">
             <label>Description: </label>
-            <input
+            <input 
               className="signup-form"
               name="description"
               value={this.state.formData.description}
@@ -53,28 +54,19 @@ class AddLinkPage extends Component {
             />
           </div>
           <div className="form-group">
-            <label>CashApp: </label>
+            <label>Exchange: </label>
             <input className="signup-form"
               name="exchange"
-              value={this.state.formData.cashapp}
+              value={this.state.formData.exchange}
               onChange={this.handleChange}
               required
             />
           </div>
           <div className="form-group">
-            <label>Venmo: </label>
+            <label>City, State: </label>
             <input className="signup-form"
               name="city"
-              value={this.state.formData.venmo}
-              onChange={this.handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label>Paypal: </label>
-            <input className="signup-form"
-              name="contactEmail"
-              value={this.state.formData.paypal}
+              value={this.state.formData.city}
               onChange={this.handleChange}
               required
             />
@@ -104,11 +96,11 @@ class AddLinkPage extends Component {
             type="submit"
             disabled={this.state.invalidForm}
           >
-            Add Link
+            Add Service
               </button>
         </form>
       </div>
     );
   }
 }
-export default AddLinkPage;
+export default AddRequest;

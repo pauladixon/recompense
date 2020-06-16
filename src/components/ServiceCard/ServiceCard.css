@@ -1,8 +1,13 @@
+.detail-card-container {
+    margin-left: 300px;
+
+}
+
 .detail-card {
     margin: 20px;
     background-color:#d9c9ba;
     color: floralwhite;
-    margin: 100px;
+    margin-left: 100px;
     padding: 10px 20px 10px 20px;
     color: black;
     max-width: 600px;
@@ -20,6 +25,7 @@
     letter-spacing: 3px;;
     text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.185);
     margin-bottom: 40px;
+    border-radius: 10px;
 }
 
 .line-item {

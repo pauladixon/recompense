@@ -13,8 +13,11 @@ import userService from '../../utils/userService';
 import LinksPage from '../LinksPage/LinksPage';
 import * as servicesAPI from '../../services/services-api'
 import * as linksAPI from '../../services/links-api';
+import * as requestsAPI from '../../services/requests-api';
 import AddServicePage from '../AddServicePage/AddServicePage'
 import AddLinkPage from '../../components/AddLinkPage/AddLinkPage';
+import RequestPage from '../../pages/RequestPage/RequestPage';
+import AddRequest from '../../components/AddRequest/AddRequest';
 
 
 class App extends Component {
@@ -68,6 +71,14 @@ class App extends Component {
       () => this.props.history.push('/directaidlinks'))
   }
 
+  handleAddRequest = async newRequestData => {
+    const newRequest = await requestsAPI.create(newRequestData)
+    this.setState(state => ({
+      requests: [...state.requests, newRequest]
+    }),
+      () => this.props.history.push('/directaidlinks'))
+  }
+
   async componentDidMount() {
     const services = await servicesAPI.getAll()
     this.setState({ services })
@@ -83,7 +94,7 @@ class App extends Component {
             handleLogout={this.handleLogout}
           />
         </header>
-        <div className="body">
+        <div className="">
           <Switch>
             <Route
               exact path="/"
@@ -168,12 +179,35 @@ class App extends Component {
             />
             <Route
               exact path="/addlink"
+              render={() =>
+                userService.getUser() ?
+                  <AddLinkPage
+                    handleAddLink={this.handleAddLink}
+                    city={this.state.user.city}
+                  />
+                  :
+                  <Redirect to='/login' />
+              }
+            />
+            <Route
+              exact path="/requests"
               render={(props) => (
-                <AddLinkPage
-                  links={this.state.links}
+                <RequestPage
                   {...props}
                 />
               )}
+            />
+            <Route
+              exact path="/addrequest"
+              render={() =>
+                userService.getUser() ?
+                  <AddRequest
+                    handleAddRequest={this.handleAddRequest}
+                    city={this.state.user.city}
+                  />
+                  :
+                  <Redirect to='/login' />
+              }
             />
           </Switch>
         </div>
