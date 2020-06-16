@@ -18,6 +18,7 @@ app.use('/api/users', require('./routes/api/users'))
 app.use(require('./config/auth'))
 app.use('/api/services', require('./routes/api/services'))
 app.use('/api/links', require('./routes/api/links'))
+app.use('/api/requests', require('./routes/api/requests'))
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'))
