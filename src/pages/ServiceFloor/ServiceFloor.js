@@ -7,8 +7,8 @@ function ServiceFloor(props) {
   return (
     <div className="page">
         <div className="page-header">
-          <p>Services:</p>  
-          <Link className="add-service" to="/addservice">Post A Service</Link>
+          <p className='page-title'>Services for BIPOC ::</p>  
+          <Link className="add-link" to="/addservice">Post a New Service</Link>
         </div>
         <div className="page-content"> 
           <div className="posts">

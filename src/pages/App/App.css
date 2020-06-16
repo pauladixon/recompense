@@ -10,7 +10,7 @@ html {
 
 .App {
   text-align: center;
-  font-family: Arial, sans-serif;
+  font-family: Helvetica;
   color: black;
 }
 
@@ -19,8 +19,9 @@ html {
 .title {
   text-decoration: none;
   color:	#3c0c15;
-  font-size: 42px;
-  font-family: 'Permanent Marker'
+  min-width: 200px;
+  font-size: 22px;
+  font-family: 'Permanent Marker';
 }
 
 .title:hover {
@@ -50,17 +51,31 @@ a {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  font-size: 14px;
   width: 200px;
-  font-weight: bold;
-  margin-top: 100px;
-  margin-left: 20px;
+  margin: 40px 20px;
 }
 
 .page-content {
-  margin-left: 180px;
+  margin: 0px 180px;
 }
 
 .posts {
   display: flex;
   justify-content: flex-start;
+}
+
+.add-link {
+  background-color: #3c0c15;
+  color: white;
+  border: none;
+  padding: 8px 0px;
+  width: 130px;
+  margin-left: 30px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.add-link:hover {
+  font-weight: bold;
 }

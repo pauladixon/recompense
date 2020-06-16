@@ -1,9 +1,14 @@
 .home-link {
-    background-color: white;
-    color: black;
+    background-color: #3c0c15;
+    color: white;
     width: 30px;
     border: none;
     padding: 8px;
     font-size: 12px;
-    border-radius: 8px;
+    border-radius: 4px;
+}
+
+.link-button {
+    text-align: right;
+    margin: 100px;
 }

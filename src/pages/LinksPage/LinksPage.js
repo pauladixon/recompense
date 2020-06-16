@@ -8,7 +8,7 @@ const LinksPage = (props) => {
   return (
     <div className="page">
       <div className="page-header">
-        <p >Direct Aid:</p>
+        <p className='page-title'>Direct Aid:</p>
         <Link className="add-link" to="/addlink">Post A Link</Link>
         {/* <Link className="add-link" to="/linkdetail">Link Detail</Link> */}
       </div>

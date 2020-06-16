@@ -15,11 +15,11 @@
 
 .page-content {
     width: 80%;
-    padding: 0px 30px;
     display: flex;
 }
 
 .posts {
     display: flex;
     flex-flow: row wrap;
+    margin-right: 40px;
 }

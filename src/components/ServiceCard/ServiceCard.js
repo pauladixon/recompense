@@ -11,7 +11,7 @@ function ServiceCard({ service, handleDeleteService, user }) {
         <>
             <div className='detail-card'>
                 <div>
-                    <h4>{service.name}</h4>
+                    <p className='card-name'>{service.name}</p>
                 </div>
                 <div>
                     <div className='line-item'>
@@ -24,7 +24,7 @@ function ServiceCard({ service, handleDeleteService, user }) {
                     </div>
                     <div className='line-item'>
                         <span className='service-label'>Categories: </span>
-                        <span className='service-info'>{categories}</span>
+                        <span className='service-info categories'>{categories}</span>
                     </div>
                     <div className='line-item'>
                         <span className='service-label'>Description: </span>
