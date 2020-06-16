@@ -5,22 +5,26 @@ import './ServiceFloorItem.css'
 function ServiceFloorItem({ service }) {
     return (
         <>
-            <div className='serviceflooritem'>
-                <div>
-                    <p>{service.name}</p>
-                    <p>{service.city}</p>
-                    <p>{service.exchange}</p>
+            <Link 
+                className='link'
+                to={{
+                    pathname: '/servicedetail',
+                    state: { service }
+                }}
+            >
+                <div className='serviceflooritem'>
+                    <div>
+                        <div className='serviceflooritem-detail-location'>
+                            <p className="location">{service.city}</p>
+                        </div>
+                        <br></br>
+                        <div className='serviceflooritem-detail-name'>
+                            <p className='name'>{service.name}</p>
+                        </div>
+                        <br></br>
+                    </div>
                 </div>
-                <div className='serviceflooritem-detail-link'>
-                    <Link 
-                        to={{
-                            pathname: '/servicedetail',
-                            state: { service }
-                        }}
-                    > details
-                    </Link>
-                </div>
-            </div>
+            </Link>
         </>
     )
 }

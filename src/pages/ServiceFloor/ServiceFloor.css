@@ -8,7 +8,14 @@
     font-weight: bold;
 }
 
-.posts {
+.page {
+    display: grid;
+    width: 100%;
+}
+
+.page-content {
+    width: 80%;
+    padding: 0px 30px;
     display: flex;
     flex-flow: row wrap;
 }

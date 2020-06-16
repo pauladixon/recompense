@@ -1,0 +1,9 @@
+.home-link {
+    background-color: white;
+    color: black;
+    width: 30px;
+    border: none;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 8px;
+}

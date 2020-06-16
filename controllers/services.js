@@ -26,8 +26,13 @@ async function create(req, res) {
 }
 
 async function update(req, res) {
-    const updatedService = await Service.findByIdAndUpdate(req.params.id, req.body, {new:true})
-    res.status(200).json(updatedService)
+    try {
+        const updatedService = await Service.findByIdAndUpdate(req.params.id, req.body, {new: true})
+        res.status(200).json(updatedService)
+    }
+    catch(err){
+        res.status(500).json(err)
+    }
 }
 
 async function deleteOne(req, res) {
