@@ -8,7 +8,7 @@ function ServiceDetailPage(props) {
 
     return (
         <>
-            <div className='detail-page'>
+            <div className='post-detail'>
                 <ServiceCard
                     className="service-card"
                     key={service._id}
@@ -17,8 +17,12 @@ function ServiceDetailPage(props) {
                     handleDeleteService={props.handleDeleteService}
                 />
             </div>
-            <hr />
-            <p className="comment-header">Comments:</p>
+            <div className='break-container'>
+                <div className="break"></div>
+            </div>
+            <div className='title-container'>
+                <p className="comment-title">Comments:</p>          
+            </div>
             <div className="comments-form">
 
                 <form>

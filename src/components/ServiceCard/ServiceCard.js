@@ -16,24 +16,24 @@ function ServiceCard({ service, handleDeleteService, user }) {
                 <div>
                     <div>
                         <div className='line-item'>
-                            <span className='service-label'>Exchange: </span>
+                            <span className='service-label'>Exchange :: </span>
                             <span className='service-info'>{service.exchange}</span>
                         </div>
                         <div className='line-item'>
-                            <span className='service-label'>City, State </span>
+                            <span className='service-label'>City, State :: </span>
                             <span className='service-info'>{service.city}</span>
                         </div>
                         <div className='line-item'>
-                            <span className='service-label'>Categories: </span>
+                            <span className='service-label'>Categories :: </span>
                             <span className='service-info categories'>{categories}</span>
                         </div>
                         <div className='line-item'>
-                            <span className='service-label'>Description: </span>
+                            <span className='service-label'>Description :: </span>
                             <span className='service-info'>{service.description}</span>
                         </div>
                         {user._id &&
                             <div className='line-item'>
-                                <span className='service-label'>Contact: </span>
+                                <span className='service-label'>Contact :: </span>
                                 <span className='service-info'>{service.creator} at {service.contactEmail}</span>
                             </div>
                         }
