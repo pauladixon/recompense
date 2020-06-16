@@ -77,7 +77,7 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <Link to='' className='title'>:: recompense ::</Link>
+          <Link to='' className='title'>recompense</Link>
           <NavBar
             user={this.state.user}
             handleLogout={this.handleLogout}

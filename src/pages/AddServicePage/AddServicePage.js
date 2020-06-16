@@ -40,7 +40,7 @@ class AddServicePage extends Component {
           <p>add service</p>
           <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
               <div className="form-group">
-                  <label>Name</label>
+                  <label>Service: </label>
                   <input className="form-control"
                       name="name"
                       value={this.state.formData.name}
@@ -49,18 +49,7 @@ class AddServicePage extends Component {
                   />
               </div>
               <div className="form-group">
-                  <label>Categories</label>
-                      <Select
-                          value={this.state.formData.categories}
-                          isMulti
-                          name="categories"
-                          onChange={this.handleChangeCategories}
-                          options={serviceCategories}
-                          required
-                      />
-              </div>
-              <div className="form-group">
-                  <label>Description</label>
+                  <label>Description: </label>
                   <input className="form-control"
                       name="description"
                       value={this.state.formData.description}
@@ -69,7 +58,7 @@ class AddServicePage extends Component {
                   />
               </div>
               <div className="form-group">
-                  <label>Exchange</label>
+                  <label>Exchange: </label>
                   <input className="form-control"
                       name="exchange"
                       value={this.state.formData.exchange}
@@ -78,7 +67,7 @@ class AddServicePage extends Component {
                   />
               </div>
               <div className="form-group">
-                  <label>City, State</label>
+                  <label>City, State: </label>
                   <input className="form-control"
                       name="city"
                       value={this.state.formData.city}
@@ -87,13 +76,24 @@ class AddServicePage extends Component {
                   />
               </div>
               <div className="form-group">
-                  <label>Service Contact Info</label>
+                  <label>Contact Email: </label>
                   <input className="form-control"
                       name="contactEmail"
                       value={this.state.formData.contactEmail}
                       onChange={this.handleChange}
                       required
                   />
+              </div>
+              <div className="form-group">
+                  <label>Categories: </label>
+                      <Select
+                          value={this.state.formData.categories}
+                          isMulti
+                          name="categories"
+                          onChange={this.handleChangeCategories}
+                          options={serviceCategories}
+                          required
+                      />
               </div>
               <button
                   className="btn"

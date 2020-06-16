@@ -1,12 +1,23 @@
 .serviceflooritem {
-    border: solid black;
+    border: solid #3c0c15;
     margin: 20px;
-    padding: 30px;
-    background-color: white;
-    min-width: 100px;
+    padding: 10px 20px 40px 20px;
+    background-color:#d9c9ba;
+    color: floralwhite;
+    min-width: 150px;
     min-height: 100px;
 }
 
-.serviceflooritem-detail-link {
-    text-align: right;
+.name {
+    color: #3c0c15;
+    font-size: 16px;
+}
+
+.serviceflooritem-detail-location {
+    text-align: left;
+}
+
+.location {
+    font-size: 12px;
+    color: black;
 }

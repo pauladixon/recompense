@@ -8,10 +8,11 @@
 }
 
 .nav-bar {
-    border-bottom: solid 1px black;
+    border-bottom: solid 1px #3c0c15;
     margin-left: 50px;
+    margin-top: 25px;
     min-width: 70%;
     display: flex;
     justify-content: flex-end;
-    font-size: 12px;
+    font-size: 13px;
 }
