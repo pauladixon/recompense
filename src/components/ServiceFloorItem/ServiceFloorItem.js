@@ -6,7 +6,6 @@ function ServiceFloorItem({ service }) {
     return (
         <>
             <Link 
-                className='link'
                 to={{
                     pathname: '/servicedetail',
                     state: { service }
