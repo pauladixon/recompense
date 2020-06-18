@@ -24,6 +24,10 @@
     border-radius: 4px;
 }
 
+.btn:hover {
+    font-style: bold;
+}
+
 .form-group {
     color: #3c0c15;
     font-size: 12px;
@@ -48,6 +52,7 @@
 
 .description {
     height: 100px;
+    font-family: Helvetica;
 }
 
 .service-categories {
@@ -56,4 +61,28 @@
     background-color: white;
     border: solid .25px #3c0c15;
     border-radius: 4px;
+}
+
+.service-label {
+    margin-top: 3px;
+}
+
+.cancel-button {
+    color: black;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-top: 20px
+}
+
+.cancel-button:hover {
+    font-weight: bold;
+}
+
+.add-links {
+    padding: 20px 78px;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

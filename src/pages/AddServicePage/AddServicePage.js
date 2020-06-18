@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import Select from 'react-select'
 import serviceCategories from '../../data'
 import './AddServicePage.css'
@@ -109,13 +110,16 @@ class AddServicePage extends Component {
                 required
               />
             </div>
-            <button
-              className="btn"
-              type="submit"
-              disabled={this.state.invalidForm}
-            >
-              Add Service
+            <div className='add-links'>
+                <Link className='cancel-button' to='/servicesfloor'>Cancel</Link>
+                <button
+                    className="btn"
+                    type="submit"
+                    disabled={this.state.invalidForm}
+                >
+                    Update Service
                 </button>
+            </div>
           </form>
         </div>
       </div>
