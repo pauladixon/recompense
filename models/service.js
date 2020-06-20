@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const serviceSchema = new Schema({
     user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
     categories: [],
-    city: String,
+    cities: [],
     name: String,
     description: String,
     exchange: String,

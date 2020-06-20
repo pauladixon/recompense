@@ -5,8 +5,13 @@ import './ServiceCard.css'
 
 function ServiceCard({ service, handleDeleteService, user }) {
     user = user === null ? user = NaN : user
+
     const categories = service.categories.map((category, idx) =>
         <span key={category.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{category.label}</span>)
+
+    const cities = service.cities.map((city, idx) =>
+        <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>)
+        
     return (
         <>
             <div className='detail-card'>
@@ -21,7 +26,7 @@ function ServiceCard({ service, handleDeleteService, user }) {
                         </div>
                         <div className='line-item'>
                             <span className='service-label'>City, State :: </span>
-                            <span className='service-info'>{service.city}</span>
+                            <span className='service-info'>{cities}</span>
                         </div>
                         <div className='line-item'>
                             <span className='service-label'>Categories :: </span>
