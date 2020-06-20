@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import Select from 'react-select'
 import { Link, Redirect } from 'react-router-dom'
-import serviceCategories from '../../data'
+import serviceCategories from '../../category-data'
+import serviceCities from '../../city-data'
 
 class EditServicePage extends Component {
     state = {
@@ -27,6 +28,13 @@ class EditServicePage extends Component {
     handleChangeCategories = categories => {
         this.setState({
             formData: {...this.state.formData, categories},
+            invalidForm: !this.formRef.current.checkValidity
+        })
+    }
+
+    handleChangeCities = cities => {
+        this.setState({
+            formData: {...this.state.formData, cities},
             invalidForm: !this.formRef.current.checkValidity
         })
     }
@@ -75,25 +83,17 @@ class EditServicePage extends Component {
                         </div>
                         <div className='form-item'>
                             <label className='service-label'>City, State :: </label>
-                            <input 
-                                className="service-form"
-                                name="city"
-                                value={this.state.formData.city}
-                                onChange={this.handleChange}
+                            <Select
+                                className='service-categories'
+                                value={this.state.formData.cities}
+                                isMulti
+                                name="cities"
+                                onChange={this.handleChangeCities}
+                                options={serviceCities}
                                 required
                             />
-                        </div>
-                        <div className='form-item'>
-                            <label className='service-label'>Contact Email :: </label>
-                            <input 
-                                className="service-form"
-                                name="contactEmail"
-                                value={this.state.formData.contactEmail}
-                                onChange={this.handleChange}
-                                required
-                            />
-                        </div>
-                        <div className='form-item'>
+                            </div>
+                            <div className='form-item'>
                             <label className='service-label'>Categories of Service :: </label>
                             <Select
                                 className='service-categories'
@@ -102,6 +102,16 @@ class EditServicePage extends Component {
                                 name="categories"
                                 onChange={this.handleChangeCategories}
                                 options={serviceCategories}
+                                required
+                            />
+                            </div>
+                            <div className='form-item'>
+                            <label className='service-label'>Contact Email :: </label>
+                            <input 
+                                className="service-form"
+                                name="contactEmail"
+                                value={this.state.formData.contactEmail}
+                                onChange={this.handleChange}
                                 required
                             />
                         </div>

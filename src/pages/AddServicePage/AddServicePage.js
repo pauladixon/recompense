@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Select from 'react-select'
-import serviceCategories from '../../data'
+import serviceCategories from '../../category-data'
+import serviceCities from '../../city-data'
 import './AddServicePage.css'
 
 class AddServicePage extends Component {
@@ -12,7 +13,7 @@ class AddServicePage extends Component {
       categories: '',
       description: '',
       exchange: '',
-      city: this.props.city,
+      city: '',
       contactEmail: ''
     }
   }
@@ -34,6 +35,10 @@ class AddServicePage extends Component {
 
   handleChangeCategories = categories => {
     this.setState({ formData: { ...this.state.formData, categories } })
+  }
+
+  handleChangeCities = cities => {
+    this.setState({ formData: { ...this.state.formData, cities } })
   }
 
   render() {
@@ -80,21 +85,13 @@ class AddServicePage extends Component {
             </div>
             <div className='form-item'>
               <label className='service-label'>City, State :: </label>
-              <input 
-                className="service-form"
-                name="city"
-                value={this.state.formData.city}
-                onChange={this.handleChange}
-                required
-              />
-            </div>
-            <div className='form-item'>
-              <label className='service-label'>Contact Email :: </label>
-              <input 
-                className="service-form"
-                name="contactEmail"
-                value={this.state.formData.contactEmail}
-                onChange={this.handleChange}
+              <Select
+                className='service-categories'
+                value={this.state.formData.cities}
+                isMulti
+                name="cities"
+                onChange={this.handleChangeCities}
+                options={serviceCities}
                 required
               />
             </div>
@@ -107,6 +104,16 @@ class AddServicePage extends Component {
                 name="categories"
                 onChange={this.handleChangeCategories}
                 options={serviceCategories}
+                required
+              />
+            </div>
+            <div className='form-item'>
+              <label className='service-label'>Contact Email :: </label>
+              <input 
+                className="service-form"
+                name="contactEmail"
+                value={this.state.formData.contactEmail}
+                onChange={this.handleChange}
                 required
               />
             </div>
