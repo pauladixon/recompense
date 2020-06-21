@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import ServiceFloorItem from '../../components/ServiceFloorItem/ServiceFloorItem'
+import SearchBar from '../../components/SearchBar/SearchBar'
 import './ServiceFloor.css'
 
 function ServiceFloor(props) {
@@ -11,6 +12,8 @@ function ServiceFloor(props) {
           <p>This is a place for non-black people to post free and discounted services / offerings / assistance for black people in their communities. Please be mindful of others in this space and put your heart forward.</p> 
           <br></br>
           <Link className="add-service" to="/addservice">Add a Service</Link>
+          <br></br>
+          <SearchBar/>
         </div>
         <div className="page-content"> 
           <div className="posts">
