@@ -1,4 +1,4 @@
-const Link = require('../models/link')
+const Request= require('../models/request')
 
 module.exports = {
     index,
@@ -12,7 +12,7 @@ async function index(req, res) {
 }
 
 async function show(req, res) {
-    const request = await Service.findById(req.params.id)
+    const request = await Request.findById(req.params.id)
     res.status(200).json(request)
 }
 

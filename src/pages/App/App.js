@@ -7,6 +7,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import Home from "../../pages/Home/Home.js";
 import ServiceFloor from '../ServiceFloor/ServiceFloor';
 import ServiceDetailPage from '../ServiceDetailPage/ServiceDetailPage'
+import RequestDetailPage from '../RequestDetailPage/RequestDetailPage'
 import LinkDetailPage from '../LinkDetailPage/LinkDetailPage'
 import EditServicePage from '../EditServicePage/EditServicePage'
 import userService from '../../utils/userService';
@@ -25,7 +26,8 @@ class App extends Component {
     user: userService.getUser(),
     services: [],
     choices: [],
-    links: []
+    links: [],
+    requests: []
   }
 
   handleLogout = () => {
@@ -76,12 +78,14 @@ class App extends Component {
     this.setState(state => ({
       requests: [...state.requests, newRequest]
     }),
-      () => this.props.history.push('/directaidlinks'))
+      () => this.props.history.push('/requests'))
   }
 
   async componentDidMount() {
     const services = await servicesAPI.getAll()
     this.setState({ services })
+    const requests = await requestsAPI.getAll()
+    this.setState({ requests })
   }
 
   render() {
@@ -191,9 +195,9 @@ class App extends Component {
             />
             <Route
               exact path="/requests"
-              render={(props) => (
+              render={() => (
                 <RequestPage
-                  {...props}
+                  requests={this.state.requests}
                 />
               )}
             />
@@ -207,6 +211,16 @@ class App extends Component {
                   />
                   :
                   <Redirect to='/login' />
+              }
+            />
+            <Route
+              exact path="/requestdetail"
+              render={({ location }) =>
+                <RequestDetailPage
+                  location={location}
+                  handleDeleteRequest={this.handleDeleteRequest}
+                  user={this.state.user}
+                />
               }
             />
           </Switch>

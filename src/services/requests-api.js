@@ -7,14 +7,14 @@ export function getAll() {
         .then(res => res.json())
 }
 
-export function create(linkrequest) {
+export function create(request) {
     const options = {
         method: 'POST',
         headers: {
             'Content-type': 'application/json',
             'Authorization':  'Bearer ' + tokenService.getToken()
         },
-        body: JSON.stringify(linkrequest)
+        body: JSON.stringify(request)
     }
     return fetch(BASE_URL, options).then(res => res.json())
 }
