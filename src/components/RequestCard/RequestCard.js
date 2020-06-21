@@ -11,7 +11,7 @@ function RequestCard({ request, handleDeleteRequest, user }) {
 
     const cities = request.cities.map((city, idx) =>
         <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>)
-        
+
     return (
         <>
             <div className='detail-card'>
@@ -65,7 +65,7 @@ function RequestCard({ request, handleDeleteRequest, user }) {
                                     pathname: '/editrequest',
                                     state: { request },
                                 }}>Edit</Link>
-                        } 
+                        }
                     </div>
                 </div>
             </div>

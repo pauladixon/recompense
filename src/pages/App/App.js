@@ -10,6 +10,7 @@ import ServiceDetailPage from '../ServiceDetailPage/ServiceDetailPage'
 import RequestDetailPage from '../RequestDetailPage/RequestDetailPage'
 import LinkDetailPage from '../LinkDetailPage/LinkDetailPage'
 import EditServicePage from '../EditServicePage/EditServicePage'
+import EditRequestPage from '../EditRequestPage/EditRequestPage'
 import userService from '../../utils/userService';
 import LinksPage from '../LinksPage/LinksPage';
 import * as servicesAPI from '../../services/services-api'
@@ -79,6 +80,24 @@ class App extends Component {
       requests: [...state.requests, newRequest]
     }),
       () => this.props.history.push('/requests'))
+  }
+
+  handleUpdateRequest = async updatedRequestData => {
+    const updatedRequest = await requestsAPI.update(updatedRequestData)
+    const newRequestsArray = this.state.requests.map(e =>
+      e._id === updatedRequest._id ? updatedRequest : e
+    )
+    this.setState(
+      { requests: newRequestsArray },
+      () => this.props.history.push('/requests')
+    )
+  }
+
+  handleDeleteRequest = async id => {
+    await requestsAPI.deleteOne(id)
+    this.setState(state => ({
+      requests: state.requests.filter(request => request._id !== id)
+    }), () => this.props.history.push('/requests'))
   }
 
   async componentDidMount() {
@@ -221,6 +240,19 @@ class App extends Component {
                   handleDeleteRequest={this.handleDeleteRequest}
                   user={this.state.user}
                 />
+              }
+            />
+            <Route
+              exact path="/editrequest"
+              render={({ location }) =>
+                userService.getUser() ?
+                  <EditRequestPage
+                    handleUpdateRequest={this.handleUpdateRequest}
+                    location={location}
+                    user={this.state.user}
+                  />
+                  :
+                  <Redirect to='/login' />
               }
             />
           </Switch>
