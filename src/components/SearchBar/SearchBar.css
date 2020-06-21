@@ -1,0 +1,41 @@
+.search-item {
+    text-align: left;
+    margin-bottom: 1px;
+}
+
+.search-bar {
+    color: #3c0c15;
+    font-size: 12px;
+}
+
+.search-select {
+    width: 160px;
+    margin-top: 5px;
+}
+
+.search-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-btn {
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    height: 37.2px;
+    font-size: 12px;
+    background-color: #3c0c15;
+    color: white;
+    border-radius: 4px;
+    margin-left: 3px;
+    margin-top: 5px;
+}
+
+.search-btn:hover {
+    font-style: bold;
+}
+
+.search-label { 
+    margin-left: 2px;
+}
