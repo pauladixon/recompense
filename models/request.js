@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const requestSchema = new Schema({
     user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
     categories: [],
-    city: String,
+    cities: [],
     name: String,
     description: String,
     exchange: String,
@@ -12,4 +12,4 @@ const requestSchema = new Schema({
     creator: String,
 }, { timestamps: true})
 
-module.exports = mongoose.model('Link', requestSchema)
+module.exports = mongoose.model('Request', requestSchema)

@@ -1,0 +1,83 @@
+.detail-card-container {
+    margin-left: 300px;
+}
+
+.detail-card {
+    margin: 20px;
+    background-color:#d9c9ba;
+    color: floralwhite;
+    padding: 10px 20px 10px 15px;
+    color: black;
+    width: 500px;
+    min-height: 100px;
+    display: grid;
+    border-radius: 4px;
+    box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
+}
+
+.card-name {
+    color: #3c0c15;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 3px;;
+    text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.185);
+    margin: 30px 0px;
+    border-radius: 10px;
+}
+
+.line-item {
+    margin: 6px 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: 5px;
+}
+
+.request-label {
+    color: #3c0c15;
+    font-size: 12px;
+    margin-right: 50px;
+    min-width: 70px;
+    text-align: left;
+}
+
+.request-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    width: 250px;
+}
+
+.card-links {
+    margin: 40px 60px 20px 40px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+}
+
+.edit {
+    background-color: #3c0c15;
+    color: white;
+    width: 30px;
+    border: none;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.delete {
+    border: none;
+    width: 60px;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    background-color: #3c0c15;
+    color: white;
+    border-radius: 4px;
+}
