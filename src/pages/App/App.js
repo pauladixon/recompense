@@ -11,6 +11,7 @@ import RequestDetailPage from '../RequestDetailPage/RequestDetailPage'
 import LinkDetailPage from '../LinkDetailPage/LinkDetailPage'
 import EditServicePage from '../EditServicePage/EditServicePage'
 import EditRequestPage from '../EditRequestPage/EditRequestPage'
+import EditLinkPage from '../EditLinkPage/EditLinkPage'
 import userService from '../../utils/userService';
 import LinksPage from '../LinksPage/LinksPage';
 import * as servicesAPI from '../../services/services-api'
@@ -105,6 +106,9 @@ class App extends Component {
     this.setState({ services })
     const requests = await requestsAPI.getAll()
     this.setState({ requests })
+    const links = await linksAPI.getAll()
+    this.setState({ links })
+
   }
 
   render() {
@@ -195,7 +199,7 @@ class App extends Component {
               render={({ location }) =>
                 <LinkDetailPage
                   location={location}
-                  // handleDeleteLink={this.handleDeleteLink}
+                  handleDeleteLink={this.handleDeleteLink}
                   user={this.state.user}
                 />
               }
@@ -207,6 +211,19 @@ class App extends Component {
                   <AddLinkPage
                     handleAddLink={this.handleAddLink}
                     city={this.state.user.city}
+                  />
+                  :
+                  <Redirect to='/login' />
+              }
+            />
+            <Route
+              exact path="/editlink"
+              render={({ location }) =>
+                userService.getUser() ?
+                  <EditLinkPage
+                    handleUpdateLink={this.handleUpdateLink}
+                    location={location}
+                    user={this.state.user}
                   />
                   :
                   <Redirect to='/login' />

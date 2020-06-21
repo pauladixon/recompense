@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import Select from 'react-select';
 import serviceCategories from '../../data';
+import serviceCities from '../../city-data'
 
 class AddLinkPage extends Component {
   state = {
@@ -11,7 +13,9 @@ class AddLinkPage extends Component {
       cashapp: '',
       venmo: '',
       paypal: '',
-      contactEmail: ''
+      contactEmail: '',
+      city: '',
+      categories: ''
     }
   }
   formRef = React.createRef()
@@ -20,6 +24,7 @@ class AddLinkPage extends Component {
     e.preventDefault()
     this.props.handleAddLink(this.state.formData)
   }
+  
   handleChange = e => {
     const formData = { ...this.state.formData, [e.target.name]: e.target.value, }
     this.setState({
@@ -27,6 +32,15 @@ class AddLinkPage extends Component {
       invalidForm: !this.formRef.current.checkValidity()
     })
   }
+
+  handleChangeCategories = categories => {
+    this.setState({ formData: { ...this.state.formData, categories } })
+  }
+
+  handleChangeCities = cities => {
+    this.setState({ formData: { ...this.state.formData, cities } })
+  }
+
   render() {
 
     return (
@@ -55,7 +69,7 @@ class AddLinkPage extends Component {
           <div className="form-group">
             <label>CashApp: </label>
             <input className="signup-form"
-              name="exchange"
+              name="cashapp"
               value={this.state.formData.cashapp}
               onChange={this.handleChange}
               required
@@ -64,7 +78,7 @@ class AddLinkPage extends Component {
           <div className="form-group">
             <label>Venmo: </label>
             <input className="signup-form"
-              name="city"
+              name="venmo"
               value={this.state.formData.venmo}
               onChange={this.handleChange}
               required
@@ -73,7 +87,7 @@ class AddLinkPage extends Component {
           <div className="form-group">
             <label>Paypal: </label>
             <input className="signup-form"
-              name="contactEmail"
+              name="paypal"
               value={this.state.formData.paypal}
               onChange={this.handleChange}
               required
@@ -88,17 +102,32 @@ class AddLinkPage extends Component {
               required
             />
           </div>
-          <div className="form-group">
-            <label>Categories: </label>
+          <div className='form-item'>
+              <label className='request-label'>Categories :: </label>
+              <Select
+                className='request-categories'
+                value={this.state.formData.categories}
+                isMulti
+                name="categories"
+                onChange={this.handleChangeCategories}
+                options={serviceCategories}
+                required
+              />
+            </div>
+          <div className='form-item'>
+            <label className='request-label'>City, State :: </label>
             <Select
-              value={this.state.formData.categories}
+              className='request-categories'
+              value={this.state.formData.cities}
               isMulti
-              name="categories"
-              onChange={this.handleChangeCategories}
-              options={serviceCategories}
+              name="cities"
+              onChange={this.handleChangeCities}
+              options={serviceCities}
               required
             />
           </div>
+          <div className="add-links">
+          <Link className='cancel-button' to='/links'>Cancel</Link>
           <button
             className="btn"
             type="submit"
@@ -106,6 +135,7 @@ class AddLinkPage extends Component {
           >
             Add Link
               </button>
+            </div>
         </form>
       </div>
     );

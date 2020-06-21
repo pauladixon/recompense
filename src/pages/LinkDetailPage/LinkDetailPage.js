@@ -1,6 +1,5 @@
 import React from 'react'
 import LinkCard from '../../components/LinkCard/LinkCard'
-import { Link } from 'react-router-dom'
 
 function LinkDetailPage (props) {
     const link = props.location.state.link
@@ -11,9 +10,8 @@ function LinkDetailPage (props) {
                 key={link._id}
                 link={link}
                 user={props.user}
-                // handleDeleteService={props.handleDeleteService}
+                handleDeleteLink={props.handleDeleteLink}
             />
-            <Link to='/directaidlinks'>Return to Aid Floor</Link>
         </>
     )
 }

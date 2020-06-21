@@ -1,12 +1,13 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import '../../utils/userService'
 import './LinkCard.css'
 
-function LinkCard({ link, user }) {
+function LinkCard({ link, handleDeleteLink, user }) {
     user = user === null ? user = NaN : user
-    // const categories = service.categories.map((category, idx) =>
-    //     <span key={category.value}>{idx !== 0 ? ', ' : ''}{category.label}</span>)
+    const categories = link.categories.map((category, idx) =>
+        <span key={category.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{category.label}</span>)
+
     return (
         <>
             <div className='detail-card'>
@@ -19,24 +20,28 @@ function LinkCard({ link, user }) {
                     <div>cashapp: {link.cashapp}</div>
                     <div>venmo: {link.venmo}</div>
                     <div>paypal: {link.paypal}</div>
+                    <div className='line-item'>
+                            <span className='request-label'>Categories :: </span>
+                            <span className='request-info categories'>{categories}</span>
+                        </div>
                     {user._id &&
                         <div>Contact: {link.creator} at {link.contactEmail}</div>
                     }
                 </div>
-                {/* <div>
+                <div>
                     {user._id === link.user &&
                         <Link to={{
                             pathname: '/edit',
-                            state: { service },
+                            state: { link },
                         }}>Edit</Link>
-                    } {user._id === service.user &&
+                    } {user._id === link.user &&
                         <button
-                            onClick={() => handleDeleteService(service._id)}
+                            onClick={() => handleDeleteLink(link._id)}
                         >
                             Delete
                         </button>
                     }
-                </div> */}
+                </div>
             </div>
         </>
     )
