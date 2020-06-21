@@ -16,7 +16,7 @@ function RequestItem({ request }) {
                     state: { request }
                 }}
             >
-                <div className='reques-titem'>
+                <div className='request-item'>
                     <div>
                         <div className='request-item-detail-location'>
                             <p className="location">{cities}</p>
