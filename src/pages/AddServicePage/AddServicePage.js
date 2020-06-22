@@ -124,7 +124,7 @@ class AddServicePage extends Component {
                     type="submit"
                     disabled={this.state.invalidForm}
                 >
-                    Update Service
+                    Add Service
                 </button>
             </div>
           </form>
