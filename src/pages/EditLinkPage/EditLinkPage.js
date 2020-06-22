@@ -40,10 +40,13 @@ class EditLinkPage extends Component {
     }
 
     renderEditLinkForm() {
+        // const link = props.location.state.link
+
         return (
             <div className="add-service-page">
                 <div className="page-header">
                     <p className='page-title'>Edit Link :: </p>
+                    {/* <Link to={link._id}>cancel</Link> */}
                 </div>
                 <div className='add-service-form'>
                     <form 

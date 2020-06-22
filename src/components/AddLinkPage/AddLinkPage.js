@@ -80,6 +80,7 @@ class AddLink extends Component {
               <input 
                 className="request-form"
                 name="venmo"
+                placeholder="@"
                 value={this.state.formData.venmo}
                 onChange={this.handleChange}
                 required
@@ -90,6 +91,7 @@ class AddLink extends Component {
               <input 
                 className="request-form"
                 name="cashapp"
+                placeholder="@"
                 value={this.state.formData.cashapp}
                 onChange={this.handleChange}
                 required
@@ -100,6 +102,7 @@ class AddLink extends Component {
               <input 
                 className="request-form"
                 name="paypal"
+                placeholder="@"
                 value={this.state.formData.paypal}
                 onChange={this.handleChange}
                 required
