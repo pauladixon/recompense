@@ -75,6 +75,24 @@ class App extends Component {
       () => this.props.history.push('/directaidlinks'))
   }
 
+  handleUpdateLink = async updatedLinkData => {
+    const updatedLink = await linksAPI.update(updatedLinkData)
+    const newLinksArray = this.state.links.map(e =>
+      e._id === updatedLink._id ? updatedLink : e
+    )
+    this.setState(
+      { links: newLinksArray },
+      () => this.props.history.push('/directaidlinks')
+    )
+  }
+
+  handleDeleteLink = async id => {
+    await linksAPI.deleteOne(id)
+    this.setState(state => ({
+      links: state.links.filter(link => link._id !== id)
+    }), () => this.props.history.push('/directaidlinks'))
+  }
+
   handleAddRequest = async newRequestData => {
     const newRequest = await requestsAPI.create(newRequestData)
     this.setState(state => ({
