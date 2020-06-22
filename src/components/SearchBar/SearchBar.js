@@ -51,6 +51,7 @@ class SearchBar extends Component {
                             <button
                                 className="search-btn"
                                 type="submit"
+                                onClick={this.props.handleSearch}
                             >
                                 →
                             </button>

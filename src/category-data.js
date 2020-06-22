@@ -1,4 +1,4 @@
-const serviceCategories = [
+const categories = [
   { value: 'Free for BIPOC', label: 'Free for BIPOC' },
   { value: 'Discounted for BIPOC', label: 'Discounted for BIPOC' },
   { value: 'Break', label: '----------------------------------' },
@@ -19,4 +19,4 @@ const serviceCategories = [
   { value: 'Energy / Body Work', label: 'Energy / Body Work' },
 ]
 
-export default serviceCategories
+export default categories

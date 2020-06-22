@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Select from 'react-select'
-import serviceCategories from '../../category-data'
-import serviceCities from '../../city-data'
 import './AddServicePage.css'
 
 class AddServicePage extends Component {
@@ -91,7 +89,7 @@ class AddServicePage extends Component {
                 isMulti
                 name="cities"
                 onChange={this.handleChangeCities}
-                options={serviceCities}
+                options={this.props.cities}
                 required
               />
             </div>
@@ -103,7 +101,7 @@ class AddServicePage extends Component {
                 isMulti
                 name="categories"
                 onChange={this.handleChangeCategories}
-                options={serviceCategories}
+                options={this.props.categories}
                 required
               />
             </div>

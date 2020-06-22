@@ -6,6 +6,16 @@ import './ServiceFloor.css'
 
 class ServiceFloor extends Component {
 
+  state = {
+    services: []
+  }
+
+  handleSearch = async (e) => {
+    const services = this.state.services.filter(service => {
+       return service.categories.includes(e.target.name)
+    })
+    this.setState({services:services})
+}
 
   render()  {
     return (
@@ -16,7 +26,9 @@ class ServiceFloor extends Component {
           <br></br>
           <Link className="add-service" to="/addservice">Add a Service</Link>
           <br></br><br></br><br></br>
-          <SearchBar/>
+          <SearchBar
+            handleSearch={this.handleSearch}
+          />
         </div>
         <div className="page-content"> 
           <div className="posts">
