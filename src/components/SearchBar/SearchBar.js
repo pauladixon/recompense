@@ -10,33 +10,20 @@ class SearchBar extends Component {
             category: ''
         }
     }
-
-    handleSubmitCity = e => {
-        e.preventDefault()
-        this.props.handleSearchCities(this.state.formData)
-        console.log('🏙', this.state.formData)
-    }
-
-    handleSubmitCategory = e => {
-        e.preventDefault()
-        this.props.handleSearchCategories(this.state.formData)
-    }
-
-    handleChangeCategory = category => {
-        this.setState({ formData: { ...this.state.formData, category } })
-    }
     
     handleChangeCity = city => {
         this.setState({ formData: { ...this.state.formData, city } })
     }
 
+
+    
     render() {
         return (
             <div className="search-bar">
                 <div className='search-item'>
                     <form 
                         autoComplete="off" 
-                        onSubmit={this.handleSubmitCity}
+                        onSubmit={this.props.handleSearchCities}
                     >
                         <label className='search-label'>Search By City :: </label>
                         <div className='search-row'>
@@ -59,9 +46,9 @@ class SearchBar extends Component {
                 </div>
                 <br></br><br></br>
                 <div className='search-item'>
-                    <form  
+                    {/* <form  
                         autoComplete="off" 
-                        onSubmit={this.handleSubmitCategory}
+                        onSubmit={this.props.handleSearchCategories}
                     >
                         <label className='search-label'>Search By Category :: </label>
                         <div className='search-row'>
@@ -80,7 +67,16 @@ class SearchBar extends Component {
                                 →
                             </button>
                         </div>
-                    </form>
+                    </form> */}
+                    {this.props.categories.map(word => 
+                        <button
+                            name={word}
+                            key={word}
+                            onClick={this.props.handleSearchCategories}
+                        >
+                        {word}
+                        </button>
+                    )}
                 </div>
             </div>
           )
