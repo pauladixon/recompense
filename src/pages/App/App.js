@@ -24,7 +24,6 @@ import AddRequest from '../../components/AddRequest/AddRequest'
 import categories from '../../category-data'
 import cities from '../../city-data'
 
-
 class App extends Component {
   state = {
     user: userService.getUser(),

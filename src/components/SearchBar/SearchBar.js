@@ -15,8 +15,10 @@ class SearchBar extends Component {
         this.setState({ formData: { ...this.state.formData, city } })
     }
 
+    handleChangeCategory = category => {
+        this.setState({ formData: { ...this.state.formData, category } })
+    }
 
-    
     render() {
         return (
             <div className="search-bar">
@@ -46,7 +48,7 @@ class SearchBar extends Component {
                 </div>
                 <br></br><br></br>
                 <div className='search-item'>
-                    {/* <form  
+                    <form  
                         autoComplete="off" 
                         onSubmit={this.props.handleSearchCategories}
                     >
@@ -67,16 +69,7 @@ class SearchBar extends Component {
                                 →
                             </button>
                         </div>
-                    </form> */}
-                    {this.props.categories.map(word => 
-                        <button
-                            name={word}
-                            key={word}
-                            onClick={this.props.handleSearchCategories}
-                        >
-                        {word}
-                        </button>
-                    )}
+                    </form>
                 </div>
             </div>
           )

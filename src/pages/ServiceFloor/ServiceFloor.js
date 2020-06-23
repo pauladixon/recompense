@@ -11,6 +11,11 @@ class ServiceFloor extends Component {
     services: []
   }
 
+  handleUpdateServices = async () => {
+    const services = await servicesAPI.getAll()
+    this.setState({services: services})
+  }
+
   handleSearchCities = async (e) => {
     const services = this.state.services.filter(service => {
       return service.cities.includes(e.target.name)
@@ -51,6 +56,7 @@ class ServiceFloor extends Component {
               services={this.state.services}
               cities={this.props.cities}
               categories={this.props.categories}
+              handleUpdateServices={this.handleUpdateServices}
           />
         </div>
       </div>
