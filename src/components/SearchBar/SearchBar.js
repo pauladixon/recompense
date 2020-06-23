@@ -10,24 +10,13 @@ class SearchBar extends Component {
             category: ''
         }
     }
-
-    handleSubmitCity = e => {
-        e.preventDefault()
-        this.props.handleSearchCities(this.state.formData)
-        console.log('🏙', this.state.formData)
-    }
-
-    handleSubmitCategory = e => {
-        e.preventDefault()
-        this.props.handleSearchCategories(this.state.formData)
+    
+    handleChangeCity = city => {
+        this.setState({ formData: { ...this.state.formData, city } })
     }
 
     handleChangeCategory = category => {
         this.setState({ formData: { ...this.state.formData, category } })
-    }
-    
-    handleChangeCity = city => {
-        this.setState({ formData: { ...this.state.formData, city } })
     }
 
     render() {
@@ -36,7 +25,7 @@ class SearchBar extends Component {
                 <div className='search-item'>
                     <form 
                         autoComplete="off" 
-                        onSubmit={this.handleSubmitCity}
+                        onSubmit={this.props.handleSearchCities}
                     >
                         <label className='search-label'>Search By City :: </label>
                         <div className='search-row'>
@@ -61,7 +50,7 @@ class SearchBar extends Component {
                 <div className='search-item'>
                     <form  
                         autoComplete="off" 
-                        onSubmit={this.handleSubmitCategory}
+                        onSubmit={this.props.handleSearchCategories}
                     >
                         <label className='search-label'>Search By Category :: </label>
                         <div className='search-row'>

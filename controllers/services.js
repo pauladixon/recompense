@@ -5,11 +5,14 @@ module.exports = {
     show, 
     create,
     update,
-    delete: deleteOne
+    delete: deleteOne,
+    addComment,
+    deleteComment
 }
 
 async function index(req, res) {
     const services = await Service.find({})
+    .sort({createdAt: -1})
     res.status(200).json(services)
 }
 
@@ -38,4 +41,28 @@ async function update(req, res) {
 async function deleteOne(req, res) {
     const deletedService = await Service.findByIdAndRemove(req.params.id)
     res.status(200).json(deletedService)
+}
+
+async function deleteComment(req,res){
+    try {
+      await Service.findByIdAndUpdate(req.body.service_id, {
+            $pull: {
+              comments: {_id: req.params.id}
+            }})
+        index(req, res);
+    } catch (err) {
+        res.json({err})
+    }
+}
+
+async function addComment (req, res) {
+    try {
+        await Service.findById(req.body.service_id, function (err, service){
+            service.comments.push({text: req.body.comment, user: req.user._id});
+            service.save();
+            index(req,res);
+        }) 
+    } catch (err){
+            res.json({err})
+    }
 }
