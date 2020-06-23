@@ -3,6 +3,8 @@ const Schema = mongoose.Schema
 
 const linkSchema = new Schema({
     user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
+    categories: [],
+    cities: [],
     name: '',
     description: '',
     cashapp: '',

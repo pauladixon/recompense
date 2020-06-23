@@ -1,16 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import LinkItem from '../../components/LinkItem/LinkItem'
-import './LinksPage.css';
+import './LinksPage.css'
 
 const LinksPage = (props) => {
-
   return (
-    <div className="page">
+    <div className="service-page">
       <div className="page-header">
-        <p className='page-title'>Direct Aid:</p>
-        <Link className="add-link" to="/addlink">Post A Link</Link>
-        {/* <Link className="add-link" to="/linkdetail">Link Detail</Link> */}
+        <p>Links:</p>
+        <Link className="add-service" to="/addlink">Post A Link</Link>
       </div>
       <div className="page-content">
         <div className="posts">
@@ -19,10 +17,7 @@ const LinksPage = (props) => {
           )}
         </div>
       </div>
-
     </div>
-
   );
-};
-
+}
 export default LinksPage;
