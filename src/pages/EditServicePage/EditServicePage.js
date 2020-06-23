@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import Select from 'react-select'
 import { Link, Redirect } from 'react-router-dom'
-import serviceCategories from '../../category-data'
-import serviceCities from '../../city-data'
+
 
 class EditServicePage extends Component {
     state = {
@@ -89,7 +88,7 @@ class EditServicePage extends Component {
                                 isMulti
                                 name="cities"
                                 onChange={this.handleChangeCities}
-                                options={serviceCities}
+                                options={this.props.cities}
                                 required
                             />
                             </div>
@@ -101,7 +100,7 @@ class EditServicePage extends Component {
                                 isMulti
                                 name="categories"
                                 onChange={this.handleChangeCategories}
-                                options={serviceCategories}
+                                options={this.props.categories}
                                 required
                             />
                             </div>

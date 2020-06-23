@@ -1,34 +1,37 @@
-import React, { Component } from 'react';
-import './App.css';
-import { Link, Route, Switch, Redirect } from 'react-router-dom';
-import SignupPage from '../SignupPage/SignupPage';
-import LoginPage from '../LoginPage/LoginPage';
-import NavBar from '../../components/NavBar/NavBar';
-import Home from "../../pages/Home/Home.js";
-import ServiceFloor from '../ServiceFloor/ServiceFloor';
+import React, { Component } from 'react'
+import './App.css'
+import { Link, Route, Switch, Redirect } from 'react-router-dom'
+import SignupPage from '../SignupPage/SignupPage'
+import LoginPage from '../LoginPage/LoginPage'
+import NavBar from '../../components/NavBar/NavBar'
+import Home from "../../pages/Home/Home.js"
+import ServiceFloor from '../ServiceFloor/ServiceFloor'
 import ServiceDetailPage from '../ServiceDetailPage/ServiceDetailPage'
 import RequestDetailPage from '../RequestDetailPage/RequestDetailPage'
 import LinkDetailPage from '../LinkDetailPage/LinkDetailPage'
 import EditServicePage from '../EditServicePage/EditServicePage'
 import EditRequestPage from '../EditRequestPage/EditRequestPage'
-import userService from '../../utils/userService';
-import LinksPage from '../LinksPage/LinksPage';
+import userService from '../../utils/userService'
+import LinksPage from '../LinksPage/LinksPage'
 import * as servicesAPI from '../../services/services-api'
-import * as linksAPI from '../../services/links-api';
-import * as requestsAPI from '../../services/requests-api';
+import * as linksAPI from '../../services/links-api'
+import * as requestsAPI from '../../services/requests-api'
 import AddServicePage from '../AddServicePage/AddServicePage'
-import AddLinkPage from '../../components/AddLinkPage/AddLinkPage';
-import RequestPage from '../../pages/RequestPage/RequestPage';
-import AddRequest from '../../components/AddRequest/AddRequest';
+import AddLinkPage from '../../components/AddLinkPage/AddLinkPage'
+import RequestPage from '../../pages/RequestPage/RequestPage'
+import AddRequest from '../../components/AddRequest/AddRequest'
+import categories from '../../category-data'
+import cities from '../../city-data'
 
 
 class App extends Component {
   state = {
     user: userService.getUser(),
     services: [],
-    choices: [],
     links: [],
-    requests: []
+    requests: [],
+    cities: cities, 
+    categories: categories,
   }
 
   handleLogout = () => {
@@ -36,8 +39,8 @@ class App extends Component {
     this.setState({ user: null })
   }
 
-  handleSignupOrLogin = () => {
-    this.setState({ user: userService.getUser() })
+  handleSignupOrLogin = async () => {
+   await this.setState({ user: userService.getUser() })
   }
 
   handleAddService = async newServiceData => {
@@ -144,6 +147,8 @@ class App extends Component {
               render={() => (
                 <ServiceFloor
                   services={this.state.services}
+                  cities={cities}
+                  categories={categories}
                 />
               )}
             />
@@ -163,7 +168,8 @@ class App extends Component {
                 userService.getUser() ?
                   <AddServicePage
                     handleAddService={this.handleAddService}
-                    city={this.state.user.city}
+                    cities={cities}
+                    categories={categories}
                   />
                   :
                   <Redirect to='/login' />
@@ -177,6 +183,8 @@ class App extends Component {
                     handleUpdateService={this.handleUpdateService}
                     location={location}
                     user={this.state.user}
+                    cities={cities}
+                    categories={categories}
                   />
                   :
                   <Redirect to='/login' />
