@@ -64,3 +64,14 @@
     justify-content: center;
     align-items: center;
 }
+
+.all-comments-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comments {
+    display: grid;
+}

@@ -51,27 +51,29 @@ class ServiceDetailPage extends Component {
                     <p className="comment-title">Comments:</p>          
                 </div>
                 <div className='all-comments-container'>
-                    {/* {this.state.service.comments.map((comment) =>
-                        <div key={comment._id} className='Comment-container'>
-                            <div className='Comment-text'>
-                                <p>{comment.text}</p>
+                    <div className='comments'>
+                        {this.state.service.comments.map((comment) =>
+                            <div key={comment._id} className='Comment-container'>
+                                <div className='Comment-text'>
+                                    <p>{comment.text}</p>
+                                </div>
+                                {this.props.user._id === this.state.service.user || this.props.user._id === comment.user ?
+                                <button className='Post-delete' id={this.state.service._id} name={comment._id} onClick={this.handleDeleteComment}>X</button>
+                                :
+                                <div></div>
+                                }
                             </div>
-                            {this.props.user._id === this.state.service.user || this.props.user._id === comment.user ?
-                            <button className='Post-delete' id={this.state.service._id} name={comment._id} onClick={this.handleDeleteComment}>X</button>
-                            :
-                            <div></div>
-                            }
-                        </div>
-                    )} */}
+                        )}
+                    </div>
                 </div>
                 <div className="comments-form">
                     <form id={this.state.service._id} className='Comment-form'  onSubmit={this.handleAddComment}>
                         <input 
                             onChange={this.handleChange}
                             name='comment'
-                            value={this.comment}
+                            value={this.comment === "" ? "" : this.local_comment}
                             className='Comment-input'
-                            placeholder='Add Comment'
+                            placeholder='Add a Comment'
                             autoComplete='off'
                         />
                         <button type="submit">+</button>
