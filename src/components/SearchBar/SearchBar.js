@@ -7,28 +7,28 @@ class SearchBar extends Component {
     state = {
         formData: {
             city: '',
-            categories: ''
+            category: ''
         }
     }
 
-
-    handleChangeCategories = categories => {
-        this.setState({ categories })
+    handleSubmitCity = e => {
+        e.preventDefault()
+        this.props.handleSearchCities(this.state.formData)
+        console.log('🏙', this.state.formData)
     }
 
-    handleChangeCities = cities => {
-        this.setState({ cities })
-    }
-
-    handleSubmitCities = e => {
-      e.preventDefault()
-      this.props.handleSearchCities(this.state.formData)
-    }
-
-    handleSubmitCategories = e => {
+    handleSubmitCategory = e => {
         e.preventDefault()
         this.props.handleSearchCategories(this.state.formData)
-      }
+    }
+
+    handleChangeCategory = category => {
+        this.setState({ formData: { ...this.state.formData, category } })
+    }
+    
+    handleChangeCity = city => {
+        this.setState({ formData: { ...this.state.formData, city } })
+    }
 
     render() {
         return (
@@ -36,23 +36,21 @@ class SearchBar extends Component {
                 <div className='search-item'>
                     <form 
                         autoComplete="off" 
-                        onSubmit={this.handleSubmitCities}
+                        onSubmit={this.handleSubmitCity}
                     >
                         <label className='search-label'>Search By City :: </label>
                         <div className='search-row'>
                             <Select
                                 className='search-select'
-                                value={this.state.formData.cities}
+                                value={this.state.formData.city}
                                 name="cities"
-                                isMulti
-                                onChange={this.handleChangeCities}
+                                onChange={this.handleChangeCity}
                                 options={this.props.cities}
                                 required
                             />
                             <button
                                 className="search-btn"
                                 type="submit"
-                                onClick={this.props.handleSearchCities}
                             >
                                 →
                             </button>
@@ -61,26 +59,23 @@ class SearchBar extends Component {
                 </div>
                 <br></br><br></br>
                 <div className='search-item'>
-                    <form 
-                        ref={this.formRef} 
+                    <form  
                         autoComplete="off" 
-                        onSubmit={this.handleSubmitCategories}
+                        onSubmit={this.handleSubmitCategory}
                     >
                         <label className='search-label'>Search By Category :: </label>
                         <div className='search-row'>
                             <Select
                                 className='search-select'
-                                value={this.state.formData.categories}
+                                value={this.state.formData.category}
                                 name="categories"
-                                isMulti
-                                onChange={this.handleChangeCategories}
+                                onChange={this.handleChangeCategory}
                                 options={this.props.categories}
                                 required
                             />
                             <button
                                 className="search-btn"
                                 type="submit"
-                                onClick={this.props.handleSearchCities}
                             >
                                 →
                             </button>

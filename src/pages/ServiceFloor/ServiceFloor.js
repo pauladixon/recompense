@@ -11,11 +11,13 @@ class ServiceFloor extends Component {
     services: []
   }
 
-  handleUpdateServices = async () => {
-    const services = await servicesAPI.getAll()
-    this.setState({services: services})
+  handleSearchCities = async (e) => {
+    const services = this.state.services.filter(service => {
+      return service.cities.includes(e.target.name)
+    })
+    this.setState({services:services})
   }
-
+  
   handleSearchCategories = async (e) => {
     const services = this.state.services.filter(service => {
       return service.categories.includes(e.target.name)
@@ -23,11 +25,9 @@ class ServiceFloor extends Component {
     this.setState({services:services})
   }
 
-  handleSearchCities = async (e) => {
-    const services = this.state.services.filter(service => {
-      return service.cities.includes(e.target.name)
-    })
-    this.setState({services:services})
+  async componentDidMount() {
+    const services = await servicesAPI.getAll()
+    this.setState({services})
   }
 
   render()  {
@@ -44,15 +44,13 @@ class ServiceFloor extends Component {
             categories={this.props.categories}
             handleSearchCities={this.handleSearchCities}
             handleSearchCategories={this.handleSearchCategories}
-            handleUpdateServices={this.handleUpdateServices}
           />
         </div>
         <div className="page-content"> 
           <ServiceFloorItems
-              services={this.props.services}
+              services={this.state.services}
               cities={this.props.cities}
               categories={this.props.categories}
-              handleUpdateServices={this.handleUpdateServices}
           />
         </div>
       </div>
