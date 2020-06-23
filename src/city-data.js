@@ -1,4 +1,4 @@
-const serviceCities = [
+const cities = [
   {value: "Online", label: "Online"},
   {value: "Aberdeen, SD", label: "Aberdeen, SD"},
   {value: "Abilene, TX", label: "Abilene, TX"},
@@ -386,4 +386,4 @@ const serviceCities = [
   {value: "Youngstown, WV", label: "Youngstown, WV"},
 ]
 
-export default serviceCities
+export default cities
