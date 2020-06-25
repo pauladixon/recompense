@@ -62,8 +62,3 @@ export function deleteComment(service_id, serviceComment_id) {
     }
     return fetch(`${BASE_URL}/${service_id}/delete/` + serviceComment_id, options).then(res => res.json())
 }
-
-export function getAllComments(service_id) {
-    return fetch(`${BASE_URL}/${service_id}`)
-        .then(res => res.json())
-}

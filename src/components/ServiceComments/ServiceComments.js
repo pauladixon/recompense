@@ -12,11 +12,11 @@ class ServiceComments extends Component {
                                 <div className='Comment-text'>
                                     <p>{serviceComment.text}</p>
                                 </div>
-                                {/* {this.props.user._id === this.state.service.user || this.props.user._id === serviceComment.user ?
+                                {this.props.user._id === this.props.service.user || this.props.user._id === serviceComment.user ?
                                 <button className='Post-delete' id={this.props.service._id} name={serviceComment._id} onClick={this.props.handleDeleteServiceComment}>X</button>
                                 :
                                 <div></div>
-                                } */}
+                                }
                             </div>
                         )}
                     </div>
