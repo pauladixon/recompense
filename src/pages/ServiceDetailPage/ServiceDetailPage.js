@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+// import * as servicesAPI from '../../services/services-api'
 import ServiceCard from '../../components/ServiceCard/ServiceCard'
 import ServiceComments from '../../components/ServiceComments/ServiceComments'
 import './ServiceDetailPage.css'
