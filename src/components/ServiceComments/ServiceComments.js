@@ -1,36 +1,19 @@
 import React, { Component } from 'react'
-import * as servicesAPI from '../../services/services-api'
 
 class ServiceComments extends Component {
-
-    state = {
-        comment: 'hi'
-    }
-
-    handleDeleteComment = async(e) => {
-        await servicesAPI.deleteComment(e.target.id, e.target.name)
-        this.props.handleUpdateServices()
-    }
-
-    handleAddComment = async (e) => {
-        e.preventDefault();
-        await servicesAPI.addComment(e.target.id, this.state.comment)
-        await this.props.handleUpdateServices()
-        this.setState({comment: ''})
-    }
 
     render() {
         return (
             <>
                 <div className='all-comments-container'>
                     <div className='comments'>
-                        {this.props.service.comments.map((comment) =>
-                            <div key={comment._id} className='Comment-container'>
+                        {this.props.service.serviceComments.map((serviceComment) =>
+                            <div key={serviceComment._id} className='Comment-container'>
                                 <div className='Comment-text'>
-                                    <p>{comment.text}</p>
+                                    <p>{serviceComment.text}</p>
                                 </div>
-                                {/* {this.props.user._id === this.state.service.user || this.props.user._id === comment.user ?
-                                <button className='Post-delete' id={this.props.service._id} name={comment._id} onClick={this.handleDeleteComment}>X</button>
+                                {/* {this.props.user._id === this.state.service.user || this.props.user._id === serviceComment.user ?
+                                <button className='Post-delete' id={this.props.service._id} name={serviceComment._id} onClick={this.props.handleDeleteServiceComment}>X</button>
                                 :
                                 <div></div>
                                 } */}
@@ -42,12 +25,12 @@ class ServiceComments extends Component {
                     <form 
                         id={this.props.service._id} 
                         className='Comment-form'  
-                        onSubmit={this.handleAddComment}
+                        onSubmit={this.props.handleAddServiceComment}
                     >
                         <input 
                             onChange={this.props.handleChange}
-                            name='comment'
-                            value={this.comment}
+                            name='serviceComment'
+                            value={this.props.serviceComment}
                             className='Comment-input'
                             placeholder='Add a Comment'
                             autoComplete='off'

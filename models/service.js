@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const commentSchema = new Schema({
+const serviceCommentSchema = new Schema({
     text: String,
     user: String
 }, {
@@ -17,7 +17,7 @@ const serviceSchema = new Schema({
     exchange: String,
     contactEmail: String,
     creator: String,
-    comments: [commentSchema],
+    serviceComments: [serviceCommentSchema],
 }, { 
     timestamps: true 
 })

@@ -46,7 +46,7 @@ async function deleteOne(req, res) {
 async function addComment (req, res) {
     try {
         await Service.findById(req.params.id, function (err, service){
-            service.comments.push({text: req.body.comment, user: req.user._id})
+            service.serviceComments.push({text: req.body.serviceComment, user: req.user._id})
             service.save()
             index(req,res)
         }) 
@@ -59,7 +59,7 @@ async function deleteComment(req,res){
     try {
       await Service.findByIdAndUpdate(req.params.id, {
             $pull: {
-              comments: {_id: req.params.id}
+              serviceComments: {_id: req.params.id}
             }})
         index(req, res)
     } catch (err) {
