@@ -70,21 +70,21 @@ class App extends Component {
     }), () => this.props.history.push('/servicesfloor'))
   }
 
-  handleGetAllServices = async () => {
-    const services = await servicesAPI.getAll()
-    this.setState({services: services})
+  handleGetAllComments = async () => {
+    const service = await servicesAPI.getAllComments()
+    this.setState({service})
   }
 
   handleAddServiceComment = async (e) => {
     e.preventDefault();
     await servicesAPI.addComment(e.target.id, this.state.serviceComment)
-    await this.handleGetAllServices()
+    await this.handleGetAllComments()
     this.setState({serviceComment: ''})
   }
 
   handleDeleteServiceComment = async(e) => {
       await servicesAPI.deleteComment(e.target.id, e.target.name)
-      this.handleGetAllServices()
+      this.handleGetAllComments()
   }
 
 
