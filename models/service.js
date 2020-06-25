@@ -17,7 +17,9 @@ const serviceSchema = new Schema({
     exchange: String,
     contactEmail: String,
     creator: String,
-    comments: [commentSchema]
-}, { timestamps: true})
+    comments: [commentSchema],
+}, { 
+    timestamps: true 
+})
 
 module.exports = mongoose.model('Service', serviceSchema)
