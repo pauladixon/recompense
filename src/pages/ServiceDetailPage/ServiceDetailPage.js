@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 import * as servicesAPI from '../../services/services-api'
 import ServiceCard from '../../components/ServiceCard/ServiceCard'
+import ServiceComments from '../../components/ServiceComments/ServiceComments'
 import './ServiceDetailPage.css'
 
 class ServiceDetailPage extends Component {
 
     state = {
         service: this.props.location.state.service,
-        text: '',
-        comment: '',
     }
 
     handleChange = e => {
@@ -18,18 +17,6 @@ class ServiceDetailPage extends Component {
     handleUpdateServices = async () => {
         const services = await servicesAPI.getAll()
         this.setState({services: services})
-    }
-    
-    handleDeleteComment = async(e) => {
-        await servicesAPI.deleteComment(e.target.id, e.target.name)
-        this.handleUpdateServices()
-    }
-
-    handleAddComment = async (e) => {
-        e.preventDefault();
-        await servicesAPI.addComment(e.target.id, this.state.comment)
-        await this.handleUpdateServices()
-        this.setState({comment: ''})
     }
 
     render() {
@@ -50,35 +37,12 @@ class ServiceDetailPage extends Component {
                 <div className='title-container'>
                     <p className="comment-title">Comments:</p>          
                 </div>
-                <div className='all-comments-container'>
-                    <div className='comments'>
-                        {this.state.service.comments.map((comment) =>
-                            <div key={comment._id} className='Comment-container'>
-                                <div className='Comment-text'>
-                                    <p>{comment.text}</p>
-                                </div>
-                                {this.props.user._id === this.state.service.user || this.props.user._id === comment.user ?
-                                <button className='Post-delete' id={this.state.service._id} name={comment._id} onClick={this.handleDeleteComment}>X</button>
-                                :
-                                <div></div>
-                                }
-                            </div>
-                        )}
-                    </div>
-                </div>
-                <div className="comments-form">
-                    <form id={this.state.service._id} className='Comment-form'  onSubmit={this.handleAddComment}>
-                        <input 
-                            onChange={this.handleChange}
-                            name='comment'
-                            value={this.comment === "" ? "" : this.local_comment}
-                            className='Comment-input'
-                            placeholder='Add a Comment'
-                            autoComplete='off'
-                        />
-                        <button type="submit">+</button>
-                    </form>
-                </div>
+                <ServiceComments
+                    service={this.state.service}
+                    user={this.props.user}
+                    handleChange={this.handleChange}
+                    handleUpdateServices={this.handleUpdateServices}
+                />
             </>
         )
     }

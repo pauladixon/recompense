@@ -3,7 +3,14 @@ import tokenService from '../../src/utils/tokenService'
 const BASE_URL = '/api/services'
 
 export function getAll() {
-    return fetch(BASE_URL)
+    const options = {
+        method: 'GET',
+        headers: {
+            'Content-type': 'application/json',
+            'Authorization': 'Bearer ' + tokenService.getToken()
+          }
+    }
+    return fetch(BASE_URL, options)
         .then(res => res.json())
 }
 
@@ -48,7 +55,7 @@ export function addComment (service_id, comment){
           }, 
         body: JSON.stringify({'service_id': service_id, 'comment': comment})
     }
-    return fetch(BASE_URL + 'comment', options).then(res => res.json())
+    return fetch(`${BASE_URL}/${service_id}/` + 'comment', options).then(res => res.json())
 }
 
 export function deleteComment(service_id, comment_id) {
@@ -60,5 +67,5 @@ export function deleteComment(service_id, comment_id) {
           },
         body: JSON.stringify({'service_id': service_id})
     }
-    return fetch(BASE_URL + 'delete/' + comment_id, options).then(res => res.json())
+    return fetch(`${BASE_URL}/${service_id}/` + 'delete/' + comment_id, options).then(res => res.json())
 }

@@ -43,26 +43,26 @@ async function deleteOne(req, res) {
     res.status(200).json(deletedService)
 }
 
-async function deleteComment(req,res){
-    try {
-      await Service.findByIdAndUpdate(req.body.service_id, {
-            $pull: {
-              comments: {_id: req.params.id}
-            }})
-        index(req, res);
-    } catch (err) {
-        res.json({err})
-    }
-}
-
 async function addComment (req, res) {
     try {
-        await Service.findById(req.body.service_id, function (err, service){
+        await Service.findById(req.params.id, function (err, service){
             service.comments.push({text: req.body.comment, user: req.user._id});
             service.save();
             index(req,res);
         }) 
     } catch (err){
             res.json({err})
+    }
+}
+
+async function deleteComment(req,res){
+    try {
+      await Service.findByIdAndUpdate(req.params.id, {
+            $pull: {
+              comments: {_id: req.params.id}
+            }})
+        index(req, res);
+    } catch (err) {
+        res.json({err})
     }
 }
