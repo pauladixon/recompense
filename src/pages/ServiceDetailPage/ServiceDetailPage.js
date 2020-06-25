@@ -9,10 +9,6 @@ class ServiceDetailPage extends Component {
         service: this.props.location.state.service,
     }
 
-    handleChange = e => {
-        this.setState({[e.target.name]: e.target.value})
-    }
-
     render() {
         return (
             <>
@@ -35,7 +31,7 @@ class ServiceDetailPage extends Component {
                     key={this.state.service._id}
                     service={this.state.service}
                     user={this.props.user}
-                    handleChange={this.handleChange}
+                    handleChange={this.props.handleChange}
                     serviceComment={this.props.serviceComment}
                     handleAddServiceComment={this.props.handleAddServiceComment}
                     handleDeleteServiceComment={this.props.handleDeleteServiceComment}

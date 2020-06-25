@@ -142,6 +142,11 @@ class App extends Component {
     }), () => this.props.history.push('/requests'))
   }
 
+
+  handleChange = e => {
+    this.setState({[e.target.name]: e.target.value})
+  }
+
   async componentDidMount() {
     const services = await servicesAPI.getAll()
     this.setState({ services })
@@ -208,6 +213,7 @@ class App extends Component {
                   handleAddServiceComment={this.handleAddServiceComment}
                   handleDeleteServiceComment={this.handleDeleteServiceComment}
                   user={this.state.user}
+                  handleChange={this.handleChange}
                 />
               }
             />
