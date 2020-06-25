@@ -48,11 +48,7 @@ export function addComment (service_id, comment){
           }, 
         body: JSON.stringify({'service_id': service_id, 'comment': comment})
     }
-<<<<<<< HEAD
-    return fetch(BASE_URL + '/comment', options).then(res => res.json())
-=======
     return fetch(`${BASE_URL}/${service_id}/comment`, options).then(res => res.json())
->>>>>>> e0c8e2c82c76462ee7aac55111c09235b142d290
 }
 
 export function deleteComment(service_id, comment_id) {
@@ -64,9 +60,5 @@ export function deleteComment(service_id, comment_id) {
           },
         body: JSON.stringify({'service_id': service_id})
     }
-<<<<<<< HEAD
-    return fetch(BASE_URL + '/delete/' + comment_id, options).then(res => res.json())
-=======
     return fetch(`${BASE_URL}/${service_id}/delete/` + comment_id, options).then(res => res.json())
->>>>>>> e0c8e2c82c76462ee7aac55111c09235b142d290
 }
