@@ -64,5 +64,5 @@ export function deleteComment(service_id, serviceComment_id) {
           },
         body: JSON.stringify({'service_id': service_id})
     }
-    return fetch(`${BASE_URL}/${service_id}/delete/${serviceComment_id}`, options).then(res => res.json())
+    return fetch(`${BASE_URL}/delete/${serviceComment_id}`, options).then(res => res.json())
 }
