@@ -154,7 +154,6 @@ class App extends Component {
     this.setState({ requests })
     const links = await linksAPI.getAll()
     this.setState({ links })
-
   }
 
   render() {
