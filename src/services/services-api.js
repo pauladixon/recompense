@@ -31,6 +31,10 @@ export function update(service) {
     return fetch(`${BASE_URL}/${service._id}`, options).then(res => res.json())
 }
 
+export function getOne(service) {
+    return fetch(`${BASE_URL}/${service._id}`).then(res => res.json())
+}
+
 export function deleteOne(id) {
     const options = {
         method: 'DELETE',
@@ -60,5 +64,5 @@ export function deleteComment(service_id, serviceComment_id) {
           },
         body: JSON.stringify({'service_id': service_id})
     }
-    return fetch(`${BASE_URL}/${service_id}/delete/` + serviceComment_id, options).then(res => res.json())
+    return fetch(`${BASE_URL}/${service_id}/delete/${serviceComment_id}`, options).then(res => res.json())
 }

@@ -3,7 +3,8 @@ const Schema = mongoose.Schema
 
 const serviceCommentSchema = new Schema({
     text: String,
-    user: String
+    user: String,
+    creator: String,
 }, {
     timestamps: true
 })

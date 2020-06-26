@@ -17,4 +17,9 @@
     display: flex;
     justify-content: flex-end;
     font-size: 13px;
+    color: #3c0c15;
+    /* text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 2px;;
+    text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.185); */
 }
