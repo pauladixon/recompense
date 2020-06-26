@@ -25,38 +25,6 @@
     width: 130px;
 }
 
-.comments-form {
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 400px;
-}
-
-.break-container {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.break {
-    margin-right: 500px;
-    text-align: right;
-    border-top: solid .5px #3c0c15;
-    margin-right: 20px;
-    width: 68%;
-}
-
-.title-container {
-    display: flex;
-}
-
-.comment-title {
-    color: #3c0c15;
-    font-size: 13px;
-    text-transform: uppercase;
-    font-style: italic;
-    letter-spacing: 2px;;
-    text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.185);
-    margin: 40px 0px 0px 20px;
-}
 
 .post-detail {
     margin: 30px;

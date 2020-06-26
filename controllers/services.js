@@ -46,7 +46,7 @@ async function deleteOne(req, res) {
 async function addComment (req, res) {
     try {
         await Service.findById(req.params.id, function (err, service){
-            service.serviceComments.push({text: req.body.serviceComment, user: req.user._id})
+            service.serviceComments.push({text: req.body.serviceComment, user: req.user._id, creator: req.user.name})
             service.save()
             index(req,res)
         }) 
