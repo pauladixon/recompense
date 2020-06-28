@@ -13,14 +13,14 @@ class ServiceFloor extends Component {
 
   handleSearchCities = async (e) => {
     const services = this.state.services.filter(service => {
-      return service.cities.includes(e.target.name)
+      return service.cities.value.includes(e.target.name)
     })
     this.setState({services:services})
   }
   
   handleSearchCategories = async (e) => {
     const services = this.state.services.filter(service => {
-      return service.categories.includes(e.target.name)
+      return service.categories.value.includes(e.target.name)
     })
     this.setState({services:services})
   }

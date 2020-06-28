@@ -40,7 +40,6 @@
     margin-right: 500px;
     text-align: right;
     border-top: solid .5px #3c0c15;
-    margin-right: 20px;
     width: 68%;
 }
 
@@ -55,7 +54,7 @@
     font-style: italic;
     letter-spacing: 2px;;
     text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.185);
-    margin: 40px 0px 0px 20px;
+    margin: 20px 0px 0px 20px;
 }
 
 .post-detail {

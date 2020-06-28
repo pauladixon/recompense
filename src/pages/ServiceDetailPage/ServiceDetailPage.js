@@ -1,39 +1,45 @@
-import React from 'react'
+import React, { Component } from 'react'
+// import * as servicesAPI from '../../services/services-api'
 import ServiceCard from '../../components/ServiceCard/ServiceCard'
+import ServiceComments from '../../components/ServiceComments/ServiceComments'
 import './ServiceDetailPage.css'
 
-function ServiceDetailPage(props) {
+class ServiceDetailPage extends Component {
 
-    const service = props.location.state.service
+    state = {
+        service: this.props.location.state.service,
+    }
 
-    return (
-        <>
-            <div className='post-detail'>
-                <ServiceCard
-                    className="service-card"
-                    key={service._id}
-                    service={service}
-                    user={props.user}
-                    handleDeleteService={props.handleDeleteService}
+    render() {
+        return (
+            <>
+                <div className='post-detail'>
+                    <ServiceCard
+                        className="service-card"
+                        key={this.state.service._id}
+                        service={this.state.service}
+                        user={this.props.user}
+                        handleDeleteService={this.props.handleDeleteService}
+                    />
+                </div>
+                <div className='break-container'>
+                    <div className="break"></div>
+                </div>
+                <div className='title-container'>
+                    <p className="comment-title">Comments:</p>          
+                </div>
+                <ServiceComments
+                    key={this.state.service._id}
+                    service={this.state.service}
+                    user={this.props.user}
+                    handleChange={this.props.handleChange}
+                    serviceComment={this.props.serviceComment}
+                    handleAddServiceComment={this.props.handleAddServiceComment}
+                    handleDeleteServiceComment={this.props.handleDeleteServiceComment}
                 />
-            </div>
-            <div className='break-container'>
-                <div className="break"></div>
-            </div>
-            <div className='title-container'>
-                <p className="comment-title">Comments:</p>          
-            </div>
-            <div className="comments-form">
-
-                <form>
-                    <input>
-
-                    </input>
-                    <button>+</button>
-                </form>
-            </div>
-        </>
-    )
+            </>
+        )
+    }
 }
 
 export default ServiceDetailPage

@@ -24,11 +24,11 @@ import AddRequest from '../../components/AddRequest/AddRequest'
 import categories from '../../category-data'
 import cities from '../../city-data'
 
-
 class App extends Component {
   state = {
     user: userService.getUser(),
     services: [],
+    serviceComment: '',
     links: [],
     requests: [],
     cities: cities, 
@@ -69,6 +69,26 @@ class App extends Component {
       services: state.services.filter(service => service._id !== id)
     }), () => this.props.history.push('/servicesfloor'))
   }
+
+  handleGetAllServices = async () => {
+    const services = await servicesAPI.getAll()
+    this.setState({services: services})
+  }
+
+  handleAddServiceComment = async (e) => {
+    e.preventDefault();
+    await servicesAPI.addComment(e.target.id, this.state.serviceComment)
+    await this.handleGetAllServices()
+    this.setState({serviceComment: ''})
+  }
+
+  handleDeleteServiceComment = async(e) => {
+      await servicesAPI.deleteComment(e.target.id, e.target.name)
+      this.handleGetAllServices()
+  }
+
+
+
 
   handleAddLink = async newLinkData => {
     const newLink = await linksAPI.create(newLinkData)
@@ -122,6 +142,11 @@ class App extends Component {
     }), () => this.props.history.push('/requests'))
   }
 
+
+  handleChange = e => {
+    this.setState({[e.target.name]: e.target.value})
+  }
+
   async componentDidMount() {
     const services = await servicesAPI.getAll()
     this.setState({ services })
@@ -129,7 +154,6 @@ class App extends Component {
     this.setState({ requests })
     const links = await linksAPI.getAll()
     this.setState({ links })
-
   }
 
   render() {
@@ -171,6 +195,7 @@ class App extends Component {
                   services={this.state.services}
                   cities={cities}
                   categories={categories}
+                  serviceComment={this.state.serviceComment}
                 />
               )}
             />
@@ -180,7 +205,14 @@ class App extends Component {
                 <ServiceDetailPage
                   location={location}
                   handleDeleteService={this.handleDeleteService}
+                  services={this.state.services}
+                  cities={cities}
+                  categories={categories}
+                  serviceComment={this.state.serviceComment}
+                  handleAddServiceComment={this.handleAddServiceComment}
+                  handleDeleteServiceComment={this.handleDeleteServiceComment}
                   user={this.state.user}
+                  handleChange={this.handleChange}
                 />
               }
             />

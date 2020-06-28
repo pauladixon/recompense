@@ -4,10 +4,6 @@ import ServiceFloorItem from '../../components/ServiceFloorItem/ServiceFloorItem
 
 class ServiceFloorItems extends Component {
 
-    state = {
-        services: []
-    }
-
     render() {
         return (
             <>
