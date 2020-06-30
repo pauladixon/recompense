@@ -5,7 +5,9 @@ module.exports = {
     show, 
     create,
     update,
-    delete: deleteOne
+    delete: deleteOne,
+    addComment,
+    deleteComment
 
 }
 
@@ -39,4 +41,28 @@ async function update(req, res) {
 async function deleteOne(req, res) {
     const deletedRequest = await Request.findByIdAndRemove(req.params.id)
     res.status(200).json(deletedRequest)
+}
+
+async function addComment (req, res) {
+    try {
+        request.findById(req.params.id, function (err, request){
+            request.requestComments.push({text: req.body.requestComment, user: req.user._id, creator: req.user.name})
+            request.save()
+            index(req,res)
+        }) 
+    } catch (err){
+            res.json({err})
+    }
+}
+
+async function deleteComment(req,res){
+    try {
+      await Request.findByIdAndUpdate(req.params.id, {
+            $pull: {
+              requestComments: {_id: req.params.id}
+            }})
+        index(req, res)
+    } catch (err) {
+        res.json({err})
+    }
 }

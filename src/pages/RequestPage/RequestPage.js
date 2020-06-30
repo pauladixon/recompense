@@ -7,7 +7,8 @@ const RequestPage = (props) => {
   return (
     <div className="service-page">
       <div className="page-header">
-        <p>Requests:</p>
+        <p className='page-title'>Requests:</p>
+        <p className="header-description">A place to call for requests not provided by the service floor.</p>
         <Link className="add-service" to="/addrequest">Post A Request</Link>
       </div>
       <div className="page-content">

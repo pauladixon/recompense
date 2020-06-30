@@ -38,3 +38,27 @@ export function deleteOne(id) {
     }
     return fetch(`${BASE_URL}/${id}`, options).then(res => res.json())
 }
+
+export function addComment (request_id, requestComment){
+    const options = {
+        method: 'POST', 
+        headers: {
+            'Content-type': 'application/json',
+            'Authorization': 'Bearer ' + tokenService.getToken()
+          }, 
+        body: JSON.stringify({'request_id': request_id, 'requestComment': requestComment})
+    }
+    return fetch(`${BASE_URL}/${request_id}/comment`, options).then(res => res.json())
+}
+
+export function deleteComment(request_id, requestComment_id) {
+    const options = {
+        method: 'DELETE',
+        headers: {
+            'Content-type': 'application/json',
+            'Authorization': 'Bearer ' + tokenService.getToken()
+          },
+        body: JSON.stringify({'request_id': request_id})
+    }
+    return fetch(`${BASE_URL}/delete/${requestComment_id}`, options).then(res => res.json())
+}

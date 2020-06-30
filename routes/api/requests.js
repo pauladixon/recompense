@@ -10,6 +10,8 @@ router.use(require('../../config/auth'))
 router.post('/', checkAuth, requestsCtrl.create)
 router.put('/:id', checkAuth, requestsCtrl.update)
 router.delete('/:id', checkAuth, requestsCtrl.delete)
+router.post('/:id/comment', checkAuth, requestsCtrl.addComment)
+router.delete('/delete/:id', checkAuth, requestsCtrl.deleteComment)
 
 function checkAuth(req, res, next){
     if (req.user) return next()

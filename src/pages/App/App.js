@@ -31,6 +31,7 @@ class App extends Component {
     serviceComment: '',
     links: [],
     requests: [],
+    requestComment: '',
     cities: cities, 
     categories: categories,
   }
@@ -142,6 +143,17 @@ class App extends Component {
     }), () => this.props.history.push('/requests'))
   }
 
+  handleAddRequestComment = async (e) => {
+    e.preventDefault();
+    await requestsAPI.addComment(e.target.id, this.state.requestComment)
+    await this.handleGetAllRequests()
+    this.setState({requestComment: ''})
+  }
+
+  handleDeleteRequestComment = async(e) => {
+      await requestsAPI.deleteComment(e.target.id, e.target.name)
+      this.handleGetAllRequests()
+  }
 
   handleChange = e => {
     this.setState({[e.target.name]: e.target.value})
@@ -291,7 +303,10 @@ class App extends Component {
               exact path="/requests"
               render={() => (
                 <RequestPage
+                  cities={cities}
+                  categories={categories}
                   requests={this.state.requests}
+                  requestComment={this.state.requestComment}
                 />
               )}
             />
@@ -314,6 +329,9 @@ class App extends Component {
                   location={location}
                   handleDeleteRequest={this.handleDeleteRequest}
                   user={this.state.user}
+                  requestComment={this.state.requestComment}
+                  handleAddRequestComment={this.handleAddRequestComment}
+                  handleDeleteRequestComment={this.handleDeleteRequestComment}
                 />
               }
             />
