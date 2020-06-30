@@ -4,8 +4,8 @@ import './RequestItem.css'
 
 function RequestItem({ request }) {
 
-    const cities = request.cities.map((city, idx) =>
-        <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>)
+    const cities = request.cities ? request.cities.map((city, idx) =>
+        <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>) : <span></span>;
 
 
     return (
