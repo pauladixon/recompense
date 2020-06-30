@@ -4,8 +4,8 @@ import './LinkItem.css'
 
 function LinkItem({ link }) {
 
-    const cities = link.cities.map((city, idx) =>
-        <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>)
+    const cities = link.cities ? link.cities.map((city, idx) =>
+        <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>) : <span></span>;
 
 
     return (

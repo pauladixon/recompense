@@ -9,8 +9,8 @@ function ServiceCard({ service, handleDeleteService, user }) {
     const categories = service.categories.map((category, idx) =>
         <span key={category.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{category.label}</span>)
 
-    const cities = service.cities.map((city, idx) =>
-        <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>)
+    const cities = service.cities ? service.cities.map((city, idx) =>
+        <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>) : <span></span>;
         
     return (
         <>

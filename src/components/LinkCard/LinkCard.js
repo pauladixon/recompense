@@ -5,10 +5,12 @@ import './LinkCard.css'
 
 function LinkCard({ link, handleDeleteLink, user }) {
     user = user === null ? user = NaN : user
-    const categories = link.categories.map((category, idx) =>
-        <span key={category.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{category.label}</span>)
-    const cities = link.cities.map((city, idx) =>
-        <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>)
+
+    const categories = link.categories ? link.categories.map((category, idx) =>
+        <span key={category.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{category.label}</span>) : <span></span>;
+
+    const cities = link.cities ? link.cities.map((city, idx) =>
+        <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>) : <span></span>;
 
     return (
         <>
