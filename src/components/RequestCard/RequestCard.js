@@ -9,8 +9,8 @@ function RequestCard({ request, handleDeleteRequest, user }) {
      const categories = request.categories ? request.categories.map((category, idx) =>
         <span key={category.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{category.label}</span>) : <span></span>;
 
-    const cities = request.cities.map((city, idx) =>
-        <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>)
+    const cities = request.cities ? request.cities.map((city, idx) =>
+        <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>) : <span></span>;
 
     return (
         <>
