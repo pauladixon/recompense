@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function RequestItem({ request }) {
+function RequestFloorItem({ request }) {
 
     const cities = request.cities ? request.cities.map((city, idx) =>
         <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>) : <span></span>;
@@ -15,13 +15,13 @@ function RequestItem({ request }) {
                     state: { request }
                 }}
             >
-                <div className='request-item'>
+                <div className='serviceflooritem'>
                     <div>
-                        <div className='request-item-detail-location'>
+                        <div className='serviceflooritem-detail-location'>
                             <p className="location">{cities}</p>
                         </div>
                         <br></br>
-                        <div className='request-item-detail-name'>
+                        <div className='serviceflooritem-detail-name'>
                             <p className='name'>{request.name}</p>
                         </div>
                         <br></br>
@@ -32,4 +32,4 @@ function RequestItem({ request }) {
     )
 }
 
-export default RequestItem
+export default RequestFloorItem

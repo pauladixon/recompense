@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import * as servicesAPI from '../../services/services-api'
 import ServiceCard from '../../components/ServiceCard/ServiceCard'
 import ServiceComments from '../../components/ServiceComments/ServiceComments'
 import './ServiceDetailPage.css'
@@ -26,7 +25,7 @@ class ServiceDetailPage extends Component {
                     <div className="break"></div>
                 </div>
                 <div className='title-container'>
-                    <p className="comment-title">Comments:</p>          
+                    <p className="comment-title">Comments ::</p>          
                 </div>
                 <ServiceComments
                     key={this.state.service._id}

@@ -8,7 +8,6 @@ module.exports = {
     delete: deleteOne,
     addComment,
     deleteComment
-
 }
 
 async function index(req, res) {
@@ -45,7 +44,7 @@ async function deleteOne(req, res) {
 
 async function addComment (req, res) {
     try {
-        request.findById(req.params.id, function (err, request){
+        await Request.findById(req.params.id, function (err, request){
             request.requestComments.push({text: req.body.requestComment, user: req.user._id, creator: req.user.name})
             request.save()
             index(req,res)

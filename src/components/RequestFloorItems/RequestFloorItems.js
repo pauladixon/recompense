@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import './RequestItems.css'
-import RequestItem from '../../components/RequestItem/RequestItem'
+import './RequestFloorItems.css'
+import RequestFloorItem from '../../components/RequestFloorItem/RequestFloorItem'
 
-class RequestItems extends Component {
+class RequestFloorItems extends Component {
 
     render() {
         return (
             <>
               <div className="posts">
                   {this.props.requests.map(request =>
-                    <RequestItem 
+                    <RequestFloorItem 
                       request={request} 
                       key={request._id}
                     />
@@ -20,4 +20,4 @@ class RequestItems extends Component {
     }
 }
 
-export default RequestItems
+export default RequestFloorItems

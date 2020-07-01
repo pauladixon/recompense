@@ -5,11 +5,11 @@ import '../../utils/userService'
 function RequestCard({ request, handleDeleteRequest, user }) {
     user = user === null ? user = NaN : user
 
-     const categories = request.categories ? request.categories.map((category, idx) =>
-        <span key={category.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{category.label}</span>) : <span></span>;
+    const categories = request.categories.map((category, idx) =>
+    <span key={category.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{category.label}</span>)
 
     const cities = request.cities ? request.cities.map((city, idx) =>
-        <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>) : <span></span>;
+        <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>) : <span></span>
 
     return (
         <>
@@ -20,25 +20,25 @@ function RequestCard({ request, handleDeleteRequest, user }) {
                 <div>
                     <div>
                         <div className='line-item'>
-                            <span className='request-label'>Exchange :: </span>
-                            <span className='request-info'>{request.exchange}</span>
+                            <span className='service-label'>Exchange :: </span>
+                            <span className='service-info'>{request.exchange}</span>
                         </div>
                         <div className='line-item'>
-                            <span className='request-label'>City, State :: </span>
-                            <span className='request-info'>{cities}</span>
+                            <span className='service-label'>City, State :: </span>
+                            <span className='service-info'>{cities}</span>
                         </div>
                         <div className='line-item'>
-                            <span className='request-label'>Categories :: </span>
-                            <span className='request-info categories'>{categories}</span>
+                            <span className='service-label'>Categories :: </span>
+                            <span className='service-info categories'>{categories}</span>
                         </div>
                         <div className='line-item'>
-                            <span className='request-label'>Description :: </span>
-                            <span className='request-info'>{request.description}</span>
+                            <span className='service-label'>Description :: </span>
+                            <span className='service-info'>{request.description}</span>
                         </div>
                         {user._id &&
                             <div className='line-item'>
-                                <span className='request-label'>Contact :: </span>
-                                <span className='request-info'>{request.creator} at {request.contactEmail}</span>
+                                <span className='service-label'>Contact :: </span>
+                                <span className='service-info'>{request.creator} at {request.contactEmail}</span>
                             </div>
                         }
                     </div>
