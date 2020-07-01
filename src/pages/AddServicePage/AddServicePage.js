@@ -52,7 +52,7 @@ class AddServicePage extends Component {
             onSubmit={this.handleSubmit}
           >
             <div className='form-item'>
-              <label className='service-label'>Service Name :: </label>
+              <label className='service-label'>Service Title :: </label>
               <input
                 className="service-form"
                 name="name"
@@ -82,7 +82,7 @@ class AddServicePage extends Component {
               />
             </div>
             <div className='form-item'>
-              <label className='service-label'>City, State :: </label>
+              <label className='service-label'>Location :: </label>
               <Select
                 className='service-categories'
                 value={this.state.formData.cities}

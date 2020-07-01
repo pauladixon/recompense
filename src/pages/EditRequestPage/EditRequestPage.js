@@ -52,7 +52,7 @@ class EditRequestPage extends Component {
                         onSubmit={this.handleSubmit}
                     >
                         <div className='form-item'>
-                            <label className='service-label'>Request Name :: </label>
+                            <label className='service-label'>Request Title :: </label>
                             <input
                                 className="service-form"
                                 name="name"

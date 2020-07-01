@@ -10,7 +10,7 @@ function ServiceCard({ service, handleDeleteService, user }) {
         <span key={category.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{category.label}</span>)
 
     const cities = service.cities ? service.cities.map((city, idx) =>
-        <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>) : <span></span>;
+        <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>) : <span></span>
         
     return (
         <>
@@ -56,7 +56,7 @@ function ServiceCard({ service, handleDeleteService, user }) {
                             className='home-link'
                             to='/servicesfloor'
                         >
-                            Return to Services Floor
+                            Return to Service Floor
                         </Link>
                         {user._id === service.user &&
                             <Link

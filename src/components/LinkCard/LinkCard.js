@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../../utils/userService'
-import './LinkCard.css'
 
 function LinkCard({ link, handleDeleteLink, user }) {
     user = user === null ? user = NaN : user

@@ -19,6 +19,8 @@ const requestSchema = new Schema({
     contactEmail: String,
     creator: String,
     requestComments: [requestCommentSchema],
-}, { timestamps: true})
+}, { 
+    timestamps: true
+})
 
 module.exports = mongoose.model('Request', requestSchema)
