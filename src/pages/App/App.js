@@ -19,8 +19,8 @@ import * as linksAPI from '../../services/links-api'
 import * as requestsAPI from '../../services/requests-api'
 import AddServicePage from '../AddServicePage/AddServicePage'
 import AddLinkPage from '../../components/AddLinkPage/AddLinkPage'
-import RequestPage from '../../pages/RequestPage/RequestPage'
-import AddRequest from '../../components/AddRequest/AddRequest'
+import RequestFloor from '../../pages/RequestFloor/RequestFloor'
+import AddRequestPage from '../AddRequestPage/AddRequestPage'
 import categories from '../../category-data'
 import cities from '../../city-data'
 
@@ -44,6 +44,8 @@ class App extends Component {
   handleSignupOrLogin = async () => {
    await this.setState({ user: userService.getUser() })
   }
+
+  // services functions //
 
   handleAddService = async newServiceData => {
     const newService = await servicesAPI.create(newServiceData)
@@ -77,7 +79,7 @@ class App extends Component {
   }
 
   handleAddServiceComment = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     await servicesAPI.addComment(e.target.id, this.state.serviceComment)
     await this.handleGetAllServices()
     this.setState({serviceComment: ''})
@@ -88,34 +90,7 @@ class App extends Component {
       this.handleGetAllServices()
   }
 
-
-
-
-  handleAddLink = async newLinkData => {
-    const newLink = await linksAPI.create(newLinkData)
-    this.setState(state => ({
-      links: [...state.links, newLink]
-    }),
-      () => this.props.history.push('/directaidlinks'))
-  }
-
-  handleUpdateLink = async updatedLinkData => {
-    const updatedLink = await linksAPI.update(updatedLinkData)
-    const newLinksArray = this.state.links.map(e =>
-      e._id === updatedLink._id ? updatedLink : e
-    )
-    this.setState(
-      { links: newLinksArray },
-      () => this.props.history.push('/directaidlinks')
-    )
-  }
-
-  handleDeleteLink = async id => {
-    await linksAPI.deleteOne(id)
-    this.setState(state => ({
-      links: state.links.filter(link => link._id !== id)
-    }), () => this.props.history.push('/directaidlinks'))
-  }
+  // requests functions //
 
   handleAddRequest = async newRequestData => {
     const newRequest = await requestsAPI.create(newRequestData)
@@ -143,8 +118,13 @@ class App extends Component {
     }), () => this.props.history.push('/requests'))
   }
 
+  handleGetAllRequests = async () => {
+    const requests = await requestsAPI.getAll()
+    this.setState({requests: requests})
+  }
+
   handleAddRequestComment = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     await requestsAPI.addComment(e.target.id, this.state.requestComment)
     await this.handleGetAllRequests()
     this.setState({requestComment: ''})
@@ -155,9 +135,42 @@ class App extends Component {
       this.handleGetAllRequests()
   }
 
+  // links functions //
+
+  handleAddLink = async newLinkData => {
+    const newLink = await linksAPI.create(newLinkData)
+    this.setState(state => ({
+      links: [...state.links, newLink]
+    }),
+      () => this.props.history.push('/directaidlinks'))
+  }
+
+  handleUpdateLink = async updatedLinkData => {
+    const updatedLink = await linksAPI.update(updatedLinkData)
+    const newLinksArray = this.state.links.map(e =>
+      e._id === updatedLink._id ? updatedLink : e
+    )
+    this.setState(
+      { links: newLinksArray },
+      () => this.props.history.push('/directaidlinks')
+    )
+  }
+
+  handleDeleteLink = async id => {
+    await linksAPI.deleteOne(id)
+    this.setState(state => ({
+      links: state.links.filter(link => link._id !== id)
+    }), () => this.props.history.push('/directaidlinks'))
+  }
+
+
+  // helper functions //
+
   handleChange = e => {
     this.setState({[e.target.name]: e.target.value})
   }
+
+  // lifecycle functions //
 
   async componentDidMount() {
     const services = await servicesAPI.getAll()
@@ -302,7 +315,7 @@ class App extends Component {
             <Route
               exact path="/requests"
               render={() => (
-                <RequestPage
+                <RequestFloor
                   cities={cities}
                   categories={categories}
                   requests={this.state.requests}
@@ -311,28 +324,33 @@ class App extends Component {
               )}
             />
             <Route
-              exact path="/addrequest"
-              render={() =>
-                userService.getUser() ?
-                  <AddRequest
-                    handleAddRequest={this.handleAddRequest}
-                    city={this.state.user.city}
-                  />
-                  :
-                  <Redirect to='/login' />
-              }
-            />
-            <Route
               exact path="/requestdetail"
               render={({ location }) =>
                 <RequestDetailPage
                   location={location}
                   handleDeleteRequest={this.handleDeleteRequest}
-                  user={this.state.user}
+                  requests={this.state.requests}
+                  cities={cities}
+                  categories={categories}
                   requestComment={this.state.requestComment}
                   handleAddRequestComment={this.handleAddRequestComment}
                   handleDeleteRequestComment={this.handleDeleteRequestComment}
+                  user={this.state.user}
+                  handleChange={this.handleChange}
                 />
+              }
+            />
+            <Route
+              exact path="/addrequest"
+              render={() =>
+                userService.getUser() ?
+                  <AddRequestPage
+                    handleAddRequest={this.handleAddRequest}
+                    cities={cities}
+                    categories={categories}
+                  />
+                  :
+                  <Redirect to='/login' />
               }
             />
             <Route

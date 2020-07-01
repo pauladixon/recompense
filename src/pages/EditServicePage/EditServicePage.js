@@ -51,7 +51,7 @@ class EditServicePage extends Component {
                         onSubmit={this.handleSubmit}
                     >
                         <div className='form-item'>
-                            <label className='service-label'>Service Name :: </label>
+                            <label className='service-label'>Service Title :: </label>
                             <input
                                 className="service-form"
                                 name="name"

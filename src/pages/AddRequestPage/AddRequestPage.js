@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Select from 'react-select'
-import serviceCategories from '../../category-data'
-import serviceCities from '../../city-data'
-// import './AddServicePage.css'
 
-class AddRequest extends Component {
+class AddRequestPage extends Component {
   state = {
     invalidForm: true,
     formData: {
@@ -43,20 +40,20 @@ class AddRequest extends Component {
 
   render() {
     return (
-      <div className="add-request-page">
+      <div className="add-service-page">
         <div className="page-header">
           <p className='page-title'>Add a Request :: </p>
         </div>
-        <div className='add-request-form'>
+        <div className='add-service-form'>
           <form 
             ref={this.formRef} 
             autoComplete="off" 
             onSubmit={this.handleSubmit}
           >
             <div className='form-item'>
-              <label className='request-label'>Request Name :: </label>
+              <label className='service-label'>Request Title :: </label>
               <input
-                className="request-form"
+                className="service-form"
                 name="name"
                 value={this.state.formData.name}
                 onChange={this.handleChange}
@@ -64,9 +61,9 @@ class AddRequest extends Component {
               /> 
             </div>
             <div className='form-item'>
-              <label className='request-label'>Description of Service :: </label>
+              <label className='service-label'>Description of Request :: </label>
               <textarea 
-                className="request-form description"
+                className="service-form description"
                 name="description"
                 value={this.state.formData.description}
                 onChange={this.handleChange}
@@ -74,9 +71,9 @@ class AddRequest extends Component {
               />
             </div>
             <div className='form-item'>
-              <label className='request-label'>Exchange for Service :: </label>
+              <label className='service-label'>Exchange for Request :: </label>
               <input 
-                className="request-form"
+                className="service-form"
                 name="exchange"
                 value={this.state.formData.exchange}
                 onChange={this.handleChange}
@@ -84,33 +81,33 @@ class AddRequest extends Component {
               />
             </div>
             <div className='form-item'>
-              <label className='request-label'>City, State :: </label>
+              <label className='service-label'>Location :: </label>
               <Select
-                className='request-categories'
+                className='service-categories'
                 value={this.state.formData.cities}
                 isMulti
                 name="cities"
                 onChange={this.handleChangeCities}
-                options={serviceCities}
+                options={this.props.cities}
                 required
               />
             </div>
             <div className='form-item'>
-              <label className='request-label'>Categories of Service :: </label>
+              <label className='service-label'>Categories of Request :: </label>
               <Select
-                className='request-categories'
+                className='service-categories'
                 value={this.state.formData.categories}
                 isMulti
                 name="categories"
                 onChange={this.handleChangeCategories}
-                options={serviceCategories}
+                options={this.props.categories}
                 required
               />
             </div>
             <div className='form-item'>
-              <label className='request-label'>Contact Email :: </label>
+              <label className='service-label'>Contact Email :: </label>
               <input 
-                className="request-form"
+                className="service-form"
                 name="contactEmail"
                 value={this.state.formData.contactEmail}
                 onChange={this.handleChange}
@@ -134,4 +131,4 @@ class AddRequest extends Component {
   }
 }
 
-export default AddRequest
+export default AddRequestPage
