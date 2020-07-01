@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './RequestFloorItems.css'
 import RequestFloorItem from '../../components/RequestFloorItem/RequestFloorItem'
 
 class RequestFloorItems extends Component {
