@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../../utils/userService'
-import './RequestCard.css'
 
 function RequestCard({ request, handleDeleteRequest, user }) {
     user = user === null ? user = NaN : user
@@ -53,10 +52,10 @@ function RequestCard({ request, handleDeleteRequest, user }) {
                         </button>
                         }
                         <Link
-                            className='home-link'
+                            className='home-link request-button'
                             to='/requests'
                         >
-                            Return to Requests Page
+                            Return to Request Floor
                         </Link>
                         {user._id === request.user &&
                             <Link
