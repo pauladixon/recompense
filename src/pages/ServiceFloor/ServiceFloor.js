@@ -6,28 +6,42 @@ import SearchBar from '../../components/SearchBar/SearchBar'
 import './ServiceFloor.css'
 
 class ServiceFloor extends Component {
-
   state = {
-    services: []
+    filteredServices: []
   }
 
-  handleSearchCities = async (e) => {
-    const services = this.state.services.filter(service => {
-      return service.cities.value.includes(e.target.name)
+  handleSearchCities = (e) => {
+    const services = this.props.services.filter(service => {
+      // console.log(service.cities[0].value.includes(service.cities[0].value))
+      if (service.cities[0].value.includes(e.target.name)) {
+        return service.cities
+        // console.log(service.cities)
+      }
+      // return service.cities[0].value.includes(e.target.value)
     })
-    this.setState({services:services})
+    // console.log(e.target.name);
+    // console.log(this.props.services)
+    this.setState({filteredServices:services})
   }
   
-  handleSearchCategories = async (e) => {
-    const services = this.state.services.filter(service => {
-      return service.categories.value.includes(e.target.name)
+  handleSearchCategories = (e) => {
+    const services = this.props.services.filter(service => {
+      return service.categories[0].value.includes(e.target.name)
     })
     this.setState({services:services})
   }
 
-  async componentDidMount() {
-    const services = await servicesAPI.getAll()
-    this.setState({services})
+  componentDidUpdate() {
+    console.log('updated', this.props.services)
+    console.log('updated', this.state.filteredServices)
+  }
+
+  handleServiceComponent() {
+    if (this.state.filteredServices.length === 0) {
+      return this.props.services
+    } else {
+      return this.state.filteredServices
+    }
   }
 
   render()  {
@@ -48,7 +62,7 @@ class ServiceFloor extends Component {
         </div>
         <div className="page-content"> 
           <ServiceFloorItems
-              services={this.state.services}
+              services={this.props.services}
               cities={this.props.cities}
               categories={this.props.categories}
           />
