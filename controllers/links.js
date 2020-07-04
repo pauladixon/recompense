@@ -5,9 +5,7 @@ module.exports = {
     show, 
     create,
     update,
-    delete: deleteOne,
-    addComment,
-    deleteComment
+    delete: deleteOne
 }
 
 async function index(req, res) {
@@ -40,28 +38,4 @@ async function update(req, res) {
 async function deleteOne(req, res) {
     const deletedLink = await Link.findByIdAndRemove(req.params.id)
     res.status(200).json(deletedLink)
-}
-
-async function addComment (req, res) {
-    try {
-        link.findById(req.params.id, function (err, link){
-            link.linkComments.push({text: req.body.linkComment, user: req.user._id, creator: req.user.name})
-            link.save()
-            index(req,res)
-        }) 
-    } catch (err){
-            res.json({err})
-    }
-}
-
-async function deleteComment(req,res){
-    try {
-      await Link.findByIdAndUpdate(req.params.id, {
-            $pull: {
-              linkComments: {_id: req.params.id}
-            }})
-        index(req, res)
-    } catch (err) {
-        res.json({err})
-    }
 }
