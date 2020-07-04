@@ -49,10 +49,11 @@ class SearchBar extends Component {
         return (
             <div className="search-bar">
                 <div className='search-item'>
-                    {/* <form 
+                    {/* Remove form opening and closing tags and type attribute from button to test */}
+                    <form 
                         autoComplete="off" 
                         onSubmit={this.props.handleSearchCities}
-                    > */}
+                    >
                         <label className='search-label'>Search By Location :: </label>
                         <div className='search-row'>
                             <Select
@@ -65,7 +66,7 @@ class SearchBar extends Component {
                             />
                             <button
                                 className="search-btn"
-                                {/* type="submit" */}
+                                type="submit"
                                 onClick={this.props.handleSearchCities}
                                 name={this.state.formData.city}
                             >
