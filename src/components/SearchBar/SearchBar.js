@@ -29,27 +29,35 @@ class SearchBar extends Component {
     }
     
     handleChangeCity = city => {
+        city = city.value
         this.setState({ formData: { ...this.state.formData, city } })
     }
 
     handleChangeCategory = category => {
+        category = category.value
         this.setState({ formData: { ...this.state.formData, category } })
+    }
+
+    componentDidUpdate() {
+        console.log(this.state.formData);
+        if (this.props.onChange) {
+            this.props.onChange(this.state)
+        }
     }
 
     render() {
         return (
             <div className="search-bar">
                 <div className='search-item'>
-                    <form 
+                    {/* <form 
                         autoComplete="off" 
                         onSubmit={this.props.handleSearchCities}
-                    >
+                    > */}
                         <label className='search-label'>Search By Location :: </label>
                         <div className='search-row'>
                             <Select
                                 className='search-select'
                                 value={this.state.formData.city}
-                                name="cities"
                                 styles={customStyles}
                                 onChange={this.handleChangeCity}
                                 options={this.props.cities}
@@ -57,7 +65,9 @@ class SearchBar extends Component {
                             />
                             <button
                                 className="search-btn"
-                                type="submit"
+                                {/* type="submit" */}
+                                onClick={this.props.handleSearchCities}
+                                name={this.state.formData.city}
                             >
                                 →
                             </button>
@@ -75,7 +85,6 @@ class SearchBar extends Component {
                             <Select
                                 className='search-select'
                                 value={this.state.formData.category}
-                                name="categories"
                                 styles={customStyles}
                                 onChange={this.handleChangeCategory}
                                 options={this.props.categories}
@@ -84,6 +93,7 @@ class SearchBar extends Component {
                             <button
                                 className="search-btn"
                                 type="submit"
+                                name={this.state.formData.city}
                             >
                                 →
                             </button>

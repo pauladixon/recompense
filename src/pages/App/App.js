@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import './App.css'
 import { Link, Route, Switch, Redirect } from 'react-router-dom'
 import SignupPage from '../SignupPage/SignupPage'
@@ -24,7 +24,7 @@ import AddRequestPage from '../AddRequestPage/AddRequestPage'
 import categories from '../../category-data'
 import cities from '../../city-data'
 
-class App extends Component {
+class App extends PureComponent {
   state = {
     user: userService.getUser(),
     services: [],
@@ -174,11 +174,9 @@ class App extends Component {
 
   async componentDidMount() {
     const services = await servicesAPI.getAll()
-    this.setState({ services })
     const requests = await requestsAPI.getAll()
-    this.setState({ requests })
     const links = await linksAPI.getAll()
-    this.setState({ links })
+    this.setState({ requests, services, links })
   }
 
   render() {

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './ServiceFloorItem.css'
 
 function ServiceFloorItem({ service }) {
-
+    
     const cities = service.cities ? service.cities.map((city, idx) =>
         <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>) : <span></span>;
     

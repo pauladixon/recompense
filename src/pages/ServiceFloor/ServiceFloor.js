@@ -1,33 +1,34 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { Link } from 'react-router-dom'
 import * as servicesAPI from '../../services/services-api'
 import ServiceFloorItems from '../../components/ServiceFloorItems/ServiceFloorItems'
 import SearchBar from '../../components/SearchBar/SearchBar'
 import './ServiceFloor.css'
 
-class ServiceFloor extends Component {
-
+class ServiceFloor extends PureComponent {
   state = {
-    services: []
+    filteredServices: []
   }
 
-  handleSearchCities = async (e) => {
-    const services = this.state.services.filter(service => {
-      return service.cities.value.includes(e.target.name)
+  handleSearchCities = (e) => {
+    const services = this.props.services.filter(service => {
+      if (service.cities[0].value.includes(e.target.name)) {
+        return service.cities
+      }
     })
-    this.setState({services:services})
+    this.setState({filteredServices:services})
   }
   
-  handleSearchCategories = async (e) => {
-    const services = this.state.services.filter(service => {
-      return service.categories.value.includes(e.target.name)
+  handleSearchCategories = (e) => {
+    const services = this.props.services.filter(service => {
+      return service.categories[0].value.includes(e.target.name)
     })
     this.setState({services:services})
   }
 
-  async componentDidMount() {
-    const services = await servicesAPI.getAll()
-    this.setState({services})
+  componentDidUpdate() {
+    console.log('updated', this.props.services)
+    console.log('updated', this.state.filteredServices)
   }
 
   render()  {
@@ -48,7 +49,7 @@ class ServiceFloor extends Component {
         </div>
         <div className="page-content"> 
           <ServiceFloorItems
-              services={this.state.services}
+              services={this.props.services}
               cities={this.props.cities}
               categories={this.props.categories}
           />
