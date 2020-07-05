@@ -20,6 +20,7 @@ app.use(require('./config/auth'))
 app.use('/api/services', require('./routes/api/services'))
 app.use('/api/links', require('./routes/api/links'))
 app.use('/api/requests', require('./routes/api/requests'))
+app.use('/api/linkComments', require('./routes/api/linkComments'))
 
 
 app.get('/*', function(req, res) {

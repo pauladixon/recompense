@@ -17,6 +17,7 @@ import LinksPage from '../LinksPage/LinksPage'
 import * as servicesAPI from '../../services/services-api'
 import * as linksAPI from '../../services/links-api'
 import * as requestsAPI from '../../services/requests-api'
+import linkCommentsAPI from '../../services/linkComments-api';
 import AddServicePage from '../AddServicePage/AddServicePage'
 import AddLinkPage from '../../components/AddLinkPage/AddLinkPage'
 import RequestFloor from '../../pages/RequestFloor/RequestFloor'
@@ -30,6 +31,7 @@ class App extends PureComponent {
     services: [],
     serviceComment: '',
     links: [],
+    linkComments: [],
     requests: [],
     requestComment: '',
     cities: cities, 
@@ -163,7 +165,19 @@ class App extends PureComponent {
     }), () => this.props.history.push('/directaidlinks'))
   }
 
-
+  handleAddLinkComment = async (newLinkCommentData) => {
+		try {
+			const newLinkComment = await linkCommentsAPI.create(newLinkCommentData);
+			this.setState(
+				(state) => ({
+					linkComments: [...state.linkComments, newLinkComment],
+				}),
+				() => this.props.history.push('/linkdetail')
+			);
+		} catch (err) {
+			console.log(err);
+		}
+	};
   // helper functions //
 
   handleChange = e => {
@@ -282,6 +296,7 @@ class App extends PureComponent {
                   location={location}
                   handleDeleteLink={this.handleDeleteLink}
                   user={this.state.user}
+                  handleAddLinkComment={this.handleAddLinkComment}
                 />
               }
             />
