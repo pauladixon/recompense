@@ -24,10 +24,10 @@ export default class AddLinkComment extends Component {
 	render() {
         return (
             <>
-				<div className="row wrapper">
-					<form className="col s12" onSubmit={this.handleSubmit}>
-						<div className="row">
-							<div className="input-field col s6 mat-input">
+				<div>
+					<form onSubmit={this.handleSubmit}>
+						<div>
+							<div>
 								<form>
 									<input
 										type="text"
@@ -35,14 +35,14 @@ export default class AddLinkComment extends Component {
 										value={this.state.comment}
 										name="comment"
 										onChange={this.handleChange}
-										// required
+										required
 									/>
 								</form>
 							</div>
 						</div>
 						<div>
 							<div>
-								<button className="waves-effect waves-light btn blue-grey darken-4 mat-input">REPLY</button>
+								<button>Comment</button>
 							</div>
 						</div>
 					</form>

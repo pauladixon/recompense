@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import * as servicesAPI from '../../services/services-api'
+// import * as servicesAPI from '../../services/services-api'
 import ServiceFloorItems from '../../components/ServiceFloorItems/ServiceFloorItems'
 import SearchBar from '../../components/SearchBar/SearchBar'
 import './ServiceFloor.css'
@@ -18,7 +18,7 @@ class ServiceFloor extends Component {
         // console.log(service.cities)
       }
       // return service.cities[0].value.includes(e.target.value)
-    })
+    } )
     // console.log(e.target.name);
     // console.log(this.props.services)
     this.setState({filteredServices:services})

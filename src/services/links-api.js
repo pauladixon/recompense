@@ -31,6 +31,7 @@ export function update(link) {
     return fetch(`${BASE_URL}/${link._id}`, options).then(res => res.json())
 }
 
+
 export function deleteOne(id) {
     const options = {
         method: 'DELETE',

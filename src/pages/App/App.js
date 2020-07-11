@@ -320,6 +320,7 @@ class App extends PureComponent {
                     handleUpdateLink={this.handleUpdateLink}
                     location={location}
                     user={this.state.user}
+                    // link={this.state.link}
                   />
                   :
                   <Redirect to='/login' />

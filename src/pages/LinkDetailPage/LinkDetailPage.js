@@ -1,6 +1,6 @@
 import React from 'react'
 import LinkCard from '../../components/LinkCard/LinkCard'
-import AddLinkComment from '../../components/AddLinkComment/AddLinkComment';
+// import AddLinkComment from '../../components/AddLinkComment/AddLinkComment';
 
 function LinkDetailPage(props) {
     const link = props.location.state.link
@@ -17,15 +17,7 @@ function LinkDetailPage(props) {
             <div className='break-container'>
                 <div className="break"></div>
             </div>
-            <div>
-                <AddLinkComment user={props.user} handleAddLinkComment={props.handleAddLinkComment} link={link} />
-                {link.linkComments.map(linkComment =>
-                    <div className="comment-section">
-                        <p id="comment-content">{linkComment.comment}</p>
-                        {/* <p id="comment-name">Posted by {comment.commentUser.name}</p> */}
-                    </div>
-                )}
-            </div>
+            
         </>
     )
 }

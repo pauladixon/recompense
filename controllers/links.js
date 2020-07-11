@@ -25,6 +25,16 @@ async function create(req, res) {
     res.status(201).json(link)
 }
 
+// async function update(req, res) {
+//     try {
+//         const updatedLink = await Link.findByIdAndUpdate(req.params.id, req.body, {new: true})
+//         res.status(200).json(updatedLink)
+//     }
+//     catch(err){
+//         res.status(500).json(err)
+//     }
+// }
+
 async function update(req, res) {
     try {
         const updatedLink = await Link.findByIdAndUpdate(req.params.id, req.body, {new: true})
