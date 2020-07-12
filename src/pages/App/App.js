@@ -17,7 +17,6 @@ import LinksPage from '../LinksPage/LinksPage'
 import * as servicesAPI from '../../services/services-api'
 import * as linksAPI from '../../services/links-api'
 import * as requestsAPI from '../../services/requests-api'
-import linkCommentsAPI from '../../services/linkComments-api';
 import AddServicePage from '../AddServicePage/AddServicePage'
 import AddLinkPage from '../../components/AddLinkPage/AddLinkPage'
 import RequestFloor from '../../pages/RequestFloor/RequestFloor'
@@ -31,7 +30,7 @@ class App extends PureComponent {
     services: [],
     serviceComment: '',
     links: [],
-    linkComments: [],
+    linkComment: [],
     requests: [],
     requestComment: '',
     cities: cities, 
@@ -165,19 +164,17 @@ class App extends PureComponent {
     }), () => this.props.history.push('/directaidlinks'))
   }
 
-  handleAddLinkComment = async (newLinkCommentData) => {
-		try {
-			const newLinkComment = await linkCommentsAPI.create(newLinkCommentData);
-			this.setState(
-				(state) => ({
-					linkComments: [...state.linkComments, newLinkComment],
-				}),
-				() => this.props.history.push('/linkdetail')
-			);
-		} catch (err) {
-			console.log(err);
-		}
-	};
+  handleGetAllLinks = async () => {
+    const links = await linksAPI.getAll()
+    this.setState({links: links})
+  }
+
+  handleAddLinkComment = async (e) => {
+    e.preventDefault()
+    await linksAPI.addComment(e.target.id, this.state.linkComment)
+    await this.handleGetAllLinks()
+    this.setState({linkComment: ''})
+  }
   // helper functions //
 
   handleChange = e => {
@@ -286,6 +283,9 @@ class App extends PureComponent {
               render={() => (
                 <LinksPage
                   links={this.state.links}
+                  cities={cities}
+                  categories={categories}
+                  linkComment={this.state.linkComment}
                 />
               )}
             />
@@ -293,10 +293,20 @@ class App extends PureComponent {
               exact path="/linkdetail"
               render={({ location }) =>
                 <LinkDetailPage
+                  // location={location}
+                  // handleDeleteLink={this.handleDeleteLink}
+                  // user={this.state.user}
+                  // handleAddLinkComment={this.handleAddLinkComment}
                   location={location}
                   handleDeleteLink={this.handleDeleteLink}
-                  user={this.state.user}
+                  link={this.state.link}
+                  cities={cities}
+                  categories={categories}
+                  linkComment={this.state.linkComment}
                   handleAddLinkComment={this.handleAddLinkComment}
+                  handleDeleteLinkComment={this.handleDeleteLinkComment}
+                  user={this.state.user}
+                  handleChange={this.handleChange}
                 />
               }
             />

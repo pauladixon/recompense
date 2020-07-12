@@ -5,7 +5,8 @@ module.exports = {
     show, 
     create,
     update,
-    delete: deleteOne
+    delete: deleteOne,
+    addComment,
 }
 
 async function index(req, res) {
@@ -25,16 +26,6 @@ async function create(req, res) {
     res.status(201).json(link)
 }
 
-// async function update(req, res) {
-//     try {
-//         const updatedLink = await Link.findByIdAndUpdate(req.params.id, req.body, {new: true})
-//         res.status(200).json(updatedLink)
-//     }
-//     catch(err){
-//         res.status(500).json(err)
-//     }
-// }
-
 async function update(req, res) {
     try {
         const updatedLink = await Link.findByIdAndUpdate(req.params.id, req.body, {new: true})
@@ -49,3 +40,16 @@ async function deleteOne(req, res) {
     const deletedLink = await Link.findByIdAndRemove(req.params.id)
     res.status(200).json(deletedLink)
 }
+
+
+function addComment(req, res) {
+    Link.findById(req.params.id).then(function(link) {
+      console.log('push')
+      link.linkComments.push(req.body);
+      console.log('after push')
+      link.save(function(err, link) {
+        console.log(err);
+        res.status(200).json(link);
+      })
+    })
+  }
