@@ -40,24 +40,36 @@ export function deleteOne(id) {
     return fetch(`${BASE_URL}/${id}`, options).then(res => res.json())
 }
 
-export function addComment(linkId, linkComment) {
-    return fetch(`/api/links/${linkId}/linkComments`, {
-      method: 'POST',
-      headers: new Headers({'Content-Type': 'application/json'}),
-      body: JSON.stringify({
-        body: linkComment
-      })
-    }).then(res => {
-      // if (res.ok) return res.json();
-      // // Probably a duplicate email
-      // throw new Error('res');
+// export function addComment(linkId, linkComment) {
+//     return fetch(`/api/links/${linkId}/linkComments`, {
+//       method: 'POST',
+//       headers: new Headers({'Content-Type': 'application/json'}),
+//       body: JSON.stringify({
+//         body: linkComment
+//       })
+//     }).then(res => {
+//       // if (res.ok) return res.json();
+//       // // Probably a duplicate email
+//       // throw new Error('res');
   
-      if (res.ok) {
-        return res.json();
-      } else {
-        throw new Error('Something went wrong');
-      }
-    }).catch((error) => {
-      console.log(error)
-    });
+//       if (res.ok) {
+//         return res.json();
+//       } else {
+//         throw new Error('Something went wrong');
+//       }
+//     }).catch((error) => {
+//       console.log(error)
+//     });
+//   }
+
+export function addComment (link_id, linkComment){
+  const options = {
+      method: 'POST', 
+      headers: {
+          'Content-type': 'application/json',
+          'Authorization': 'Bearer ' + tokenService.getToken()
+        }, 
+      body: JSON.stringify({'service_id': link_id, 'linkComment': linkComment})
   }
+  return fetch(`${BASE_URL}/${link_id}/comment`, options).then(res => res.json())
+}
