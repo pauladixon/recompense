@@ -3,7 +3,7 @@ import LinkCard from '../../components/LinkCard/LinkCard'
 import LinkComments from '../../components/LinkComments/LinkComments'
 
 class LinkDetailPage extends Component {
-    
+
     state = {
         link: this.props.location.state.link,
     }
@@ -34,7 +34,7 @@ class LinkDetailPage extends Component {
                     handleChange={this.props.handleChange}
                     linkComment={this.props.linkComment}
                     handleAddLinkComment={this.props.handleAddLinkComment}
-                    // handleDeleteLinkComment={this.props.handleDeleteLinkComment}
+                    handleDeleteLinkComment={this.props.handleDeleteLinkComment}
                 />
             </>
         )

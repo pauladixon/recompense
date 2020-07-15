@@ -7,6 +7,7 @@ module.exports = {
     update,
     delete: deleteOne,
     addComment,
+    deleteComment
 }
 
 async function index(req, res) {
@@ -63,5 +64,17 @@ async function addComment (req, res) {
         }) 
     } catch (err){
             res.json({err})
+    }
+}
+
+async function deleteComment(req,res){
+    try {
+      await Link.findByIdAndUpdate(req.params.id, {
+            $pull: {
+              linkComments: {_id: req.params.id}
+            }})
+        index(req, res)
+    } catch (err) {
+        res.json({err})
     }
 }

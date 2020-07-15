@@ -175,6 +175,11 @@ class App extends PureComponent {
     await this.handleGetAllLinks()
     this.setState({linkComment: ''})
   }
+
+  handleDeleteLinkComment = async(e) => {
+    await linksAPI.deleteComment(e.target.id, e.target.name)
+    this.handleGetAllLinks()
+}
   // helper functions //
 
   handleChange = e => {
