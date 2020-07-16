@@ -42,9 +42,22 @@ async function deleteOne(req, res) {
     res.status(200).json(deletedLink)
 }
 
+
+// function addComment(req, res) {
+//     Link.findById(req.params.id).then(function(link) {
+//       console.log('push')
+//       link.linkComments.push(req.body);
+//       console.log('after push')
+//       link.save(function(err, link) {
+//         console.log(err);
+//         res.status(200).json(link);
+//       })
+//     })
+//   }
+
 async function addComment (req, res) {
     try {
-        link.findById(req.params.id, function (err, link){
+        await Link.findById(req.params.id, function (err, link){
             link.linkComments.push({text: req.body.linkComment, user: req.user._id, creator: req.user.name})
             link.save()
             index(req,res)

@@ -78,7 +78,7 @@ class EditLinkPage extends Component {
                             <label className='service-label'>Venmo for Link :: </label>
                             <input 
                                 className="service-form"
-                                name="exchange"
+                                name="venmo"
                                 value={this.state.formData.venmo}
                                 onChange={this.handleChange}
                                 required
@@ -88,7 +88,7 @@ class EditLinkPage extends Component {
                             <label className='service-label'>Cashapp for Link :: </label>
                             <input 
                                 className="service-form"
-                                name="exchange"
+                                name="cashapp"
                                 value={this.state.formData.cashapp}
                                 onChange={this.handleChange}
                                 required
@@ -98,7 +98,7 @@ class EditLinkPage extends Component {
                             <label className='service-label'>PayPal for Link :: </label>
                             <input 
                                 className="service-form"
-                                name="exchange"
+                                name="paypal"
                                 value={this.state.formData.paypal}
                                 onChange={this.handleChange}
                                 required

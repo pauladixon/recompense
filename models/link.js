@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const linkCommentSchema = new Schema({
+const LinkCommentSchema = new Schema({
     text: String,
     user: String,
     creator: String,
@@ -9,7 +9,7 @@ const linkCommentSchema = new Schema({
     timestamps: true
 })
 
-const linkSchema = new Schema({
+const LinkSchema = new Schema({
     user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
     categories: [],
     cities: [],
@@ -20,7 +20,7 @@ const linkSchema = new Schema({
     paypal: '',
     contactEmail: String,
     creator: String,
-    linkComments: [linkCommentSchema],
+    linkComments: [LinkCommentSchema],
 }, { timestamps: true})
 
-module.exports = mongoose.model('Link', linkSchema)
+module.exports = mongoose.model('Link', LinkSchema)

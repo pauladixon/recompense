@@ -30,6 +30,7 @@ class App extends PureComponent {
     services: [],
     serviceComment: '',
     links: [],
+    linkComment: [],
     requests: [],
     requestComment: '',
     cities: cities, 
@@ -76,18 +77,6 @@ class App extends PureComponent {
   handleGetAllServices = async () => {
     const services = await servicesAPI.getAll()
     this.setState({services: services})
-  }
-
-  handleAddServiceComment = async (e) => {
-    e.preventDefault()
-    await servicesAPI.addComment(e.target.id, this.state.serviceComment)
-    await this.handleGetAllServices()
-    this.setState({serviceComment: ''})
-  }
-
-  handleDeleteServiceComment = async(e) => {
-      await servicesAPI.deleteComment(e.target.id, e.target.name)
-      this.handleGetAllServices()
   }
 
   // requests functions //
@@ -163,7 +152,22 @@ class App extends PureComponent {
     }), () => this.props.history.push('/directaidlinks'))
   }
 
+  handleGetAllLinks = async () => {
+    const links = await linksAPI.getAll()
+    this.setState({links: links})
+  }
 
+  handleAddLinkComment = async (e) => {
+    e.preventDefault()
+    await linksAPI.addComment(e.target.id, this.state.linkComment)
+    await this.handleGetAllLinks()
+    this.setState({linkComment: ''})
+  }
+
+  handleDeleteLinkComment = async(e) => {
+    await linksAPI.deleteComment(e.target.id, e.target.name)
+    this.handleGetAllLinks()
+}
   // helper functions //
 
   handleChange = e => {
@@ -218,7 +222,7 @@ class App extends PureComponent {
                   services={this.state.services}
                   cities={cities}
                   categories={categories}
-                  serviceComment={this.state.serviceComment}
+                  // serviceComment={this.state.serviceComment}
                 />
               )}
             />
@@ -232,8 +236,7 @@ class App extends PureComponent {
                   cities={cities}
                   categories={categories}
                   serviceComment={this.state.serviceComment}
-                  handleAddServiceComment={this.handleAddServiceComment}
-                  handleDeleteServiceComment={this.handleDeleteServiceComment}
+                  handleGetAllServices={this.handleGetAllServices}
                   user={this.state.user}
                   handleChange={this.handleChange}
                 />
@@ -272,6 +275,9 @@ class App extends PureComponent {
               render={() => (
                 <LinksPage
                   links={this.state.links}
+                  cities={cities}
+                  categories={categories}
+                  linkComment={this.state.linkComment}
                 />
               )}
             />
@@ -279,9 +285,20 @@ class App extends PureComponent {
               exact path="/linkdetail"
               render={({ location }) =>
                 <LinkDetailPage
+                  // location={location}
+                  // handleDeleteLink={this.handleDeleteLink}
+                  // user={this.state.user}
+                  // handleAddLinkComment={this.handleAddLinkComment}
                   location={location}
                   handleDeleteLink={this.handleDeleteLink}
+                  link={this.state.link}
+                  cities={cities}
+                  categories={categories}
+                  linkComment={this.state.linkComment}
+                  handleAddLinkComment={this.handleAddLinkComment}
+                  handleDeleteLinkComment={this.handleDeleteLinkComment}
                   user={this.state.user}
+                  handleChange={this.handleChange}
                 />
               }
             />
@@ -305,6 +322,7 @@ class App extends PureComponent {
                     handleUpdateLink={this.handleUpdateLink}
                     location={location}
                     user={this.state.user}
+                    // link={this.state.link}
                   />
                   :
                   <Redirect to='/login' />

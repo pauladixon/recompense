@@ -16,9 +16,9 @@ function LinkItem({ link }) {
                     state: { link }
                 }}
             >
-                <div className='request-item'>
+                <div className='link-item'>
                     <div>
-                        <div className='request-item-detail-location'>
+                        <div className='serviceflooritem-detail-location'>
                             <p className="location">{cities}</p>
                         </div>
                         <br></br>

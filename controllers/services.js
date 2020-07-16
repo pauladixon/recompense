@@ -57,7 +57,7 @@ async function addComment (req, res) {
 
 async function deleteComment(req,res){
     try {
-      await Service.findByIdAndUpdate(req.params.id, {
+      await Service.findByIdAndUpdate(req.body.service_id, {
             $pull: {
               serviceComments: {_id: req.params.id}
             }})
