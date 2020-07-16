@@ -69,7 +69,7 @@ async function addComment (req, res) {
 
 async function deleteComment(req,res){
     try {
-      await Link.findByIdAndUpdate(req.params.id, {
+      await Link.findByIdAndUpdate(req.body.link_id, {
             $pull: {
               linkComments: {_id: req.params.id}
             }})

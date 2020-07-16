@@ -1,13 +1,41 @@
 import React, { Component } from 'react'
-
+import * as linksAPI from '../../services/links-api'
 
 class LinkComments extends Component {
+    state = {
+        linkComment: '',
+        link: this.props.link
+    }
 
+    async componentDidMount(){
+        const link = await linksAPI.getOne(this.state.link)
+        this.setState({link: link, linkComment: ''})
+    }
+
+      handleAddLinkComment = async (e) => {
+        e.preventDefault()
+        await linksAPI.addComment(e.target.id, this.state.linkComment)
+        const link = await linksAPI.getOne(this.state.link)
+        this.setState({link: link, linkComment: ''})
+      }
+
+      handleDeleteLinkComment = async(e) => {
+        e.preventDefault();
+        
+        console.log(e.target.id, e.target.name)
+        await linksAPI.deleteComment(e.target.id, e.target.name)
+        const link = await linksAPI.getOne(this.state.link)
+        this.setState({link: link, linkComment: ''})
+    }
+
+      handleChange = e => {
+        this.setState({[e.target.name]: e.target.value})
+      }
     render() {
         return (
             <div className='all-comments-container'>
                 <div className='comments'>
-                    {this.props.link.linkComments.map((linkComment) =>
+                    {this.state.link && this.state.link.linkComments.map((linkComment) =>
                         <div key={linkComment._id} className='comment-container'>
                             <p className='creator'>{linkComment.creator} :: </p>
                             <div className='comment-text'>
@@ -18,7 +46,7 @@ class LinkComments extends Component {
                                     className='x-btn' 
                                     id={this.props.link._id} 
                                     name={linkComment._id} 
-                                    onClick={this.props.handleDeleteLinkComment}
+                                    onClick={this.handleDeleteLinkComment}
                                 > X
                                 </button>
                             :
@@ -30,12 +58,12 @@ class LinkComments extends Component {
                         <form
                             className='comment-form'
                             id={this.props.link._id} 
-                            onSubmit={this.props.handleAddLinkComment}
+                            onSubmit={this.handleAddLinkComment}
                         >
                             <input 
-                                onChange={this.props.handleChange}
+                                onChange={this.handleChange}
                                 name='linkComment'
-                                value={this.props.linkComment}
+                                value={this.state.linkComment}
                                 className='comment-input'
                                 autoComplete='off'
                             />
