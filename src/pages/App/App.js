@@ -79,18 +79,6 @@ class App extends PureComponent {
     this.setState({services: services})
   }
 
-  handleAddServiceComment = async (e) => {
-    e.preventDefault()
-    await servicesAPI.addComment(e.target.id, this.state.serviceComment)
-    await this.handleGetAllServices()
-    this.setState({serviceComment: ''})
-  }
-
-  handleDeleteServiceComment = async(e) => {
-      await servicesAPI.deleteComment(e.target.id, e.target.name)
-      this.handleGetAllServices()
-  }
-
   // requests functions //
 
   handleAddRequest = async newRequestData => {
@@ -234,7 +222,7 @@ class App extends PureComponent {
                   services={this.state.services}
                   cities={cities}
                   categories={categories}
-                  serviceComment={this.state.serviceComment}
+                  // serviceComment={this.state.serviceComment}
                 />
               )}
             />
@@ -248,9 +236,7 @@ class App extends PureComponent {
                   cities={cities}
                   categories={categories}
                   serviceComment={this.state.serviceComment}
-                  handleAddServiceComment={this.handleAddServiceComment}
                   handleGetAllServices={this.handleGetAllServices}
-                  handleDeleteServiceComment={this.handleDeleteServiceComment}
                   user={this.state.user}
                   handleChange={this.handleChange}
                 />
