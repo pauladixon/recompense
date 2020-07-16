@@ -1,13 +1,42 @@
 import React, { Component } from 'react'
-
+import * as requestsAPI from '../../services/requests-api'
 
 class RequestComments extends Component {
+    state = {
+        requestComment: '',
+        request: this.props.request
+    }
+
+    async componentDidMount(){
+        const request = await requestsAPI.getOne(this.state.request)
+        this.setState({request: request, requestComment: ''})
+    }
+
+      handleAddRequestComment = async (e) => {
+        e.preventDefault()
+        await requestsAPI.addComment(e.target.id, this.state.requestComment)
+        const request = await requestsAPI.getOne(this.state.request)
+        this.setState({request: request, requestComment: ''})
+      }
+
+      handleDeleteRequestComment = async(e) => {
+        e.preventDefault();
+        
+        console.log(e.target.id, e.target.name)
+        await requestsAPI.deleteComment(e.target.id, e.target.name)
+        const request = await requestsAPI.getOne(this.state.request)
+        this.setState({request: request, requestComment: ''})
+    }
+
+      handleChange = e => {
+        this.setState({[e.target.name]: e.target.value})
+      }
 
     render() {
         return (
             <div className='all-comments-container'>
                 <div className='comments'>
-                    {this.props.request.requestComments.map((requestComment) =>
+                    {this.state.request && this.state.request.requestComments.map((requestComment) =>
                         <div key={requestComment._id} className='comment-container'>
                             <p className='creator'>{requestComment.creator} :: </p>
                             <div className='comment-text'>
@@ -18,7 +47,7 @@ class RequestComments extends Component {
                                     className='x-btn' 
                                     id={this.props.request._id} 
                                     name={requestComment._id} 
-                                    onClick={this.props.handleDeleteRequestComment}
+                                    onClick={this.handleDeleteRequestComment}
                                 > X
                                 </button>
                             :
@@ -30,12 +59,12 @@ class RequestComments extends Component {
                         <form
                             className='comment-form'
                             id={this.props.request._id} 
-                            onSubmit={this.props.handleAddRequestComment}
+                            onSubmit={this.handleAddRequestComment}
                         >
                             <input 
-                                onChange={this.props.handleChange}
-                                name='serviceComment'
-                                value={this.props.requestComment}
+                                onChange={this.handleChange}
+                                name='requestComment'
+                                value={this.state.requestComment}
                                 className='comment-input'
                                 autoComplete='off'
                             />

@@ -7,6 +7,10 @@ export function getAll() {
         .then(res => res.json())
 }
 
+export function getOne(request) {
+    return fetch(`${BASE_URL}/${request._id}`).then(res => res.json())
+}
+
 export function create(request) {
     const options = {
         method: 'POST',

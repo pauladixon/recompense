@@ -112,17 +112,17 @@ class App extends PureComponent {
     this.setState({requests: requests})
   }
 
-  handleAddRequestComment = async (e) => {
-    e.preventDefault()
-    await requestsAPI.addComment(e.target.id, this.state.requestComment)
-    await this.handleGetAllRequests()
-    this.setState({requestComment: ''})
-  }
+  // handleAddRequestComment = async (e) => {
+  //   e.preventDefault()
+  //   await requestsAPI.addComment(e.target.id, this.state.requestComment)
+  //   await this.handleGetAllRequests()
+  //   this.setState({requestComment: ''})
+  // }
 
-  handleDeleteRequestComment = async(e) => {
-      await requestsAPI.deleteComment(e.target.id, e.target.name)
-      this.handleGetAllRequests()
-  }
+  // handleDeleteRequestComment = async(e) => {
+  //     await requestsAPI.deleteComment(e.target.id, e.target.name)
+  //     this.handleGetAllRequests()
+  // }
 
   // links functions //
 
@@ -349,8 +349,8 @@ class App extends PureComponent {
                   cities={cities}
                   categories={categories}
                   requestComment={this.state.requestComment}
-                  handleAddRequestComment={this.handleAddRequestComment}
-                  handleDeleteRequestComment={this.handleDeleteRequestComment}
+                  // handleAddRequestComment={this.handleAddRequestComment}
+                  // handleDeleteRequestComment={this.handleDeleteRequestComment}
                   user={this.state.user}
                   handleChange={this.handleChange}
                 />
