@@ -35,6 +35,7 @@ class ServiceDetailPage extends Component {
                     serviceComment={this.props.serviceComment}
                     handleAddServiceComment={this.props.handleAddServiceComment}
                     handleDeleteServiceComment={this.props.handleDeleteServiceComment}
+                    handleGetAllServices={this.props.handleGetAllServices}
                 />
             </>
         )

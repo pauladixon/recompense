@@ -249,6 +249,7 @@ class App extends PureComponent {
                   categories={categories}
                   serviceComment={this.state.serviceComment}
                   handleAddServiceComment={this.handleAddServiceComment}
+                  handleGetAllServices={this.handleGetAllServices}
                   handleDeleteServiceComment={this.handleDeleteServiceComment}
                   user={this.state.user}
                   handleChange={this.handleChange}
