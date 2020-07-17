@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import Select from 'react-select'
 import { Link, Redirect } from 'react-router-dom'
-import serviceCategories from '../../category-data'
-import serviceCities from '../../city-data'
+
 
 class EditLinkPage extends Component {
     state = {
@@ -25,28 +23,12 @@ class EditLinkPage extends Component {
         })
     }
 
-    handleChangeCategories = categories => {
-        this.setState({
-            formData: {...this.state.formData, categories},
-            invalidForm: !this.formRef.current.checkValidity
-        })
-    }
-
-    handleChangeCities = cities => {
-        this.setState({
-            formData: {...this.state.formData, cities},
-            invalidForm: !this.formRef.current.checkValidity
-        })
-    }
 
     renderEditLinkForm() {
-        // const link = props.location.state.link
-
         return (
             <div className="add-service-page">
                 <div className="page-header">
                     <p className='page-title'>Edit Link :: </p>
-                    {/* <Link to={link._id}>cancel</Link> */}
                 </div>
                 <div className='add-service-form'>
                     <form 
@@ -55,7 +37,7 @@ class EditLinkPage extends Component {
                         onSubmit={this.handleSubmit}
                     >
                         <div className='form-item'>
-                            <label className='service-label'>Link Name :: </label>
+                            <label className='service-label'>Your Name :: </label>
                             <input
                                 className="service-form"
                                 name="name"
@@ -65,7 +47,17 @@ class EditLinkPage extends Component {
                             /> 
                         </div>
                         <div className='form-item'>
-                            <label className='service-label'>Description of Link :: </label>
+                            <label className='service-label'>Your Pronouns :: </label>
+                            <input
+                                className="service-form"
+                                name="pronouns"
+                                value={this.state.formData.pronouns}
+                                onChange={this.handleChange}
+                                required
+                            /> 
+                        </div>
+                        <div className='form-item'>
+                            <label className='service-label'>About You :: </label>
                             <textarea 
                                 className="service-form description"
                                 name="description"
@@ -75,7 +67,7 @@ class EditLinkPage extends Component {
                             />
                         </div>
                         <div className='form-item'>
-                            <label className='service-label'>Venmo for Link :: </label>
+                            <label className='service-label'>Venmo :: </label>
                             <input 
                                 className="service-form"
                                 name="venmo"
@@ -85,7 +77,7 @@ class EditLinkPage extends Component {
                             />
                         </div>
                         <div className='form-item'>
-                            <label className='service-label'>Cashapp for Link :: </label>
+                            <label className='service-label'>Cashapp :: </label>
                             <input 
                                 className="service-form"
                                 name="cashapp"
@@ -95,7 +87,7 @@ class EditLinkPage extends Component {
                             />
                         </div>
                         <div className='form-item'>
-                            <label className='service-label'>PayPal for Link :: </label>
+                            <label className='service-label'>PayPal :: </label>
                             <input 
                                 className="service-form"
                                 name="paypal"
@@ -105,30 +97,6 @@ class EditLinkPage extends Component {
                             />
                         </div>
                         <div className='form-item'>
-                            <label className='service-label'>City, State :: </label>
-                            <Select
-                                className='service-categories'
-                                value={this.state.formData.cities}
-                                isMulti
-                                name="cities"
-                                onChange={this.handleChangeCities}
-                                options={serviceCities}
-                                required
-                            />
-                            </div>
-                            <div className='form-item'>
-                            <label className='service-label'>Categories of Link :: </label>
-                            <Select
-                                className='service-categories'
-                                value={this.state.formData.categories}
-                                isMulti
-                                name="categories"
-                                onChange={this.handleChangeCategories}
-                                options={serviceCategories}
-                                required
-                            />
-                            </div>
-                            <div className='form-item'>
                             <label className='service-label'>Contact Email :: </label>
                             <input 
                                 className="service-form"
@@ -145,7 +113,7 @@ class EditLinkPage extends Component {
                                 type="submit"
                                 disabled={this.state.invalidForm}
                             >
-                                Update Link
+                                Update Direct Aid Link
                             </button>
                         </div>
                     </form>

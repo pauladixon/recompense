@@ -1,21 +1,17 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Select from 'react-select'
-import serviceCategories from '../../category-data'
-import serviceCities from '../../city-data'
-// import './AddServicePage.css'
 
-class AddLink extends Component {
+class AddLinkPage extends Component {
   state = {
     invalidForm: true,
     formData: {
       name: '',
-      categories: '',
+      pronouns: '',
       description: '',
       venmo: '',
       cashapp: '',
       paypal: '',
-      city: '',
       contactEmail: ''
     }
   }
@@ -35,30 +31,22 @@ class AddLink extends Component {
     })
   }
 
-  handleChangeCategories = categories => {
-    this.setState({ formData: { ...this.state.formData, categories } })
-  }
-
-  handleChangeCities = cities => {
-    this.setState({ formData: { ...this.state.formData, cities } })
-  }
-
   render() {
     return (
-      <div className="add-request-page">
+      <div className="add-service-page">
         <div className="page-header">
           <p className='page-title'>Add a Link :: </p>
         </div>
-        <div className='add-request-form'>
+        <div className='add-service-form'>
           <form 
             ref={this.formRef} 
             autoComplete="off" 
             onSubmit={this.handleSubmit}
           >
             <div className='form-item'>
-              <label className='request-label'>Link Name :: </label>
+              <label className='service-label'>Your Name :: </label>
               <input
-                className="request-form"
+                className="service-form"
                 name="name"
                 value={this.state.formData.name}
                 onChange={this.handleChange}
@@ -66,9 +54,19 @@ class AddLink extends Component {
               /> 
             </div>
             <div className='form-item'>
-              <label className='request-label'>Description of Link :: </label>
+              <label className='service-label'>Your Pronouns :: </label>
+              <input
+                className="service-form"
+                name="pronouns"
+                value={this.state.formData.pronouns}
+                onChange={this.handleChange}
+                required
+              /> 
+            </div>
+            <div className='form-item'>
+              <label className='service-label'>About You :: </label>
               <textarea 
-                className="request-form description"
+                className="service-form description"
                 name="description"
                 value={this.state.formData.description}
                 onChange={this.handleChange}
@@ -76,9 +74,9 @@ class AddLink extends Component {
               />
             </div>
             <div className='form-item'>
-              <label className='request-label'>Venmo :: </label>
+              <label className='service-label'>Venmo :: </label>
               <input 
-                className="request-form"
+                className="service-form"
                 name="venmo"
                 value={this.state.formData.venmo}
                 onChange={this.handleChange}
@@ -86,9 +84,9 @@ class AddLink extends Component {
               />
             </div>
             <div className='form-item'>
-              <label className='request-label'>Cashapp :: </label>
+              <label className='service-label'>Cashapp :: </label>
               <input 
-                className="request-form"
+                className="service-form"
                 name="cashapp"
                 value={this.state.formData.cashapp}
                 onChange={this.handleChange}
@@ -96,9 +94,9 @@ class AddLink extends Component {
               />
             </div>
             <div className='form-item'>
-              <label className='request-label'>PayPal :: </label>
+              <label className='service-label'>PayPal :: </label>
               <input 
-                className="request-form"
+                className="service-form"
                 name="paypal"
                 value={this.state.formData.paypal}
                 onChange={this.handleChange}
@@ -106,33 +104,9 @@ class AddLink extends Component {
               />
             </div>
             <div className='form-item'>
-              <label className='request-label'>City, State :: </label>
-              <Select
-                className='request-categories'
-                value={this.state.formData.cities}
-                isMulti
-                name="cities"
-                onChange={this.handleChangeCities}
-                options={serviceCities}
-                required
-              />
-            </div>
-            <div className='form-item'>
-              <label className='request-label'>Categories of Link :: </label>
-              <Select
-                className='request-categories'
-                value={this.state.formData.categories}
-                isMulti
-                name="categories"
-                onChange={this.handleChangeCategories}
-                options={serviceCategories}
-                required
-              />
-            </div>
-            <div className='form-item'>
-              <label className='request-label'>Contact Email :: </label>
+              <label className='service-label'>Contact Email :: </label>
               <input 
-                className="request-form"
+                className="service-form"
                 name="contactEmail"
                 value={this.state.formData.contactEmail}
                 onChange={this.handleChange}
@@ -140,13 +114,13 @@ class AddLink extends Component {
               />
             </div>
             <div className='add-links'>
-                <Link className='cancel-button' to='/links'>Cancel</Link>
+                <Link className='cancel-button' to='/servicesfloor'>Cancel</Link>
                 <button
                     className="btn"
                     type="submit"
                     disabled={this.state.invalidForm}
                 >
-                    Add Link
+                    Add Direct Aid Link
                 </button>
             </div>
           </form>
@@ -156,4 +130,4 @@ class AddLink extends Component {
   }
 }
 
-export default AddLink
+export default AddLinkPage

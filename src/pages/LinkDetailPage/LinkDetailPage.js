@@ -14,7 +14,7 @@ class LinkDetailPage extends Component {
             <>
                 <div className='post-detail'>
                     <LinkCard
-                    className="service-card"
+                        className="service-card"
                         key={this.state.link._id}
                         link={this.state.link}
                         user={this.props.user}
