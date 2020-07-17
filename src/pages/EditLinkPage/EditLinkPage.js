@@ -73,7 +73,7 @@ class EditLinkPage extends Component {
                                 name="venmo"
                                 value={this.state.formData.venmo}
                                 onChange={this.handleChange}
-                                required
+                                // required
                             />
                         </div>
                         <div className='form-item'>
@@ -83,7 +83,7 @@ class EditLinkPage extends Component {
                                 name="cashapp"
                                 value={this.state.formData.cashapp}
                                 onChange={this.handleChange}
-                                required
+                                // required
                             />
                         </div>
                         <div className='form-item'>
@@ -93,7 +93,7 @@ class EditLinkPage extends Component {
                                 name="paypal"
                                 value={this.state.formData.paypal}
                                 onChange={this.handleChange}
-                                required
+                                // required
                             />
                         </div>
                         <div className='form-item'>
@@ -103,7 +103,7 @@ class EditLinkPage extends Component {
                                 name="contactEmail"
                                 value={this.state.formData.contactEmail}
                                 onChange={this.handleChange}
-                                required
+                                // required
                             />
                         </div>
                         <div className='add-links'>
