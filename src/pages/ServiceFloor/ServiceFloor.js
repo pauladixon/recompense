@@ -10,19 +10,19 @@ class ServiceFloor extends Component {
     filteredServices: []
   }
 
-  // handleSearchCities = (e) => {
-  //   const services = this.props.services.filter(service => {
-  //     // console.log(service.cities[0].value.includes(service.cities[0].value))
-  //     if (service.cities[0].value.includes(e.target.name)) {
-  //       return service.cities
-  //       // console.log(service.cities)
-  //     }
-  //     // return service.cities[0].value.includes(e.target.value)
-  //   } )
-  //   // console.log(e.target.name);
-  //   // console.log(this.props.services)
-  //   this.setState({filteredServices:services})
-  // }
+  handleSearchCities = (e) => {
+    const services = this.props.services.filter(service => {
+      // console.log(service.cities[0].value.includes(service.cities[0].value))
+      if (service.cities[0].value.includes(e.target.name)) {
+        return service.cities
+        // console.log(service.cities)
+      }
+      // return service.cities[0].value.includes(e.target.value)
+    } )
+    // console.log(e.target.name);
+    // console.log(this.props.services)
+    this.setState({filteredServices:services})
+  }
   
   handleSearchCategories = (e) => {
     const services = this.props.services.filter(service => {
