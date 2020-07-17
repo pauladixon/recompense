@@ -89,7 +89,7 @@ class AddRequestPage extends Component {
                 name="cities"
                 onChange={this.handleChangeCities}
                 options={this.props.cities}
-                required
+                // required
               />
             </div>
             <div className='form-item'>
@@ -101,7 +101,7 @@ class AddRequestPage extends Component {
                 name="categories"
                 onChange={this.handleChangeCategories}
                 options={this.props.categories}
-                required
+                // required
               />
             </div>
             <div className='form-item'>
@@ -111,7 +111,7 @@ class AddRequestPage extends Component {
                 name="contactEmail"
                 value={this.state.formData.contactEmail}
                 onChange={this.handleChange}
-                required
+                // required
               />
             </div>
             <div className='add-links'>
