@@ -7,6 +7,7 @@
     margin: 90px;
     letter-spacing: 1px;
     font-size: 12px;
+    z-index: -2;
 }
 .home-border-1 {
     display: flex;
@@ -15,6 +16,7 @@
     margin: 20px 50px;
     background-color: rgba(0, 0, 0, 0.05);
     border-radius: 4px;
+    z-index: -1;
 }
 
 .home-border-2 {
@@ -25,11 +27,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 0;
 }
 .home-page {
     background-color: rgba(0, 0, 0, 0.05);
     border-radius: 4px;
     margin: 20px 50px;
+    z-index: 1;
 }
 
 .home-text {
@@ -39,10 +43,12 @@
     align-items: center;
     flex-direction: column;
     max-width: 400px;
+    z-index: 2;
 }
 
 .home-p {
     text-align: start;
+    z-index: 3;
 }
 
 .doc-link {
