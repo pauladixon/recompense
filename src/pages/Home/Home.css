@@ -48,7 +48,7 @@
 
 .home-p {
     text-align: start;
-    z-index: 3;
+    z-index: 100;
 }
 
 .doc-link {
