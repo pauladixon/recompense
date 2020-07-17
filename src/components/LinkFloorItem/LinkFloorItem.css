@@ -1,0 +1,36 @@
+
+
+.pronouns {
+    font-size: 11px;
+    color: black;
+    opacity: 50%;
+}
+
+.link-item { 
+    margin: 20px;
+    padding: 3px 0px 10px 0px;
+    background-color:#d9c9ba;
+    color: floralwhite;
+    width: 200px;
+    min-height: 50px;
+    border-radius: 4px;
+    box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
+}
+
+.linkflooritem-detail-pronouns {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.link-name {
+    color: #3c0c15;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 2px;;
+    text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.185);
+    margin-top: 0px;
+}
+.link-name:hover {
+    font-weight: bolder;
+}

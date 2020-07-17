@@ -13,12 +13,12 @@ import EditServicePage from '../EditServicePage/EditServicePage'
 import EditRequestPage from '../EditRequestPage/EditRequestPage'
 import EditLinkPage from '../EditLinkPage/EditLinkPage'
 import userService from '../../utils/userService'
-import LinksPage from '../LinksPage/LinksPage'
+import LinkFloor from '../LinkFloor/LinkFloor'
 import * as servicesAPI from '../../services/services-api'
 import * as linksAPI from '../../services/links-api'
 import * as requestsAPI from '../../services/requests-api'
 import AddServicePage from '../AddServicePage/AddServicePage'
-import AddLinkPage from '../../components/AddLinkPage/AddLinkPage'
+import AddLinkPage from '../../pages/AddLinkPage/AddLinkPage'
 import RequestFloor from '../../pages/RequestFloor/RequestFloor'
 import AddRequestPage from '../AddRequestPage/AddRequestPage'
 import categories from '../../category-data'
@@ -111,18 +111,6 @@ class App extends PureComponent {
     const requests = await requestsAPI.getAll()
     this.setState({requests: requests})
   }
-
-  // handleAddRequestComment = async (e) => {
-  //   e.preventDefault()
-  //   await requestsAPI.addComment(e.target.id, this.state.requestComment)
-  //   await this.handleGetAllRequests()
-  //   this.setState({requestComment: ''})
-  // }
-
-  // handleDeleteRequestComment = async(e) => {
-  //     await requestsAPI.deleteComment(e.target.id, e.target.name)
-  //     this.handleGetAllRequests()
-  // }
 
   // links functions //
 
@@ -273,7 +261,7 @@ class App extends PureComponent {
             <Route
               exact path="/directaidlinks"
               render={() => (
-                <LinksPage
+                <LinkFloor
                   links={this.state.links}
                   cities={cities}
                   categories={categories}
