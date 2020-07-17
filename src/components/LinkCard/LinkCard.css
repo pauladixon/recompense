@@ -1,0 +1,20 @@
+
+.link-label {
+    color: #3c0c15;
+    font-size: 12px;
+    margin-right: 50px;
+    min-width: 70px;
+    text-align: left;
+}
+
+.link-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    width: 250px;
+}
+
+.about {
+    margin-bottom: 5px;
+}

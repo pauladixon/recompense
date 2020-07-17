@@ -31,7 +31,7 @@ class SignupForm extends Component {
   render() {
     return (
       <div className="signup-container">
-        <header className="signup-header">Sign Up</header>
+        <header className="signup-header page-title">Sign Up</header>
         <form  onSubmit={this.handleSubmit} >
           <div>
             <div>

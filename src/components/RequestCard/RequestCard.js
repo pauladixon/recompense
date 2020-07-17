@@ -17,8 +17,12 @@ function RequestCard({ request, handleDeleteRequest, user }) {
                 <div>
                     <p className='card-name'>{request.name}</p>
                 </div>
-                <div>
+                <div className='card-info'>
                     <div>
+                        <div className='line-item'>
+                            <span className='service-label'>Description :: </span>
+                            <span className='service-info'>{request.description}</span>
+                        </div>
                         <div className='line-item'>
                             <span className='service-label'>Exchange :: </span>
                             <span className='service-info'>{request.exchange}</span>
@@ -30,10 +34,6 @@ function RequestCard({ request, handleDeleteRequest, user }) {
                         <div className='line-item'>
                             <span className='service-label'>Categories :: </span>
                             <span className='service-info categories'>{categories}</span>
-                        </div>
-                        <div className='line-item'>
-                            <span className='service-label'>Description :: </span>
-                            <span className='service-info'>{request.description}</span>
                         </div>
                         {user._id &&
                             <div className='line-item'>
