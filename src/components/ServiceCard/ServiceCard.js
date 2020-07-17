@@ -50,7 +50,7 @@ function ServiceCard({ service, handleDeleteService, user }) {
                                 onClick={() => handleDeleteService(service._id)}
                             >
                                 Remove
-                        </button>
+                            </button>
                         }
                         <Link
                             className='home-link'
@@ -64,7 +64,8 @@ function ServiceCard({ service, handleDeleteService, user }) {
                                 to={{
                                     pathname: '/editservice',
                                     state: { service },
-                                }}>Edit</Link>
+                                }}>Edit
+                            </Link>
                         } 
                     </div>
                 </div>

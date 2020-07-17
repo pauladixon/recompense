@@ -1,32 +1,31 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-// import * as servicesAPI from '../../services/services-api'
+import * as servicesAPI from '../../services/services-api'
 import ServiceFloorItems from '../../components/ServiceFloorItems/ServiceFloorItems'
 import SearchBar from '../../components/SearchBar/SearchBar'
 import './ServiceFloor.css'
 
 class ServiceFloor extends Component {
+
   state = {
+    services: [],
     filteredServices: []
   }
 
-  // handleSearchCities = (e) => {
-  //   const services = this.props.services.filter(service => {
-  //     // console.log(service.cities[0].value.includes(service.cities[0].value))
-  //     if (service.cities[0].value.includes(e.target.name)) {
-  //       return service.cities
-  //       // console.log(service.cities)
-  //     }
-  //     // return service.cities[0].value.includes(e.target.value)
-  //   } )
-  //   // console.log(e.target.name);
-  //   // console.log(this.props.services)
-  //   this.setState({filteredServices:services})
-  // }
-  
-  handleSearchCategories = (e) => {
+  handleSearchCities = async (e) => {
+    e.preventDefault()
     const services = this.props.services.filter(service => {
-      return service.categories[0].value.includes(e.target.name)
+      if (service.cities[0].value.includes(e.target.name)) {
+        return service.cities
+      }
+    })
+    this.setState({filteredServices:services})
+  }
+  
+  handleSearchCategories = async (e) => {
+    // e.preventDefault()
+    const services = this.state.services.filter(service => {
+      return service.categories.value.includes(e.target.name)
     })
     this.setState({services:services})
   }
@@ -44,6 +43,11 @@ class ServiceFloor extends Component {
     }
   }
 
+  async componentDidMount() {
+    const services = await servicesAPI.getAll()
+    this.setState({services})
+  }
+  
   render()  {
     return (
       <div className="service-page">
@@ -62,7 +66,7 @@ class ServiceFloor extends Component {
         </div>
         <div className="page-content"> 
           <ServiceFloorItems
-              services={this.props.services}
+              services={this.state.services}
               cities={this.props.cities}
               categories={this.props.categories}
           />

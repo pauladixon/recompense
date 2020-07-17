@@ -131,7 +131,7 @@ class EditServicePage extends Component {
     }
 
     render() {
-        return this.state.formData ? this.renderEditServiceForm() : <Redirect to='/marketplace' />;
+        return this.state.formData ? this.renderEditServiceForm() : <Redirect to='/servicesfloor' />;
     }
 }
 

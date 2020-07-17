@@ -1,13 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './LinkItem.css'
+import './LinkFloorItem.css'
 
-function LinkItem({ link }) {
-
-    const cities = link.cities ? link.cities.map((city, idx) =>
-        <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>) : <span></span>;
-
-
+function LinkFloorItem({ link }) {
     return (
         <>
             <Link
@@ -18,12 +13,12 @@ function LinkItem({ link }) {
             >
                 <div className='link-item'>
                     <div>
-                        <div className='serviceflooritem-detail-location'>
-                            <p className="location">{cities}</p>
+                        <div className='linkflooritem-detail-pronouns'>
+                            <p className="pronouns">{link.pronouns}</p>
                         </div>
                         <br></br>
-                        <div className='request-item-detail-name'>
-                            <p className='name'>{link.name}</p>
+                        <div className='link-item-detail-name'>
+                            <p className='link-name'>{link.name}</p>
                         </div>
                         <br></br>
                     </div>
@@ -33,4 +28,4 @@ function LinkItem({ link }) {
     )
 }
 
-export default LinkItem
+export default LinkFloorItem
