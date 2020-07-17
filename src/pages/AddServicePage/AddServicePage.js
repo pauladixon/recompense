@@ -112,7 +112,7 @@ class AddServicePage extends Component {
                 name="contactEmail"
                 value={this.state.formData.contactEmail}
                 onChange={this.handleChange}
-                required
+                // required
               />
             </div>
             <div className='add-links'>

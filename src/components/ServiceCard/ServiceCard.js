@@ -6,8 +6,8 @@ import './ServiceCard.css'
 function ServiceCard({ service, handleDeleteService, user }) {
     user = user === null ? user = NaN : user
 
-    const categories = service.categories.map((category, idx) =>
-        <span key={category.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{category.label}</span>)
+    const categories = service.categories ? service.categories.map((category, idx) =>
+        <span key={category.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{category.label}</span>) : <span></span>
 
     const cities = service.cities ? service.cities.map((city, idx) =>
         <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>) : <span></span>
@@ -36,12 +36,12 @@ function ServiceCard({ service, handleDeleteService, user }) {
                             <span className='service-label'>Categories :: </span>
                             <span className='service-info categories'>{categories}</span>
                         </div>
-                        {user._id &&
+                        {user._id && service.contactEmail ? 
                             <div className='line-item'>
                                 <span className='service-label'>Contact :: </span>
                                 <span className='service-info'>{service.creator} at {service.contactEmail}</span>
                             </div>
-                        }
+                        : <div></div>}
                     </div>
                     <div className='card-links'>
                         {user._id === service.user &&
