@@ -7,30 +7,29 @@ class LinkComments extends Component {
         link: this.props.link
     }
 
-    async componentDidMount(){
-        const link = await linksAPI.getOne(this.state.link)
-        this.setState({link: link, linkComment: ''})
-    }
-
-      handleAddLinkComment = async (e) => {
+    handleAddLinkComment = async (e) => {
         e.preventDefault()
         await linksAPI.addComment(e.target.id, this.state.linkComment)
         const link = await linksAPI.getOne(this.state.link)
         this.setState({link: link, linkComment: ''})
-      }
+    }
 
-      handleDeleteLinkComment = async(e) => {
-        e.preventDefault();
-        
-        console.log(e.target.id, e.target.name)
+    handleDeleteLinkComment = async(e) => {
+        e.preventDefault()
         await linksAPI.deleteComment(e.target.id, e.target.name)
         const link = await linksAPI.getOne(this.state.link)
         this.setState({link: link, linkComment: ''})
     }
 
-      handleChange = e => {
+    handleChange = e => {
         this.setState({[e.target.name]: e.target.value})
-      }
+    }
+
+    async componentDidMount(){
+        const link = await linksAPI.getOne(this.state.link)
+        this.setState({link: link, linkComment: ''})
+    }
+
     render() {
         return (
             <div className='all-comments-container'>

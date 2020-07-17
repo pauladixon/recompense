@@ -9,34 +9,28 @@ class ServiceComments extends Component {
         service: this.props.service
     }
 
-    async componentDidMount(){
-        const service = await servicesAPI.getOne(this.state.service)
-        // console.log(services)
-        this.setState({service: service, serviceComment: ''})
-    }
-
-      handleAddServiceComment = async (e) => {
+    handleAddServiceComment = async (e) => {
         e.preventDefault()
         await servicesAPI.addComment(e.target.id, this.state.serviceComment)
-        // await this.props.handleGetAllServices()
         const service = await servicesAPI.getOne(this.state.service)
-        // console.log(services)
-        this.setState({service: service, serviceComment: ''})
-      }
-
-      handleDeleteServiceComment = async(e) => {
-        e.preventDefault();
-        
-        console.log(e.target.id, e.target.name)
-        await servicesAPI.deleteComment(e.target.id, e.target.name)
-        const service = await servicesAPI.getOne(this.state.service)
-        // console.log(services)
         this.setState({service: service, serviceComment: ''})
     }
 
-      handleChange = e => {
+    handleDeleteServiceComment = async(e) => {
+        e.preventDefault()
+        await servicesAPI.deleteComment(e.target.id, e.target.name)
+        const service = await servicesAPI.getOne(this.state.service)
+        this.setState({service: service, serviceComment: ''})
+    }
+
+    handleChange = e => {
         this.setState({[e.target.name]: e.target.value})
-      }
+    }
+
+    async componentDidMount(){
+        const service = await servicesAPI.getOne(this.state.service)
+        this.setState({service: service, serviceComment: ''})
+    }
       
     render() {
         return (
