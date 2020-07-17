@@ -34,12 +34,12 @@ class SearchBar extends Component {
     }
 
     handleChangeCategory = category => {
-        // category = category.value
+        category = category.value
         this.setState({ formData: { ...this.state.formData, category } })
     }
 
     componentDidUpdate() {
-        console.log(this.state.formData);
+        console.log(this.state.formData)
         if (this.props.onChange) {
             this.props.onChange(this.state)
         }

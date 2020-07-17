@@ -86,3 +86,99 @@ a {
 .add-link:hover {
   font-weight: bold;
 }
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+    html {
+      background-color: #FFF4DE;
+    }
+    
+    .body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .App {
+      text-align: center;
+      font-family: Helvetica;
+      color: black;
+    }
+    
+    @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+    
+    .title {
+      text-decoration: none;
+      color:	#3c0c15;
+      min-width: 200px;
+      font-size: 22px;
+      font-family: 'Permanent Marker';
+      text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.185);
+    }
+    
+    .title:hover {
+      font-weight: bold;
+    }
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px;
+    }
+    
+    *:focus {
+      outline: none;
+    }
+    
+    a {
+      text-decoration: none;
+    }
+    
+    .page-title {
+      color: #3c0c15;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-style: italic;
+      letter-spacing: 2px;
+      text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.185);
+    }
+    
+    .page {
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .page-content {
+      display: flex;
+      margin: 50px 0px 0px 50px;
+    }
+    
+    .page-header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      font-size: 14px;
+      min-width: 200px;
+      max-width: 200px;
+      margin: 40px 0px 0px 20px;
+    }
+    
+    .add-link {
+      background-color: #3c0c15;
+      color: white;
+      border: none;
+      padding: 8px 0px;
+      width: 130px;
+      font-size: 12px;
+      border-radius: 4px;
+    }
+    
+    .add-link:hover {
+      font-weight: bold;
+    }
+  }

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import * as requestsAPI from '../../services/requests-api'
 import RequestFloorItems from '../../components/RequestFloorItems/RequestFloorItems'
 import SearchBar from '../../components/SearchBar/SearchBar'
-import './RequestFloor.css'
 
 class RequestFloor extends Component {
 

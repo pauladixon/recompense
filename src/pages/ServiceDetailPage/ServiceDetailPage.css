@@ -1,29 +1,4 @@
-.home-link {
-    background-color: #3c0c15;
-    color: white;
-    width: 30px;
-    border: none;
-    padding: 8px;
-    font-size: 12px;
-    border-radius: 4px;
-}
 
-.link-button {
-    text-align: right;
-    margin: 100px;
-    border-radius: 8px;
-    margin: 40px;
-}
-
-.service-card {
-    margin-left: 400px;
-}
-
-.home-link {
-    display: flex;
-    justify-content: flex-end;
-    width: 130px;
-}
 
 .comments-form {
     display: flex;

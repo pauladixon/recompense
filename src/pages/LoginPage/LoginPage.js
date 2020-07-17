@@ -30,7 +30,7 @@ class LoginPage extends Component {
   render() {
     return (
       <div className="signup-container">
-        <header className="signup-header">Log In</header>
+        <header className="signup-header page-title">Log In</header>
         <form onSubmit={this.handleSubmit} >
           <div>
             <div>
@@ -54,8 +54,8 @@ class LoginPage extends Component {
               />
             </div>
           </div>
-          <div>
-            <div>
+          <div className='buttons-div'>
+            <div className='buttons'>
               <button className="signup-form button">Log In</button>&nbsp;&nbsp;&nbsp;
               <Link to='/' className="cancel">Cancel</Link>
             </div>

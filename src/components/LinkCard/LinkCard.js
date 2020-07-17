@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../../utils/userService'
+import './LinkCard.css'
 
 function LinkCard({ link, handleDeleteLink, user }) {
     user = user === null ? user = NaN : user
@@ -11,28 +12,32 @@ function LinkCard({ link, handleDeleteLink, user }) {
                 <div>
                     <p className='card-name'>{link.name}</p>
                 </div>
-                <div>
+                <div className='card-info'>
                     <div>
                         <div className='line-item'>
-                            <span className='request-label'>Description :: </span>
-                            <span className='request-info'>{link.description}</span>
+                            <span className='link-label'>Pronouns :: </span>
+                            <span className='link-info'>{link.pronouns}</span>
                         </div>
                         <div className='line-item'>
-                            <span className='request-label'>CashApp :: </span>
-                            <span className='request-info'>{link.cashapp}</span>
+                            <span className='link-label'>About :: </span>
+                            <span className='link-info about'>{link.description}</span>
                         </div>
                         <div className='line-item'>
-                            <span className='request-label'>Venmo :: </span>
-                            <span className='request-info'>{link.venmo}</span>
+                            <span className='link-label'>Venmo :: </span>
+                            <span className='link-info'>{link.venmo}</span>
                         </div>
                         <div className='line-item'>
-                            <span className='request-label'>PayPal :: </span>
-                            <span className='request-info'>{link.paypal}</span>
+                            <span className='link-label'>CashApp :: </span>
+                            <span className='link-info'>{link.cashapp}</span>
+                        </div>
+                        <div className='line-item'>
+                            <span className='link-label'>PayPal :: </span>
+                            <span className='link-info'>{link.paypal}</span>
                         </div>
                         {user._id &&
                             <div className='line-item'>
-                                <span className='request-label'>Contact :: </span>
-                                <span className='request-info'>{link.creator} at {link.contactEmail}</span>
+                                <span className='link-label'>Contact Email:: </span>
+                                <span className='link-info'>{link.creator} at {link.contactEmail}</span>
                             </div>
                         }
                     </div>

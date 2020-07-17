@@ -23,11 +23,13 @@ class ServiceFloor extends Component {
   }
   
   handleSearchCategories = async (e) => {
-    // e.preventDefault()
-    const services = this.state.services.filter(service => {
-      return service.categories.value.includes(e.target.name)
+    e.preventDefault()
+    const services = this.props.services.filter(service => {
+      if (service.categories[0].value.includes(e.target.name)) {
+        return service.categories
+      }
     })
-    this.setState({services:services})
+    this.setState({filteredServices:services})
   }
 
   componentDidUpdate() {
