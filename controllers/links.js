@@ -12,6 +12,7 @@ module.exports = {
 
 async function index(req, res) {
     const links = await Link.find({})
+    .sort({createdAt: -1})
     res.status(200).json(links)
 }
 

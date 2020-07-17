@@ -7,30 +7,28 @@ class RequestComments extends Component {
         request: this.props.request
     }
 
-    async componentDidMount(){
-        const request = await requestsAPI.getOne(this.state.request)
-        this.setState({request: request, requestComment: ''})
-    }
-
-      handleAddRequestComment = async (e) => {
+    handleAddRequestComment = async (e) => {
         e.preventDefault()
         await requestsAPI.addComment(e.target.id, this.state.requestComment)
         const request = await requestsAPI.getOne(this.state.request)
         this.setState({request: request, requestComment: ''})
-      }
+    }
 
-      handleDeleteRequestComment = async(e) => {
-        e.preventDefault();
-        
-        console.log(e.target.id, e.target.name)
+    handleDeleteRequestComment = async(e) => {
+        e.preventDefault()
         await requestsAPI.deleteComment(e.target.id, e.target.name)
         const request = await requestsAPI.getOne(this.state.request)
         this.setState({request: request, requestComment: ''})
     }
 
-      handleChange = e => {
+    handleChange = e => {
         this.setState({[e.target.name]: e.target.value})
-      }
+    }
+
+    async componentDidMount(){
+        const request = await requestsAPI.getOne(this.state.request)
+        this.setState({request: request, requestComment: ''})
+    }
 
     render() {
         return (
