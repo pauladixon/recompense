@@ -2,54 +2,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: rgba(0, 0, 0, 0.05); */
-    letter-spacing: 1px;
-    font-size: 12px;
-    z-index: -2;
 }
 .home-border-1 {
     display: flex;
     justify-content: center;
-    align-items: center;
     background-image: url(https://i.imgur.com/4pG4fSl.png);
     background-repeat: no-repeat;
-    background-size: 700px 700px;
+    background-size: 700px 600px;
     width: 700px;
-    height: 700px;
-    margin: 30px;
-    border-radius: 4px;
-    z-index: -1;
+    height: 600px;
+    margin: 50px;
 }
-
-.home-border-2 {
-    margin: 50px 20px;
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 4px;
-    opacity: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 0;
-}
-.home-page {
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 4px;
-    margin: 20px 50px;
-    z-index: 1;
-}
-
-.home-text {
-    margin: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    max-width: 400px;
-    z-index: 2;
-} 
 
 .home-p {
-    margin: 0px 10px;
+    letter-spacing: 1px;
+    font-size: 12px;
+    margin: 170px 160px;
     text-align: start;
     z-index: 100;
 }

@@ -5,9 +5,6 @@ const Home = () => {
   return (
     <div className="Home">
       <div className="home-border-1">
-        <div className="home-border-2">
-          <div className="home-page">
-            <div className="home-text">
               <div className="home-p">
                 <p><span className='page-title'>Recompense</span> :: as a verb, means to make amends for loss or harm suffered; to compensate.</p>
                 <br></br>
@@ -15,9 +12,6 @@ const Home = () => {
 
                 <p>Included <a className="doc-link" href="https://docs.google.com/document/d/1z9F3SPp-Ft_9kCWLB_TE-1Nl_jSaQnkAwvFEy4HTQqs/edit" target="_blank" rel="noopener noreferrer">here</a> is a google doc library of resources we’ve compiled, aimed mostly at the national, and major city level, for continuing to provide assistance outside of our site.</p>
               </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
