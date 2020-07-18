@@ -22,7 +22,8 @@
 .link-detail-card {
     /* background-color:#dbd7d2; */
     /* background-color:#d6ceb9; */
-    background-color:#d9c9ba;
+    background-color: rgb(173,255,47, 0.25);
+    /* background-color:#d9c9ba; */
     /* background-color:#e4d4c3; */
     margin: 40px 20px 20px 20px;
     color: floralwhite;

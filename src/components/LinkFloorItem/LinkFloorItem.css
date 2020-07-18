@@ -10,7 +10,8 @@
 .link-item { 
     margin: 20px;
     padding: 3px 0px 40px 0px;
-    background-color:#d9c9ba;
+    background-color: rgb(4,35,3, 0.25);
+    /* background-color:#d9c9ba; */
     /* background-color: 		#e6e6e6; */
     /* background-color:#dbd3d0; */
     /* background-color:#e4d4c3; */
