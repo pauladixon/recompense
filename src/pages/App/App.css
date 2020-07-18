@@ -30,6 +30,9 @@ html {
   font-weight: bold;
 }
 
+.img-title {
+  width: 500px;
+}
 header {
   display: flex;
   justify-content: space-between;
