@@ -42,6 +42,10 @@ html, body {
   margin-bottom: 100px;
 }
 
+.img-title {
+  width: 500px;
+}
+
 header {
   display: flex;
   justify-content: space-between;

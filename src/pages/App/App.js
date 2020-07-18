@@ -34,7 +34,7 @@ class App extends PureComponent {
     linkComment: [],
     requests: [],
     requestComment: '',
-    cities: cities, 
+    cities: cities,
     categories: categories,
   }
 
@@ -44,7 +44,7 @@ class App extends PureComponent {
   }
 
   handleSignupOrLogin = async () => {
-   await this.setState({ user: userService.getUser() })
+    await this.setState({ user: userService.getUser() })
   }
 
   // services functions //
@@ -77,7 +77,7 @@ class App extends PureComponent {
 
   handleGetAllServices = async () => {
     const services = await servicesAPI.getAll()
-    this.setState({services: services})
+    this.setState({ services: services })
   }
 
   // requests functions //
@@ -110,7 +110,7 @@ class App extends PureComponent {
 
   handleGetAllRequests = async () => {
     const requests = await requestsAPI.getAll()
-    this.setState({requests: requests})
+    this.setState({ requests: requests })
   }
 
   // links functions //
@@ -143,24 +143,24 @@ class App extends PureComponent {
 
   handleGetAllLinks = async () => {
     const links = await linksAPI.getAll()
-    this.setState({links: links})
+    this.setState({ links: links })
   }
 
   handleAddLinkComment = async (e) => {
     e.preventDefault()
     await linksAPI.addComment(e.target.id, this.state.linkComment)
     await this.handleGetAllLinks()
-    this.setState({linkComment: ''})
+    this.setState({ linkComment: '' })
   }
 
-  handleDeleteLinkComment = async(e) => {
+  handleDeleteLinkComment = async (e) => {
     await linksAPI.deleteComment(e.target.id, e.target.name)
     this.handleGetAllLinks()
-}
+  }
   // helper functions //
 
   handleChange = e => {
-    this.setState({[e.target.name]: e.target.value})
+    this.setState({ [e.target.name]: e.target.value })
   }
 
   // lifecycle functions //
@@ -176,7 +176,9 @@ class App extends PureComponent {
     return (
       <div className="App">
         <header>
-          <Link to='' className='title'>recompense</Link>
+          {/* <Link to='' className='title'>recompense</Link> */}
+          <Link to=''><img src="https://i.postimg.cc/JzfX5rNh/Screen-Shot-2020-07-18-at-3-53-17-PM.png" alt="recompense" class="img-title"/></Link>
+          {/* <img src="https://i.postimg.cc/JzfX5rNh/Screen-Shot-2020-07-18-at-3-53-17-PM.png" alt="recompense" class="img-title"/> */}
           <NavBar
             user={this.state.user}
             handleLogout={this.handleLogout}
@@ -211,7 +213,7 @@ class App extends PureComponent {
                   services={this.state.services}
                   cities={cities}
                   categories={categories}
-                  // serviceComment={this.state.serviceComment}
+                // serviceComment={this.state.serviceComment}
                 />
               )}
             />
@@ -274,10 +276,6 @@ class App extends PureComponent {
               exact path="/linkdetail"
               render={({ location }) =>
                 <LinkDetailPage
-                  // location={location}
-                  // handleDeleteLink={this.handleDeleteLink}
-                  // user={this.state.user}
-                  // handleAddLinkComment={this.handleAddLinkComment}
                   location={location}
                   handleDeleteLink={this.handleDeleteLink}
                   link={this.state.link}
@@ -311,7 +309,7 @@ class App extends PureComponent {
                     handleUpdateLink={this.handleUpdateLink}
                     location={location}
                     user={this.state.user}
-                    // link={this.state.link}
+                  // link={this.state.link}
                   />
                   :
                   <Redirect to='/login' />

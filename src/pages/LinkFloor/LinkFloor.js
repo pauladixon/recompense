@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom'
 import LinkFloorItem from '../../components/LinkFloorItem/LinkFloorItem'
 import './LinkFloor.css'
 
+
 const LinkFloor = (props) => {
+
   return (
     <div className="service-page">
       <div className="page-header">
