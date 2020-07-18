@@ -10,18 +10,30 @@ class RequestFloor extends Component {
     requests: []
   }
 
-  handleSearchCities = async (e) => {
-    const requests = this.state.requests.filter(request => {
-      return request.cities.value.includes(e.target.name)
+  handleSearchCities = async (e, city) => {
+    e.preventDefault();
+    const requests = this.props.requests.filter(request => {
+      if (request.cities[0].value.includes(city.value)){
+        return request.cities
+      }
     })
     this.setState({requests:requests})
   }
   
-  handleSearchCategories = async (e) => {
-    const requests = this.state.requests.filter(request => {
-      return request.categories.value.includes(e.target.name)
+  handleSearchCategories = async (e, category) => {
+    e.preventDefault();
+    const requests = this.props.requests.filter(request => {
+      if (request.categories[0].value.includes(category.value)){
+        return request.categories
+      }
     })
     this.setState({requests:requests})
+  }
+
+  handleRequestComponent() {
+    if (this.state.filteredRequests.length === 0){
+      return this.state.filteredRequests
+    }
   }
 
   async componentDidMount() {
