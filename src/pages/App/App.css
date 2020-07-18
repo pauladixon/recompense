@@ -20,8 +20,9 @@ html {
   text-decoration: none;
   color:	#3c0c15;
   min-width: 200px;
-  font-size: 22px;
+  font-size: 23px;
   font-family: 'Permanent Marker';
+  letter-spacing: .3em;
   text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.185);
 }
 
