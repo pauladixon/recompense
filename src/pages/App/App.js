@@ -273,10 +273,6 @@ class App extends PureComponent {
               exact path="/linkdetail"
               render={({ location }) =>
                 <LinkDetailPage
-                  // location={location}
-                  // handleDeleteLink={this.handleDeleteLink}
-                  // user={this.state.user}
-                  // handleAddLinkComment={this.handleAddLinkComment}
                   location={location}
                   handleDeleteLink={this.handleDeleteLink}
                   link={this.state.link}
