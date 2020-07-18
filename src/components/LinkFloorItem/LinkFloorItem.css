@@ -4,22 +4,31 @@
     font-size: 11px;
     color: black;
     opacity: 50%;
+    height: 10px;
 }
 
 .link-item { 
     margin: 20px;
-    padding: 3px 0px 10px 0px;
-    background-color:#d9c9ba;
+    padding: 3px 0px 40px 0px;
+    background-color:#d6ceb9;
+    /* background-color: 		#e6e6e6; */
+    /* background-color:#dbd3d0; */
+    background-color:#e4d4c3;
     color: floralwhite;
     width: 200px;
-    min-height: 50px;
+    height: 105px;
     border-radius: 4px;
     box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
 }
 
 .linkflooritem-detail-pronouns {
     text-align: left;
-    margin-left: 10px;
+    margin: 5px 5px 5px 12px;
+}
+
+.link-item-detail-name {
+    text-align: center;
+    margin: 0px 5px;
 }
 
 .link-name {
@@ -29,7 +38,8 @@
     font-style: italic;
     letter-spacing: 2px;;
     text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.185);
-    margin-top: 0px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 .link-name:hover {
     font-weight: bolder;

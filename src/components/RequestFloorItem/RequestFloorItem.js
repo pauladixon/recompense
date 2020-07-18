@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './RequestFloorItem.css'
 
 function RequestFloorItem({ request }) {
 
@@ -15,7 +16,7 @@ function RequestFloorItem({ request }) {
                     state: { request }
                 }}
             >
-                <div className='serviceflooritem'>
+                <div className='requestflooritem'>
                     <div>
                         <div className='serviceflooritem-detail-location'>
                             <p className="location">{cities}</p>

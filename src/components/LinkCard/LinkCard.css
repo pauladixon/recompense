@@ -18,3 +18,19 @@
 .about {
     margin-bottom: 5px;
 }
+
+.link-detail-card {
+    /* background-color:#dbd7d2; */
+    /* background-color:#d6ceb9; */
+    /* background-color:#d9c9ba; */
+    background-color:#e4d4c3;
+    margin: 20px;
+    color: floralwhite;
+    padding: 10px 20px 10px 10px;
+    color: black;
+    width: 500px;
+    min-height: 100px;
+    display: grid;
+    border-radius: 4px;
+    box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
+}
