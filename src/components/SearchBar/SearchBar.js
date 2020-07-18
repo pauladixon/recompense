@@ -49,8 +49,8 @@ class SearchBar extends Component {
     render() {
         return (
             <div className="search-bar">
-                <div className='search-item by-location'>
-                    <label className='search-label search-title'>Search by Location :: </label>
+                <div className='search-item'>
+                    <label className='search-label'>Search by Location :: </label>
                     <div className='search-row'>
                         <Select
                             className='search-select'
@@ -70,8 +70,9 @@ class SearchBar extends Component {
                         </button>
                     </div>
                 </div>
+                <br></br><br></br><br></br>
                 <div className='search-item'>
-                    <label className='search-label search-title'>or by Category :: </label>
+                    <label className='search-label'>or by Category :: </label>
                     <div className='search-row'>
                         <Select
                             className='search-select'
