@@ -8,7 +8,7 @@ function LinkCard({ link, handleDeleteLink, user }) {
 
     return (
         <>
-            <div className='detail-card'>
+            <div className='link-detail-card'>
                 <div>
                     <p className='card-name'>{link.name}</p>
                 </div>

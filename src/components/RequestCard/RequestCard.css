@@ -1,0 +1,12 @@
+.request-detail-card {
+    margin: 20px;
+    background-color:#dbd7d2;
+    color: floralwhite;
+    padding: 10px 20px 10px 10px;
+    color: black;
+    width: 500px;
+    min-height: 100px;
+    display: grid;
+    border-radius: 4px;
+    box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
+}

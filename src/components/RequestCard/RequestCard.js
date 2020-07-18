@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../../utils/userService'
+import './RequestCard.css'
 
 function RequestCard({ request, handleDeleteRequest, user }) {
     user = user === null ? user = NaN : user
@@ -13,7 +14,7 @@ function RequestCard({ request, handleDeleteRequest, user }) {
 
     return (
         <>
-            <div className='detail-card'>
+            <div className='request-detail-card'>
                 <div>
                     <p className='card-name'>{request.name}</p>
                 </div>
