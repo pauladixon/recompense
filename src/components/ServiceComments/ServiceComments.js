@@ -37,7 +37,7 @@ class ServiceComments extends Component {
             <div className='all-comments-container'>
                 <div className='comments'>
                     {this.state.service && this.state.service.serviceComments.map((serviceComment) =>
-                        <div key={serviceComment._id} className='comment-container'>
+                        <div key={serviceComment._id} className='s-comment-container'>
                             <p className='creator'>{serviceComment.creator} :: </p>
                             <div className='comment-text'>
                                 <p>{serviceComment.text}</p>
