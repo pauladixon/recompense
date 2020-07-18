@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './NavBar.css';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import './NavBar.css'
 
 const NavBar = (props) => {
   let nav = props.user ?
@@ -9,7 +9,7 @@ const NavBar = (props) => {
       <span className='NavBar-welcome'>Welcome, {props.user.name}</span>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <Link className='nav' to='' onClick={props.handleLogout} >Log Out</Link>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;
     </div>
     :
     <div>
@@ -30,7 +30,7 @@ const NavBar = (props) => {
       {nav}
     </div>
 
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar

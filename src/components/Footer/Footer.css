@@ -1,0 +1,48 @@
+.foo-link {
+    text-decoration: none;
+    color: black;
+    min-width: 0px;
+    margin-top: 12px;
+}
+
+.foo-link:hover {
+    font-weight: bold;
+    color: #3c0c15;
+}
+
+.foo {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    color: #3c0c15;
+    min-width: 0px;
+    margin-top: 10px;
+}
+
+
+.footer-bar {
+    background-color: #FFF4DE;
+    left:0;
+    bottom:0;
+    right:0;
+    height: 50px;
+    margin-top: 50px;
+    border-top: solid 1px #3c0c15;
+    margin-right: 80px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 13px;
+    color: #3c0c15;
+    position: fixed;
+}
+
+@media all and (max-width: 375px) {
+    .nav {
+      width: 50%;
+      /* display: flex;
+      flex-direction: column; */
+      color: teal;
+
+    }
+  }
