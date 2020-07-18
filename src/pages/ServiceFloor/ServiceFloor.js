@@ -8,33 +8,27 @@ import './ServiceFloor.css'
 class ServiceFloor extends Component {
 
   state = {
-    services: [],
-    filteredServices: []
+    services: []
   }
 
-  handleSearchCities = async (e) => {
+  handleSearchCities = async (e, city) => {
     e.preventDefault()
     const services = this.props.services.filter(service => {
-      if (service.cities[0].value.includes(e.target.name)) {
+      if (service.cities[0].value.includes(city.value)) {
         return service.cities
       }
     })
-    this.setState({filteredServices:services})
+    this.setState({services:services})
   }
   
-  handleSearchCategories = async (e) => {
+  handleSearchCategories = async (e, category) => {
     e.preventDefault()
     const services = this.props.services.filter(service => {
-      if (service.categories[0].value.includes(e.target.name)) {
+      if (service.categories[0].value.includes(category.value)) {
         return service.categories
       }
     })
-    this.setState({filteredServices:services})
-  }
-
-  componentDidUpdate() {
-    console.log('updated', this.props.services)
-    console.log('updated', this.state.filteredServices)
+    this.setState({services:services})
   }
 
   handleServiceComponent() {
