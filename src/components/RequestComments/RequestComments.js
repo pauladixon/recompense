@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import * as requestsAPI from '../../services/requests-api'
+import './RequestComments.css'
 
 class RequestComments extends Component {
     state = {
@@ -35,7 +36,7 @@ class RequestComments extends Component {
             <div className='all-comments-container'>
                 <div className='comments'>
                     {this.state.request && this.state.request.requestComments.map((requestComment) =>
-                        <div key={requestComment._id} className='comment-container'>
+                        <div key={requestComment._id} className='r-comment-container'>
                             <p className='creator'>{requestComment.creator} :: </p>
                             <div className='comment-text'>
                                 <p>{requestComment.text}</p>
