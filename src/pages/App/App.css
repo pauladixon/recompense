@@ -40,6 +40,7 @@ html, body {
   position: relative;
   min-height: 100%;
   margin-bottom: 100px;
+  z-index: 10;
 }
 
 .img-title {
@@ -96,7 +97,8 @@ a {
   font-size: 14px;
   min-width: 200px;
   max-width: 200px;
-  margin: 40px 0px 0px 20px;
+  margin: 40px 50px 0px 20px;
+  position: fixed;
 }
 
 .add-link {
@@ -114,14 +116,16 @@ a {
 }
 
 .dollar-sign {
-  position: absolute;
-  margin-bottom: 200px;
-  background-position: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 50px;
+  margin-bottom: 60px;
 }
 
 .img-dollar {
-  width: 200px;
-  height: 300px;
+  width: 100px;
+  height: 150px;
 }
 
 @media screen 

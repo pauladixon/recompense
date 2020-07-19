@@ -2,24 +2,100 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 }
 .home-border-1 {
+    margin: 70px 0px;
     display: flex;
     justify-content: center;
-    background-image: url(https://i.imgur.com/4pG4fSl.png);
-    background-repeat: no-repeat;
-    background-size: 700px 600px;
-    width: 700px;
+    /* background-image: url(https://i.imgur.com/4pG4fSl.png);
+    background-repeat: no-repeat; */
+    /* background-size: 700px 600px; */
+    /* width: 700px;
     height: 600px;
-    margin: 50px;
+    margin: 50px; */
+
+    background-color: rgba(76, 75, 139, 0.11);
+    /* background-color:#d9c9ba; */
+    /* background-color:#e4d4c3; */
+    width: 400px;
+    min-height: 100px;
+    display: grid;
+    border-radius: 4px;
+    box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
+    height: 400px;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
+.home-border-2 {
+    margin: 40px 0px;
+    display: flex;
+    justify-content: center;
+    /* background-image: url(https://i.imgur.com/4pG4fSl.png);
+    background-repeat: no-repeat; */
+    /* background-size: 700px 600px; */
+    /* width: 700px;
+    height: 600px;
+    margin: 50px; */
+
+    background-color: rgba(76, 75, 139, 0.11);
+    /* background-color:#d9c9ba; */
+    /* background-color:#e4d4c3; */
+    width: 400px;
+    min-height: 100px;
+    display: grid;
+    border-radius: 4px;
+    box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
+    height: 400px;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+.x {
+    animation: x 20s linear infinite alternate;
+}
+  
+.y {
+    animation: y 7s linear infinite alternate;
+}
+  
+@keyframes x {
+    0% {
+        transform: translateX( calc(10vw) );
+      }
+    100% {
+        transform: translateX( calc(-10vw));
+    }
+}
+  
+@keyframes y {
+    33% {
+      transform: translateY( calc(10vh) );
+    }
+    66% {
+        transform: translateY( calc(0vh));
+    }
+    100% {
+        transform: translateY( calc(-10vh));
+    }
+}
+
+
 .home-p {
-    letter-spacing: 1px;
+    /* letter-spacing: 1px;
     font-size: 12px;
     margin: 160px 148px 160px 165px;
     text-align: start;
-    z-index: 100;
+    z-index: 100; */
+    letter-spacing: 1px;
+    font-size: 12px;
+    margin: 25px 85px;
+    text-align: start;
+    text-align: justify;
+    z-index: 100;    
+    text-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
 }
 
 .doc-link {

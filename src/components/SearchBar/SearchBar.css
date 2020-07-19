@@ -6,6 +6,8 @@
 .search-bar {
     color: #3c0c15;
     font-size: 12px;
+    position: fixed;
+    margin: 300px;
 }
 
 .search-select {
@@ -67,7 +69,7 @@
 
 .refresh-btn {
     margin-top: 40px;
-    margin-right: 15px;
+    margin-right: 10px;
     border: none;
     padding: 8px;
     border-radius: 8px;
@@ -76,6 +78,7 @@
     color: white;
     border-radius: 4px;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 .refresh-btn:hover {
