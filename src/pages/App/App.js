@@ -176,13 +176,13 @@ class App extends PureComponent {
     return (
       <div className="App">
         <header>
-          {/* <Link to='' className='title'>recompense</Link> */}
-          <Link to=''><img src="https://i.postimg.cc/JzfX5rNh/Screen-Shot-2020-07-18-at-3-53-17-PM.png" alt="recompense" class="img-title"/></Link>
-          {/* <img src="https://i.postimg.cc/JzfX5rNh/Screen-Shot-2020-07-18-at-3-53-17-PM.png" alt="recompense" class="img-title"/> */}
+          <Link to=''><img src="https://i.imgur.com/f8W7tXe.png" alt="recompense" class="img-title"/></Link>
           <NavBar
             user={this.state.user}
             handleLogout={this.handleLogout}
           />
+          {/* <Link to='' className='title'>recompense</Link> */}
+          {/* <img src="https://i.postimg.cc/JzfX5rNh/Screen-Shot-2020-07-18-at-3-53-17-PM.png" alt="recompense" class="img-title"/> */}
         </header>
         <div className="container">
           <Switch>

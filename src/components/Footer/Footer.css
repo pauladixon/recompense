@@ -35,6 +35,7 @@
     font-size: 13px;
     color: #3c0c15;
     position: fixed;
+    font-size: 12px;
 }
 
 @media all and (max-width: 375px) {
