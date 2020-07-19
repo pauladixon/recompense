@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import Select from 'react-select'
 
 class AddLinkPage extends Component {
   state = {
     invalidForm: true,
     formData: {
       name: '',
+      city: '',
       pronouns: '',
       description: '',
       venmo: '',
@@ -28,6 +30,10 @@ class AddLinkPage extends Component {
       formData,
       invalidForm: !this.formRef.current.checkValidity()
     })
+  }
+
+  handleChangeCities = cities => {
+    this.setState({ formData: { ...this.state.formData, cities } })
   }
 
   render() {
@@ -61,6 +67,18 @@ class AddLinkPage extends Component {
                 onChange={this.handleChange}
                 required
               /> 
+            </div>
+            <div className='form-item'>
+              <label className='service-label'>Location :: </label>
+              <Select
+                className='service-categories'
+                value={this.state.formData.cities}
+                isMulti
+                name="cities"
+                onChange={this.handleChangeCities}
+                options={this.props.cities}
+                required
+              />
             </div>
             <div className='form-item'>
               <label className='service-label'>About You :: </label>

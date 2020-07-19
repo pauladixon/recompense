@@ -90,7 +90,7 @@ class EditRequestPage extends Component {
                                 name="cities"
                                 onChange={this.handleChangeCities}
                                 options={serviceCities}
-                                // required
+                                required
                             />
                             </div>
                             <div className='form-item'>
@@ -102,7 +102,7 @@ class EditRequestPage extends Component {
                                 name="categories"
                                 onChange={this.handleChangeCategories}
                                 options={serviceCategories}
-                                // required
+                                required
                             />
                             </div>
                             <div className='form-item'>

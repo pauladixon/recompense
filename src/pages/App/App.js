@@ -4,7 +4,7 @@ import { Link, Route, Switch, Redirect } from 'react-router-dom'
 import SignupPage from '../SignupPage/SignupPage'
 import LoginPage from '../LoginPage/LoginPage'
 import NavBar from '../../components/NavBar/NavBar'
-import Footer from '../../components/Footer/Footer'
+// import Footer from '../../components/Footer/Footer'
 import Home from "../../pages/Home/Home.js"
 import ServiceFloor from '../ServiceFloor/ServiceFloor'
 import ServiceDetailPage from '../ServiceDetailPage/ServiceDetailPage'
@@ -176,7 +176,8 @@ class App extends PureComponent {
     return (
       <div className="App">
         <header>
-          <Link to=''><img src="https://i.imgur.com/f8W7tXe.png" alt="recompense" class="img-title"/></Link>
+          {/* <Link to=''><img src="https://i.imgur.com/f8W7tXe.png" alt="recompense" class="img-title"/></Link> */}
+          <Link to=''><img src="https://i.postimg.cc/FHy0xPvS/Screen-Shot-2020-07-18-at-6-11-39-PM.png" alt="recompense" class="img-title"/></Link>
           <NavBar
             user={this.state.user}
             handleLogout={this.handleLogout}
@@ -268,7 +269,7 @@ class App extends PureComponent {
                   links={this.state.links}
                   cities={cities}
                   categories={categories}
-                  linkComment={this.state.linkComment}
+                  // linkComment={this.state.linkComment}
                 />
               )}
             />
@@ -282,8 +283,7 @@ class App extends PureComponent {
                   cities={cities}
                   categories={categories}
                   linkComment={this.state.linkComment}
-                  handleAddLinkComment={this.handleAddLinkComment}
-                  handleDeleteLinkComment={this.handleDeleteLinkComment}
+                  handleGetAllLinks={this.handleGetAllLinks}
                   user={this.state.user}
                   handleChange={this.handleChange}
                 />
@@ -295,7 +295,7 @@ class App extends PureComponent {
                 userService.getUser() ?
                   <AddLinkPage
                     handleAddLink={this.handleAddLink}
-                    city={this.state.user.city}
+                    cities={cities}
                   />
                   :
                   <Redirect to='/login' />
@@ -371,9 +371,9 @@ class App extends PureComponent {
             />
           </Switch>
         </div>
-        <footer>
+        {/* <footer>
           <Footer/>
-        </footer>
+        </footer> */}
       </div>
     );
   }

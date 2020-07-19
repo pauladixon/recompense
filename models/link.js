@@ -12,6 +12,7 @@ const LinkCommentSchema = new Schema({
 const LinkSchema = new Schema({
     user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
     name: '',
+    cities: [],
     pronouns: '',
     description: '',
     cashapp: '',
