@@ -72,7 +72,7 @@ class SearchBar extends Component {
                 </div>
                 <br></br><br></br><br></br>
                 <div className='search-item'>
-                    <label className='search-label'>or by Category :: </label>
+                    <label className='search-label'>or Category :: </label>
                     <div className='search-row'>
                         <Select
                             className='search-select'
@@ -92,7 +92,6 @@ class SearchBar extends Component {
                         </button>
                     </div>
                 </div>
-                <br></br>
                 <button
                     className="refresh-btn"
                     type="submit"
