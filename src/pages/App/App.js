@@ -372,7 +372,7 @@ class App extends PureComponent {
           </Switch>
         </div>
         <div className='dollar-sign'>
-          <img src="https://i.imgur.com/3CdUsgY.png" alt="recompense" class="img-dollar"/>
+          <img src="https://i.imgur.com/a04DBOD.png" alt="recompense" class="img-dollar"/>
         </div>
         {/* <footer>
           <Footer/>
