@@ -6,6 +6,9 @@ import './LinkCard.css'
 function LinkCard({ link, handleDeleteLink, user }) {
     user = user === null ? user = NaN : user
 
+    const cities = link.cities ? link.cities.map((city, idx) =>
+        <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>) : <span></span>
+
     return (
         <>
             <div className='link-detail-card'>
@@ -14,6 +17,10 @@ function LinkCard({ link, handleDeleteLink, user }) {
                 </div>
                 <div className='card-info'>
                     <div>
+                        <div className="line-item">
+                            <span className='link-label'>City, State :: </span>
+                            <span className='link-info'>{cities}</span>
+                        </div>
                         <div className='line-item'>
                             <span className='link-label'>Pronouns :: </span>
                             <span className='link-info'>{link.pronouns}</span>

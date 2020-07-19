@@ -176,13 +176,14 @@ class App extends PureComponent {
     return (
       <div className="App">
         <header>
-          {/* <Link to='' className='title'>recompense</Link> */}
-          <Link to=''><img src="https://i.postimg.cc/JzfX5rNh/Screen-Shot-2020-07-18-at-3-53-17-PM.png" alt="recompense" class="img-title"/></Link>
-          {/* <img src="https://i.postimg.cc/JzfX5rNh/Screen-Shot-2020-07-18-at-3-53-17-PM.png" alt="recompense" class="img-title"/> */}
+          {/* <Link to=''><img src="https://i.imgur.com/f8W7tXe.png" alt="recompense" class="img-title"/></Link> */}
+          <Link to=''><img src="https://i.postimg.cc/FHy0xPvS/Screen-Shot-2020-07-18-at-6-11-39-PM.png" alt="recompense" class="img-title"/></Link>
           <NavBar
             user={this.state.user}
             handleLogout={this.handleLogout}
           />
+          {/* <Link to='' className='title'>recompense</Link> */}
+          {/* <img src="https://i.postimg.cc/JzfX5rNh/Screen-Shot-2020-07-18-at-3-53-17-PM.png" alt="recompense" class="img-title"/> */}
         </header>
         <div className="container">
           <Switch>
@@ -268,7 +269,7 @@ class App extends PureComponent {
                   links={this.state.links}
                   cities={cities}
                   categories={categories}
-                  linkComment={this.state.linkComment}
+                  // linkComment={this.state.linkComment}
                 />
               )}
             />
@@ -282,8 +283,7 @@ class App extends PureComponent {
                   cities={cities}
                   categories={categories}
                   linkComment={this.state.linkComment}
-                  handleAddLinkComment={this.handleAddLinkComment}
-                  handleDeleteLinkComment={this.handleDeleteLinkComment}
+                  handleGetAllLinks={this.handleGetAllLinks}
                   user={this.state.user}
                   handleChange={this.handleChange}
                 />
@@ -295,7 +295,7 @@ class App extends PureComponent {
                 userService.getUser() ?
                   <AddLinkPage
                     handleAddLink={this.handleAddLink}
-                    city={this.state.user.city}
+                    cities={cities}
                   />
                   :
                   <Redirect to='/login' />

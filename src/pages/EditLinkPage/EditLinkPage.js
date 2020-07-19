@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link, Redirect } from 'react-router-dom'
-
+import Select from 'react-select'
+import serviceCities from '../../city-data'
 
 class EditLinkPage extends Component {
     state = {
@@ -20,6 +21,13 @@ class EditLinkPage extends Component {
         this.setState({
             formData,
             invalidForm: !this.formRef.current.checkValidity()
+        })
+    }
+
+    handleChangeCities = cities => {
+        this.setState({
+            formData: {...this.state.formData, cities},
+            invalidForm: !this.formRef.current.checkValidity
         })
     }
 
@@ -56,6 +64,18 @@ class EditLinkPage extends Component {
                                 required
                             /> 
                         </div>
+                        <div className='form-item'>
+                            <label className='service-label'>City, State :: </label>
+                            <Select
+                                className='service-categories'
+                                value={this.state.formData.cities}
+                                isMulti
+                                name="cities"
+                                onChange={this.handleChangeCities}
+                                options={serviceCities}
+                                required
+                            />
+                            </div>
                         <div className='form-item'>
                             <label className='service-label'>About You :: </label>
                             <textarea 
