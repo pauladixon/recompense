@@ -19,4 +19,15 @@
 
 .service-page {
     display: flex;
+
+}
+
+@media screen and (max-width: 375px){
+    .service-page {
+        display: flex;
+        flex-direction: column;
+    }
+    .page-header {
+        margin-left: 80px;
+    }
 }

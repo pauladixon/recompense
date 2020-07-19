@@ -29,3 +29,19 @@
 .doc-link:hover {
     font-weight: bold;
 }
+
+@media screen and (max-width: 375px) {
+    .home-border-1 {
+        background-image: none;
+        height: 350px;
+        margin-top: 20px;
+        margin-bottom: 0px;
+        background-color: rgb(230,221,201);
+        padding: 20px;
+    }
+
+    .home-p {
+        margin: 0px;
+        height: 330px;
+    }
+}

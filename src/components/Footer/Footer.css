@@ -38,12 +38,23 @@
     font-size: 12px;
 }
 
-@media all and (max-width: 375px) {
-    .nav {
-      width: 50%;
-      /* display: flex;
-      flex-direction: column; */
-      color: teal;
+.mobile-foo {
+    display: none;
+}
 
+@media all and (max-width: 375px) {
+    .footer-bar {
+        margin: 0px;
+    }
+    .foo {
+        margin-left: 20px;
+        display: none;
+    }
+    .mobile-foo {
+        display: inline-block;
+        margin-left: 50px;
+    }
+    .foo-link {
+        margin-top: 14px;
     }
   }
