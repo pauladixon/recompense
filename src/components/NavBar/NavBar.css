@@ -26,9 +26,8 @@
     text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.185); */
 }
 
-@media screen 
+/* @media screen 
   and (max-width: 825px) { 
-  
     .nav-bar {
         min-width: 100%;
         display: flex;
@@ -36,5 +35,19 @@
         align-items: flex-end;
         height: 40px;
         margin-top: -5px;
+    }
+} */
+
+@media screen and (max-width: 375px){
+    .nav-bar{
+        min-width: 100%;
+        /* display: flex;
+        justify-content: flex-end;
+        align-items: flex-end; */
+        font-size: 10px;
+        
+    }
+    .nav {
+        margin: 0px;
     }
 }
