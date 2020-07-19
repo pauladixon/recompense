@@ -113,7 +113,16 @@ a {
   font-weight: bold;
 }
 
+.dollar-sign {
+  position: absolute;
+  margin-bottom: 200px;
+  background-position: center;
+}
 
+.img-dollar {
+  width: 200px;
+  height: 300px;
+}
 
 @media screen 
   and (max-width: 825px) { 
