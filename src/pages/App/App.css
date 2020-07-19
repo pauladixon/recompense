@@ -141,3 +141,10 @@ a {
     flex-flow: row wrap;
   }
 }
+
+@media all and (max-width: 375px) {
+  html {
+    height: 667px;
+    width: 375px;
+  }
+}
