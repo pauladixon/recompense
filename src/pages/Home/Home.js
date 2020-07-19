@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css';
+import Footer from '../../components/Footer/Footer'
 
 const Home = () => {
   return (
@@ -13,6 +14,9 @@ const Home = () => {
                 <p>Included <a className="doc-link" href="http://pfw.guide/" target="_blank" rel="noopener noreferrer">here</a> is a link to the master list of resources compiled by Patia's Fantasy World for the continued support of the Black Lives Matter movement outside of our site.</p>
               </div>
       </div>
+      <footer>
+          <Footer/>
+        </footer>
     </div>
   );
 }

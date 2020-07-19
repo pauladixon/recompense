@@ -4,7 +4,7 @@ import { Link, Route, Switch, Redirect } from 'react-router-dom'
 import SignupPage from '../SignupPage/SignupPage'
 import LoginPage from '../LoginPage/LoginPage'
 import NavBar from '../../components/NavBar/NavBar'
-import Footer from '../../components/Footer/Footer'
+// import Footer from '../../components/Footer/Footer'
 import Home from "../../pages/Home/Home.js"
 import ServiceFloor from '../ServiceFloor/ServiceFloor'
 import ServiceDetailPage from '../ServiceDetailPage/ServiceDetailPage'
@@ -371,9 +371,9 @@ class App extends PureComponent {
             />
           </Switch>
         </div>
-        <footer>
+        {/* <footer>
           <Footer/>
-        </footer>
+        </footer> */}
       </div>
     );
   }

@@ -9,7 +9,8 @@ const Footer = (props) => {
         &nbsp;
         <p className="foo">Copyright Ⓒ Paula Dixon & Isa Martinez, 2020</p>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <Link className="foo-link" to="/directaidlinks">Contact Us </Link>
+        <a className="foo-link" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=isasofma@gmail.com paulapdixon@gmail.com" target="_blank"
+                    rel="noopener noreferrer">Contact us</a>
     </div>
   )
 }
