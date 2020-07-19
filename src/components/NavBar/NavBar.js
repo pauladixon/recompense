@@ -5,7 +5,6 @@ import './NavBar.css'
 const NavBar = (props) => {
   let nav1 = props.user ?
     <div >
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <span className='NavBar-welcome'>Welcome, {props.user.name}</span>
     </div>
     :

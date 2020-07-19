@@ -7,11 +7,14 @@
     /* background-color:#d9c9ba; */
     background-color: 		#d2dbcf;
     color: floralwhite;
-    padding: 10px 20px 10px 10px;
+    padding: 10px 20px 10px 20px;
     color: black;
     width: 500px;
     min-height: 100px;
-    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
     border-radius: 4px;
     box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
 }
@@ -28,7 +31,8 @@
 }
 
 .line-item {
-    margin: 8px 40px 8px 60px;
+    width: 400px;
+    margin: 8px 100px 8px 100px;
     display: flex;
     justify-content: space-between;
 }
@@ -43,8 +47,10 @@
     color: #3c0c15;
     font-size: 12px;
     margin-right: 50px;
-    min-width: 70px;
-    text-align: left;
+    min-width: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .service-info {
@@ -56,10 +62,11 @@
 }
 
 .card-links {
-    margin: 50px 25px 20px 25px;
+    margin: 50px 100px 20px 100px;
     display: flex;
-    justify-content: space-around;
     font-size: 12px;
+    width: 400px;
+    justify-content: space-around;
 }
 
 .edit {

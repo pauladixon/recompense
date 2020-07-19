@@ -50,7 +50,7 @@ class LinkComments extends Component {
                                 > X
                                 </button>
                             :
-                                <div></div>
+                                <div className='button-fill'></div>
                             }
                         </div>
                     )}
