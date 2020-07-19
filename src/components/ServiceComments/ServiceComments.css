@@ -38,8 +38,8 @@
 .creator {
     font-size: 10px;
     text-transform: uppercase;
+    color: rgb(110, 93, 93);
     font-style: italic;
-    opacity: 70%;
     margin: 0px 10px;
     min-width: 100px;
     text-align: left;
@@ -48,7 +48,8 @@
 .comment-text {
     color: #3c0c15;
     font-size: 14px;
-    margin-right: 105px;
+    margin-right: 80px;
+    width: 300px;
 }
 
 .x-btn {
@@ -62,6 +63,10 @@
     border-radius: 4px;
     margin-top: 2px;
     margin-right: 13px;
+}
+
+.button-fill {
+    width: 42px;
 }
 
 .form-container {
