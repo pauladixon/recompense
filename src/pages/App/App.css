@@ -121,6 +121,7 @@ a {
   right: 0;
   margin-right: 50px;
   margin-bottom: 90px;
+  opacity: 65%;
 }
 
 .img-dollar {
@@ -129,7 +130,7 @@ a {
 }
 
 @media screen 
-  and (max-width: 825px) { 
+  and (max-width: 815px) { 
 
     .img-title {
       width: 300px;
