@@ -86,7 +86,6 @@ class AddServicePage extends Component {
               <Select
                 className='service-categories'
                 value={this.state.formData.cities}
-                isMulti
                 name="cities"
                 onChange={this.handleChangeCities}
                 options={this.props.cities}
@@ -98,7 +97,6 @@ class AddServicePage extends Component {
               <Select
                 className='service-categories'
                 value={this.state.formData.categories}
-                isMulti
                 name="categories"
                 onChange={this.handleChangeCategories}
                 options={this.props.categories}

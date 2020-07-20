@@ -21,15 +21,12 @@ function LinkFloorItem({ link }) {
                         <div className='serviceflooritem-detail-location'>
                             <p className="location">{cities}</p>
                         </div>
-                        <br></br>
                         <div className='link-item-detail-name'>
                             <p className='link-name'>{link.name}</p>
                         </div>
-                        <br></br>
-                        <div className='linkflooritem-detail-pronouns'>
+                        {/* <div className='linkflooritem-detail-pronouns'>
                             <p className="pronouns">{link.pronouns}</p>
-                        </div>
-                        <br></br>
+                        </div> */}
                     </div>
                 </div>
             </Link>

@@ -1,4 +1,6 @@
-
+.detail-page {
+    position: relative;
+}
 
 .comments-form {
     display: flex;
@@ -37,4 +39,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }

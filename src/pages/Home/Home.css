@@ -51,11 +51,11 @@
 
 
 .x {
-    animation: x 20s linear infinite alternate;
+    animation: x 30s linear infinite alternate;
 }
   
 .y {
-    animation: y 15s linear infinite alternate;
+    animation: y 25s linear infinite alternate;
 }
   
 @keyframes x {

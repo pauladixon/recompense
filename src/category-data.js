@@ -1,7 +1,7 @@
 const categories = [
-  { value: 'Free for BIPOC', label: 'Free for BIPOC' },
-  { value: 'Discounted for BIPOC', label: 'Discounted for BIPOC' },
-  { value: 'Break', label: '----------------------------------' },
+  // { value: 'Free for BIPOC', label: 'Free for BIPOC' },
+  // { value: 'Discounted for BIPOC', label: 'Discounted for BIPOC' },
+  // { value: 'Break', label: '----------------------------------' },
   { value: 'General Care Packages', label: 'General Care Packages' },
   { value: 'Artistic Resources', label: 'Artistic Resources' },
   { value: 'Manual Labor', label: 'Manual Labor' },

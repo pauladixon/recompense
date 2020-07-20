@@ -2,6 +2,7 @@
 .add-service-page {
     display: flex;
     justify-content: flex-start;
+    position: relative;
 }
 
 .add-service-form {
