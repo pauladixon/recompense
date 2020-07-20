@@ -85,7 +85,6 @@ class EditServicePage extends Component {
                             <Select
                                 className='service-categories'
                                 value={this.state.formData.cities}
-                                isMulti
                                 name="cities"
                                 onChange={this.handleChangeCities}
                                 options={this.props.cities}

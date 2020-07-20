@@ -1,46 +1,26 @@
 
 
-.pronouns {
-    font-size: 11px;
-    color: black;
-    opacity: 50%;
-    height: 10px;
-}
 .link-item {
     margin: 20px;
-    padding: 3px 0px 40px 0px;
-    /* background-color: rgba(58, 126, 18, 0.171); */
+    background-color:#d8d6d6;
+    background-color: 		#dad7c0;
     color: floralwhite;
     width: 200px;
-    height: 105px;
-    border-radius: 4px;
-    box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
-}
-
-.link-item:nth-child(odd) { 
-    margin: 20px;
-    padding: 3px 0px 40px 0px;
-    background-color: rgba(58, 126, 18, 0.171);
-    color: floralwhite;
-    width: 200px;
-    height: 105px;
-    border-radius: 4px;
-    box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
-}
-.link-item:nth-child(even){
-    margin: 20px;
-    padding: 3px 0px 40px 0px;
-    background-color: rgba(0, 0, 0, 0.171);
-    color: floralwhite;
-    width: 200px;
-    height: 105px;
+    min-height: 140px;
     border-radius: 4px;
     box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
 }
 
 .linkflooritem-detail-pronouns {
-    text-align: left;
-    margin: 5px 5px 5px 12px;
+    text-align: right;
+    margin: -12px 12px -8px 12px;
+}
+
+.pronouns {
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.479);
+    height: 10px;
+    margin: 0px;
 }
 
 .link-item-detail-name {
@@ -53,10 +33,13 @@
     font-size: 13px;
     text-transform: uppercase;
     font-style: italic;
-    letter-spacing: 2px;;
+    letter-spacing: 2px;
     text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.185);
-    margin-right: 5px;
-    margin-left: 5px;
+    margin: -10px 5px 0px 5px;
+    min-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .link-name:hover {
     font-weight: bolder;

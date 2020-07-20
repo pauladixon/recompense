@@ -1,12 +1,9 @@
 .serviceflooritem { 
     margin: 20px;
-    padding: 3px 0px 40px 0px;
-    /* background-color:#d9c9ba; */
-    /* background-color: 		#d2dbcf; */
-    background-color: 		#d2dbcf;
+    background-color: #d2dbcf;
     color: floralwhite;
     width: 200px;
-    height: 105px;
+    min-height: 140px;
     border-radius: 4px;
     box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
 }
@@ -21,22 +18,35 @@
     font-size: 13px;
     text-transform: uppercase;
     font-style: italic;
-    letter-spacing: 2px;;
+    letter-spacing: 2px;
     text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.185);
-    margin-right: 5px;
-    margin-left: 5px;
+    margin: -10px 5px 0px 5px;
+    min-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .name:hover {
     font-weight: bolder;
 }
 
 .serviceflooritem-detail-location {
-    text-align: left;
+    text-align: right;
 }
 
 .location {
     font-size: 11px;
-    color: black;
-    opacity: 50%;
+    color: rgba(0, 0, 0, 0.479);
     height: 10px;
+    padding: 10px 10px 15px 0px;
+    margin: 0px;
+}
+
+
+.categories {
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.479);
+    height: 10px;
+    padding: 10px 0px;
+    margin: 0px;
 }
