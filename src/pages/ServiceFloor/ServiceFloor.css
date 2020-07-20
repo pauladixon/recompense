@@ -22,6 +22,8 @@
 
 }
 
+.justify {}
+
 @media screen and (max-width: 375px){
     .service-page {
         display: flex;

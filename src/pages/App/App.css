@@ -43,13 +43,6 @@ html, body {
   z-index: 100;
 }
 
-.img-title {
-  width: 300px;
-  margin-top: 10px;
-  margin-left: -10px;
-  margin-right: 10px;
-}
-
 header {
   margin: 20px;
   display: flex;
