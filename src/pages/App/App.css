@@ -2,6 +2,7 @@ html, body {
   background-color: #FFF4DE;
   height: 100%;
   margin: 0;
+  text-transform: lowercase;
 }
 
 .body {
@@ -14,7 +15,7 @@ html, body {
 
 .App {
   text-align: center;
-  font-family: Helvetica;
+  font-family: Arial;
   color: black;
   height: 100%;
   margin: 0;
