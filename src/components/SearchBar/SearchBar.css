@@ -80,6 +80,7 @@
     border-radius: 4px;
     cursor: pointer;
     margin-left: 10px;
+    text-transform: lowercase;
 }
 
 .refresh-btn:hover {
