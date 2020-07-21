@@ -4,6 +4,8 @@ import { Link, Route, Switch, Redirect } from 'react-router-dom'
 import SignupPage from '../SignupPage/SignupPage'
 import LoginPage from '../LoginPage/LoginPage'
 import NavBar from '../../components/NavBar/NavBar'
+import Title from '../../components/Title/Title'
+// import Footer from '../../components/Footer/Footer'
 import Home from "../../pages/Home/Home.js"
 import ContactPage from '../../pages/ContactPage/ContactPage'
 import ServiceFloor from '../ServiceFloor/ServiceFloor'
@@ -176,8 +178,7 @@ class App extends PureComponent {
     return (
       <div className="App">
         <header>
-          {/* <Link to=''><img src="https://i.imgur.com/f8W7tXe.png" alt="recompense" class="img-title"/></Link> */}
-          <Link to=''><img src="https://i.postimg.cc/FHy0xPvS/Screen-Shot-2020-07-18-at-6-11-39-PM.png" alt="recompense" class="img-title" /></Link>
+          <Title/>
           <NavBar
             user={this.state.user}
             handleLogout={this.handleLogout}
@@ -375,7 +376,7 @@ class App extends PureComponent {
           </Switch>
         </div>
         <div className='dollar-sign'>
-          <img src="https://i.imgur.com/a04DBOD.png" alt="recompense" class="img-dollar" />
+          <img src="https://i.imgur.com/3CdUsgY.png" alt="recompense" class="img-dollar"/>
         </div>
       </div>
     );

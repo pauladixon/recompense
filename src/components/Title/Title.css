@@ -1,0 +1,15 @@
+.img-title {
+    width: 300px;
+    height: 40px;
+    padding: 0px;
+    padding-top: 10px;
+    margin-left: -10px;
+    margin-right: 10px;
+    position: fixed;
+}
+
+.img-title:hover {
+    width: 300px;
+    height: 45.02px;
+    margin: -2.5157px 10px 1.8px -10px;
+}
