@@ -4,14 +4,12 @@ import './Title.css'
 
 class Title extends Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            imgSrc: '/title1.png'
-        }
-        this.handleMouseOver = this.handleMouseOver.bind(this)
-        this.handleMouseOut = this.handleMouseOut.bind(this)
+    state = {
+        imgSrc: '/title1.png'
     }
+    
+    handleMouseOver = this.handleMouseOver.bind(this)
+    handleMouseOut = this.handleMouseOut.bind(this)
 
     handleMouseOver() {
         this.setState({
