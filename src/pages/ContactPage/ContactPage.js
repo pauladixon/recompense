@@ -14,35 +14,23 @@ const ContactPage = () => {
 
 
         return (
-            // <div className="contact-home">
-            //     <div className="contact-border-1 y">
-            //         <div className="contact-border-3 z">
-            //             <div className="contact-border-4 y">
-            //                 <div className="contact-border-4 x">
-            //                     <div className="contact-border-4 y">
-            //                         <div className="contact-border-4 x">
-            //                             <div className="contact-border-4 y">
-            //                                 <div className="contact-border-4 x"></div>
-            //                             </div>
-            //                         </div>
-            //                     </div>
-            //                 </div>
-            //             </div>
-            //         </div>
-            //     </div>
-           
-            <div class="Home" 
-            onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
-            onMouseClick={() => set({ xy: [0, 0] })}
-          >
-                      <animated.div class="card1" style={{ transform: props.xy.interpolate(translate1) }} />
-        <animated.div 
-          class="card2" 
-          style={{ transform: props.xy.interpolate(translate2) }} 
-          onMouseOver={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
-          onMouseClick={() => set({ xy: [0, 0] })}
-        ></animated.div>
-                <div className="contact-page contact-border-2 x">
+            <div className="contact-home">
+                <div className="contact-border-1 y">
+                    <div className="contact-border-3 z">
+                        <div className="contact-border-4 y">
+                            <div className="contact-border-4 x">
+                                <div className="contact-border-4 y">
+                                    <div className="contact-border-4 x">
+                                        <div className="contact-border-4 y">
+                                            <div className="contact-border-4 x"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="contact-page x">
                     <p className="contact-title">We're both fullstack developers, to see the rest of our work or contact us individually, check out our links below.</p>
                     <div className="isa">
                         <p className="dev-name">Isa:</p>
