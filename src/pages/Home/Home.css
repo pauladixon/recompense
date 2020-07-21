@@ -10,7 +10,7 @@
     position: fixed;
 }
 
-.home-border-1 {
+/* .home-border-1 {
     margin: 0px 0px;
     display: flex;
     justify-content: center;
@@ -35,7 +35,7 @@
     /* background-size: 700px 600px; */
     /* width: 700px;
     height: 600px;
-    margin: 50px; */
+    margin: 50px;
 
     background-color: rgba(139, 79, 75, 0.11);
     width: 450px;
@@ -51,6 +51,7 @@
 }
 
 
+/* 
 .x {
     animation: x 30s linear infinite alternate;
 }
@@ -58,7 +59,6 @@
 .y {
     animation: y 25s linear infinite alternate;
 }
-
 @keyframes x {
     0% {
         transform: translateX( calc(7vw) );
@@ -75,21 +75,16 @@
     100% {
         transform: translateY( calc(-8vh));
     }
-}
+} */
 
 .home-p {
-    /* letter-spacing: 1px;
-    font-size: 12px;
-    margin: 160px 148px 160px 165px;
-    text-align: start;
-    z-index: 100; */
     letter-spacing: 1px;
     font-size: 12px;
-    margin: 80px 80px;
+    margin: 120px 120px;
     text-align: start;
     z-index: 100;    
-    text-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
-    position: absolute;
+    /* text-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185); */
+    position: fixed;
 }
 
 .doc-link {
@@ -99,6 +94,40 @@
 .doc-link:hover {
     font-weight: bold;
 }
+
+.card1,
+.card2 {
+  position: absolute;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+.card1 {
+  min-width: 50ch;
+  min-height: 50ch;
+  width: 25vw;
+  height: 25vw;
+  max-width: 100ch;
+  max-height: 100ch;
+  background-color: rgba(77, 31, 31, 0.082);
+  box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
+  
+}
+
+.card2 {
+  min-width: 60ch;
+  min-height: 60ch;
+  width: 25vw;
+  height: 25vw;
+  max-width: 100ch;
+  max-height: 100ch;
+  background-color: rgba(88, 62, 22, 0.137);
+  box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
+}
+
 
 @media screen and (max-width: 375px) {
     .home-border-1 {

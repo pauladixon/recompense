@@ -124,14 +124,6 @@ a {
 
 @media screen 
   and (max-width: 815px) { 
-
-    .img-title {
-      width: 300px;
-      margin-top: 0px;
-      margin-left: 20px;
-      margin-right: 10px;
-      margin-bottom: -15px;
-    }
   
   header {
     margin: 20px;
