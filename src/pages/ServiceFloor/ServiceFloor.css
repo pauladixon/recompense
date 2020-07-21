@@ -22,11 +22,6 @@
 
 }
 
-<<<<<<< HEAD
-=======
-.justify {}
->>>>>>> 1448a762f653d9609c745a6c2eb0a1d2c3febd09
-
 @media screen and (max-width: 375px){
     .service-page {
         display: flex;
