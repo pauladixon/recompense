@@ -152,7 +152,7 @@
 }
 
 
-.x {
+/* .x {
     animation: x 30s linear infinite alternate;
 }
   
@@ -162,9 +162,9 @@
 
 .z {
     animation: x 20s linear infinite alternate;
-}  
+}   */
 
-@keyframes x {
+/* @keyframes x {
     0% {
         transform: translateX( calc(7vw) );
       }
@@ -189,4 +189,4 @@
     100% {
         transform: translateY( calc(-10vh));
     }
-}
+} */
