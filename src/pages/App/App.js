@@ -4,8 +4,8 @@ import { Link, Route, Switch, Redirect } from 'react-router-dom'
 import SignupPage from '../SignupPage/SignupPage'
 import LoginPage from '../LoginPage/LoginPage'
 import NavBar from '../../components/NavBar/NavBar'
-// import Footer from '../../components/Footer/Footer'
 import Home from "../../pages/Home/Home.js"
+import ContactPage from '../../pages/ContactPage/ContactPage'
 import ServiceFloor from '../ServiceFloor/ServiceFloor'
 import ServiceDetailPage from '../ServiceDetailPage/ServiceDetailPage'
 import RequestDetailPage from '../RequestDetailPage/RequestDetailPage'
@@ -177,7 +177,7 @@ class App extends PureComponent {
       <div className="App">
         <header>
           {/* <Link to=''><img src="https://i.imgur.com/f8W7tXe.png" alt="recompense" class="img-title"/></Link> */}
-          <Link to=''><img src="https://i.postimg.cc/FHy0xPvS/Screen-Shot-2020-07-18-at-6-11-39-PM.png" alt="recompense" class="img-title"/></Link>
+          <Link to=''><img src="https://i.postimg.cc/FHy0xPvS/Screen-Shot-2020-07-18-at-6-11-39-PM.png" alt="recompense" class="img-title" /></Link>
           <NavBar
             user={this.state.user}
             handleLogout={this.handleLogout}
@@ -214,7 +214,6 @@ class App extends PureComponent {
                   services={this.state.services}
                   cities={cities}
                   categories={categories}
-                // serviceComment={this.state.serviceComment}
                 />
               )}
             />
@@ -269,7 +268,6 @@ class App extends PureComponent {
                   links={this.state.links}
                   cities={cities}
                   categories={categories}
-                  // linkComment={this.state.linkComment}
                 />
               )}
             />
@@ -309,7 +307,6 @@ class App extends PureComponent {
                     handleUpdateLink={this.handleUpdateLink}
                     location={location}
                     user={this.state.user}
-                  // link={this.state.link}
                   />
                   :
                   <Redirect to='/login' />
@@ -336,8 +333,6 @@ class App extends PureComponent {
                   cities={cities}
                   categories={categories}
                   requestComment={this.state.requestComment}
-                  // handleAddRequestComment={this.handleAddRequestComment}
-                  // handleDeleteRequestComment={this.handleDeleteRequestComment}
                   user={this.state.user}
                   handleChange={this.handleChange}
                 />
@@ -369,14 +364,19 @@ class App extends PureComponent {
                   <Redirect to='/login' />
               }
             />
+            <Route
+              exact path="/contact"
+              render={(props) => (
+                <ContactPage
+                  {...props}
+                />
+              )}
+            />
           </Switch>
         </div>
         <div className='dollar-sign'>
-          <img src="https://i.imgur.com/a04DBOD.png" alt="recompense" class="img-dollar"/>
+          <img src="https://i.imgur.com/a04DBOD.png" alt="recompense" class="img-dollar" />
         </div>
-        {/* <footer>
-          <Footer/>
-        </footer> */}
       </div>
     );
   }
