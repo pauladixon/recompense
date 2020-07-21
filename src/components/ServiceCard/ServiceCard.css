@@ -113,3 +113,28 @@
 .service-card {
     margin-left: 400px;
 }
+
+
+@media screen and (max-width: 375px){
+
+    .detail-card-container {
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+    }
+    .detail-card {
+        width: 270px;
+    }
+    .line-item {
+        width: 200px;
+    }
+    .card-info {
+        /* margin-left: 200px; */
+        width: 300px;
+        margin-right: 100px;
+    }
+    .card-links {
+        display: flex;
+        justify-content: flex-start;
+    }
+}

@@ -12,10 +12,10 @@ class ContactPage extends Component {
 
                 <div className="contact-border-2 x">
                     <div className="contact-page">
-                        <p className="contact-title">To see the rest of our work or contact us individually, check out our links below.</p>
+                        <p className="contact-title">We're both fullstack developers, to see the rest of our work or contact us individually, check out our links below.</p>
                         <div className="isa">
                             <p className="dev-name">Isa:</p>
-                            <p>A fullstack dev focused on tools that foster communication; with an emphasis on the synthesis of art and tech</p>
+                            <p>is focused on tools that foster communication; with an emphasis on the synthesis of art and tech</p>
                             <SocialIcon
                                 style={{ height: 45, width: 45 }}
                                 bgColor="#FFF4DE"
@@ -31,7 +31,7 @@ class ContactPage extends Component {
                         </div>
                         <div className="paula">
                             <p className="dev-name">Paula:</p>
-                            <p>A fullstack dev focused on the accessibility through technology; with an emphasis on the digitization of self help and spiritual tools.</p>
+                            <p>is focused on the accessibility through technology; with an emphasis on the digitization of self help and spiritual tools.</p>
                             <SocialIcon
                                 style={{ height: 45, width: 45 }}
                                 bgColor="#FFF4DE"

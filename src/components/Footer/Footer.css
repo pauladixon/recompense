@@ -27,7 +27,7 @@
     right:0;
     height: 50px;
     margin-top: 50px;
-    border-top: solid 1px #3c0c15;
+    /* border-top: solid 1px #3c0c15; */
     margin-right: 80px;
     margin-left: 20px;
     display: flex;
