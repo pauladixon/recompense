@@ -47,17 +47,28 @@ class ContactPage extends Component {
                             />
                         </div>
                         <div className="email-div">
-                            <p>For concerns or issues on the site, email us </p>
-                            <p className="email"> here</p>
+                            <p>For concerns or issues on the site, email us at recompenser@gmail.com</p>
+                            {/* <p className="email"> recompenser@gmail.com</p> */}
                         </div>
                     </div>
                 </div>
+
                 <div className="contact-border-1 y">
                     <div className="contact-border-3 z">
                         <div className="contact-border-4 y">
+                            <div className="contact-border-4 x">
+                                <div className="contact-border-4 y">
+                                <div className="contact-border-4 x">
+                                <div className="contact-border-4 y">
+                                <div className="contact-border-4 x"></div>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                
                 <footer>
                     <Footer />
                 </footer>
