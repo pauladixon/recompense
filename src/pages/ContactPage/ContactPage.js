@@ -24,7 +24,7 @@ class ContactPage extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="contact-page contact-border-2 x">
+                <div className="contact-page x">
                     <p className="contact-title">We're both fullstack developers, to see the rest of our work or contact us individually, check out our links below.</p>
                     <div className="isa">
                         <p className="dev-name">Isa:</p>

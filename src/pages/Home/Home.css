@@ -78,13 +78,16 @@
 } */
 
 .home-p {
-    letter-spacing: 1px;
-    font-size: 12px;
-    margin: 120px 120px;
+    font-size: 13px;
+    margin: 140px 120px;
     text-align: start;
     z-index: 100;    
     /* text-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185); */
     position: fixed;
+}
+
+.uppercase {
+    text-transform: uppercase;
 }
 
 .doc-link {
