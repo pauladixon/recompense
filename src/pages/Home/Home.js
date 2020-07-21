@@ -11,13 +11,16 @@ const Home = () => {
   const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 150, friction: 140 } }))
   return (
     <div>
-      <div class="Home" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
+      <div class="Home" 
+        onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
+        onMouseClick={() => set({ xy: [0, 0] })}
+      >
         <animated.div class="card1" style={{ transform: props.xy.interpolate(translate1) }} />
         <animated.div 
           class="card2" 
           style={{ transform: props.xy.interpolate(translate2) }} 
-          onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-          onMouseLeave={() => set({ xys: [0, 0, 1] })}
+          onMouseOver={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
+          onMouseClick={() => set({ xy: [0, 0] })}
         >
           <div className="home-p">
             <p><span className='page-title'>Recompense</span> :: as a verb, means to make amends for loss or harm suffered; to compensate.</p>
