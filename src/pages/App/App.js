@@ -7,6 +7,7 @@ import NavBar from '../../components/NavBar/NavBar'
 import Title from '../../components/Title/Title'
 // import Footer from '../../components/Footer/Footer'
 import Home from "../../pages/Home/Home.js"
+import ContactPage from '../../pages/ContactPage/ContactPage'
 import ServiceFloor from '../ServiceFloor/ServiceFloor'
 import ServiceDetailPage from '../ServiceDetailPage/ServiceDetailPage'
 import RequestDetailPage from '../RequestDetailPage/RequestDetailPage'
@@ -214,7 +215,6 @@ class App extends PureComponent {
                   services={this.state.services}
                   cities={cities}
                   categories={categories}
-                // serviceComment={this.state.serviceComment}
                 />
               )}
             />
@@ -269,7 +269,6 @@ class App extends PureComponent {
                   links={this.state.links}
                   cities={cities}
                   categories={categories}
-                  // linkComment={this.state.linkComment}
                 />
               )}
             />
@@ -309,7 +308,6 @@ class App extends PureComponent {
                     handleUpdateLink={this.handleUpdateLink}
                     location={location}
                     user={this.state.user}
-                  // link={this.state.link}
                   />
                   :
                   <Redirect to='/login' />
@@ -336,8 +334,6 @@ class App extends PureComponent {
                   cities={cities}
                   categories={categories}
                   requestComment={this.state.requestComment}
-                  // handleAddRequestComment={this.handleAddRequestComment}
-                  // handleDeleteRequestComment={this.handleDeleteRequestComment}
                   user={this.state.user}
                   handleChange={this.handleChange}
                 />
@@ -369,14 +365,19 @@ class App extends PureComponent {
                   <Redirect to='/login' />
               }
             />
+            <Route
+              exact path="/contact"
+              render={(props) => (
+                <ContactPage
+                  {...props}
+                />
+              )}
+            />
           </Switch>
         </div>
         <div className='dollar-sign'>
           <img src="https://i.imgur.com/3CdUsgY.png" alt="recompense" class="img-dollar"/>
         </div>
-        {/* <footer>
-          <Footer/>
-        </footer> */}
       </div>
     );
   }

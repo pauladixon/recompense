@@ -47,6 +47,7 @@
     animation-duration: 2s;
     animation-iteration-count: infinite;
     position: fixed;
+    z-index: 0;
 }
 
 
@@ -57,7 +58,7 @@
 .y {
     animation: y 25s linear infinite alternate;
 }
-  
+
 @keyframes x {
     0% {
         transform: translateX( calc(7vw) );
@@ -75,7 +76,6 @@
         transform: translateY( calc(-8vh));
     }
 }
-
 
 .home-p {
     /* letter-spacing: 1px;
