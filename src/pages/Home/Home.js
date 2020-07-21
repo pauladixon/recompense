@@ -16,8 +16,8 @@ const Home = () => {
         <animated.div 
           class="card2" 
           style={{ transform: props.xy.interpolate(translate2) }} 
-          onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
-          onMouseLeave={() => set({ xys: [0, 0] })}
+          onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+          onMouseLeave={() => set({ xys: [0, 0, 1] })}
         >
           <div className="home-p">
             <p><span className='page-title'>Recompense</span> :: as a verb, means to make amends for loss or harm suffered; to compensate.</p>
@@ -25,6 +25,7 @@ const Home = () => {
             <p>Included <a className="doc-link" href="http://pfw.guide/" target="_blank" rel="noopener noreferrer">here</a> is a link to the master list of resources compiled by Patia's Fantasy World for the continued support of the Black Lives Matter movement outside of our site.</p>
           </div>
         </animated.div>
+        <animated.div class="card3" style={{ transform: props.xy.interpolate(translate2) }} />
       </div>
       <footer>
           <Footer/>

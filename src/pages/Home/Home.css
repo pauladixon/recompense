@@ -95,8 +95,7 @@
     font-weight: bold;
 }
 
-.card1,
-.card2 {
+.card1, .card2, .card3 {
   position: absolute;
   border-radius: 5px;
   background-size: cover;
@@ -112,7 +111,7 @@
   height: 25vw;
   max-width: 100ch;
   max-height: 100ch;
-  background-color: rgba(77, 31, 31, 0.082);
+  border: solid 1px black;
   box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
   
 }
@@ -124,8 +123,19 @@
   height: 25vw;
   max-width: 100ch;
   max-height: 100ch;
-  background-color: rgba(88, 62, 22, 0.137);
+  background-color: rgba(88, 62, 22, 0.062);
   box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
+}
+
+.card3 {
+    min-width: 50ch;
+    min-height: 50ch;
+    width: 25vw;
+    height: 25vw;
+    max-width: 100ch;
+    max-height: 100ch;
+    border: solid 1px black;
+    box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
 }
 
 
