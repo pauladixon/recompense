@@ -31,18 +31,24 @@ class ContactPage extends Component {
                         </div>
                         <div className="paula">
                             <p className="dev-name">Paula:</p>
+                            <p>A fullstack dev focused on the accessibility through technology; with an emphasis on the digitization of self help and spiritual tools.</p>
                             <SocialIcon
-
                                 style={{ height: 45, width: 45 }}
                                 bgColor="#FFF4DE"
                                 fgColor='black'
-                                url="https://www.linkedin.com/in/isa-sofia-martinez/"
+                                url="https://www.linkedin.com/in/paulapdixon/"
                             />
                             <SocialIcon
                                 style={{ height: 45, width: 45 }}
                                 bgColor="#FFF4DE"
                                 fgColor='black'
-                                url="https://isasofiamartinez.com/"
+                                url="https://pauladixon.software/"
+                            />
+                            <SocialIcon 
+                                style={{ height: 45, width: 45 }}
+                                bgColor="#FFF4DE"
+                                fgColor='black'
+                                url="https://www.instagram.com/paula__dixon/" 
                             />
                         </div>
                         <div className="email-div">
