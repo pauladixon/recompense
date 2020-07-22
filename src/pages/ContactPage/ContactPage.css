@@ -1,3 +1,15 @@
+.contact-p {
+    height: 400px;
+    /* background-color: white; */
+    font-size: 9px;
+    width: 400px;
+    margin-left:65px;
+    margin-top: 70px;
+    /* border: solid 1px black;
+    border-radius: 5px; */
+
+}
+
 
 .contact-home {
     display: flex;
@@ -142,6 +154,7 @@
 .email-div {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 .email {
     margin-left: 5px;
@@ -190,3 +203,83 @@
         transform: translateY( calc(-10vh));
     }
 } */
+
+.contact-card1, .contact-card2, .contact-card3 {
+    position: absolute;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    will-change: transform;
+  }
+  
+  .contact-card1 {
+    min-width: 50ch;
+    min-height: 50ch;
+    width: 25vw;
+    height: 25vw;
+    max-width: 100ch;
+    max-height: 100ch;
+    border: solid 1px black;
+    box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
+    padding: 8px;
+  }
+  
+  .contact-card2 {
+    min-width: 60ch;
+    min-height: 60ch;
+    width: 25vw;
+    height: 25vw;
+    max-width: 100ch;
+    max-height: 100ch;
+    /* background-color: rgba(88, 62, 22, 0.062); */
+    box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
+    border: solid black 1px;
+    border-radius: 5px;
+  }
+  
+  .contact-card3 {
+      min-width: 50ch;
+      min-height: 50ch;
+      width: 25vw;
+      height: 25vw;
+      max-width: 100ch;
+      max-height: 100ch;
+      border: solid 1px black;
+      box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
+      background-color: rgba(88, 62, 22, 0.062);
+      /* padding: 8px; */
+  }
+  
+
+  .contact-card4 {
+    min-width: 50ch;
+    min-height: 50ch;
+    width: 25vw;
+    height: 25vw;
+    max-width: 100ch;
+    max-height: 100ch;
+    /* box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.78); */
+    padding: 20px;
+    /* background-color: rgba(0, 0, 0, 0.185); */
+    border: solid black 1px;
+    border-radius: 5px;
+
+
+
+}
+
+.contact-card5 {
+    min-width: 50ch;
+    min-height: 50ch;
+    width: 25vw;
+    height: 25vw;
+    max-width: 100ch;
+    max-height: 100ch;
+    /* box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.78); */
+    padding: 10px;
+    /* background-color: rgba(0, 0, 0, 0.185); */
+    border: solid black 1px;
+    border-radius: 5px;
+    background-position: left center;
+}
