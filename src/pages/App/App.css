@@ -116,8 +116,9 @@ a {
 }
 
 .img-dollar {
-  width: 100px;
-  height: 150px;
+  /* width: 100px;
+  height: 150px; */
+  height: 75px;
 }
 
 @media screen 
