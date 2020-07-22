@@ -116,9 +116,8 @@ a {
 }
 
 .img-dollar {
-  /* width: 100px;
-  height: 150px; */
-  height: 75px;
+  width: 100px;
+  height: 150px;
 }
 
 @media screen 
@@ -135,5 +134,8 @@ a {
   html {
     height: 667px;
     width: 375px;
+  }
+  .dollar-sign {
+    display: none;
   }
 }

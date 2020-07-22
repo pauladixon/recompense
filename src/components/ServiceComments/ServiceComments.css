@@ -123,6 +123,12 @@
 @media screen and (max-width: 375px){
     .s-comment-container {
         width: 200px;
-        margin-left: 170px;
+        margin-left: 50px;
+    }
+    .comments {
+        width: 300px;
+    }
+    .form-container, .comment-form {
+        width: 300px;
     }
 }
