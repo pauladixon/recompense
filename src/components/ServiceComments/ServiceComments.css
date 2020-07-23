@@ -139,11 +139,11 @@
         /* display: flex;
         justify-content: center; */
         word-wrap: normal;
-        margin-right: 10px;
+        margin: 10px;
         width: 250px;
     }
     .creator {
-        margin: 5px;
-        min-width: 50px;
+        margin-left: 10px;
+        min-width: 25px;
     }
 }
