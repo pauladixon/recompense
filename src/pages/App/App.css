@@ -89,7 +89,7 @@ a {
   font-size: 14px;
   min-width: 200px;
   max-width: 200px;
-  margin: 40px 50px 0px 25px;
+  margin: 0px 50px 0px 25px;
   position: fixed;
 }
 
@@ -134,5 +134,8 @@ a {
   html {
     height: 667px;
     width: 375px;
+  }
+  .dollar-sign {
+    display: none;
   }
 }

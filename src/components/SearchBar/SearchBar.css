@@ -98,5 +98,8 @@
   }
 
   @media screen and (max-width: 375px){
-
+    .search-bar {
+        position: static;
+        margin: 0px;
+    }
   }

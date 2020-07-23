@@ -30,8 +30,18 @@
     .service-page {
         display: flex;
         flex-direction: column;
+        /* width: 300px; */
     }
     .page-header {
         margin-left: 80px;
+        position: unset;
+    }
+    .page-content {
+        /* margin-top: 300px; */
+        margin-left: 0px;
+    }
+    .posts {
+        /* margin-top: 300px; */
+        margin-left: 65px;
     }
 }
