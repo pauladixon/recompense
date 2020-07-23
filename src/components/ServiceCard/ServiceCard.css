@@ -130,11 +130,41 @@
     }
     .card-info {
         /* margin-left: 200px; */
-        width: 300px;
-        margin-right: 100px;
+        width: 270px;
+        margin-right: 130px;
     }
     .card-links {
         display: flex;
+        justify-content: center;
+        margin-left: 0px;
+        /* background-color: yellow; */
+        /* width: 200px; */
+    }
+    .delete {
+        margin-right: 20px;
+    }
+    .edit {
+        margin-left: 20px;
+    }
+    .service-label {
+        font-size: 14px;
+        display: flex;
         justify-content: flex-start;
+        align-items: flex-start;
+        margin-right: 10px;
+    }
+    .service-info {
+        /* background-color: white; */
+        text-align: left;
+        font-size: 14px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        min-width: 110px;
+    }
+    .categories {
+        /* background-color: yellow; */
+        display: flex;
+        flex-flow: nowrap;
     }
 }

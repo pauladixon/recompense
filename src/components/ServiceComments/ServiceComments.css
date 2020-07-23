@@ -122,13 +122,28 @@
 
 @media screen and (max-width: 375px){
     .s-comment-container {
-        width: 200px;
-        margin-left: 50px;
+        width: 300px;
+        margin-left: 0px;
     }
     .comments {
         width: 300px;
     }
-    .form-container, .comment-form {
+    .form-container {
         width: 300px;
+        margin-top: 20px;
+    }
+    .comment-form {
+        width: 300px;
+    }
+    .comment-text {
+        /* display: flex;
+        justify-content: center; */
+        word-wrap: normal;
+        margin-right: 10px;
+        width: 250px;
+    }
+    .creator {
+        margin: 5px;
+        min-width: 50px;
     }
 }
