@@ -59,6 +59,7 @@
     align-items: center;
     font-size: 13px;
     width: 250px;
+    /* text-align: left; */
 }
 
 .card-links {

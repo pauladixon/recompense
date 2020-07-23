@@ -15,21 +15,7 @@ const ContactPage = () => {
 
     return (
         <div className="contact-home">
-            {/* <div className="contact-border-1 y">
-                    <div className="contact-border-3 z">
-                        <div className="contact-border-4 y">
-                            <div className="contact-border-4 x">
-                                <div className="contact-border-4 y">
-                                    <div className="contact-border-4 x">
-                                        <div className="contact-border-4 y">
-                                            <div className="contact-border-4 x"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
+
 
             <div class="Home"
                 onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
@@ -96,9 +82,56 @@ const ContactPage = () => {
         
                 <animated.div class="contact-card3" style={{ transform: props.xy.interpolate(translate2) }} />
                 
-                {/* <animated.div class="card5" style={{ transform: props.xy.interpolate(translate2) }} /> */}
+            
               
 
+            </div>
+
+            <div className="mobile-contact">
+            <div className="mobile-contact-p">
+                        <p className="contact-title">We're both fullstack developers, to see the rest of our work or contact us individually, check out our links below.</p>
+                        <div className="isa">
+                            <p className="dev-name">Isa:</p>
+                            <p>is focused on tools that foster communication; with an emphasis on the synthesis of art and tech</p>
+                            <SocialIcon
+                                style={{ height: 45, width: 45 }}
+                                bgColor="none"
+                                fgColor='black'
+                                url="https://www.linkedin.com/in/isa-sofia-martinez/"
+                            />
+                            <SocialIcon
+                                style={{ height: 45, width: 45 }}
+                                bgColor="none"
+                                fgColor='black'
+                                url="https://isasofiamartinez.com/"
+                            />
+                        </div>
+                        <div className="paula">
+                            <p className="dev-name">Paula:</p>
+                            <p>is focused on accessibility through technology; with an emphasis on the digitization of self help and spiritual tools.</p>
+                            <SocialIcon
+                                style={{ height: 45, width: 45 }}
+                                bgColor="none"
+                                fgColor='black'
+                                url="https://www.linkedin.com/in/paulapdixon/"
+                            />
+                            <SocialIcon
+                                style={{ height: 45, width: 45 }}
+                                bgColor="none"
+                                fgColor='black'
+                                url="https://pauladixon.software/"
+                            />
+                            <SocialIcon
+                                style={{ height: 45, width: 45 }}
+                                bgColor="none"
+                                fgColor='black'
+                                url="https://www.instagram.com/paula__dixon/"
+                            />
+                        </div>
+                        <div className="email-div">
+                            <p>For concerns or issues on the site, email us at recompensce@gmail.com</p>
+                        </div>
+                    </div>
             </div>
             <footer>
                 <Footer />
