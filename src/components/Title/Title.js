@@ -7,7 +7,7 @@ class Title extends Component {
     state = {
         imgSrc: '/title1.png'
     }
-    
+
     handleMouseOver = this.handleMouseOver.bind(this)
     handleMouseOut = this.handleMouseOut.bind(this)
 
@@ -32,6 +32,7 @@ class Title extends Component {
                         onMouseOut={this.handleMouseOut} 
                         src={this.state.imgSrc}
                         class="img-title"
+                        alt='recompense'
                     />
                 </Link>
             </>

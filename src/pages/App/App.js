@@ -1,11 +1,10 @@
 import React, { PureComponent } from 'react'
 import './App.css'
-import { Link, Route, Switch, Redirect } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import SignupPage from '../SignupPage/SignupPage'
 import LoginPage from '../LoginPage/LoginPage'
 import NavBar from '../../components/NavBar/NavBar'
 import Title from '../../components/Title/Title'
-// import Footer from '../../components/Footer/Footer'
 import Home from "../../pages/Home/Home.js"
 import ContactPage from '../../pages/ContactPage/ContactPage'
 import ServiceFloor from '../ServiceFloor/ServiceFloor'
@@ -377,10 +376,10 @@ class App extends PureComponent {
         </div>
         <div className='dollar-sign'>
           {/* <img src="https://i.imgur.com/3CdUsgY.png" alt="recompense" class="img-dollar"/> */}
-          <img src="https://i.postimg.cc/J4nBSnhS/Screen-Shot-2020-07-22-at-1-16-43-PM.png" alt=""/>
+          <img class='img-dollar' src="https://i.imgur.com/iHqjqcV.png" alt=""/>
         </div>
       </div>
-    );
+    )
   }
 
 }

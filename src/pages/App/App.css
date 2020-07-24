@@ -116,8 +116,12 @@ a {
 }
 
 .img-dollar {
-  width: 100px;
-  height: 150px;
+  width: 85px;
+  height: 120px;
+}
+
+.img-d {
+  opacity: 55%;
 }
 
 @media screen 
