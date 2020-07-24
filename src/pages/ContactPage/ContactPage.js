@@ -48,7 +48,7 @@ const ContactPage = () => {
                                 style={{ height: 45, width: 45 }}
                                 bgColor="none"
                                 fgColor='black'
-                                url="https://isasofiamartinez.com/"
+                                url="http://isasofiamartinez.com/"
                             />
                         </div>
                         <div className="paula">
