@@ -7,14 +7,14 @@
 }
 
 .l-comment-container:nth-child(even) {
-    background-color: rgba(39, 41, 75, 0.158);
+    background-color: #d8d2c8;
     margin-bottom: 8px;
     border-radius: 4px;
     box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
 }
 
 .l-comment-container:nth-child(odd) {
-    background-color: rgba(0, 0, 0, 0.089);
+    background-color: #e6decc;
     margin-bottom: 8px;
     border-radius: 4px;
     box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);

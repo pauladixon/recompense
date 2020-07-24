@@ -22,7 +22,8 @@
 
 .s-comment-container:nth-child(even) {
     /* background-color: #d9c9ba; */
-    background-color: #e2d2c8;
+    background-color: #e2cec1;
+    background-color: #e6dacc;
     margin-bottom: 8px;
     border-radius: 4px;
     box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);

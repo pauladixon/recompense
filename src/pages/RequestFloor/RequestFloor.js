@@ -46,7 +46,7 @@ class RequestFloor extends Component {
       <div className="service-page">
         <div className="page-header">
           <p className='page-title'>Requests by BIPOC ::</p>
-          <p>This is a place for black and indigenous people to post requests for free / discounted assistance from their communities. When responding to requests, please be mindful in this space and respect the experiences of others.</p> 
+          <p className='justify'>This is a place for black and indigenous people to post requests for assistance from non-black people in their communities. in response to these requests, please be mindful and respect the experiences of others.</p> 
           <br></br>
           <Link className="add-service" to="/addrequest">Post a Request</Link>
           <br></br><br></br><br></br>

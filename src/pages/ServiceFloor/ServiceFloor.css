@@ -24,6 +24,7 @@
 
 .justify {
     text-align: justify;
+    width: 188px;
 }
 
 @media screen and (max-width: 375px){
