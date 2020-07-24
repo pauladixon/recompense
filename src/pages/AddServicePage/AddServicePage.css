@@ -88,3 +88,35 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@media screen and (max-width: 375px) {
+    .add-service-page {
+        /* width: 350px; */
+        display: flex;
+        flex-direction: column;
+    }
+    .add-service-form {
+        margin-top: 20px;
+        width: 50%;
+        margin-left: 90px;
+    }
+    .page-title {
+        margin-left: 20px;
+    }
+    .form-item {
+        display: flex;
+        flex-direction: column;
+    }
+    .service-label {
+        margin: 20px 20px 20px 0px;
+        font-size: 13px;
+    }
+    .add-links {
+        display: flex;
+        flex-direction: column;
+        margin-right: 50px;
+    }
+    .cancel-button {
+        margin-left: 50px;
+    }
+}
