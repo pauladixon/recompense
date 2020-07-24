@@ -115,7 +115,7 @@ class AddServicePage extends Component {
               />
             </div>
             <div className='form-item'>
-              <label className='service-label'>Date :: </label>
+              <label className='service-label'>Today's Date :: </label>
               <input 
                 className="service-form"
                 name="date"
