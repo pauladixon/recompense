@@ -18,7 +18,14 @@
     border-radius: 4px;
     box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
 }
-
+.service-date {
+    font-size: 9px;
+    color: grey;
+    /* margin-left: 300px; */
+    display: flex;
+    /* align-items: flex-start; */
+    justify-content: center;
+}
 .card-name {
     color: #3c0c15;
     font-size: 15px;
@@ -154,16 +161,13 @@
         justify-content: flex-start;
         align-items: flex-start;
         margin-right: 10px;
+        text-align: justify;
         
     }
     .service-info {
-        /* background-color: white; */
-        /* text-align: left; */
         font-size: 14px;
-        /* display: flex;
-        justify-content: flex-start;
-        align-items: flex-start; */
         min-width: 110px;
+        text-align: justify;
     }
     .categories {
         /* background-color: yellow; */
