@@ -220,17 +220,20 @@ class App extends PureComponent {
             <Route
               exact path="/servicedetail"
               render={({ location }) =>
-                <ServiceDetailPage
-                  location={location}
-                  handleDeleteService={this.handleDeleteService}
-                  services={this.state.services}
-                  cities={cities}
-                  categories={categories}
-                  serviceComment={this.state.serviceComment}
-                  handleGetAllServices={this.handleGetAllServices}
-                  user={this.state.user}
-                  handleChange={this.handleChange}
-                />
+                userService.getUser() ?
+                  <ServiceDetailPage
+                    location={location}
+                    handleDeleteService={this.handleDeleteService}
+                    services={this.state.services}
+                    cities={cities}
+                    categories={categories}
+                    serviceComment={this.state.serviceComment}
+                    handleGetAllServices={this.handleGetAllServices}
+                    user={this.state.user}
+                    handleChange={this.handleChange}
+                  />
+                :
+                <Redirect to='/login'/>
               }
             />
             <Route
@@ -274,17 +277,20 @@ class App extends PureComponent {
             <Route
               exact path="/linkdetail"
               render={({ location }) =>
-                <LinkDetailPage
-                  location={location}
-                  handleDeleteLink={this.handleDeleteLink}
-                  link={this.state.link}
-                  cities={cities}
-                  categories={categories}
-                  linkComment={this.state.linkComment}
-                  handleGetAllLinks={this.handleGetAllLinks}
-                  user={this.state.user}
-                  handleChange={this.handleChange}
-                />
+                userService.getUser() ?
+                  <LinkDetailPage
+                    location={location}
+                    handleDeleteLink={this.handleDeleteLink}
+                    link={this.state.link}
+                    cities={cities}
+                    categories={categories}
+                    linkComment={this.state.linkComment}
+                    handleGetAllLinks={this.handleGetAllLinks}
+                    user={this.state.user}
+                    handleChange={this.handleChange}
+                  />
+                :
+                <Redirect to='/login'/>
               }
             />
             <Route
@@ -326,16 +332,19 @@ class App extends PureComponent {
             <Route
               exact path="/requestdetail"
               render={({ location }) =>
-                <RequestDetailPage
-                  location={location}
-                  handleDeleteRequest={this.handleDeleteRequest}
-                  requests={this.state.requests}
-                  cities={cities}
-                  categories={categories}
-                  requestComment={this.state.requestComment}
-                  user={this.state.user}
-                  handleChange={this.handleChange}
-                />
+                userService.getUser() ?
+                  <RequestDetailPage
+                    location={location}
+                    handleDeleteRequest={this.handleDeleteRequest}
+                    requests={this.state.requests}
+                    cities={cities}
+                    categories={categories}
+                    requestComment={this.state.requestComment}
+                    user={this.state.user}
+                    handleChange={this.handleChange}
+                  />
+                :
+                <Redirect to='/login'/>
               }
             />
             <Route

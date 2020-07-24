@@ -33,8 +33,9 @@ class LoginPage extends Component {
         <header className="signup-header page-title">Log In</header>
         <form onSubmit={this.handleSubmit} >
           <div>
-            <div>
-              <input className="signup-form"
+            <div className='sign-up-form-container one'>
+              <input 
+                className="sign-up-form-input"
                 type="email" 
                 placeholder="Email" 
                 value={this.state.email} 
@@ -44,8 +45,9 @@ class LoginPage extends Component {
             </div>
           </div>
           <div>
-            <div>
-              <input className="signup-form"
+            <div className='sign-up-form-container four'>
+              <input 
+                className="sign-up-form-input"
                 type="password"
                 placeholder="Password"
                 value={this.state.pw}
@@ -56,8 +58,9 @@ class LoginPage extends Component {
           </div>
           <div className='buttons-div'>
             <div className='buttons'>
-              <button className="signup-form button">Log In</button>&nbsp;&nbsp;&nbsp;
               <Link to='/' className="cancel">Cancel</Link>
+              &nbsp;&nbsp;&nbsp;
+              <button className="sign-up-btn">Log In</button>
             </div>
           </div>
         </form>

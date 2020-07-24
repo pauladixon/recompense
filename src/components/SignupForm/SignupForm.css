@@ -1,8 +1,7 @@
 .signup-container {
     margin-top: 65px;
-    display: flex;
+    display: grid;
     justify-content: center;
-    flex-direction: column;
 }
 .signup-header {
     display: flex;
@@ -28,11 +27,11 @@
 }
 
 .buttons {
-    margin: 20px;
+    margin: 10px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 155px;
+    width: 256px;
 }
 
 .button:hover {
@@ -51,4 +50,63 @@
 
 .cancel:hover {
     font-weight: bold;
+}
+
+.sign-up-form-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 56px;
+    background-color: #e6decc;
+    box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
+    width: 256px;
+}
+
+.one {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding-top: 20px;
+}
+
+.four {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding-bottom: 10px;
+}
+
+.sign-up-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.sign-up-form-input {
+    text-align: center;
+    background-color: #d0cabb;
+    text-transform: lowercase;
+    outline: none;
+    border-style: hidden;
+    color: #3c0c15;
+    height: 44px;
+    border-radius: 4px;
+    margin-top: 3px;
+    width: 210px;
+    font-size: 14px;
+}
+
+.sign-up-btn {
+    border: none;
+    text-transform: lowercase;
+    font-size: 12px;
+    background-color: #3c0c15;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 4px;
+    margin-top: 5px;
+    height: 34px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
