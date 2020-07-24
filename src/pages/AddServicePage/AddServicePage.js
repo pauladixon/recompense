@@ -12,7 +12,8 @@ class AddServicePage extends Component {
       description: '',
       exchange: '',
       city: '',
-      contactEmail: ''
+      contactEmail: '',
+      date: ''
     }
   }
 
@@ -111,6 +112,16 @@ class AddServicePage extends Component {
                 value={this.state.formData.contactEmail}
                 onChange={this.handleChange}
                 // required
+              />
+            </div>
+            <div className='form-item'>
+              <label className='service-label'>Date :: </label>
+              <input 
+                className="service-form"
+                name="date"
+                value={this.state.formData.date}
+                onChange={this.handleChange}
+                required
               />
             </div>
             <div className='add-links'>

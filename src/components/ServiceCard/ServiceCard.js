@@ -11,7 +11,7 @@ function ServiceCard({ service, handleDeleteService, user }) {
 
     const cities = service.cities ? service.cities.map((city, idx) =>
         <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>) : <span></span>
-        
+
     return (
         <>
             <div className='detail-card'>
@@ -36,12 +36,12 @@ function ServiceCard({ service, handleDeleteService, user }) {
                             <span className='service-label'>Categories :: </span>
                             <span className='service-info categories'>{categories}</span>
                         </div>
-                        {user._id && service.contactEmail ? 
+                        {user._id && service.contactEmail ?
                             <div className='line-item'>
                                 <span className='service-label'>Contact :: </span>
                                 <span className='service-info'>{service.creator} at {service.contactEmail}</span>
                             </div>
-                        : <div></div>}
+                            : <div></div>}
                     </div>
                     <div className='card-links'>
                         {user._id === service.user &&
@@ -66,8 +66,11 @@ function ServiceCard({ service, handleDeleteService, user }) {
                                     state: { service },
                                 }}>Edit
                             </Link>
-                        } 
+                        }
                     </div>
+                    <div>
+                    <span className='service-date'>{service.date}</span>
+                </div>
                 </div>
             </div>
         </>
