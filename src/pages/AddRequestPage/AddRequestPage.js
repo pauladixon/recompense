@@ -2,6 +2,24 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Select from 'react-select'
 
+
+const customStyles = {
+  option: (provided, state) => ({
+    ...provided,
+    backgroundColor: state.isSelected ? '#3c0c15' : '#e3dbc9',
+    color: state.isSelected ? 'white' : '#3c0c15',
+  }),
+  control: () => ({
+    width: 200,
+  }),
+  singleValue: (provided, state) => {
+    const opacity = state.isDisabled ? 0.5 : 1;
+    const transition = 'opacity 300ms';
+
+    return { ...provided, opacity, transition };
+  }
+}
+
 class AddRequestPage extends Component {
   state = {
     invalidForm: true,
@@ -88,6 +106,7 @@ class AddRequestPage extends Component {
                 name="cities"
                 onChange={this.handleChangeCities}
                 options={this.props.cities}
+                styles={customStyles}
                 // required
               />
             </div>
@@ -99,6 +118,7 @@ class AddRequestPage extends Component {
                 name="categories"
                 onChange={this.handleChangeCategories}
                 options={this.props.categories}
+                styles={customStyles}
                 // required
               />
             </div>

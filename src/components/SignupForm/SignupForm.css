@@ -46,6 +46,10 @@
     text-decoration: none;
     color: black;
     font-size: 12px;
+    color: black;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-top: 7px;
 }
 
 .cancel:hover {
@@ -99,6 +103,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.sign-up-btn:hover {
+    font-weight: bold;
 }
 
 .buttons {

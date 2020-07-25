@@ -6,7 +6,8 @@
 }
 
 .add-service-form {
-    margin-top: 100px;
+    margin-top: 60px;
+    margin-bottom: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +15,6 @@
 }
 
 .btn {
-    margin-top: 20px;
     margin-left: 50px;
     border: none;
     padding: 8px;
@@ -23,10 +23,12 @@
     background-color: #3c0c15;
     color: white;
     border-radius: 4px;
+    text-transform: lowercase;
+    width: 90px;
 }
 
 .btn:hover {
-    font-style: bold;
+    font-weight: bold;
 }
 
 .form-group {
@@ -41,40 +43,60 @@
     margin: 6px 80px;
     display: flex;
     justify-content: space-between;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #ece2cb;
+    box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
+    margin-bottom: 10px;
+    min-height: 62px;
 }
 
 .service-form {
     width: 200px;
     height: 32px;
-    background-color: white;
-    border: solid .25px #3c0c15;
     border-radius: 4px;
+    text-align: center;
+    background-color: #e7e3da;
+    text-transform: lowercase;
+    outline: none;
+    border-style: hidden;
+    color: #3c0c15;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-right: 12px;
 }
 
 .description {
     height: 100px;
     font-family: Helvetica;
+    margin: 12px;
 }
 
 .service-categories {
     width: 206px;
     font-size: 12px;
-    background-color: white;
-    border: solid .25px #3c0c15;
+    text-align: center;
+    border: hidden;
+    background-color: #e7e3da;
     border-radius: 4px;
+    margin: 12px;
+    color: #3c0c15;
 }
 
 .service-label {
     margin-top: 3px;
-    width: 150px;
+    margin-left: 10px;
+    width: 140px;
+    font-size: 13px;
 }
 
 .cancel-button {
     color: black;
-    font-size: 13px;
+    font-size: 12px;
     text-transform: uppercase;
     font-style: italic;
-    margin-top: 20px
+    margin-top: 0px;
 }
 
 .cancel-button:hover {
@@ -82,7 +104,7 @@
 }
 
 .add-links {
-    padding: 20px 78px;
+    padding: 3px 78px;
     max-width: 500px;
     display: flex;
     justify-content: space-between;
