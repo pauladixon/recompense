@@ -85,7 +85,6 @@ class SignupForm extends Component {
             <div className="buttons-div">
               <div className="buttons">
                   <Link to='/' className="cancel">Cancel</Link>
-                  &nbsp;&nbsp;
                   <button className="sign-up-btn" disabled={this.isFormInvalid()}>Sign Up</button>
               </div>
             </div>

@@ -22,17 +22,17 @@
 
 .buttons-div {
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
-.buttons {
-    margin: 10px 0px;
+/* .buttons {
+    margin: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 256px;
-}
+    width: 155px;
+} */
 
 .button:hover {
     background-color: #3c0c15;
@@ -54,24 +54,14 @@
 
 .sign-up-form-container {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    height: 56px;
-    background-color: #e6decc;
+    height: 62px;
+    border-radius: 4px;
+    background-color: #ece2cb;
     box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
-    width: 256px;
-}
-
-.one {
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    padding-top: 20px;
-}
-
-.four {
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    padding-bottom: 10px;
+    width: 200px;
+    margin-bottom: 10px;
 }
 
 .sign-up-form {
@@ -83,15 +73,15 @@
 
 .sign-up-form-input {
     text-align: center;
-    background-color: #d0cabb;
+    background-color: #e7e3da;
     text-transform: lowercase;
     outline: none;
     border-style: hidden;
     color: #3c0c15;
-    height: 44px;
+    height: 32px;
     border-radius: 4px;
     margin-top: 3px;
-    width: 210px;
+    width: 160px;
     font-size: 14px;
 }
 
@@ -103,10 +93,17 @@
     color: white;
     padding: 8px 10px;
     border-radius: 4px;
-    margin-top: 5px;
+    margin-top: 3px;
     height: 34px;
     width: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    align-items: center;
 }
