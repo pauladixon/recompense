@@ -18,7 +18,8 @@ const serviceSchema = new Schema({
     exchange: String,
     contactEmail: String,
     creator: String,
-    date: String,
+    dateBegin: String,
+    dateEnd: String,
     serviceComments: [serviceCommentSchema],
 }, { 
     timestamps: true 

@@ -20,6 +20,7 @@ const LinkSchema = new Schema({
     paypal: '',
     contactEmail: String,
     creator: String,
+    datePosted: String,
     linkComments: [LinkCommentSchema],
 }, { timestamps: true})
 

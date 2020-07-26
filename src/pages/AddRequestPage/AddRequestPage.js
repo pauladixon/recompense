@@ -29,7 +29,9 @@ class AddRequestPage extends Component {
       description: '',
       exchange: '',
       city: '',
-      contactEmail: ''
+      contactEmail: '',
+      dateBegin: '',
+      dateEnd: ''
     }
   }
 
@@ -69,7 +71,7 @@ class AddRequestPage extends Component {
             onSubmit={this.handleSubmit}
           >
             <div className='form-item'>
-              <label className='service-label'>Request Title :: </label>
+              <label className='form-label'>Request Title :: </label>
               <input
                 className="service-form"
                 name="name"
@@ -79,7 +81,7 @@ class AddRequestPage extends Component {
               /> 
             </div>
             <div className='form-item'>
-              <label className='service-label'>Description of Request :: </label>
+              <label className='form-label'>Description of Request :: </label>
               <textarea 
                 className="service-form description"
                 name="description"
@@ -89,7 +91,7 @@ class AddRequestPage extends Component {
               />
             </div>
             <div className='form-item'>
-              <label className='service-label'>Exchange for Request :: </label>
+              <label className='form-label'>Exchange for Request :: </label>
               <input 
                 className="service-form"
                 name="exchange"
@@ -99,19 +101,7 @@ class AddRequestPage extends Component {
               />
             </div>
             <div className='form-item'>
-              <label className='service-label'>Location :: </label>
-              <Select
-                className='service-categories'
-                value={this.state.formData.cities}
-                name="cities"
-                onChange={this.handleChangeCities}
-                options={this.props.cities}
-                styles={customStyles}
-                // required
-              />
-            </div>
-            <div className='form-item'>
-              <label className='service-label'>Categories of Request :: </label>
+              <label className='form-label'>Categories of Request :: </label>
               <Select
                 className='service-categories'
                 value={this.state.formData.categories}
@@ -123,7 +113,40 @@ class AddRequestPage extends Component {
               />
             </div>
             <div className='form-item'>
-              <label className='service-label'>Contact Email :: </label>
+              <label className='form-label'>Location of request :: </label>
+              <Select
+                className='service-categories'
+                value={this.state.formData.cities}
+                name="cities"
+                onChange={this.handleChangeCities}
+                options={this.props.cities}
+                styles={customStyles}
+                // required
+              />
+            </div>
+            <div className='form-item date-group'>
+              <label className='form-label'>Dates for request :: </label>
+              <div>
+                <input 
+                  className="dates date-one"
+                  name="dateBegin"
+                  type='date'
+                  value={this.state.formData.dateBegin}
+                  onChange={this.handleChange}
+                  required
+                />
+                <input 
+                  className="dates date-two"
+                  name="dateEnd"
+                  type='date'
+                  value={this.state.formData.dateEnd}
+                  onChange={this.handleChange}
+                  required
+                />
+              </div>
+            </div>
+            <div className='form-item'>
+              <label className='form-label'>Contact Email :: </label>
               <input 
                 className="service-form"
                 name="contactEmail"

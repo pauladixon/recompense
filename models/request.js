@@ -18,6 +18,8 @@ const requestSchema = new Schema({
     exchange: String,
     contactEmail: String,
     creator: String,
+    dateBegin: String,
+    dateEnd: String,
     requestComments: [requestCommentSchema],
 }, { 
     timestamps: true

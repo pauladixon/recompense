@@ -31,7 +31,8 @@ class AddLinkPage extends Component {
       venmo: '',
       cashapp: '',
       paypal: '',
-      contactEmail: ''
+      contactEmail: '',
+      datePosted: '',
     }
   }
 
@@ -67,7 +68,7 @@ class AddLinkPage extends Component {
             onSubmit={this.handleSubmit}
           >
             <div className='form-item'>
-              <label className='service-label'>Your Name :: </label>
+              <label className='form-label'>Your Name :: </label>
               <input
                 className="service-form"
                 name="name"
@@ -77,7 +78,7 @@ class AddLinkPage extends Component {
               /> 
             </div>
             <div className='form-item'>
-              <label className='service-label'>Your Pronouns :: </label>
+              <label className='form-label'>Your Pronouns :: </label>
               <input
                 className="service-form"
                 name="pronouns"
@@ -87,7 +88,47 @@ class AddLinkPage extends Component {
               /> 
             </div>
             <div className='form-item'>
-              <label className='service-label'>Location :: </label>
+              <label className='form-label'>About You :: </label>
+              <textarea 
+                className="service-form description"
+                name="description"
+                value={this.state.formData.description}
+                onChange={this.handleChange}
+                required
+              />
+            </div>
+            <div className='form-item'>
+              <label className='form-label'>Venmo :: </label>
+              <input 
+                className="service-form"
+                name="venmo"
+                value={this.state.formData.venmo}
+                onChange={this.handleChange}
+                // required
+              />
+            </div>
+            <div className='form-item'>
+              <label className='form-label'>Cashapp :: </label>
+              <input 
+                className="service-form"
+                name="cashapp"
+                value={this.state.formData.cashapp}
+                onChange={this.handleChange}
+                // required
+              />
+            </div>
+            <div className='form-item'>
+              <label className='form-label'>PayPal :: </label>
+              <input 
+                className="service-form"
+                name="paypal"
+                value={this.state.formData.paypal}
+                onChange={this.handleChange}
+                // required
+              />
+            </div>
+            <div className='form-item'>
+              <label className='form-label'>Location :: </label>
               <Select
                 className='service-categories'
                 value={this.state.formData.cities}
@@ -98,48 +139,21 @@ class AddLinkPage extends Component {
                 required
               />
             </div>
-            <div className='form-item'>
-              <label className='service-label'>About You :: </label>
-              <textarea 
-                className="service-form description"
-                name="description"
-                value={this.state.formData.description}
-                onChange={this.handleChange}
-                required
-              />
+            <div className='form-item date-group'>
+              <label className='form-label'>Date Posted :: </label>
+              <div>
+                <input 
+                  className="dates date-link"
+                  name="datePosted"
+                  type='date'
+                  value={this.state.formData.datePosted}
+                  onChange={this.handleChange}
+                  required
+                />
+              </div>
             </div>
             <div className='form-item'>
-              <label className='service-label'>Venmo :: </label>
-              <input 
-                className="service-form"
-                name="venmo"
-                value={this.state.formData.venmo}
-                onChange={this.handleChange}
-                // required
-              />
-            </div>
-            <div className='form-item'>
-              <label className='service-label'>Cashapp :: </label>
-              <input 
-                className="service-form"
-                name="cashapp"
-                value={this.state.formData.cashapp}
-                onChange={this.handleChange}
-                // required
-              />
-            </div>
-            <div className='form-item'>
-              <label className='service-label'>PayPal :: </label>
-              <input 
-                className="service-form"
-                name="paypal"
-                value={this.state.formData.paypal}
-                onChange={this.handleChange}
-                // required
-              />
-            </div>
-            <div className='form-item'>
-              <label className='service-label'>Contact Email :: </label>
+              <label className='form-label'>Contact Email :: </label>
               <input 
                 className="service-form"
                 name="contactEmail"
