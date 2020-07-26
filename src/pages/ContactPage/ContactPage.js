@@ -34,9 +34,10 @@ const ContactPage = () => {
                     onMouseClick={() => set({ xy: [0, 0] })}
                 >
                     <div className="contact-p">
-                        <p className="contact-title">We're both fullstack developers, to see the rest of our work or contact us individually, check out our links below.</p>
+                        <p className="contact-title">We're fullstack developers. to see our other work or to contact us individually, check out our links below ::</p>
+                        <p className='div-break'></p>
                         <div className="isa">
-                            <p className="dev-name">Isa:</p>
+                            <p className="dev-name">Isa martinez</p>
                             <p>is focused on tools that foster communication; with an emphasis on the synthesis of art and tech</p>
                             <SocialIcon
                                 style={{ height: 45, width: 45 }}
@@ -52,7 +53,7 @@ const ContactPage = () => {
                             />
                         </div>
                         <div className="paula">
-                            <p className="dev-name">Paula:</p>
+                            <p className="dev-name">Paula dixon</p>
                             <p>is focused on accessibility through technology; with an emphasis on the digitization of self help and spiritual tools.</p>
                             <SocialIcon
                                 style={{ height: 45, width: 45 }}

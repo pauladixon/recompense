@@ -43,7 +43,7 @@
 }
 
 .search-btn:hover {
-    font-style: bold;
+    font-weight: bold;
 }
 
 .search-label { 
@@ -81,10 +81,11 @@
     cursor: pointer;
     margin-left: 10px;
     text-transform: lowercase;
+    width: 130px;
 }
 
 .refresh-btn:hover {
-    font-style: bold;
+    font-weight: bold;
 }
 
 .search-title {

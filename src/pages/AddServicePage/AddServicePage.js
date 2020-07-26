@@ -30,7 +30,8 @@ class AddServicePage extends Component {
       exchange: '',
       city: '',
       contactEmail: '',
-      date: ''
+      dateBegin: '',
+      dateEnd: ''
     }
   }
 
@@ -64,13 +65,13 @@ class AddServicePage extends Component {
           <p className='page-title'>Add a Service :: </p>
         </div>
         <div className='add-service-form'>
-          <form 
+          <form
             ref={this.formRef} 
             autoComplete="off" 
             onSubmit={this.handleSubmit}
           >
             <div className='form-item'>
-              <label className='service-label'>Service Title :: </label>
+              <label className='form-label'>Service Title :: </label>
               <input
                 className="service-form"
                 name="name"
@@ -80,7 +81,7 @@ class AddServicePage extends Component {
               /> 
             </div>
             <div className='form-item'>
-              <label className='service-label'>Description of Service :: </label>
+              <label className='form-label'>Description of Service :: </label>
               <textarea 
                 className="service-form description"
                 name="description"
@@ -90,7 +91,7 @@ class AddServicePage extends Component {
               />
             </div>
             <div className='form-item'>
-              <label className='service-label'>Exchange for Service :: </label>
+              <label className='form-label'>Exchange for Service :: </label>
               <input 
                 className="service-form"
                 name="exchange"
@@ -100,7 +101,20 @@ class AddServicePage extends Component {
               />
             </div>
             <div className='form-item'>
-              <label className='service-label'>Location :: </label>
+              <label className='form-label'>Categories of Service :: </label>
+              <Select
+                className='service-categories'
+                value={this.state.formData.categories}
+                styles={customStyles}
+                name="categories"
+                onChange={this.handleChangeCategories}
+                options={this.props.categories}
+                styles={customStyles}
+                required
+              />
+            </div>
+            <div className='form-item'>
+              <label className='form-label'>Location of service :: </label>
               <Select
                 className='service-categories'
                 value={this.state.formData.cities}
@@ -111,36 +125,35 @@ class AddServicePage extends Component {
                 required
               />
             </div>
-            <div className='form-item'>
-              <label className='service-label'>Categories of Service :: </label>
-              <Select
-                className='service-categories'
-                value={this.state.formData.categories}
-                styles={customStyles}
-                name="categories"
-                onChange={this.handleChangeCategories}
-                options={this.props.categories}
-                required
-              />
+            <div className='form-item date-group'>
+              <label className='form-label'>Dates of availability :: </label>
+              <div>
+                <input 
+                  className="dates date-one"
+                  name="dateBegin"
+                  type='date'
+                  value={this.state.formData.dateBegin}
+                  onChange={this.handleChange}
+                  required
+                />
+                <input 
+                  className="dates date-two"
+                  name="dateEnd"
+                  type='date'
+                  value={this.state.formData.dateEnd}
+                  onChange={this.handleChange}
+                  required
+                />
+              </div>
             </div>
             <div className='form-item'>
-              <label className='service-label'>Contact Email :: </label>
+              <label className='form-label'>Contact Email :: </label>
               <input 
                 className="service-form"
                 name="contactEmail"
                 value={this.state.formData.contactEmail}
                 onChange={this.handleChange}
                 // required
-              />
-            </div>
-            <div className='form-item'>
-              <label className='service-label'>Today's Date :: </label>
-              <input 
-                className="service-form"
-                name="date"
-                value={this.state.formData.date}
-                onChange={this.handleChange}
-                required
               />
             </div>
             <div className='add-links'>

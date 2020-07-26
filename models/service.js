@@ -5,6 +5,7 @@ const serviceCommentSchema = new Schema({
     text: String,
     user: String,
     creator: String,
+    date: String,
 }, {
     timestamps: true
 })
@@ -18,7 +19,8 @@ const serviceSchema = new Schema({
     exchange: String,
     contactEmail: String,
     creator: String,
-    date: String,
+    dateBegin: String,
+    dateEnd: String,
     serviceComments: [serviceCommentSchema],
 }, { 
     timestamps: true 

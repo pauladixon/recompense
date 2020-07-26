@@ -5,6 +5,7 @@ const requestCommentSchema = new Schema({
     text: String,
     user: String,
     creator: String,
+    date: String,
 }, {
     timestamps: true
 })
@@ -18,6 +19,8 @@ const requestSchema = new Schema({
     exchange: String,
     contactEmail: String,
     creator: String,
+    dateBegin: String,
+    dateEnd: String,
     requestComments: [requestCommentSchema],
 }, { 
     timestamps: true

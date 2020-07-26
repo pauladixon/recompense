@@ -3,6 +3,23 @@ import Select from 'react-select'
 import { Link, Redirect } from 'react-router-dom'
 
 
+const customStyles = {
+    option: (provided, state) => ({
+      ...provided,
+      backgroundColor: state.isSelected ? '#3c0c15' : '#e3dbc9',
+      color: state.isSelected ? 'white' : '#3c0c15',
+    }),
+    control: () => ({
+      width: 200,
+    }),
+    singleValue: (provided, state) => {
+      const opacity = state.isDisabled ? 0.5 : 1;
+      const transition = 'opacity 300ms';
+  
+      return { ...provided, opacity, transition };
+    }
+}
+
 class EditServicePage extends Component {
     state = {
         invalidForm: true,
@@ -51,7 +68,7 @@ class EditServicePage extends Component {
                         onSubmit={this.handleSubmit}
                     >
                         <div className='form-item'>
-                            <label className='service-label'>Service Title :: </label>
+                            <label className='form-label'>Service Title :: </label>
                             <input
                                 className="service-form"
                                 name="name"
@@ -61,7 +78,7 @@ class EditServicePage extends Component {
                             /> 
                         </div>
                         <div className='form-item'>
-                            <label className='service-label'>Description of Service :: </label>
+                            <label className='form-label'>Description of Service :: </label>
                             <textarea 
                                 className="service-form description"
                                 name="description"
@@ -71,7 +88,7 @@ class EditServicePage extends Component {
                             />
                         </div>
                         <div className='form-item'>
-                            <label className='service-label'>Exchange for Service :: </label>
+                            <label className='form-label'>Exchange for Service :: </label>
                             <input 
                                 className="service-form"
                                 name="exchange"
@@ -81,30 +98,52 @@ class EditServicePage extends Component {
                             />
                         </div>
                         <div className='form-item'>
-                            <label className='service-label'>City, State :: </label>
+                            <label className='form-label'>Categories of Service :: </label>
+                            <Select
+                                className='service-categories'
+                                value={this.state.formData.categories}
+                                styles={customStyles}
+                                name="categories"
+                                onChange={this.handleChangeCategories}
+                                options={this.props.categories}
+                                required
+                            />
+                        </div>
+                        <div className='form-item'>
+                            <label className='form-label'>Location of service :: </label>
                             <Select
                                 className='service-categories'
                                 value={this.state.formData.cities}
                                 name="cities"
                                 onChange={this.handleChangeCities}
                                 options={this.props.cities}
-                                // required
+                                styles={customStyles}
+                                required
                             />
+                        </div>
+                        <div className='form-item date-group'>
+                            <label className='form-label'>Dates of availability :: </label>
+                            <div>
+                                <input 
+                                className="dates date-one"
+                                name="dateBegin"
+                                type='date'
+                                value={this.state.formData.dateBegin}
+                                onChange={this.handleChange}
+                                required
+                                />
+                                <input 
+                                className="dates date-two"
+                                name="dateEnd"
+                                type='date'
+                                value={this.state.formData.dateEnd}
+                                onChange={this.handleChange}
+                                required
+                                />
                             </div>
-                            <div className='form-item'>
-                            <label className='service-label'>Categories of Service :: </label>
-                            <Select
-                                className='service-categories'
-                                value={this.state.formData.categories}
-                                isMulti
-                                name="categories"
-                                onChange={this.handleChangeCategories}
-                                options={this.props.categories}
-                                // required
-                            />
-                            </div>
-                            <div className='form-item'>
-                            <label className='service-label'>Contact Email :: </label>
+                        </div>
+                        <div className='form-item'>
+                            <label className='form-label'>Contact Email :: </label>
                             <input 
                                 className="service-form"
                                 name="contactEmail"

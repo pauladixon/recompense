@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import * as linksAPI from '../../services/links-api'
 import './LinkComments.css'
+import moment from 'moment'
 
 class LinkComments extends Component {
     state = {
@@ -37,7 +38,10 @@ class LinkComments extends Component {
                 <div className='comments'>
                     {this.state.link && this.state.link.linkComments.map((linkComment) =>
                         <div key={linkComment._id} className='l-comment-container'>
-                            <p className='creator'>{linkComment.creator} :: </p>
+                            <div className='comment-info'> 
+                                <p className='comment-date'>{moment(linkComment.date).format('LL')}</p>
+                                <p className='comment-creator'>{linkComment.creator}</p>
+                            </div>
                             <div className='comment-text'>
                                 <p>{linkComment.text}</p>
                             </div>

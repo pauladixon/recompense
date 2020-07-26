@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../../utils/userService'
 import './LinkCard.css'
+import moment from 'moment'
 
 function LinkCard({ link, handleDeleteLink, user }) {
     user = user === null ? user = NaN : user
@@ -19,36 +20,44 @@ function LinkCard({ link, handleDeleteLink, user }) {
                     <div>
                         <div className="line-item">
                             <span className='link-label'>City, State :: </span>
-                            <span className='link-info'>{cities}</span>
+                            <span className='link-info' key={link.id}>{cities}</span>
                         </div>
                         <div className='line-item'>
                             <span className='link-label'>Pronouns :: </span>
-                            <span className='link-info'>{link.pronouns}</span>
+                            <span className='link-info' key={link.id}>{link.pronouns}</span>
                         </div>
                         <div className='line-item'>
                             <span className='link-label'>About :: </span>
-                            <span className='link-info about'>{link.description}</span>
+                            <span className='link-info about' key={link.id}>{link.description}</span>
                         </div>
                         {link.venmo ? 
                         <div className='line-item'>
                             <span className='link-label'>Venmo :: </span>
-                            <span className='link-info'>{link.venmo}</span>
+                            <span className='link-info' key={link.id}>{link.venmo}</span>
                         </div>      : <div></div>}
                         {link.cashapp ? 
                         <div className='line-item'>
                             <span className='link-label'>CashApp :: </span>
-                            <span className='link-info'>{link.cashapp}</span>
+                            <span className='link-info' key={link.id}>{link.cashapp}</span>
                         </div>        : <div></div>}
                         {link.paypal ? 
+                            <div className='line-item'>
+                                <span className='link-label'>PayPal :: </span>
+                                <span className='link-info' key={link.id}>{link.paypal}</span>
+                            </div>       
+                            : 
+                            <div></div>
+                        }
                         <div className='line-item'>
-                            <span className='link-label'>PayPal :: </span>
-                            <span className='link-info'>{link.paypal}</span>
-                        </div>       : <div></div>}
+                            <span className='service-label'>date posted :: </span>
+                            <div className='service-info service-dates-label'>
+                                <span className='service-date' key={link.id}>{moment(link.datePosted).format('LL')}</span>
+                            </div>
+                        </div>
                         {user._id && link.contactEmail ?
-                        
                             <div className='line-item'>
                                 <span className='link-label'>Contact Email:: </span>
-                                <span className='link-info'>{link.creator} at {link.contactEmail}</span>
+                                <span className='link-info' key={link.id}>{link.creator} at {link.contactEmail}</span>
                             </div>
                         : <div></div>} 
                     </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../../utils/userService'
 import './ServiceCard.css'
+import moment from 'moment'
 
 function ServiceCard({ service, handleDeleteService, user }) {
     user = user === null ? user = NaN : user
@@ -15,33 +16,43 @@ function ServiceCard({ service, handleDeleteService, user }) {
     return (
         <>
             <div className='detail-card'>
-                <div>
-                    <p className='card-name'>{service.name}</p>
+                <div className='title-group'>
+                    <p className='card-name' key={service.id}>{service.name}</p>
                 </div>
                 <div className='card-info'>
                     <div>
                         <div className='line-item'>
                             <span className='service-label'>Description :: </span>
-                            <span className='service-info'>{service.description}</span>
+                            <span className='service-info' key={service.id}>{service.description}</span>
                         </div>
                         <div className='line-item'>
                             <span className='service-label'>Exchange :: </span>
-                            <span className='service-info'>{service.exchange}</span>
+                            <span className='service-info' key={service.id}>{service.exchange}</span>
                         </div>
                         <div className='line-item'>
                             <span className='service-label'>City, State :: </span>
-                            <span className='service-info'>{cities}</span>
+                            <span className='service-info' key={service.id}>{cities}</span>
                         </div>
                         <div className='line-item'>
                             <span className='service-label'>Categories :: </span>
-                            <span className='service-info categories'>{categories}</span>
+                            <span className='service-info categories' key={service.id}>{categories}</span>
+                        </div>
+                        <div className='line-item'>
+                            <span className='service-label'>dates available :: </span>
+                            <div className='service-info service-dates-label'>
+                                <span className='service-date' key={service.id}>{moment(service.dateBegin).format('LL')}</span>
+                                to 
+                                <span className='service-date' key={service.id}>{moment(service.dateEnd).format('LL')}</span>
+                            </div>
                         </div>
                         {user._id && service.contactEmail ?
                             <div className='line-item'>
-                                <span className='service-label'>Contact :: </span>
-                                <span className='service-info'>{service.creator} at {service.contactEmail}</span>
+                                <span className='service-label'>contact info :: </span>
+                                <span className='service-info' key={service.id}>{service.creator} at {service.contactEmail}</span>
                             </div>
-                            : <div></div>}
+                            : 
+                            <div></div>
+                        }
                     </div>
                     <div className='card-links'>
                         {user._id === service.user &&
@@ -49,7 +60,7 @@ function ServiceCard({ service, handleDeleteService, user }) {
                                 className='delete'
                                 onClick={() => handleDeleteService(service._id)}
                             >
-                                Remove
+                                remove
                             </button>
                         }
                         <Link
@@ -68,9 +79,6 @@ function ServiceCard({ service, handleDeleteService, user }) {
                             </Link>
                         }
                     </div>
-                    <div>
-                    <span className='service-date'>{service.date}</span>
-                </div>
                 </div>
             </div>
         </>
