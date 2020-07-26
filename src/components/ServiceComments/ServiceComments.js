@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './ServiceComments.css'
 import * as servicesAPI from '../../services/services-api'
+import moment from 'moment'
 
 class ServiceComments extends Component {
 
@@ -38,7 +39,10 @@ class ServiceComments extends Component {
                 <div className='comments'>
                     {this.state.service && this.state.service.serviceComments.map((serviceComment) =>
                         <div key={serviceComment._id} className='s-comment-container'>
-                            <p className='creator'>{serviceComment.creator} :: </p>
+                            <div className='comment-info'> 
+                                <p className='comment-date'>{moment(serviceComment.date).format('LL')}</p>
+                                <p className='comment-creator'>{serviceComment.creator}</p>
+                            </div>
                             <div className='comment-text'>
                                 <p>{serviceComment.text}</p>
                             </div>

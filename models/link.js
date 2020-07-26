@@ -5,6 +5,7 @@ const LinkCommentSchema = new Schema({
     text: String,
     user: String,
     creator: String,
+    date: String,
 }, {
     timestamps: true
 })

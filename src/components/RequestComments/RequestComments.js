@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import * as requestsAPI from '../../services/requests-api'
 import './RequestComments.css'
+import moment from 'moment'
 
 class RequestComments extends Component {
     state = {
@@ -37,7 +38,10 @@ class RequestComments extends Component {
                 <div className='comments'>
                     {this.state.request && this.state.request.requestComments.map((requestComment) =>
                         <div key={requestComment._id} className='r-comment-container'>
-                            <p className='creator'>{requestComment.creator} :: </p>
+                            <div className='comment-info'> 
+                                <p className='comment-date'>{moment(requestComment.date).format('LL')}</p>
+                                <p className='comment-creator'>{requestComment.creator}</p>
+                            </div>
                             <div className='comment-text'>
                                 <p>{requestComment.text}</p>
                             </div>

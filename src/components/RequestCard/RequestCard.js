@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../../utils/userService'
 import './RequestCard.css'
+import moment from 'moment'
 
 function RequestCard({ request, handleDeleteRequest, user }) {
     user = user === null ? user = NaN : user
@@ -16,32 +17,42 @@ function RequestCard({ request, handleDeleteRequest, user }) {
         <>
             <div className='request-detail-card'>
                 <div>
-                    <p className='card-name'>{request.name}</p>
+                    <p className='card-name' key={request.id}>{request.name}</p>
                 </div>
                 <div className='card-info'>
                     <div>
                         <div className='line-item'>
                             <span className='service-label'>Description :: </span>
-                            <span className='service-info'>{request.description}</span>
+                            <span className='service-info' key={request.id}>{request.description}</span>
                         </div>
                         <div className='line-item'>
                             <span className='service-label'>Exchange :: </span>
-                            <span className='service-info'>{request.exchange}</span>
+                            <span className='service-info' key={request.id}>{request.exchange}</span>
                         </div>
                         <div className='line-item'>
                             <span className='service-label'>City, State :: </span>
-                            <span className='service-info'>{cities}</span>
+                            <span className='service-info' key={request.id}>{cities}</span>
                         </div>
                         <div className='line-item'>
                             <span className='service-label'>Categories :: </span>
-                            <span className='service-info categories'>{categories}</span>
+                            <span className='service-info categories' key={request.id}>{categories}</span>
+                        </div>
+                        <div className='line-item'>
+                            <span className='service-label'>dates requesting :: </span>
+                            <div className='service-info service-dates-label'>
+                                <span className='service-date' key={request.id}>{moment(request.dateBegin).format('LL')}</span>
+                                to 
+                                <span className='service-date' key={request.id}>{moment(request.dateEnd).format('LL')}</span>
+                            </div>
                         </div>
                         {user._id && request.contactEmail ? 
                             <div className='line-item'>
                                 <span className='service-label'>Contact :: </span>
-                                <span className='service-info'>{request.creator} at {request.contactEmail}</span>
+                                <span className='service-info' key={request.id}>{request.creator} at {request.contactEmail}</span>
                             </div>
-                        : <div></div>} 
+                        : 
+                            <div></div>
+                        } 
                     </div>
                     <div className='card-links'>
                         {user._id === request.user &&
