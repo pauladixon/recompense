@@ -39,12 +39,12 @@ class LinkComments extends Component {
                     {this.state.link && this.state.link.linkComments.map((linkComment) =>
                         <div key={linkComment._id} className='l-comment-container'>
                             <div className='comment-info'> 
-                                <p className='comment-date'>{moment(linkComment.date).format('LL')}</p>
                                 <p className='comment-creator'>{linkComment.creator}</p>
                             </div>
                             <div className='comment-text'>
                                 <p>{linkComment.text}</p>
                             </div>
+                            <p className='comment-date'>{moment(linkComment.date).format('LL')}</p>
                             {this.props.user._id === this.props.link.user || this.props.user._id === linkComment.user ?
                                 <button 
                                     className='x-btn' 

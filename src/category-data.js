@@ -17,6 +17,7 @@ const categories = [
   { value: 'Spiritual Tools', label: 'Spiritual Tools' },
   { value: 'Energy Readings', label: 'Energy Readings' },
   { value: 'Energy / Body Work', label: 'Energy / Body Work' },
+  { value: 'Food / Groceries', label: 'Food / Groceries'}
 ]
 
 export default categories
