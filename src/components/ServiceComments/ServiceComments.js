@@ -40,12 +40,13 @@ class ServiceComments extends Component {
                     {this.state.service && this.state.service.serviceComments.map((serviceComment) =>
                         <div key={serviceComment._id} className='s-comment-container'>
                             <div className='comment-info'> 
-                                <p className='comment-date'>{moment(serviceComment.date).format('LL')}</p>
+                                {/* <p className='comment-date'>{moment(serviceComment.date).format('LL')}</p> */}
                                 <p className='comment-creator'>{serviceComment.creator}</p>
                             </div>
                             <div className='comment-text'>
                                 <p>{serviceComment.text}</p>
                             </div>
+                            <p className='comment-date'>{moment(serviceComment.date).format('LL')}</p>
                             {this.props.user._id === this.props.service.user || this.props.user._id === serviceComment.user ?
                                 <button 
                                     className='x-btn' 

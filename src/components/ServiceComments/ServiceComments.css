@@ -62,13 +62,17 @@
     margin: 2px 10px;
     min-width: 100px;
     text-align: left;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .comment-text {
     color: #3c0c15;
     font-size: 14px;
-    margin-right: 110px;
+    /* margin-right: 110px; */
     width: 300px;
+    display: flex;
+    justify-content: center;
 }
 
 .x-btn {
