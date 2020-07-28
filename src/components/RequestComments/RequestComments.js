@@ -39,12 +39,12 @@ class RequestComments extends Component {
                     {this.state.request && this.state.request.requestComments.map((requestComment) =>
                         <div key={requestComment._id} className='r-comment-container'>
                             <div className='comment-info'> 
-                                <p className='comment-date'>{moment(requestComment.date).format('LL')}</p>
                                 <p className='comment-creator'>{requestComment.creator}</p>
                             </div>
                             <div className='comment-text'>
                                 <p>{requestComment.text}</p>
                             </div>
+                            <p className='comment-date'>{moment(requestComment.date).format('LL')}</p>
                             {this.props.user._id === this.props.request.user || this.props.user._id === requestComment.user ?
                                 <button 
                                     className='x-btn' 
