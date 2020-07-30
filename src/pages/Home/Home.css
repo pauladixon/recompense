@@ -10,79 +10,11 @@
     position: fixed;
 }
 
-/* .home-border-1 {
-    margin: 0px 0px;
-    display: flex;
-    justify-content: center;
-    background-color: rgba(89, 75, 139, 0.11);
-    width: 450px;
-    min-height: 100px;
-    display: grid;
-    border-radius: 4px;
-    box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
-    height: 450px;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-}
-
-.home-border-2 {
-    margin: 0px 0px;
-    display: flex;
-    justify-content: center;
-
-    /* background-image: url(https://i.imgur.com/4pG4fSl.png);
-    background-repeat: no-repeat; */
-    /* background-size: 700px 600px; */
-    /* width: 700px;
-    height: 600px;
-    margin: 50px;
-
-    background-color: rgba(139, 79, 75, 0.11);
-    width: 450px;
-    min-height: 100px;
-    display: grid;
-    border-radius: 4px;
-    box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
-    height: 450px;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    position: fixed;
-    z-index: 0;
-}
-
-
-/* 
-.x {
-    animation: x 30s linear infinite alternate;
-}
-  
-.y {
-    animation: y 25s linear infinite alternate;
-}
-@keyframes x {
-    0% {
-        transform: translateX( calc(7vw) );
-      }
-    100% {
-        transform: translateX( calc(-7vw));
-    }
-}
-  
-@keyframes y {
-    0% {
-      transform: translateY( calc(6vh) );
-    }
-    100% {
-        transform: translateY( calc(-8vh));
-    }
-} */
-
 .home-p {
     font-size: 13px;
-    margin: 140px 120px;
-    text-align: start;
+    margin: 128px 133px;
+    text-align: justify;
     z-index: 100;    
-    /* text-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185); */
     position: fixed;
 }
 

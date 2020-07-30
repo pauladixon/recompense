@@ -1,11 +1,11 @@
 .contact-p {
     height: 400px;
     font-size: 11px;
-    width: 380px;
+    width: 400px;
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-    margin-top: -20px;
+    margin-top: 5px;
 }
 
 
@@ -47,35 +47,66 @@
     display: flex;
     justify-content: center;
     padding: 10px;
-    border-bottom: 1px solid black;
     margin-bottom: -15px;
+}
+
+.div-break {
+    border-bottom: 1px solid black;
+    width: 80%;
+    height: 1px;
 }
 
 .dev-name {
     display: flex;
     justify-content: center;
     color: #3c0c15;
-    font-size: 12px;
+    font-size: 13px;
+    text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.185);
+    margin-bottom: 0px;
+}
+
+.us {
+    margin: -5px 15px 20px 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
 }
 
 .isa {
-    margin: 5px;
-    padding: 7px;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
 }
 
 .paula {
-    margin: 5px;
-    padding: 7px;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -5px;
 }
 
 .email-div {
+    margin-top: -15px;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
+
 .email {
     margin-left: 5px;
 }
+
 .email:hover {
     font-weight: bold;
     cursor: pointer;
@@ -88,9 +119,9 @@
     background-position: center center;
     background-repeat: no-repeat;
     will-change: transform;
-  }
+}
   
-  .contact-card1 {
+.contact-card1 {
     min-width: 50ch;
     min-height: 50ch;
     width: 25vw;
@@ -101,9 +132,9 @@
     box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
     padding: 8px;
     z-index: -1;
-  }
+}
   
-  .contact-card2 {
+.contact-card2 {
     min-width: 60ch;
     min-height: 60ch;
     width: 25vw;
@@ -117,22 +148,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
   
-  .contact-card3 {
-      min-width: 50ch;
-      min-height: 50ch;
-      width: 25vw;
-      height: 25vw;
-      max-width: 100ch;
-      max-height: 100ch;
-      border: solid 1px black;
-      box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
-      background-color: rgba(88, 62, 22, 0.062);
-  }
+.contact-card3 {
+    min-width: 50ch;
+    min-height: 50ch;
+    width: 25vw;
+    height: 25vw;
+    max-width: 100ch;
+    max-height: 100ch;
+    border: solid 1px black;
+    box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
+    background-color: rgba(88, 62, 22, 0.062);
+}
   
 
-  .contact-card4 {
+.contact-card4 {
     min-width: 50ch;
     min-height: 50ch;
     width: 25vw;
