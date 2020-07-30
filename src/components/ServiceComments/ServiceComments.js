@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ServiceComment from '../../components/ServiceComment/ServiceComment'
 import './ServiceComments.css'
 import * as servicesAPI from '../../services/services-api'
 import moment from 'moment'
@@ -37,30 +38,14 @@ class ServiceComments extends Component {
         return (
             <div className='all-comments-container'>
                 <div className='comments'>
-                    {this.state.service && this.state.service.serviceComments.map((serviceComment) =>
-                        <div key={serviceComment._id} className='s-comment-container'>
-                            <div className='comment-info'> 
-                                {/* <p className='comment-date'>{moment(serviceComment.date).format('LL')}</p> */}
-                                <p className='comment-creator'>{serviceComment.creator}</p>
-                            </div>
-                            <div className='comment-text'>
-                                <p>{serviceComment.text}</p>
-                            </div>
-                            {this.props.user._id === this.props.service.user || this.props.user._id === serviceComment.user ?
-                                <>
-                                    <p className='my-comment-date'>{moment(serviceComment.timestamps).format('LL')}</p>
-                                    <button 
-                                        className='x-btn' 
-                                        id={this.props.service._id} 
-                                        name={serviceComment._id} 
-                                        onClick={this.handleDeleteServiceComment}
-                                    > X
-                                    </button>
-                                </>
-                            :
-                            <p className='comment-date'>{moment(serviceComment.timestamps).format('LL')}</p>
-                            }
-                        </div>
+                    {this.state.service && this.state.service.serviceComments.map(serviceComment =>
+                        <ServiceComment
+                            serviceComment={serviceComment}
+                            key={serviceComment._id}
+                            user={this.props.user}
+                            service={this.state.service}
+                            handleDeleteServiceComment={this.props.handleDeleteServiceComment}
+                        />
                     )}
                     <div className='form-container'>
                         <form

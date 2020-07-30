@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import * as requestsAPI from '../../services/requests-api'
 import './RequestComments.css'
-import moment from 'moment'
+import RequestComment from '../../components/RequestComment/RequestComment'
 
 class RequestComments extends Component {
     state = {
@@ -37,26 +37,13 @@ class RequestComments extends Component {
             <div className='all-comments-container'>
                 <div className='comments'>
                     {this.state.request && this.state.request.requestComments.map((requestComment) =>
-                        <div key={requestComment._id} className='r-comment-container'>
-                            <div className='comment-info'> 
-                                <p className='comment-creator'>{requestComment.creator}</p>
-                            </div>
-                            <div className='comment-text'>
-                                <p>{requestComment.text}</p>
-                            </div>
-                            <p className='comment-date'>{moment(requestComment.date).format('LL')}</p>
-                            {this.props.user._id === this.props.request.user || this.props.user._id === requestComment.user ?
-                                <button 
-                                    className='x-btn' 
-                                    id={this.props.request._id} 
-                                    name={requestComment._id} 
-                                    onClick={this.handleDeleteRequestComment}
-                                > X
-                                </button>
-                            :
-                                <div className='button-fill'></div>
-                            }
-                        </div>
+                        <RequestComment
+                            requestComment={requestComment}
+                            key={requestComment._id}
+                            user={this.props.user}
+                            request={this.state.request}
+                            handleDeleteRequestComment={this.props.handleDeleteRequestComment}
+                        />
                     )}
                     <div className='form-container'>
                         <form

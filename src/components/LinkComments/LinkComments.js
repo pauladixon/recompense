@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import LinkComment from'../../components/LinkComment/LinkComment'
 import * as linksAPI from '../../services/links-api'
 import './LinkComments.css'
 import moment from 'moment'
@@ -37,26 +38,13 @@ class LinkComments extends Component {
             <div className='all-comments-container'>
                 <div className='comments'>
                     {this.state.link && this.state.link.linkComments.map((linkComment) =>
-                        <div key={linkComment._id} className='l-comment-container'>
-                            <div className='comment-info'> 
-                                <p className='comment-creator'>{linkComment.creator}</p>
-                            </div>
-                            <div className='comment-text'>
-                                <p>{linkComment.text}</p>
-                            </div>
-                            <p className='comment-date'>{moment(linkComment.date).format('LL')}</p>
-                            {this.props.user._id === this.props.link.user || this.props.user._id === linkComment.user ?
-                                <button 
-                                    className='x-btn' 
-                                    id={this.props.link._id} 
-                                    name={linkComment._id} 
-                                    onClick={this.handleDeleteLinkComment}
-                                > X
-                                </button>
-                            :
-                                <div className='button-fill'></div>
-                            }
-                        </div>
+                        <LinkComment
+                            linkComment={linkComment}
+                            key={linkComment._id}
+                            user={this.props.user}
+                            link={this.state.link}
+                            handleDeleteLinkComment={this.props.handleDeleteLinkComment}
+                        />
                     )}
                     <div className='form-container'>
                         <form

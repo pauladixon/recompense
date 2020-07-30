@@ -5,12 +5,8 @@ import './ServiceFloorItem.css'
 function ServiceFloorItem({ service }) {
     
     const cities = service.cities ? service.cities.map((city, idx) =>
-        <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>) : <span></span>;
+        <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>) : <span></span>
     
-    const categories = service.categories ? service.categories.map((category, idx) =>
-        <span key={category.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{category.label}</span>) : <span></span>;
-    
-
     return (
         <>
             <Link 
@@ -27,9 +23,6 @@ function ServiceFloorItem({ service }) {
                         <div className='serviceflooritem-detail-name'>
                             <p className='name'>{service.name}</p>
                         </div>
-                        {/* <div className='serviceflooritem-detail-categories'>
-                            <p className="categories">{categories}</p>
-                        </div> */}
                     </div>
                 </div>
             </Link>
