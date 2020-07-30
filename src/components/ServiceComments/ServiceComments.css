@@ -59,20 +59,34 @@
     text-transform: lowercase;
     color: rgb(110, 93, 93);
     font-style: italic;
-    margin: 2px 10px;
-    min-width: 100px;
     text-align: left;
     display: flex;
     justify-content: flex-end;
+    margin-right: 10px;
+    min-width: 100px;
+}
+
+.my-comment-date {
+    font-size: 9px;
+    text-transform: lowercase;
+    color: rgb(110, 93, 93);
+    font-style: italic;
+    text-align: left;
+    display: flex;
+    justify-content: flex-end;
+    min-width: 100px;
+    margin-left: -42px;
 }
 
 .comment-text {
     color: #3c0c15;
     font-size: 14px;
     /* margin-right: 110px; */
-    width: 300px;
+    width: 280px;
     display: flex;
     justify-content: center;
+    margin-right: 0px;
+    margin-left: -10px;
 }
 
 .x-btn {
@@ -86,16 +100,16 @@
     border-radius: 4px;
     margin-top: 2px;
     margin-right: 13px;
-    margin-left: -5px;
+    margin-left: 0px;
 }
 
 .x-btn:hover {
     font-weight: bold;
 }
-
+/* 
 .button-fill {
     width: 42px;
-}
+} */
 
 .form-container {
     display: flex;

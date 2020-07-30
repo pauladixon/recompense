@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link, Redirect } from 'react-router-dom'
 import Select from 'react-select'
-import serviceCities from '../../city-data'
 
 
 const customStyles = {

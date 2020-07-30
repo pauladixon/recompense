@@ -46,17 +46,19 @@ class ServiceComments extends Component {
                             <div className='comment-text'>
                                 <p>{serviceComment.text}</p>
                             </div>
-                            <p className='comment-date'>{moment(serviceComment.date).format('LL')}</p>
                             {this.props.user._id === this.props.service.user || this.props.user._id === serviceComment.user ?
-                                <button 
-                                    className='x-btn' 
-                                    id={this.props.service._id} 
-                                    name={serviceComment._id} 
-                                    onClick={this.handleDeleteServiceComment}
-                                > X
-                                </button>
+                                <>
+                                    <p className='my-comment-date'>{moment(serviceComment.timestamps).format('LL')}</p>
+                                    <button 
+                                        className='x-btn' 
+                                        id={this.props.service._id} 
+                                        name={serviceComment._id} 
+                                        onClick={this.handleDeleteServiceComment}
+                                    > X
+                                    </button>
+                                </>
                             :
-                                <div className='button-fill'></div>
+                            <p className='comment-date'>{moment(serviceComment.timestamps).format('LL')}</p>
                             }
                         </div>
                     )}
