@@ -49,7 +49,6 @@
         height: 40px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
     }
     .foo {
         margin-left: 0px;
@@ -58,7 +57,7 @@
     .mobile-foo {
         display: inline-block;
         margin-left: 0px;
-        margin-right: 0px;
+        margin-right: 15px;
     }
     .foo-link {
         margin-top: 0px;
