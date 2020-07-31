@@ -163,7 +163,7 @@ class EditLinkPage extends Component {
                           type="submit"
                           disabled={this.state.invalidForm}
                       >
-                          Add Aid Link
+                          update Aid Link
                       </button>
                   </div>
                 </form>

@@ -10,11 +10,14 @@ function LinkCard({ link, handleDeleteLink, user }) {
     const cities = link.cities ? link.cities.map((city, idx) =>
         <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>) : <span></span>
 
+    const dateCreated = new Date(link.createdAt)
+
     return (
         <>
             <div className='link-detail-card'>
-                <div>
+                <div className='title-group'>
                     <p className='card-name'>{link.name}</p>
+                    <div className='post-date'>posted on <span>{moment(dateCreated.toLocaleString()).format('LL')}</span></div>
                 </div>
                 <div className='card-info'>
                     <div>
@@ -48,12 +51,6 @@ function LinkCard({ link, handleDeleteLink, user }) {
                             : 
                             <div></div>
                         }
-                        <div className='line-item'>
-                            <span className='service-label'>date posted :: </span>
-                            <div className='service-info service-dates-label'>
-                                <span className='service-date' key={link.id}>{moment(link.datePosted).format('LL')}</span>
-                            </div>
-                        </div>
                         {user._id && link.contactEmail ?
                             <div className='line-item'>
                                 <span className='link-label'>Contact Email:: </span>
@@ -67,7 +64,7 @@ function LinkCard({ link, handleDeleteLink, user }) {
                                 className='delete'
                                 onClick={() => handleDeleteLink(link._id)}
                             >
-                                Remove
+                                remove
                             </button>
                         }
                         <Link

@@ -8,7 +8,7 @@ class RequestComment extends Component {
         const dateCreated = new Date(this.props.requestComment.createdAt)
 
         return (
-            <div key={this.props.requestComment._id} className='s-comment-container'>
+            <div key={this.props.requestComment._id} className='r-comment-container'>
                 <div className='comment-info'> 
                     <p className='comment-creator'>{this.props.requestComment.creator}</p>
                 </div>

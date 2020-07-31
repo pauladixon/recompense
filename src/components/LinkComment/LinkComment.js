@@ -8,7 +8,7 @@ class LinkComment extends Component {
         const dateCreated = new Date(this.props.linkComment.createdAt)
 
         return (
-            <div key={this.props.linkComment._id} className='s-comment-container'>
+            <div key={this.props.linkComment._id} className='l-comment-container'>
                 <div className='comment-info'> 
                     <p className='comment-creator'>{this.props.linkComment.creator}</p>
                 </div>

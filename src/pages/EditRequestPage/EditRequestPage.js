@@ -159,7 +159,7 @@ class EditRequestPage extends Component {
                           type="submit"
                           disabled={this.state.invalidForm}
                       >
-                          Add Request
+                          Update Request
                       </button>
                   </div>
                 </form>

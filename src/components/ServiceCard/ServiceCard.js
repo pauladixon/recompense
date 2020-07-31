@@ -13,11 +13,14 @@ function ServiceCard({ service, handleDeleteService, user }) {
     const cities = service.cities ? service.cities.map((city, idx) =>
         <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>) : <span></span>
 
+    const dateCreated = new Date(service.createdAt)
+
     return (
         <>
             <div className='detail-card'>
                 <div className='title-group'>
                     <p className='card-name' key={service.id}>{service.name}</p>
+                    <div className='post-date'>posted on <span>{moment(dateCreated.toLocaleString()).format('LL')}</span></div>
                 </div>
                 <div className='card-info'>
                     <div>

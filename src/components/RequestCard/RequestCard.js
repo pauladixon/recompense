@@ -13,11 +13,14 @@ function RequestCard({ request, handleDeleteRequest, user }) {
     const cities = request.cities ? request.cities.map((city, idx) =>
         <span key={city.value}>&nbsp;&nbsp;{idx !== 0 ? '•' : ''}&nbsp;&nbsp;{city.label}</span>) : <span></span>
 
+    const dateCreated = new Date(request.createdAt)
+
     return (
         <>
             <div className='request-detail-card'>
-                <div>
+                <div className='title-group'>
                     <p className='card-name' key={request.id}>{request.name}</p>
+                    <div className='post-date'>posted on <span>{moment(dateCreated.toLocaleString()).format('LL')}</span></div>
                 </div>
                 <div className='card-info'>
                     <div>
@@ -60,7 +63,7 @@ function RequestCard({ request, handleDeleteRequest, user }) {
                                 className='delete'
                                 onClick={() => handleDeleteRequest(request._id)}
                             >
-                                Remove
+                                remove
                         </button>
                         }
                         <Link
