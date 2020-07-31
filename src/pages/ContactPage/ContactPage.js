@@ -99,13 +99,13 @@ const ContactPage = () => {
                                 <p>is focused on tools that foster communication; with an emphasis on the synthesis of art and tech</p>
                                 <div className='icons'>                              
                                     <SocialIcon
-                                        style={{ height: 20, width: 20 }}
+                                        style={{ height: 22.5, width: 22.5 }}
                                         bgColor="none"
                                         fgColor='black'
                                         url="https://www.linkedin.com/in/isa-sofia-martinez/"
                                     />
                                     <SocialIcon
-                                        style={{ height: 20, width: 20 }}
+                                        style={{ height: 22.5, width: 22.5 }}
                                         bgColor="none"
                                         fgColor='black'
                                         url="https://isasofiamartinez.com/"
@@ -117,19 +117,19 @@ const ContactPage = () => {
                                 <p>is focused on accessibility through technology; with an emphasis on the digitization of mental health tools</p>
                                 <div className='icons'>
                                     <SocialIcon
-                                        style={{ height: 20, width: 20 }}
+                                        style={{ height: 22.5, width: 22.5 }}
                                         bgColor="none"
                                         fgColor='black'
                                         url="https://www.linkedin.com/in/paulapdixon/"
                                     />
                                     <SocialIcon
-                                        style={{ height: 20, width: 20 }}
+                                        style={{ height: 22.5, width: 22.5 }}
                                         bgColor="none"
                                         fgColor='black'
                                         url="https://pauladixon.software/"
                                     />
                                     <SocialIcon
-                                        style={{ height: 20, width: 20 }}
+                                        style={{ height: 22.5, width: 22.5 }}
                                         bgColor="none"
                                         fgColor='black'
                                         url="https://www.instagram.com/paula__dixon/"

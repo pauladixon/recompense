@@ -203,7 +203,7 @@
 
     .contact-home {
         width: 375px;
-        height: 450px;
+        height: 430px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -270,7 +270,7 @@
     }
 
     .us {
-        margin: 0px 15px 0px 15px;
+        margin: 0px 0px 0px 8px;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
