@@ -91,7 +91,7 @@ const ContactPage = () => {
             <div className="mobile-contact y2">
                 <div className="mobile-contact-p-1">
                     <div className='mobile-contact-text'>
-                        <p className="contact-title">We're both fullstack developers, to see the rest of our work or contact us individually, check out our links below.</p>
+                        <p className="contact-title">We're fullstack developers. to see the rest of our work or contact us individually, check out our links below.</p>
                         <div className='div-break'></div>
                         <div className='us'>
                             <div className="isa">
