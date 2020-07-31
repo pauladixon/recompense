@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import ServiceComment from '../../components/ServiceComment/ServiceComment'
 import './ServiceComments.css'
 import * as servicesAPI from '../../services/services-api'
-import moment from 'moment'
 
 class ServiceComments extends Component {
 

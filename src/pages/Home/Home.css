@@ -18,6 +18,15 @@
     position: fixed;
 }
 
+.home-page-title {
+    color: #3c0c15;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.185);
+}
+
 .uppercase {
     text-transform: uppercase;
 }

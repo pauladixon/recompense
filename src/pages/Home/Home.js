@@ -14,6 +14,8 @@ const Home = () => {
       <div class="Home" 
         onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
         onMouseClick={() => set({ xy: [0, 0] })}
+        onTouchStart={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
+        onTouchEnd={() => set({ xy: [0, 0] })}
       >
         <animated.div class="card1" style={{ transform: props.xy.interpolate(translate1) }} />
         <animated.div 
@@ -21,9 +23,11 @@ const Home = () => {
           style={{ transform: props.xy.interpolate(translate2) }} 
           onMouseOver={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
           onMouseClick={() => set({ xy: [0, 0] })}
+          onTouchStart={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
+          onTouchEnd={() => set({ xy: [0, 0] })}
         >
           <div className="home-p">
-            <p><span className='page-title'>Recompense</span> :: as a verb, means to make amends for loss or harm suffered; to compensate.</p>
+            <p><span className='home-page-title'>Recompense</span> :: as a verb, means to make amends for loss or harm suffered; to compensate.</p>
             <p>Recompense is a community driven application for paying reparations to <span className='uppercase'>BIPOC</span>. Users can post services to offer, make service requests, and donate to individuals in need. In the ongoing effort to redistribute resources and care, we hope this application will help further the task of connecting individuals to resources that they need, and the resources that individuals can provide to others.</p>
             <p>Included <a className="doc-link" href="http://pfw.guide/" target="_blank" rel="noopener noreferrer">here</a> is a link to the master list of resources compiled by Patia's Fantasy World for the continued support of the Black Lives Matter movement outside of our site.</p>
           </div>

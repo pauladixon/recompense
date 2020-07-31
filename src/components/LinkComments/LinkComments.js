@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import LinkComment from'../../components/LinkComment/LinkComment'
 import * as linksAPI from '../../services/links-api'
 import './LinkComments.css'
-import moment from 'moment'
 
 class LinkComments extends Component {
     state = {
