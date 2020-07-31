@@ -161,10 +161,10 @@
     
     @keyframes x {
         0% {
-            transform: translateX( calc(1vw) );
+            transform: translateX( calc(3vw) );
           }
         100% {
-            transform: translateX( calc(-2vw));
+            transform: translateX( calc(-3vw));
         }
     }
     
