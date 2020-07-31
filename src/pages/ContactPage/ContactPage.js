@@ -95,7 +95,7 @@ const ContactPage = () => {
                         <div className='div-break'></div>
                         <div className='us'>
                             <div className="isa">
-                                <p className="dev-name">Isa:</p>
+                                <p className="dev-name">isa martinez</p>
                                 <p>is focused on tools that foster communication; with an emphasis on the synthesis of art and tech</p>
                                 <div className='icons'>                              
                                     <SocialIcon
@@ -113,7 +113,7 @@ const ContactPage = () => {
                                 </div>
                             </div>
                             <div className="paula">
-                                <p className="dev-name">Paula:</p>
+                                <p className="dev-name">paula dixon</p>
                                 <p>is focused on accessibility through technology; with an emphasis on the digitization of mental health tools</p>
                                 <div className='icons'>
                                     <SocialIcon
