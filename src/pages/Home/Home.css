@@ -147,7 +147,8 @@
     }
 
     .mobile-text {
-        width: 250px;
+        width: 240px;
+        margin-bottom: 8px;
     }
 
     .x2 {
