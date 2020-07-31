@@ -223,8 +223,11 @@
     .cancel-button {
         margin-left: 0px;
     }
-
     .mobile-erase {
         display: none;
+    }
+
+    .dates {
+        -webkit-appearance: none;
     }
 }
