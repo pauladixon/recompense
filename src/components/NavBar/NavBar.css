@@ -47,12 +47,15 @@
     .nav-bar{
         /* min-width: 100%; */
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         /* align-items: center; */
         font-size: 10px;
-        min-width: 63.5%;
+        min-width: 100%;
         margin-left: 0px;
-        
+        margin-right: 0px;
+        font-size: 11px;
+        margin-top: 0px;
+        height: 30px;
     }
     .nav {
         margin: 0px;

@@ -132,6 +132,16 @@ a {
     flex-flow: row wrap;
   }
 
+  body {
+    margin: 0;
+    padding: 0;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    position: relative;
+  }
+
   .page-header {
     margin: 15px 50px 0px 25px;
   }

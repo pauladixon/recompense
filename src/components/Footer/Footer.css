@@ -17,6 +17,7 @@
     color: #3c0c15;
     min-width: 0px;
     margin-top: 10px;
+    margin-right: 22px;
 }
 
 
@@ -44,8 +45,11 @@
 
 @media all and (max-width: 375px) {
     .footer-bar {
-        width: 80%;
-        margin-left: 10;
+        margin: 0px 20px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
     .foo {
         margin-left: 0px;
@@ -54,8 +58,9 @@
     .mobile-foo {
         display: inline-block;
         margin-left: 0px;
+        margin-right: 0px;
     }
     .foo-link {
-        margin-top: 14px;
+        margin-top: 0px;
     }
   }
