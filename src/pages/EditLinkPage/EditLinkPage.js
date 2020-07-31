@@ -52,8 +52,8 @@ class EditLinkPage extends Component {
     renderEditLinkForm() {
         return (
             <div className="add-service-page">
-              <div className="page-header">
-                <p className='page-title'>Add a Link :: </p>
+              <div className="add-page-header">
+                <p className='page-title'>Edit Aid Links :: </p>
               </div>
               <div className='add-service-form'>
                 <form 

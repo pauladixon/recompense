@@ -58,7 +58,7 @@ class EditServicePage extends Component {
     renderEditServiceForm() {
         return (
             <div className="add-service-page">
-                <div className="page-header">
+                <div className="add-page-header">
                     <p className='page-title'>Edit Service :: </p>
                 </div>
                 <div className='add-service-form'>

@@ -1,6 +1,6 @@
 html, body {
   background-color: #FFF4DE;
-  height: 100%;
+
   margin: 0;
   text-transform: lowercase;
 }
@@ -9,7 +9,6 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
   margin: 0;
 }
 

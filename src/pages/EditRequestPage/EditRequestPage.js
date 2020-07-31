@@ -58,8 +58,8 @@ class EditRequestPage extends Component {
     renderEditRequestForm() {
         return (
             <div className="add-service-page">
-              <div className="page-header">
-                <p className='page-title'>Add a Request :: </p>
+              <div className="add-page-header">
+                <p className='page-title'>Edit Request :: </p>
               </div>
               <div className='add-service-form'>
                 <form 

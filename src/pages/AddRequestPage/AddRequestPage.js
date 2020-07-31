@@ -61,7 +61,7 @@ class AddRequestPage extends Component {
   render() {
     return (
       <div className="add-service-page">
-        <div className="page-header">
+        <div className="add-page-header">
           <p className='page-title'>Add a Request :: </p>
         </div>
         <div className='add-service-form'>
