@@ -62,7 +62,7 @@ class AddServicePage extends Component {
     return (
       <div className="add-service-page">
         <div className="add-page-header">
-          <p className='page-title'>Add a Service :: </p>
+          <p className='page-title'>Add a Service <span className='mobile-erase'>::</span></p>
         </div>
         <div className='add-service-form'>
           <form
