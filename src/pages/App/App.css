@@ -139,8 +139,7 @@ a {
 
 @media all and (max-width: 375px) {
   html {
-    height: 667px;
-    width: 375px;
+    width: 100%;
   }
   .dollar-sign {
     display: none;

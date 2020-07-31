@@ -11,7 +11,7 @@
 .nav-bar {
     border-bottom: solid 1px #3c0c15;
     padding-bottom: 5px;
-    margin-right: 0px;
+    margin-right: 5px;
     min-width: 63.5%;
     display: flex;
     justify-content: flex-end;
@@ -47,11 +47,11 @@
     .nav-bar{
         /* min-width: 100%; */
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         /* align-items: center; */
         font-size: 10px;
         min-width: 63.5%;
-        margin-left: 15px;
+        margin-left: 0px;
         
     }
     .nav {

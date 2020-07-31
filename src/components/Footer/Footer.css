@@ -44,15 +44,16 @@
 
 @media all and (max-width: 375px) {
     .footer-bar {
-        margin: 0px;
+        width: 80%;
+        margin-left: 10;
     }
     .foo {
-        margin-left: 20px;
+        margin-left: 0px;
         display: none;
     }
     .mobile-foo {
         display: inline-block;
-        margin-left: 50px;
+        margin-left: 0px;
     }
     .foo-link {
         margin-top: 14px;
