@@ -1,27 +1,27 @@
 .img-title {
-    width: 300px;
-    height: 40px;
-    padding: 0px;
-    padding-top: 10px;
-    margin-left: -5px;
-    margin-right: 10px;
+  width: 300px;
+  height: 40px;
+  padding: 0px;
+  padding-top: 10px;
+  margin-left: -5px;
+  margin-right: 10px;
 }
 
 .img-title:hover {
-    width: 300px;
-    height: 45.02px;
-    margin: -2.5157px 10px -2.51px -5px;
+  width: 300px;
+  height: 45.02px;
+  margin: -2.5157px 10px -2.51px -5px;
 }
 
 @media screen 
   and (max-width: 815px) { 
 
-    .img-title {
-      margin: -15px 10px -15px 0px;
-    }
+  .img-title {
+    margin: -15px 10px -15px 0px;
+  }
 
-    .img-title:hover {
-        margin: -2.5157px 10px -17.51px 0px;
-    }
+  .img-title:hover {
+    margin: -17.5157px 10px -17.51px 0px;
+  }
   
 }
