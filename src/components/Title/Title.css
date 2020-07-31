@@ -17,7 +17,7 @@
   and (max-width: 815px) { 
 
     .img-title {
-      margin: 0px 10px -15px 0px;
+      margin: -10px 10px -15px 0px;
     }
 
     .img-title:hover {

@@ -124,8 +124,10 @@
     .mobile-p-2 {
         border: solid 1px black;
         border-radius: 5px;
-        width: 290px;
-        height: 290px;
+        max-width: 290px;
+        max-height: 290px;
+        min-width: 290px;
+        min-height: 290px;
         position: relative;
         margin-top: -8px;
     }
@@ -134,8 +136,10 @@
         border: solid 1px black;
         border-radius: 5px;
         position: absolute;
-        width: 290px;
-        height: 290px;
+        max-width: 290px;
+        max-height: 290px;
+        min-width: 290px;
+        min-height: 290px;
         margin-top: 8px;
         display: flex;
         justify-content: center;
