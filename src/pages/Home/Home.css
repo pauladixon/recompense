@@ -109,7 +109,7 @@
         justify-content: center;
         align-items: center;
         z-index: 100;
-        font-size: 11px;
+        font-size: 10.5px;
         text-align: justify;
         background-color: rgba(88, 62, 22, 0.062);
         border-radius: 5px;
@@ -148,7 +148,7 @@
 
     .mobile-text {
         width: 240px;
-        height: 260px;
+        height: 250px;
     }
 
     .x2 {
