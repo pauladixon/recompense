@@ -108,13 +108,11 @@
 
 @media screen and (max-width: 375px){
     .search-bar {
-        position: static;
-        margin: 180px 0px 0px 13px;
+        margin: 260px 0px 0px 0px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        flex-flow: row wrap;
-        width: 325px;
+        width: 100%;
         position: absolute;
     }
 
@@ -148,6 +146,14 @@
         justify-content: flex-end;
         width: 325px;
         margin-top: -71px;
-        margin-left: -15px;
+        margin-left: -25px;
+    }
+
+    .search-location {
+        margin-right: 8px;
+    }
+
+    .search-category {
+        margin-left: 8px;
     }
 }

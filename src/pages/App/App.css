@@ -176,8 +176,13 @@ a {
   }
   
   .page-header {
-    margin-left: 80px;
+    margin-left: 0px;
     position: relative;
     margin-bottom: 110px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
   }
 }
