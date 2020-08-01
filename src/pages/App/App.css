@@ -154,4 +154,29 @@ a {
   .dollar-sign {
     display: none;
   }
+
+  .page-title {
+    color: #3c0c15;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.185);
+  }
+  
+  .page {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .page-content {
+    display: flex;
+    margin: 25px 0px 0px 0px;
+  }
+  
+  .page-header {
+    margin-left: 80px;
+    position: relative;
+    margin-bottom: 110px;
+  }
 }

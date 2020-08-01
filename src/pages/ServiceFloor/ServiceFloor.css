@@ -2,10 +2,15 @@
     background-color: #3c0c15;
     color: white;
     border: none;
-    padding: 8px 0px;
+    margin-top: 15px;
+    padding: 8px 12px;
     width: 100px;
     font-size: 12px;
     border-radius: 4px;
+}
+
+.post-button {
+    margin-top: 30px;
 }
 
 .add-service:hover {
@@ -19,7 +24,6 @@
 
 .service-page {
     display: flex;
-
 }
 
 .justify {
@@ -33,16 +37,38 @@
         flex-direction: column;
         /* width: 300px; */
     }
-    .page-header {
-        margin-left: 80px;
-        position: unset;
-    }
-    .page-content {
-        /* margin-top: 300px; */
-        margin-left: 0px;
-    }
     .posts {
         /* margin-top: 300px; */
-        margin-left: 65px;
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row wrap;
+    }
+
+    .justify {
+        text-align: center;
+        width: 305px;
+        font-size: 11px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+
+    .add-service {
+        background-color: #3c0c15;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        width: 100px;
+        font-size: 12px;
+        border-radius: 4px;
+    }
+
+    .post-button {
+        width: 300px;
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 55px;
+        margin-top: -20px;
     }
 }

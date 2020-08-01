@@ -54,7 +54,7 @@ class LinkFloor extends Component {
           <p className='page-title'>Direct Aid Links to Assist BIPOC ::</p>
           <p className='justify'>This is a place for black and indigenous people to post payment platform handles and for non-black people to initiate direct peer-to-peer support for <span className='uppercase'>BIPOC</span> individuals in your online community.</p>
           <br></br>
-          <Link className="add-service" to="/addlink">Post an Aid Link</Link>
+          <Link className="add-service" to="/addlink">Post a new Aid Link</Link>
           <br></br><br></br><br></br>
           {/* <LinkCitySearch
             cities={this.props.cities}

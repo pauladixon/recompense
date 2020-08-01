@@ -48,11 +48,13 @@ class ServiceFloor extends Component {
     return (
       <div className="service-page">
         <div className="page-header">
-          <p className='page-title'>Services for BIPOC ::</p> 
-          <p className='justify'>This is a place for non-black people to post free and discounted services and offerings for black and indigenous people in their communities. Please be mindful of others in this space and put your heart forward.</p> 
-          <br></br>
-          <Link className="add-service" to="/addservice">Post a Service</Link>
-          <br></br><br></br><br></br>
+          <p className='page-title'>Services for BIPOC <span className='mobile-erase'>::</span></p> 
+          <div className='top-group'>
+            <p className='justify'>This is a place for non-black people to post free and discounted services and offerings for black and indigenous people in their communities. Please be mindful of others in this space and put your heart forward.</p> 
+          </div>
+          <div className='post-button'>
+            <Link className="add-service" to="/addservice">Post a new Service</Link>
+          </div>
           <SearchBar
             cities={this.props.cities}
             categories={this.props.categories}
