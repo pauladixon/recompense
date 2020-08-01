@@ -162,7 +162,7 @@ a {
     font-style: italic;
     letter-spacing: 2px;
     text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.185);
-    margin: 22px 0px 22px 0px;
+    margin: 32px 0px 22px 0px;
   }
   
   .page {
@@ -181,7 +181,6 @@ a {
     margin-bottom: 110px;
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-flow: row wrap;
   }
