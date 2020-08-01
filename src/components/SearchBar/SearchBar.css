@@ -108,12 +108,12 @@
 
 @media screen and (max-width: 375px){
     .search-bar {
-        margin: 260px 0px 0px 0px;
+        margin: 20px 0px 0px 0px;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
-        position: absolute;
+        position: relative;
     }
 
     .web-erase {
