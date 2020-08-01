@@ -162,7 +162,7 @@ a {
     font-style: italic;
     letter-spacing: 2px;
     text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.185);
-    margin: 32px 0px 22px 0px;
+    margin-bottom: 30px;
   }
   
   .page {
@@ -182,5 +182,6 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin: 22px 0px 32px 0px;
   }
 }
