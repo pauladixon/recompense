@@ -81,7 +81,6 @@ class SearchBar extends Component {
                             </button>
                         </div>
                     </div>
-                    <br></br><br></br><br></br>
                     <div className='search-item search-category'>
                         <label className='search-label'>or by Category :: </label>
                         <div className='search-row'>
