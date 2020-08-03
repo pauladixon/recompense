@@ -51,28 +51,27 @@ class LinkFloor extends Component {
     return (
       <div className="service-page">
         <div className="page-header">
-          <p className='page-title'>Direct Aid Links to Assist BIPOC ::</p>
-          <p className='justify'>This is a place for black and indigenous people to post payment platform handles and for non-black people to initiate direct peer-to-peer support for <span className='uppercase'>BIPOC</span> individuals in your online community.</p>
-          <br></br>
-          <Link className="add-service" to="/addlink">Post a new Aid Link</Link>
-          <br></br><br></br><br></br>
-          {/* <LinkCitySearch
+          <p className='page-title link-title'>Direct Aid Links to Assist BIPOC <span className='mobile-erase'>::</span></p> 
+          <div className='top-group link-desc'>
+            <p className='justify'>This is a place for black and indigenous people to post payment platform handles and for non-black people to initiate direct peer-to-peer support for <span className='uppercase'>BIPOC</span> individuals in your online community.</p>
+          </div>
+          <div className='post-button'>
+            <Link className="add-service" to="/addlink">Post a new Aid Link</Link>
+          </div>
+          <LinkSearch
             cities={this.props.cities}
             handleSearchCities={this.handleSearchCities}
-          /> */}
-          <LinkSearch
-                cities={this.props.cities}
-                handleSearchCities={this.handleSearchCities}
           />
         </div>
         <div className="page-content">
-              <LinkFloorItems 
-                links={this.state.links} 
-                cities={this.props.cities}
-                />
+          <LinkFloorItems 
+            links={this.state.links} 
+            cities={this.props.cities}
+          />
         </div>
       </div>
     )
   }
-  }
+}
+
 export default LinkFloor

@@ -2,3 +2,15 @@
     text-align: start;
     margin-bottom: 30px;
 }
+
+
+@media screen and (max-width: 375px){
+
+    .link-title {
+        width: 150px;
+    }
+
+    .link-desc {
+        margin-top: -15px;
+    }
+}

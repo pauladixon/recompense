@@ -52,14 +52,10 @@
 } */
 
 @media screen and (max-width: 375px){
+    
     .serviceflooritem { 
         margin: 10px;
-        background-color: #d2dbcf;
-        color: floralwhite;
         width: 150px;
-        min-height: 140px;
-        border-radius: 4px;
-        box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
     }
 
 }

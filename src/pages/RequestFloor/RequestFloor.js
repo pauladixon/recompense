@@ -45,11 +45,13 @@ class RequestFloor extends Component {
     return (
       <div className="service-page">
         <div className="page-header">
-          <p className='page-title'>Requests by BIPOC ::</p>
-          <p className='justify'>This is a place for black and indigenous people to post requests for assistance from non-black people in their communities. in response to these requests, please be mindful and respect the experiences of others.</p> 
-          <br></br>
-          <Link className="add-service" to="/addrequest">Post a new Request</Link>
-          <br></br><br></br><br></br>
+          <p className='page-title'>Requests by BIPOC <span className='mobile-erase'>::</span></p> 
+          <div className='top-group'>
+            <p className='justify'>This is a place for black and indigenous people to post requests for assistance from non-black people in their communities. in response to these requests, please be mindful and respect the experiences of others.</p> 
+          </div>
+          <div className='post-button'>
+            <Link className="add-service" to="/addrequest">Post a new Request</Link>
+          </div>
           <SearchBar
             cities={this.props.cities}
             categories={this.props.categories}

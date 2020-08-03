@@ -44,3 +44,12 @@
 .link-name:hover {
     font-weight: bolder;
 }
+
+
+@media screen and (max-width: 375px){
+    .link-item { 
+        margin: 10px;
+        width: 150px;
+    }
+
+}

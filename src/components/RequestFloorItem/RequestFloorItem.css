@@ -7,3 +7,11 @@
     border-radius: 4px;
     box-shadow: 0 .125rem .125rem rgba(0, 0, 0, 0.185);
 }
+
+@media screen and (max-width: 375px){
+    .requestflooritem { 
+        margin: 10px;
+        width: 150px;
+    }
+
+}
