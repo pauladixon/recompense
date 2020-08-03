@@ -17,11 +17,11 @@
   and (max-width: 815px) { 
 
   .img-title {
-    margin: 7px 10px -15px 15px;
+    margin: -5px 10px -15px 5px;
   }
 
   .img-title:hover {
-    margin: -17.5157px 10px -17.51px 0px;
+    margin: -7.5157px 10px -7.51px 5px;
   }
   
 }

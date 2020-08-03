@@ -4,7 +4,7 @@ import './NavBar.css'
 
 const NavBar = (props) => {
   let nav1 = props.user ?
-    <div >
+    <div className='mobile-erase'>
       <span className='NavBar-welcome'>Welcome, {props.user.name}</span>
     </div>
     :
