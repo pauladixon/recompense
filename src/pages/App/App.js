@@ -182,8 +182,6 @@ class App extends PureComponent {
             user={this.state.user}
             handleLogout={this.handleLogout}
           />
-          {/* <Link to='' className='title'>recompense</Link> */}
-          {/* <img src="https://i.postimg.cc/JzfX5rNh/Screen-Shot-2020-07-18-at-3-53-17-PM.png" alt="recompense" class="img-title"/> */}
         </header>
         <div className="container">
           <Switch>
