@@ -21,7 +21,7 @@
     .request-detail-card {
         margin: 0px 0px 0px 0px;
         padding: 0px 0px 0px 0px;
-        min-width: 335px;
+        width: 335px;
         min-height: 270px;
     }
 }

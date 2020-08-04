@@ -50,21 +50,30 @@
     .link-detail-card {
         margin: 0px 0px 0px 0px;
         padding: 0px 0px 0px 0px;
-        min-width: 335px;
+        width: 320px;
         min-height: 270px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row wrap;
     }
 
     .link-label {
-        font-size: 10px;
+        color: #3c0c15;
+        font-size: 11px;
+        margin-right: 0px;
+        min-width: 100px;
         display: flex;
         justify-content: flex-start;
-        align-items: flex-start;
-        margin-right: 10px;
-        
+        align-items: center;
+        margin-left: 10px;
     }
     .link-info {
-        font-size: 10px;
-        min-width: 110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        width: 250px;
     }
     .link-city {
         margin-right: 100px;

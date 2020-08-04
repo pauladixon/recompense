@@ -24,7 +24,11 @@
 
 @media screen and (max-width: 375px){
     .r-comment-container {
-        width: 300px;
-        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row wrap;
+        max-width: 335px;
+        min-height: 52px;
     }
 }

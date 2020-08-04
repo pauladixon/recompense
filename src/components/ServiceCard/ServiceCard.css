@@ -85,10 +85,10 @@
 }
 
 .card-links {
-    margin: 40px 100px 20px 100px;
+    margin: 40px 10px 20px 68px;
     display: flex;
     font-size: 12px;
-    width: 400px;
+    width: 460px;
     justify-content: space-around;
 }
 
@@ -159,8 +159,8 @@
     .detail-card {
         margin: 0px 0px 0px 0px;
         padding: 0px 0px 0px 0px;
-        width: 335px;
-        min-height: 270px;
+        width: 320px;
+        min-height: 250px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -182,7 +182,7 @@
     }
     
     .title-group {
-        margin: -15px 0px 10px 0px;
+        margin: -8px 0px 10px 0px;
         width: 300px;
         height: 30px;
     }
@@ -199,8 +199,9 @@
     }
     
     .post-date {
-        font-size: 11px;
+        font-size: 10px;
         color: grey;
+        margin-top: -8px;
     }
     
     .line-item {
@@ -233,14 +234,12 @@
         align-items: center;
         font-size: 12px;
         width: 250px;
-        /* text-align: left; */
     }
     
     .card-links {
         margin: 20px 0px 0px 0px;
         display: flex;
         align-items: center;
-        font-size: 12px;
         width: 320px;
         justify-content: space-around;
     }
@@ -251,7 +250,7 @@
         width: 30px;
         border: none;
         padding: 8px;
-        font-size: 12px;
+        font-size: 11px;
         border-radius: 4px;
     }
     
@@ -264,7 +263,7 @@
         width: 60px;
         padding: 8px;
         border-radius: 8px;
-        font-size: 12px;
+        font-size: 11px;
         background-color: #3c0c15;
         color: white;
         border-radius: 4px;
@@ -277,7 +276,7 @@
     
     .home-link {
         padding: 8px;
-        font-size: 12px;
+        font-size: 11px;
         display: flex;
         justify-content: center;
         width: 135px;
@@ -289,5 +288,4 @@
         border-radius: 8px;
         margin: 0px;
     }
-    
 }
