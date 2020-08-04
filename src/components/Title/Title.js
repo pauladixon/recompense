@@ -25,7 +25,7 @@ class Title extends Component {
 
     render() {
         return (
-            <>
+            <div className='mobile-title'>
                 <Link to=''>
                     <img 
                         onMouseOver={this.handleMouseOver} 
@@ -35,7 +35,7 @@ class Title extends Component {
                         alt='recompense'
                     />
                 </Link>
-            </>
+            </div>
         )
     }
 

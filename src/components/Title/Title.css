@@ -3,8 +3,7 @@
   height: 40px;
   padding: 0px;
   padding-top: 10px;
-  margin-left: -5px;
-  margin-right: 10px;
+  margin: 0px 10px 0px -5px;
 }
 
 .img-title:hover {
@@ -17,11 +16,26 @@
   and (max-width: 815px) { 
 
   .img-title {
-    margin: -5px 10px -15px 5px;
+    margin: -2px 10px -15px 15px;
   }
 
   .img-title:hover {
-    margin: -7.5157px 10px -7.51px 5px;
+    margin: -4.5157px 10px -17.51px 15px;
   }
   
+}
+
+@media screen and (max-width: 375px){
+
+  .img-title {
+    margin: 45px 0px -15px 0px;
+  }
+
+  .img-title:hover {
+    margin: 27.4843px 0px -17.51px 0px;
+  }
+
+  .mobile-title {
+    width: 100%;
+  }
 }

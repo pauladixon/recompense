@@ -13,7 +13,7 @@ const NavBar = (props) => {
   let nav2 = props.user ?
     <div >
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <Link className='nav' to='' onClick={props.handleLogout} >Sign Out</Link>
+      <Link className='nav end' to='' onClick={props.handleLogout} >Sign Out</Link>
       &nbsp;
     </div>
     :
@@ -27,11 +27,11 @@ const NavBar = (props) => {
     <div className="nav-bar">
       {nav1}
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <Link className="nav" to="/directaidlinks">Direct Aid</Link>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <Link className="nav" to="/servicesfloor">Service Floor</Link>
+      <Link className="nav start" to="/servicesfloor">Service Floor</Link>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <Link className="nav" to="/requests">Request Floor</Link>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <Link className="nav" to="/directaidlinks">Direct Aid</Link>
       {nav2}
     </div>
 
