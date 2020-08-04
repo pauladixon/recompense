@@ -31,7 +31,7 @@ class LinkComment extends Component {
                     <p className='comment-date'>{moment(dateCreated.toLocaleString()).format('LL')}</p>
                     }
                 </div>
-                <div className='comment-text web-erase'>
+                <div className='comment-text norm-erase'>
                     <p>{this.props.linkComment.text}</p>
                 </div>
             </div>

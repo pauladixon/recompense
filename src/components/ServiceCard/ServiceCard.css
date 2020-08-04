@@ -174,6 +174,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        min-width: 60px;
     }
     
     .service-dates-label {
@@ -225,7 +226,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        margin-left: 20px;
+        margin-left: 15px;
     }
     
     .service-info {
@@ -237,10 +238,10 @@
     }
     
     .card-links {
-        margin: 20px 0px 10px 0px;
+        margin: 20px 0px 10px 5px;
         display: flex;
         align-items: center;
-        width: 320px;
+        width: 310px;
         justify-content: space-around;
     }
     

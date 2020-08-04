@@ -170,7 +170,7 @@
         margin-left: 0px;
     }
     .service-form {
-        width: 185px;
+        width: 260px;
         height: 32px;
         border-radius: 4px;
         text-align: left;
@@ -204,7 +204,7 @@
         justify-content: center;
         align-items: flex-start;
         flex-flow: row wrap;
-        width: 225px;
+        width: 295px;
         min-height: 80px;
     }
     .form-label {
@@ -214,11 +214,21 @@
         min-width: 100%;
         font-size: 11px;
     }
+    .service-categories {
+        width: 280px;
+        font-size: 14px;
+        text-align: center;
+        border: hidden;
+        background-color: #e7e3da;
+        border-radius: 4px;
+        margin: 12px;
+        color: #3c0c15;
+    }
     .add-links {
         display: flex;
         justify-content: space-between;
         margin-right: 0px;
-        width: 59.3%;
+        width: 65.5%;
     }
     .cancel-button {
         margin-left: 0px;
@@ -229,5 +239,6 @@
 
     .dates {
         -webkit-appearance: none;
+        width: 260px;
     }
 }
