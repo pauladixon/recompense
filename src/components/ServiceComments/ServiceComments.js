@@ -43,7 +43,7 @@ class ServiceComments extends Component {
                             key={serviceComment._id}
                             user={this.props.user}
                             service={this.state.service}
-                            handleDeleteServiceComment={this.props.handleDeleteServiceComment}
+                            handleDeleteServiceComment={this.handleDeleteServiceComment}
                         />
                     )}
                     <div className='form-container'>

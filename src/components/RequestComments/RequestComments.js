@@ -42,7 +42,7 @@ class RequestComments extends Component {
                             key={requestComment._id}
                             user={this.props.user}
                             request={this.state.request}
-                            handleDeleteRequestComment={this.props.handleDeleteRequestComment}
+                            handleDeleteRequestComment={this.handleDeleteRequestComment}
                         />
                     )}
                     <div className='form-container'>

@@ -23,7 +23,7 @@ class LinkComment extends Component {
                                 className='x-btn' 
                                 id={this.props.link._id} 
                                 name={this.props.linkComment._id} 
-                                onClick={this.handleDeleteLinkComment}
+                                onClick={this.props.handleDeleteLinkComment}
                             > X
                             </button>
                         </>

@@ -23,12 +23,14 @@ class ServiceComment extends Component {
                                 className='x-btn' 
                                 id={this.props.service._id} 
                                 name={this.props.serviceComment._id} 
-                                onClick={this.handleDeleteServiceComment}
+                                onClick={this.props.handleDeleteServiceComment}
                             > X
                             </button>
                         </>
                     :
-                    <p className='comment-date'>{moment(dateCreated.toLocaleString()).format('LL')}</p>
+                    <p className='comment-date'>
+                        {moment(dateCreated.toLocaleString()).format('LL')}
+                    </p>
                     }
                 </div>
                 <div className='comment-text norm-erase'>

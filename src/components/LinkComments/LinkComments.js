@@ -42,7 +42,7 @@ class LinkComments extends Component {
                             key={linkComment._id}
                             user={this.props.user}
                             link={this.state.link}
-                            handleDeleteLinkComment={this.props.handleDeleteLinkComment}
+                            handleDeleteLinkComment={this.handleDeleteLinkComment}
                         />
                     )}
                     <div className='form-container'>

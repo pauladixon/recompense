@@ -23,7 +23,7 @@ class RequestComment extends Component {
                                 className='x-btn' 
                                 id={this.props.request._id} 
                                 name={this.props.requestComment._id} 
-                                onClick={this.handleDeleteRequestComment}
+                                onClick={this.props.handleDeleteRequestComment}
                             > X
                             </button>
                         </>
