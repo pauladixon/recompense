@@ -226,7 +226,7 @@
         min-height: 290px;
         position: relative;
         margin-left: 0px;
-        margin-top: 50px;
+        margin-top: 20px;
     }
 
     .mobile-contact-p-2 {
@@ -237,7 +237,7 @@
         min-width: 315px;
         min-height: 350px;
         position: absolute;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .mobile-contact-p-1 {
@@ -318,7 +318,7 @@
     }
 
     .x2 {
-        animation: x2 20s linear infinite alternate;
+        animation: x2 15s linear infinite alternate;
     }
     
     .y2 {
