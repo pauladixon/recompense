@@ -50,6 +50,12 @@ const ContactPage = () => {
                                         fgColor='black'
                                         url="http://isasofiamartinez.com/"
                                     />
+                                    <SocialIcon
+                                        style={{ height: 35, width: 35 }}
+                                        bgColor="none"
+                                        fgColor='black'
+                                        url="https://github.com/isama22"
+                                    />
                                 </div>
                             </div>
                             <div className="paula">
@@ -74,12 +80,18 @@ const ContactPage = () => {
                                         fgColor='black'
                                         url="https://pauladixon.software/"
                                     />
+                                    <SocialIcon
+                                        style={{ height: 35, width: 35 }}
+                                        bgColor="none"
+                                        fgColor='black'
+                                        url="https://github.com/pauladixon"
+                                    />
                                 </div>
                             </div>
                         </div>
                         <div className='div-break'></div>
                         <div className="email-div">
-                            <p>For concerns or issues on the site, email us at recompensce@gmail.com</p>
+                            <p>For thoughts or concerns on the site, email us at recompensce@gmail.com</p>
                         </div>
                     </div>
                 </animated.div>
@@ -110,6 +122,12 @@ const ContactPage = () => {
                                         fgColor='black'
                                         url="https://isasofiamartinez.com/"
                                     />
+                                    <SocialIcon
+                                        style={{ height: 35, width: 35 }}
+                                        bgColor="none"
+                                        fgColor='black'
+                                        url="https://github.com/isama22"
+                                    />
                                 </div>
                             </div>
                             <div className="paula">
@@ -133,6 +151,12 @@ const ContactPage = () => {
                                         bgColor="none"
                                         fgColor='black'
                                         url="https://www.instagram.com/paula__dixon/"
+                                    />
+                                    <SocialIcon
+                                        style={{ height: 35, width: 35 }}
+                                        bgColor="none"
+                                        fgColor='black'
+                                        url="https://github.com/pauladixon"
                                     />
                                 </div>
                             </div>
