@@ -66,7 +66,6 @@ class AddServicePage extends Component {
         </div>
         <div className='add-service-form'>
           <form
-            className='form-center'
             ref={this.formRef} 
             autoComplete="off" 
             onSubmit={this.handleSubmit}
