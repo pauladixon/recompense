@@ -148,7 +148,7 @@
     }
 
     .refresh-btn {
-        height: 30px;
+        height: 31px;
         padding: 0px 0px 2px 0px;
         margin-right: 7.5px;
     }
@@ -158,7 +158,7 @@
         justify-content: flex-end;
         width: 325px;
         margin-top: -71px;
-        margin-left: -25px;
+        margin-left: -27px;
     }
 
     .search-location {
