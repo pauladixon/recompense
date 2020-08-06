@@ -153,7 +153,7 @@ const ContactPage = () => {
                                         url="https://www.instagram.com/paula__dixon/"
                                     />
                                     <SocialIcon
-                                        style={{ height: 35, width: 35 }}
+                                        style={{ height: 22.5, width: 22.5 }}
                                         bgColor="none"
                                         fgColor='black'
                                         url="https://github.com/pauladixon"
