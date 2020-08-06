@@ -26,7 +26,7 @@ function ServiceCard({ service, handleDeleteService, user }) {
                     <div>
                         <div className='line-item'>
                             <span className='service-label'>Description :: </span>
-                            <span className='service-info' key={service.id}>{service.description}</span>
+                            <span className='service-info description-mobile' key={service.id}>{service.description}</span>
                         </div>
                         <div className='line-item'>
                             <span className='service-label'>Exchange :: </span>
