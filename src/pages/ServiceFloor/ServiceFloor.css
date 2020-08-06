@@ -40,9 +40,9 @@
     }
     .posts {
         /* margin-top: 300px; */
-        margin-left: 0px;
+        margin-left: 15px;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         flex-flow: row wrap;
     }
