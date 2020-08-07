@@ -59,7 +59,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: -5px;
+        margin-left: 0px;
+        font-size: 11px;
     }
     .foo-link {
         margin-top: 0px;
