@@ -8,7 +8,9 @@
 
 ## Screenshots:
 
-
+![Screenshot1](https://i.imgur.com/o1CM6na.png)
+![Screenshot2](https://i.imgur.com/rVWFGSf.png)
+![Screenshot3](https://i.imgur.com/Bv7gFAf.png)
 
 ## Description:
 
@@ -24,9 +26,6 @@ Recompense is a community driven application for paying reparations. Users can p
 - _Javascript_
 - _HTML_
 - _CSS_
-
-
-## Next Steps:
 
 
 Created by Paula Dixon and Isa Martinez
