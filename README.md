@@ -5,7 +5,6 @@
 
 [View the App](https://recompense.herokuapp.com/)
 
-check 
 
 ## Screenshots:
 
