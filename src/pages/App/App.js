@@ -5,7 +5,7 @@ import SignupPage from '../SignupPage/SignupPage'
 import LoginPage from '../LoginPage/LoginPage'
 import NavBar from '../../components/NavBar/NavBar'
 import Title from '../../components/Title/Title'
-import Home from "../../pages/Home/Home.js"
+import Home from '../../pages/Home/Home.js'
 import ContactPage from '../../pages/ContactPage/ContactPage'
 import ServiceFloor from '../ServiceFloor/ServiceFloor'
 import ServiceDetailPage from '../ServiceDetailPage/ServiceDetailPage'
